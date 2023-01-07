@@ -1,3 +1,9 @@
+# Frequent Words Problem: Find the most frequent K-mers in a string. 
+# Input: A string Text and an integer k. 
+# Output: All most frequent k-mers in Text.
+
+
+# Find the most frequent 2-mers in a string
 seq = "GATCCAGATCCCCATAC"
 two_mer = {}
 i = 0
