@@ -82,7 +82,7 @@ FrequencyMap3(Text = "GATCCAGATCCCCATAC", k = 2)
 # {'GA': 2, 'AT': 3, 'TC': 2, 'CC': 4, 'CA': 2, 'AG': 1, 'TA': 1, 'AC': 1}
 
 
-# Find the most frequent k-mers in a string (variant 4)
+# Find the most frequent k-mers in a string (variant 3)
 def PatternCount(Text, Pattern):
     count = 0
     for i in range(len(Text)-len(Pattern)+1):
