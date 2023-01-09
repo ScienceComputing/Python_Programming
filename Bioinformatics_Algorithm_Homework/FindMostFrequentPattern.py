@@ -2,6 +2,45 @@
 # Input: A string Text and an integer k. 
 # Output: All most frequent k-mers in Text.
 
+### Final solution
+def FrequentWords(Text, k):
+    """Return the most frequent k-mers inside a sequence.
+    Parameters:
+    Text (str): The sequence string to explore
+    k (int): The length of the patterns to retrieve
+    Returns:
+    list: A list of k-mers that have the highest number of occurrences in a sequence.
+    """
+    words = []
+    freq = FrequencyMap(Text, k)
+    m = max(freq.values())
+    words = [key for key in freq if freq[key] == m] 
+    return words
+
+def FrequencyMap(Text, k):
+    """Return the frequency of each k-mers inside a sequence.
+    Parameters:
+    Text (str): The sequence string to explore
+    k (int): The length of the patterns to retrieve
+    Returns:
+    Dictionary: Key-value pairs of k-mers with the number of occurrences in a sequence.
+    """
+    freq = {}
+    for i in range(len(Text)-k+1):
+        k_mer = Text[i:i+k]
+        if k_mer in freq:
+            freq[k_mer] += 1
+        else:
+            freq[k_mer] = 1
+    return freq
+
+Text = "ATCAATGATCAACGTAAGCTTCTAAGCATGATCAAGGTGCTCACACAGTTTATCCACAACCTGAGTGGATGACATCAAGATAGGTCGTTGTATCTCCTTCCTCTCGTACTCTCATGACCACGGAAAGATGATCAAGAGAGGATGATTTCTTGGCCATATCGCAATGAATACTTGTGACTTGTGCTTCCAATTGACATCTTCAGCGCCATATTGCGCTGGCCAAGGTGACGGAGCGGGATTACGAAAGCATGATCATGGCTGTTGTTCTGTTTATCTTGTTTTGACTGAGACTTGTTAGGATAGACGGTTTTTCATCACTGACTAGCCAAAGCCTTACTCTGCCTGACATCGACCGTAAATTGATAATGAATTTACATGCTTCCGCGACGATTTACCTCTTGATCATCGATCCGATTGAAGATCTTCAATTGTTAATTCTCTTGCCTCGACTCATAGCCATGATGAGCTCTTGATCATGTTTCCTTAACCCTCTATTTTTTACGGAAGAATGATCAAGCTGCTGCTCTTGATCATCGTTTC"
+k = 10
+
+print(FrequentWords(Text = Text, k = 10))
+
+
+### Intermediate attempts
 # Obtain the frequency of each 2-mers in a string (standard)
 seq = "GATCCAGATCCCCATAC"
 freq = {}
