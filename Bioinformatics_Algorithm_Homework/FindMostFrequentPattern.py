@@ -2,7 +2,7 @@
 # Input: A string Text and an integer k. 
 # Output: All most frequent k-mers in Text.
 
-# Find the most frequent 2-mers in a string (standard)
+# Obtain the frequency of each 2-mers in a string (standard)
 seq = "GATCCAGATCCCCATAC"
 freq = {}
 n = len(seq)
@@ -16,7 +16,7 @@ print(freq)
 # {'GA': 2, 'AT': 3, 'TC': 2, 'CC': 4, 'CA': 2, 'AG': 1, 'TA': 1, 'AC': 1}
 
 
-# Find the most frequent 2-mers in a string (variant)
+# Obtain the frequency of each 2-mers in a string (variant)
 seq = "GATCCAGATCCCCATAC"
 two_mer = {}
 for i in range(len(seq)-2+1) : # The last position should be 15; list(range(len(sequence)-2+1))
@@ -32,7 +32,7 @@ print(two_mer)
 # {'GA': 2, 'AT': 3, 'TC': 2, 'CC': 4, 'CA': 2, 'AG': 1, 'TA': 1, 'AC': 1}
 
 
-# Find the most frequent k-mers in a string (standard)
+# Obtain the frequency of each 2-mers in a string (standard)
 def FrequencyMap(Text, k):
     freq = {}
     n = len(Text)
@@ -51,7 +51,7 @@ FrequencyMap(Text = "GATCCAGATCCCCATAC", k = 2)
 # {'GA': 2, 'AT': 3, 'TC': 2, 'CC': 4, 'CA': 2, 'AG': 1, 'TA': 1, 'AC': 1}
 
 
-# Find the most frequent k-mers in a string (variant 1)
+# Obtain the frequency of each 2-mers in a string (variant 1)
 def FrequencyMap2(Text, k):
     k_mer = {}
     for i in range(len(Text)-2+1) : # The last position should be 15; list(range(len(sequence)-2+1))
@@ -68,7 +68,7 @@ FrequencyMap2(Text = "GATCCAGATCCCCATAC", k = 2)
 # {'GA': 2, 'AT': 3, 'TC': 2, 'CC': 4, 'CA': 2, 'AG': 1, 'TA': 1, 'AC': 1}
 
 
-# Find the most frequent k-mers in a string (variant 2)
+# Obtain the frequency of each 2-mers in a string (variant 2)
 def FrequencyMap3(Text, k): 
     freq = {}
     for i in range(len(Text)-k+1):
@@ -82,7 +82,7 @@ FrequencyMap3(Text = "GATCCAGATCCCCATAC", k = 2)
 # {'GA': 2, 'AT': 3, 'TC': 2, 'CC': 4, 'CA': 2, 'AG': 1, 'TA': 1, 'AC': 1}
 
 
-# Find the most frequent k-mers in a string (variant 3)
+# Obtain the frequency of each 2-mers in a string (variant 3)
 def PatternCount(Text, Pattern):
     count = 0
     for i in range(len(Text)-len(Pattern)+1):
@@ -100,3 +100,26 @@ def FrequencyMap4(Text, k):
         freq[k_mer] = count
     return freq
 # {'GA': 2, 'AT': 3, 'TC': 2, 'CC': 4, 'CA': 2, 'AG': 1, 'TA': 1, 'AC': 1}
+
+
+# Find the most frequent k-mers in a string
+# Input:  A string Text and an integer k
+# Output: A list containing all most frequent k-mers in Text
+def FrequentWords(Text, k):
+    words = []
+    freq = FrequencyMap(Text, k)
+    m = max(freq.values())
+    for key in freq:
+        if freq[key] == m:
+            words.append(key)
+    return words
+
+def FrequencyMap(Text, k):
+    freq = {}
+    for i in range(len(Text)-k+1):
+        k_mer = Text[i:i+k]
+        if k_mer in freq:
+            freq[k_mer] += 1
+        else:
+            freq[k_mer] = 1
+    return freq
