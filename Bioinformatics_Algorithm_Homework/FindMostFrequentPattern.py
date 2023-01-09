@@ -1,4 +1,4 @@
-# Frequent Words Problem: Find the most frequent K-mers in a string. 
+# Frequent Words Problem: Find the most frequent K-mers in a sequence string. 
 # Input: A string Text and an integer k. 
 # Output: All most frequent k-mers in Text.
 
