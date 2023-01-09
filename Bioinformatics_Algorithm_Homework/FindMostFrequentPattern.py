@@ -20,13 +20,13 @@ print(freq)
 seq = "GATCCAGATCCCCATAC"
 two_mer = {}
 for i in range(len(seq)-2+1) : # The last position should be 15; list(range(len(sequence)-2+1))
-    now = seq[i: i+2] # When i = 1, [1: 3]extract the first two bases, excluding the third bases
+    now_mer = seq[i: i+2] # When i = 1, [1: 3]extract the first two bases, excluding the third bases
     # print(now)
-    if now in two_mer:
-        count = two_mer.get(now) # get() return the value
-        two_mer[now] = count + 1 # key:value: assign the variable now to the key and count + 1 to the value
+    if now_mer in two_mer:
+        two_mer[now_mer] = two_mer.get(now_mer) + 1 # key:value: assign the variable now to the key and right side (two_mer.get(now) + 1) to the value; 
+                                                    # get() return the value; or two_mer.get(now, 0) + 1
     else:
-        two_mer[now] = 1 # key:value: assign the variable now to the key, and 1 to the value
+        two_mer[now_mer] = 1 # key:value: assign the variable now to the key, and 1 to the value
         
 print(two_mer)
 # {'GA': 2, 'AT': 3, 'TC': 2, 'CC': 4, 'CA': 2, 'AG': 1, 'TA': 1, 'AC': 1}
