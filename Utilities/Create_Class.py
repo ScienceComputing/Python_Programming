@@ -3,7 +3,7 @@ class Falafel:
         self.ingrediate = ['Chickpeas', 'Onion', 'Parsley', 'Garlic', 'Green Chile Pepper', 'Oil', 'Baking Soda']
         self.type = type
         if self.type not in ['fried','baked']:
-            print('Unrecognized type: ' + str(self.shape))
+            print('Unrecognized type: ' + str(self.type))
             print('Type will be set to baked')
             self.type ='baked'
         self.origin = "Egyptian cuisine"
