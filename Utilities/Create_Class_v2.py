@@ -21,7 +21,7 @@ m2.max_speed
 class Car3:
     pass
 
-# Create a child class Tesla that will inherit all of the attributes and methods of the car class
+# Create a child class that will inherit all of the attributes and methods of the parent class
 class Car:
     def __init__(self, brand, max_speed, mileage):
         self.brand = brand
@@ -32,3 +32,23 @@ class Tesla(Car):
     pass
 m4 = Tesla("Tesla", 360, 30)
 print ("Car brand: {}, Maximum speed: {}, Mileage: {}.".format(m4.brand, m4.max_speed, m4.mileage))
+
+# Create a class with attributes and method 
+class Car:
+    def __init__(self, brand, max_speed, mileage):
+        self.brand = brand
+        self.max_speed = max_speed
+        self.mileage = mileage
+    
+    def seat_capacity(self, capacity):
+        return "The seating capacity of a {} is {} passengers".format(self.brand, capacity)
+m5 = Car("Audi", 350, 30)
+m5.seat_capacity(5)
+# 'The seating capacity of a Audi is 5 passengers'
+
+# Create a child class that will inherit all of the attributes and methods (default value of capacity: 3) of the parent class
+class MINI(Car):
+    def seat_capacity(self, capacity=3):
+        return super().seat_capacity(capacity=3) # super() access methods of the base class
+m5 = MINI("MINI", 250, 15)
+m5.seat_capacity()
