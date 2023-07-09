@@ -79,7 +79,6 @@ class Car:
         self.brand = brand
         self.max_speed = max_speed
         self.mileage = mileage
-        self.color = color
 
 class Tesla(Car):
     pass
@@ -88,3 +87,43 @@ m7 = Tesla("Tesla Model Y", 155, 330)
 m7.color
 # The class variable is shared between all class instances. 
 # We can define a class attribute by assigning a value to a variable name outside of .__init__().
+
+# Create a Porsche child class that inherits from the Car class. 
+# The default fare charge of any car is seating capacity * 100. 
+# If Car is a Porsche instance, we need to add an extra 6% on full fare as a maintenance charge. 
+# Hence, the total fare for a Porsche instance is final amount = total fare + 6% of the total fare.
+class Car:
+    color = "Black"
+    def __init__(self, brand, max_speed, mileage, capacity):
+        self.brand = brand
+        self.max_speed = max_speed
+        self.mileage = mileage
+        self.capacity = capacity
+    
+    def fare(self):
+        return self.capacity * 100
+
+class Porsche(Car):
+    def fare(self):
+        return self.capacity * 100 * (1  + 0.06) 
+    
+m8 = Porsche("Porsche 911", 182, "18 mpg city", 2)
+m8.fare()
+
+# Another variant
+class Porsche(Car):
+    def fare(self):
+        total_amount = super().fare()
+        total_amount += total_amount * 6 / 100
+        return total_amount
+    
+m8_2 = Porsche("Porsche 911", 182, "18 mpg city", 2)
+m8_2.fare()
+
+# Check type of a Porsche object
+type(m8)   
+# <class '__main__.Porsche'>
+
+# Check if m8 is also an instance of the Car class
+print(isinstance(m8, Car))
+# True
