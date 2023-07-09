@@ -52,3 +52,39 @@ class MINI(Car):
         return super().seat_capacity(capacity=3) # super() access methods of the base class
 m5 = MINI("MINI", 250, 15)
 m5.seat_capacity()
+
+# Instance variable vs class variable
+class Car:
+    def __init__(self, brand, max_speed, mileage, color = "White"):
+        self.brand = brand
+        self.max_speed = max_speed
+        self.mileage = mileage
+        self.color = color
+
+class Tesla(Car):
+    pass
+
+m6 = Tesla("Tesla Model Y", 155, 330)
+m6_2 = Tesla("Tesla Model S", 200, 405)
+m6.color
+m6_2.color
+# Variables created in .__init__() are called instance variables. 
+# # An instance variable’s value is specific to a particular instance of the class. 
+# For example, all car objects have a name and a max_speed, but the name and max_speed variables’ values will vary depending on the car instance.
+
+# Define a color attribute that must have the same value for every class instance
+class Car:
+    color = "White"
+    def __init__(self, brand, max_speed, mileage):
+        self.brand = brand
+        self.max_speed = max_speed
+        self.mileage = mileage
+        self.color = color
+
+class Tesla(Car):
+    pass
+
+m7 = Tesla("Tesla Model Y", 155, 330)
+m7.color
+# The class variable is shared between all class instances. 
+# We can define a class attribute by assigning a value to a variable name outside of .__init__().
