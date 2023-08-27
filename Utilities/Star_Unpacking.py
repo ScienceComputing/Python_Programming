@@ -12,3 +12,8 @@ PC_gene_expression
 past_avg = sum(past) / len(past)
 past
 past_avg
+
+items = [5, 6, 7]
+head, *tail = items
+head
+tail
