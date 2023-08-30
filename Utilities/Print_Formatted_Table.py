@@ -28,6 +28,9 @@ def print_car_models(car_data):
         max_len = max(len(headers[i]), max(len(str(row[i])) for row in rows[1:])) # TD
         max_lens.append(max_len)
 
+    # Create a row of dashes with lengths determined by the maximum width of each column
+    rows.insert(1, ['-' * l for l in max_lens])
+
     # Print the table
     for row in rows:
         for col, max_len in zip(row, max_lens):
@@ -36,7 +39,6 @@ def print_car_models(car_data):
 
     sys.exit(1)
 
-# Example usage
 car_data = [
     {'model': ['Civic', 'version 1'], 'make': 'Honda', 'year': 2023, 'price': 25000.99, 'fuel_type': 'Gasoline', 'horsepower': 158},
     {'model': ['Camry', 'version 2'], 'make': 'Toyota', 'year': 2022, 'price': None, 'fuel_type': 'Hybrid', 'horsepower': 208},
