@@ -14,6 +14,7 @@ with open('sequence_read.fasta') as f:
         print('-'*20)
 
 # Bioinformatics senarior: calculate the moving average of the quality scores of base calls in DNA sequencing
+# Adding items from either end of a queue has O(1) complexity. Whereas in a list, inserting items from the front of the list is O(N).
 def calculate_moving_average(seq, window_size):
     moving_average = deque()
     window = deque(maxlen=window_size)
