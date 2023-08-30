@@ -32,3 +32,69 @@ Car1.show_info()
 
 Car2 = Lamborghini(200, 15)
 Car2.show_info()
+
+# Bioinformatics senarior: create a parent class called SequenceAnalyzer and two child classes, DNAAnalyzer and RNAAnalyzer, to analyze the base distribution of DNA and RNA sequences. 
+class SequenceAnalyzer:
+    def __init__(self, sequence: str):
+        self.sequence = sequence
+    def analyze(self):
+        raise NotImplementedError("Subclasses must implement the analyze method.")
+    def show_info(self):
+        pass
+
+class DNAAnalyzer(SequenceAnalyzer):
+    def analyze(self):
+        base_counts = {'A': 0, 'T': 0, 'C': 0, 'G': 0}
+        total_bases = len(self.sequence)
+        for base in self.sequence:
+            if base in base_counts:
+                base_counts[base] += 1
+        gc_content = (base_counts['G'] + base_counts['C']) / total_bases * 100
+        self.analysis_results = {
+            "Sequence": self.sequence,
+            "Total bases": total_bases,
+            "A Count": base_counts['A'],
+            "T Count": base_counts['T'],
+            "C Count": base_counts['C'],
+            "G Count": base_counts['G'],
+            "GC Content": f"{gc_content:.2f}%"
+        }
+    def show_info(self):
+        print("Analyzing DNA sequence:")
+        for key, value in self.analysis_results.items():
+            print(f"{key}: {value}")
+
+class RNAAnalyzer(SequenceAnalyzer):
+    def analyze(self):
+        base_counts = {'A': 0, 'U': 0, 'C': 0, 'G': 0}
+        total_bases = len(self.sequence)
+        for base in self.sequence:
+            if base in base_counts:
+                base_counts[base] += 1
+        gc_content = (base_counts['G'] + base_counts['C']) / total_bases * 100
+        self.analysis_results = {
+            "Sequence": self.sequence,
+            "Total bases": total_bases,
+            "A Count": base_counts['A'],
+            "U Count": base_counts['U'],
+            "C Count": base_counts['C'],
+            "G Count": base_counts['G'],
+            "GC Content": f"{gc_content:.2f}%"
+        }
+    def show_info(self):
+        print("Analyzing RNA sequence:")
+        for key, value in self.analysis_results.items():
+            print(f"{key}: {value}")
+
+# Example usage:
+dna_sequence = "ATCGATCGTTCG"
+rna_sequence = "AUCUAUCGAUCG"
+
+dna_analyzer = DNAAnalyzer(dna_sequence)
+rna_analyzer = RNAAnalyzer(rna_sequence)
+
+dna_analyzer.analyze()
+rna_analyzer.analyze()
+
+dna_analyzer.show_info()
+rna_analyzer.show_info()
