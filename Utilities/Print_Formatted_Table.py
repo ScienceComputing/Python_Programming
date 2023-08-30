@@ -25,7 +25,7 @@ def print_car_models(car_data):
     # Calculate the maximum length for each column
     max_lens = []
     for i in range(len(headers)):
-        max_len = max(len(headers[i]), max(len(str(row[i])) for row in rows[1:]))
+        max_len = max(len(headers[i]), max(len(str(row[i])) for row in rows[1:])) # TD
         max_lens.append(max_len)
 
     # Print the table
