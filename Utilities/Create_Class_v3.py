@@ -5,7 +5,7 @@ class Car:
         self.mileage = mileage
     
     def show_info(self):
-        print((f"Car brand: {self.brand}, Maximum speed: {self.max_speed}, Mileage: {self.max_speed}."))
+        print((f"Car brand: {self.brand}, Maximum speed: {self.max_speed}, Mileage: {self.mileage}."))
 
 Ferrari = Car("Ferrari", 205, 21)
 Ferrari.show_info()
@@ -17,7 +17,7 @@ class Car:
         self.mileage = mileage
     
     def show_info(self):
-        print((f"Car brand: {self.brand}, Maximum speed: {self.max_speed}, Mileage: {self.max_speed}."))
+        print((f"Car brand: {self.brand}, Maximum speed: {self.max_speed}, Mileage: {self.mileage}."))
 
 class Ferrari(Car):
     def __init__(self, max_speed: int, mileage: int):
