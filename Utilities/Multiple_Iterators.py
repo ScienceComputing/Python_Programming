@@ -11,7 +11,7 @@ print(f"B: {next(iterator_2)}")
 class BioSequenceIterator:
     def __init__(self, sequence):
         self.sequence = sequence
-        self.index = 0
+        self.index = 0 # TD
     def __iter__(self):
         return self
     def __next__(self):
