@@ -13,7 +13,7 @@ with open('sequence_read.fasta') as f:
         print(line, end='') 
         print('-'*20)
 
-# Bioinformatics senarior 1: calculate the moving average of the quality scores of base calls in DNA sequencing
+# Bioinformatics scenarior 1: calculate the moving average of the quality scores of base calls in DNA sequencing
 # Adding items from either end of a queue has O(1) complexity. Whereas in a list, inserting items from the front of the list is O(N).
 def calculate_moving_average(seq, window_size):
     moving_average = deque()
@@ -29,7 +29,7 @@ def calculate_moving_average(seq, window_size):
 quality_scores = [30, 40, 25, 35, 45, 20, 30, 40, 50, 60]
 window_size = 3
 
-# Bioinformatics senarior 2: calculate the moving average of the hydrophobicity scores for amino acids
+# Bioinformatics scenarior 2: calculate the moving average of the hydrophobicity scores for amino acids
 def calculate_hydrophobicity_score(aa):
     """
     This function would calculate the moving average of the hydrophobicity scores for amino acids.
