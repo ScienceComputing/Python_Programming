@@ -10,6 +10,7 @@ class Car:
 Ferrari = Car("Ferrari", 205, 21)
 Ferrari.show_info()
 
+###
 class Car:
     def __init__(self, brand: str, max_speed: int, mileage: int):
         self.brand = brand
@@ -21,7 +22,8 @@ class Car:
 
 class Ferrari(Car):
     def __init__(self, max_speed: int, mileage: int):
-        super().__init__(brand="Ferrari", max_speed=max_speed, mileage=mileage)
+        super().__init__(brand="Ferrari", max_speed=max_speed, mileage=mileage) 
+        # super().__init__ is often used in single-inheritance scenarios where there is only one parent class. It simplifies the code by letting Python determine the appropriate parent class automatically.
 
 class Lamborghini(Car):
     def __init__(self, max_speed: int, mileage: int):
