@@ -14,9 +14,9 @@ df.index # index attribute extracts the row names/numbers
 
 df.sort_values("column_name", ascending=False) # change the order of the rows by sorting on the particular column
 
-df.sort_values("column_name_1", "column_name_2") # sort on the first column then on the second column
+df.sort_values(["column_name_1", "column_name_2"]) # sort on the first column then on the second column
 
-df.sort_values("column_name_1", "column_name_2",  ascending=[True, False]) # sort on the first column by ascending order then on the second column by decreasing order
+df.sort_values(["column_name_1", "column_name_2"],  ascending=[True, False]) # sort on the first column by ascending order then on the second column by decreasing order
 
 df["column_name_1"] # select one column
 
