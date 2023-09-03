@@ -35,7 +35,7 @@ Car1.show_info()
 Car2 = Lamborghini(200, 15)
 Car2.show_info()
 
-# Bioinformatics senarior: create a parent class called SequenceAnalyzer and two child classes, DNAAnalyzer and RNAAnalyzer, to analyze the base distribution of DNA and RNA sequences. 
+# Bioinformatics scenarior: create a parent class called SequenceAnalyzer and two child classes, DNAAnalyzer and RNAAnalyzer, to analyze the base distribution of DNA and RNA sequences. 
 class SequenceAnalyzer:
     def __init__(self, sequence: str):
         self.sequence = sequence
