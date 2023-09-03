@@ -23,7 +23,8 @@ class Car:
 class Ferrari(Car):
     def __init__(self, max_speed: int, mileage: int):
         super().__init__(brand="Ferrari", max_speed=max_speed, mileage=mileage) 
-        # super(Ferrari, self).__init__() is redundant, slower (due to the name lookups), and more verbose
+        # super(Ferrari, self).__init__() works in Python 2 and 3
+        # But it is redundant, slower (due to the name lookups), and more verbose
 
 class Lamborghini(Car):
     def __init__(self, max_speed: int, mileage: int):
