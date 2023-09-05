@@ -46,7 +46,7 @@ class GenomeQueue:
         self._queue = []  # Initialize a priority queue to manage tasks
         self._index = 0   # Initialize an index counter to maintain task order
     def add_sequence(self, sequence, quality_score):
-        # Add a DNA sequence to the assembly queue with a priority based on quality score
+        # Add a DNA sequence to the queue with a priority based on quality score
         # Higher quality scores are given higher priority (negate the score for max-heap behavior)
         heapq.heappush(self._queue, (-quality_score, self._index, sequence))
         self._index += 1
