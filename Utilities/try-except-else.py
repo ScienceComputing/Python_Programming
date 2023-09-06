@@ -9,7 +9,7 @@ for item in nums:
         sum_nums += float_num 
         print(f"{sum_nums=}")
 
-# Bioinformatics senarior: load the BAM file and print reads in a specific region
+# Bioinformatics scenarior: load the BAM file and print reads in a specific region
 import pysam
 try:
     bam_file = pysam.AlignmentFile("alignment.bam", "rb")
