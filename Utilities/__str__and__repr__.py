@@ -38,7 +38,7 @@ print(google_stock) # This will call the __str__ method
 
 # Buy more shares
 google_stock.buy(5000)
-print(google_stock) # This will call the __repr__ method 
+print(repr(google_stock)) # This will call the __repr__ method 
 
 # Sell some shares
 if google_stock.sell(10000):
