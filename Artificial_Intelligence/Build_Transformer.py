@@ -33,10 +33,10 @@ class MultiHeadAttention(nn.Module):
         self.d_k = d_model // num_heads    # Dimension of each head's key, query, and value
 
         # Build linear layers for transforming inputs
-        self.W_q = nn.Linear(d_model, d_model)  # Defines the transformation weights for query
-        self.W_k = nn.Linear(d_model, d_model)  # Defines the transformation weights for key
-        self.W_v = nn.Linear(d_model, d_model)  # Defines the transformation weights for value
-        self.W_o = nn.Linear(d_model, d_model)  # Defines the transformation weights for output
+        self.W_q = nn.Linear(d_model, d_model)  # Define the transformation weights for query
+        self.W_k = nn.Linear(d_model, d_model)  # Define the transformation weights for key
+        self.W_v = nn.Linear(d_model, d_model)  # Define the transformation weights for value
+        self.W_o = nn.Linear(d_model, d_model)  # Define the transformation weights for output
 
     def scaled_dot_product_attention(self, Q, K, V, mask=None):
         # Calculate attention scores
