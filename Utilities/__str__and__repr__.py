@@ -1,24 +1,34 @@
 class Stock:
     def __init__(self, symbol: str, price: float, quantity: int):
-        """Initialize a Stock object with a symbol, price per share, and quantity of shares."""
+        """
+        Initialize a Stock object with a symbol, price per share, and quantity of shares.
+        """
         self.symbol = symbol
         self.price = price
         self.quantity = quantity
     def buy(self, amount: float):
-        """Buy a specified dollar amount of shares and update the quantity of shares."""
+        """
+        Buy a specified dollar amount of shares and update the quantity of shares.
+        """
         self.quantity += amount / self.price
     def sell(self, amount: float):
-        """Sell a specified dollar amount of shares if enough shares are available."""
+        """
+        Sell a specified dollar amount of shares if enough shares are available.
+        """
         if self.quantity >= amount / self.price:
             self.quantity -= amount / self.price
             return True
         else:
             return False
     def __str__(self):
-        """Return a string representation of the Stock object."""
+        """
+        Return a string representation of the Stock object.
+        """
         return f"{self.symbol}: {self.quantity} shares at ${self.price} per share"
     def __repr__(self):
-        """Return a string representation for creating a new Stock object."""
+        """
+        Return a string representation for creating a new Stock object.
+        """
         return f"Stock({self.symbol}, {self.price}, {self.quantity})"
 
 
