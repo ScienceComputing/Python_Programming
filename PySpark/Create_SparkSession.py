@@ -5,5 +5,5 @@ from pyspark.sql import SparkSession
 RNA_velocity_spark = SparkSession.builder.getOrCreate()
 # The SparkSession.builder.getOrCreate() method returns an existing SparkSession if there's already one in the environment, or creates a new one if necessary.
 
-# Print my_spark
+# Print RNA_velocity_spark
 print(RNA_velocity_spark)
