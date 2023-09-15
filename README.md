@@ -4,4 +4,4 @@ Welcome to the **Python Gallary** repository! Here, you'll find a curated collec
 
 Feel free to fork this repository, contribute your own code, or suggest improvements. Let's learn and grow together as Python enthusiasts!
 
-**Happy coding** :)
+**Stay Hungry Stay Foolish** :)
