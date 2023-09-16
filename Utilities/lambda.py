@@ -8,3 +8,6 @@ greet()
 
 greet_stock = lambda stock_name: print('Welcome to the world of', stock_name, 'stocks!')
 greet_stock('GOOGL')
+
+raise_to_power = lambda m, n: m ** n
+raise_to_power(8, 8)
