@@ -11,3 +11,9 @@ greet_stock('GOOGL')
 
 raise_to_power = lambda m, n: m ** n
 raise_to_power(8, 8)
+
+# The map function accepts two parameters: a function and a sequence, e.g., a list, and then proceeds to apply the specified function to each element within the given sequence.
+num_list = [6, 8, 15, 0, 90, 50]
+cubic_all = map(lambda num: num ** 3, num_list)
+print(cubic_all)
+print(list(cubic_all))
