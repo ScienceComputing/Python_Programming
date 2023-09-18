@@ -1,3 +1,4 @@
+# Ref: Attention is all you need. https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf
 # A weighting scheme enables a *transformer* model to give varying degrees of attention to different segments of the input when generating an output.
 
 # Set up the working environment
@@ -128,3 +129,38 @@ class PositionalEncoding(nn.Module):
     def forward(self, x):
         # Add the positional encodings to the input x
         return x + self.pe[:, :x.size(1)]
+
+# Build the Encoder
+class EncoderLayer(nn.Module):
+    def __init__(self, d_model, num_heads, d_ff, dropout):
+        """
+        The EncoderLayer in a transformer defines one layer of the encoder. 
+        It combines a multi-head self-attention mechanism with a position-wise feed-forward neural network, applying residual connections, layer normalization, and dropout as needed. 
+        These elements enable the encoder to capture intricate relationships in the input data and convert them into a valuable representation for downstream tasks. 
+        Typically, several encoder layers are stacked to create the full encoder in a transformer model.
+        d_model: the dimensionality of the input
+        num_heads: number of attention heads in the multi-head attention
+        d_ff: the dimensionality of the inner layer in the position-wise feed-forward network
+        dropout: the dropout rate used for regularization
+        self.self_attn: multi-head attention mechanism
+        self.feed_forward: position-wise feed-forward neural network
+        self.norm1 and self.norm2: layer normalization, applied to smooth the layer's input
+        self.dropout: dropout layer, used to prevent overfitting by randomly setting some activations to zero during training
+        """
+        super(EncoderLayer, self).__init__()
+        self.self_attn = MultiHeadAttention(d_model, num_heads)
+        self.feed_forward = PositionWiseFeedForward(d_model, d_ff)
+        self.norm1 = nn.LayerNorm(d_model)
+        self.norm2 = nn.LayerNorm(d_model)
+        self.dropout = nn.Dropout(dropout)
+        
+    def forward(self, x, mask):
+        """
+        x: the input to the encoder layer
+        mask: optional mask to ignore certain parts of the input
+        """
+        attn_output = self.self_attn(x, x, x, mask)
+        x = self.norm1(x + self.dropout(attn_output))
+        ff_output = self.feed_forward(x)
+        x = self.norm2(x + self.dropout(ff_output))
+        return x
