@@ -7,7 +7,7 @@ m = lambda x: x ** 3 + 6
 n = lambda x: 3 * x - 1
 F = lambda x: m(n(x))
 
-m_prime = lambda x: 3*(x**2)
+m_prime = lambda x: 3 * (x ** 2)
 n_prime = lambda x: 3
 F_prime = lambda x: m_prime(n(x)) * n_prime(x)
 y_1 = lambda x_0, x_1: F_prime(x_0) * (x_1 - x_0) + F(x_0)
