@@ -24,7 +24,6 @@ shape = (5,6,)
 rand_tensor = torch.rand(shape)
 ones_tensor = torch.ones(shape)
 zeros_tensor = torch.zeros(shape)
-
 print(f"random tensor - \n {rand_tensor} \n")
 print(f"Ones tensor - \n {ones_tensor} \n")
 print(f"Zeros tensor - \n {zeros_tensor}")
