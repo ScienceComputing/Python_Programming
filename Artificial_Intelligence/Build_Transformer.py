@@ -134,7 +134,7 @@ class PositionalEncoding(nn.Module):
 class EncoderLayer(nn.Module):
     def __init__(self, d_model, num_heads, d_ff, dropout):
         """
-        The EncoderLayer in a transformer defines one layer of the encoder. 
+        The EncoderLayer class in a transformer defines one layer of the encoder. 
         It combines a multi-head self-attention mechanism with a position-wise feed-forward neural network, applying residual connections, layer normalization, and dropout as needed. 
         These elements enable the encoder to capture intricate relationships in the input data and convert them into a valuable representation for downstream tasks. 
         Typically, several encoder layers are stacked to create the full encoder in a transformer model.
@@ -164,3 +164,103 @@ class EncoderLayer(nn.Module):
         ff_output = self.feed_forward(x)
         x = self.norm2(x + self.dropout(ff_output))
         return x
+
+# Build the Decoder
+class DecoderLayer(nn.Module):
+    def __init__(self, d_model, num_heads, d_ff, dropout):
+        """
+        The DecoderLayer class in a transformer model defines a single decoder layer, which includes multi-head self-attention, multi-head cross-attention to the encoder's output, a position-wise feed-forward neural network, and utilizes residual connections, layer normalization, and dropout layers. 
+        This combination allows the decoder to produce meaningful outputs by considering both the target and source sequences. 
+        Similar to the encoder, multiple decoder layers are usually stacked to create the complete decoder component of a transformer model.
+        d_model: the dimensionality of the input
+        num_heads: the number of attention heads in the multi-head attention
+        d_ff: the dimensionality of the inner layer in the feed-forward network
+        dropout: the dropout rate for regularization
+        self.self_attn: multi-head self-attention mechanism for the target sequence
+        self.cross_attn: multi-head attention mechanism that attends to the encoder's output
+        self.feed_forward: position-wise feed-forward neural network
+        self.norm1, self.norm2, self.norm3: layer normalization components
+        self.dropout: dropout layer for regularization
+        """
+        super(DecoderLayer, self).__init__()
+        self.self_attn = MultiHeadAttention(d_model, num_heads)
+        self.cross_attn = MultiHeadAttention(d_model, num_heads)
+        self.feed_forward = PositionWiseFeedForward(d_model, d_ff)
+        self.norm1 = nn.LayerNorm(d_model)
+        self.norm2 = nn.LayerNorm(d_model)
+        self.norm3 = nn.LayerNorm(d_model)
+        self.dropout = nn.Dropout(dropout)
+        
+    def forward(self, x, enc_output, src_mask, tgt_mask):
+        """
+        x: the input to the decoder layer
+        enc_output: the output from the corresponding encoder (used in the cross-attention step)
+        src_mask: source mask to ignore certain parts of the encoder's output
+        tgt_mask: target mask to ignore certain parts of the decoder's input
+        """
+        attn_output = self.self_attn(x, x, x, tgt_mask)
+        x = self.norm1(x + self.dropout(attn_output))
+        attn_output = self.cross_attn(x, enc_output, enc_output, src_mask)
+        x = self.norm2(x + self.dropout(attn_output))
+        ff_output = self.feed_forward(x)
+        x = self.norm3(x + self.dropout(ff_output))
+        return x
+
+# Combine the Encoder and Decoder layers
+class Transformer(nn.Module):
+    """
+    The Transformer class consolidates all key components of a Transformer model, such as embeddings, positional encoding, encoder layers, and decoder layers. 
+    It simplifies training and inference, handling intricate aspects like multi-head attention, feed-forward networks, and layer normalization.
+    This implementation adheres to the standard Transformer architecture, making it well-suited for sequence-to-sequence tasks like machine translation and text summarization. 
+    The use of masking ensures the model respects causal dependencies within sequences by ignoring padding tokens and preventing information leakage from future tokens.
+    src_vocab_size: source vocabulary size
+    tgt_vocab_size: target vocabulary size
+    d_model: the dimensionality of the model's embeddings
+    num_heads: number of attention heads in the multi-head attention mechanism
+    num_layers: number of layers for both the encoder and the decoder
+    d_ff: dimensionality of the inner layer in the feed-forward network
+    max_seq_length: maximum sequence length for positional encoding
+    dropout: dropout rate for regularization
+    self.encoder_embedding: embedding layer for the source sequence
+    self.decoder_embedding: embedding layer for the target sequence
+    self.positional_encoding: positional encoding component
+    self.encoder_layers: a list of encoder layers
+    self.decoder_layers: a list of decoder layers
+    self.fc: final fully connected (linear) layer mapping to target vocabulary size
+    self.dropout: dropout layer
+    """
+    def __init__(self, src_vocab_size, tgt_vocab_size, d_model, num_heads, num_layers, d_ff, max_seq_length, dropout):
+        super(Transformer, self).__init__()
+        self.encoder_embedding = nn.Embedding(src_vocab_size, d_model)
+        self.decoder_embedding = nn.Embedding(tgt_vocab_size, d_model)
+        self.positional_encoding = PositionalEncoding(d_model, max_seq_length)
+
+        self.encoder_layers = nn.ModuleList([EncoderLayer(d_model, num_heads, d_ff, dropout) for _ in range(num_layers)])
+        self.decoder_layers = nn.ModuleList([DecoderLayer(d_model, num_heads, d_ff, dropout) for _ in range(num_layers)])
+
+        self.fc = nn.Linear(d_model, tgt_vocab_size)
+        self.dropout = nn.Dropout(dropout)
+
+    def generate_mask(self, src, tgt):
+        src_mask = (src != 0).unsqueeze(1).unsqueeze(2)
+        tgt_mask = (tgt != 0).unsqueeze(1).unsqueeze(3)
+        seq_length = tgt.size(1)
+        nopeak_mask = (1 - torch.triu(torch.ones(1, seq_length, seq_length), diagonal=1)).bool()
+        tgt_mask = tgt_mask & nopeak_mask
+        return src_mask, tgt_mask
+
+    def forward(self, src, tgt):
+        src_mask, tgt_mask = self.generate_mask(src, tgt)
+        src_embedded = self.dropout(self.positional_encoding(self.encoder_embedding(src)))
+        tgt_embedded = self.dropout(self.positional_encoding(self.decoder_embedding(tgt)))
+
+        enc_output = src_embedded
+        for enc_layer in self.encoder_layers:
+            enc_output = enc_layer(enc_output, src_mask)
+
+        dec_output = tgt_embedded
+        for dec_layer in self.decoder_layers:
+            dec_output = dec_layer(dec_output, enc_output, src_mask, tgt_mask)
+
+        output = self.fc(dec_output)
+        return output
