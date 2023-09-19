@@ -3,8 +3,8 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 # Show the chain rule of derivatives
-m = lambda x: x**3 + 6
-n = lambda x: 3*x - 1
+m = lambda x: x ** 3 + 6
+n = lambda x: 3 * x - 1
 F = lambda x: m(n(x))
 
 m_prime = lambda x: 3*(x**2)
