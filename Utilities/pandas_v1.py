@@ -10,6 +10,8 @@ df.values # values attribute extracts the data values in 2-D numpy array
 
 df.columns # columns attribute extracts the column names
 
+df.columns = new_column # assign new column names
+
 df.index # index attribute extracts the row names/numbers
 
 df.sort_values("column_name", ascending=False) # change the order of the rows by sorting on the particular column
