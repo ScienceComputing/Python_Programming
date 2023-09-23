@@ -1,3 +1,4 @@
+# Formatting rule for the import
 - Import statements should be employed exclusively for packages and modules, avoiding their use for individual classes or functions.
 - `a.xyz` asserts that the module a defines the object named xyz.
 - To import packages and modules, please use `import a`.
