@@ -39,4 +39,12 @@ df["column_name_1"].cummax()
 df["column_name_1"].cummin()
 df["column_name_1"].cumprod()
 
+# Drop the records with the duplicate values on variables
+df.drop_duplicates(subset=["column_name_1", "column_name_2"])
+
+# Count the categorical variable
+df["column_name_1"].value_counts() # Count the number of each categorical level
+df["column_name_1"].value_counts(sort=True) # Sort the count
+df["column_name_1"].value_counts(normalize=True) # Count the proportion of each categorical level
+
 
