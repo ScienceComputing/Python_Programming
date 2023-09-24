@@ -1,5 +1,6 @@
 # Compute built-in summary statistics
 df["column_name_1"].mean()
+df[df["column_name_1"] == "group1"]["column_name_2"].mean() # calculate the mean by the specific group
 df["column_name_1"].median()
 df["column_name_1"].mode()
 df["column_name_1"].min()
@@ -46,5 +47,11 @@ df.drop_duplicates(subset=["column_name_1", "column_name_2"])
 df["column_name_1"].value_counts() # Count the number of each categorical level
 df["column_name_1"].value_counts(sort=True) # Sort the count
 df["column_name_1"].value_counts(normalize=True) # Count the proportion of each categorical level
+
+# Calculate one or multiple grouped summary statistics
+df.groupby("group_column")["column_name_1"].mean()
+df.groupby("group_column")["column_name_1"].agg([mean, max, sum])
+df.groupby(["group_column_1", "group_column_2"])["column_name_1"].mean()
+df.groupby(["group_column_1", "group_column_2"])[["column_name_1", "column_name_2"]].mean()
 
 
