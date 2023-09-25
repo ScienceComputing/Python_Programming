@@ -1,6 +1,6 @@
 # Compute built-in summary statistics
 df["column_name_1"].mean()
-df[df["column_name_1"] == "group1"]["column_name_2"].mean() # calculate the mean by the specific group
+df[df["column_name_1"] == "group1"]["column_name_2"].mean() # Calculate the mean by the specific group
 df["column_name_1"].median()
 df["column_name_1"].mode()
 df["column_name_1"].min()
@@ -48,10 +48,23 @@ df["column_name_1"].value_counts() # Count the number of each categorical level
 df["column_name_1"].value_counts(sort=True) # Sort the count
 df["column_name_1"].value_counts(normalize=True) # Count the proportion of each categorical level
 
-# Calculate one or multiple grouped summary statistics
+# Calculate one or multiple grouped summary statistics for one or multiple variables
 df.groupby("group_column")["column_name_1"].mean()
 df.groupby("group_column")["column_name_1"].agg([mean, max, sum])
 df.groupby(["group_column_1", "group_column_2"])["column_name_1"].mean()
 df.groupby(["group_column_1", "group_column_2"])[["column_name_1", "column_name_2"]].mean()
+
+# Create the pivot table grouped by one variable
+df.pivot_table(values="column_name", index="group_column") # By default, pivot_table takes the mean value for each group
+
+# Create the pivot table for multiple summary statistics
+import numpy as np
+df.pivot_table(values="column_name", index="group_column", aggfunc=np.median)
+df.pivot_table(values="column_name", index="group_column", aggfunc=[np.mean, np.median])
+
+# Create the pivot tables grouped by multiple variables
+df.pivot_table(values="column_name", index="group_column_1", columns="group_column_2") 
+df.pivot_table(values="column_name", index="group_column_1", columns="group_column_2", fill_value=0) # Replace NaN with 0
+# df.pivot_table(values="column_name", index="group_column_1", columns="group_column_2", fill_value=0, margins=True) # Return the mean of values per row/column
 
 
