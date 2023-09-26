@@ -1,4 +1,5 @@
 # Neural Ordinary Differential Equations [NeurIPS18]: https://arxiv.org/pdf/1806.07366.pdf
+# https://www.youtube.com/watch?v=V6nGT0Gakyg
 """
 We introduce a new family of deep neural network models. 
 Instead of specifying a discrete sequence of hidden layers, we parameterize the derivative of the hidden state using a neural network. 
