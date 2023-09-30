@@ -2,16 +2,34 @@
 # Nonetheless, there exists a faster method for crafting functions spontaneously, referred to as lambda functions, as they make use of the 'lambda' keyword.
 
 # lambda argument(s) : expression 
+# Case 1:
 lambda : print('Hello Anonymous Function!')
 greet = lambda : print('Hello Anonymous Function!')
 greet()
 
+# Case 2:
 greet_stock = lambda stock_name: print('Welcome to the world of', stock_name, 'stocks!')
 greet_stock('GOOGL')
 
+# Case 3:
 raise_to_power = lambda m, n: m ** n
 raise_to_power(8, 8)
 
+# Case 4:
+def neg_log_likelyhood(X, Y, theta):
+    loss_function = np.sum(np.exp(theta * X) - (Y * theta * X) + np.log(factorial_Y))
+    return loss_function
+def backtracking_line_search(L, theta, direction, step=0.5, rho=0.8):
+    while L(theta + step * direction) > L(x):
+        step *= rho
+    return step
+t = backtracking_line_search(
+        L=lambda theta: neg_log_likelyhood(X=X_data, Y=Y_data, theta=theta), #!
+        theta=theta_estimate,
+        direction=-gradient)
+
+
+# Integrate lambda with map
 # The map function accepts two parameters: a function and a sequence, e.g., a list, and then proceeds to apply the specified function to each element within the given sequence.
 num_list = [6, 8, 15, 0, 90, 50]
 cubic_all = map(lambda num: num ** 3, num_list)
