@@ -54,8 +54,13 @@ df.groupby("group_column")["column_name_1"].agg([mean, max, sum])
 df.groupby(["group_column_1", "group_column_2"])["column_name_1"].mean()
 df.groupby(["group_column_1", "group_column_2"])[["column_name_1", "column_name_2"]].mean()
 
-# Create the pivot table grouped by one variable
+# Create the pivot table grouped by one/multiple variables
+# A pivot table is a pandas DataFrame with the sorted index
 df.pivot_table(values="column_name", index="group_column") # By default, pivot_table takes the mean value for each group
+df.pivot_table(values="column_name", index=["group_column_1", "group_column_2") # By default, pivot_table takes the mean value for each group
+# For example,
+GDP_by_country_city_vs_year = gdp.pivot_table(values="avg_gdp_c", index=["country", "city"], columns="year")
+Make a pivot table of the avg_gdp_c column, with **country and city as rows**, and **year as columns**.
 
 # Create the pivot table for multiple summary statistics
 import numpy as np
