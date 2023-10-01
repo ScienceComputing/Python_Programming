@@ -36,7 +36,7 @@ df.loc["val_1":"val_3"] # Subset the outer index level that meet val_1, val_2, v
 # Special slicing feature for dates
 df.loc["2020-01-27":"2022-03-09"]
 df.loc["2020":"2022"]
-# Conventional way with more codes to subset rows that meet specified date values
+# Conventional way to subset rows that meet date values
 df[(df["date"] >= "2010-09-02") & (df["date"] <= "2012-09-02")]
 
 df.loc[("val_1_for_col_1", "val_1_for_col_2"):("val_3_for_col_1", "val_3_for_col_2")] # Subset the outer index level that meet val_1_for_col_1, val_2_for_col_1, val_3_for_col_1, and then subset the inner index level that meet val_1_for_col_2, val_2_for_col_2, val_3_for_col_2
@@ -55,3 +55,14 @@ list_1[:] # Return the whole list
 
 # Subset the DataFrame by row and column numbers
 df.iloc[1:6, 1:6] # Select the 2nd to 5th rows and the 2nd to 5th columns
+
+# Calculate the summary statistics across rows
+df_pivot_table.mean(axis="index")
+
+# Calculate the summary statistics across columns; pivot table has columns with the same data type
+df_pivot_table.mean(axis="columns")
+
+# Access components of a date (year, month, day)
+df["date_column"].dt.year
+df["date_column"].dt.month
+df["date_column"].dt.day
