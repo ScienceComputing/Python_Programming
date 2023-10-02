@@ -6,3 +6,10 @@ programming_language_list = ['Python', 'JavaScript', 'Julia', 'R', 'C']
 programming_language_enumerate = enumerate(programming_language_list)
 print(list(programming_language_enumerate))
 # [(0, 'Python'), (1, 'JavaScript'), (2, 'Julia'), (3, 'R'), (4, 'C')]
+
+# Map categorical labels to numerical indices
+atac_train = pd.read_parquet('../single_cell_data/atac_train.parquet', engine='pyarrow')
+row_labels = df['id'].values
+row_label_to_index = {label: index for index, label in enumerate(row_labels)}
+type(row_label_to_index)
+# <class 'dict'>
