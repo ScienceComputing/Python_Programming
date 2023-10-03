@@ -56,10 +56,13 @@ list_1[:] # Return the whole list
 # Subset the DataFrame by row and column numbers
 df.iloc[1:6, 1:6] # Select the 2nd to 5th rows and the 2nd to 5th columns
 
-# Calculate the summary statistics across rows
+# Calculate the summary statistics across rows [per column as a group]
 df_pivot_table.mean(axis="index")
+# Filter for the group that has the largest mean value
+mean_by_group=df_pivot_table.mean(axis="index")
+mean_by_group[mean_by_group == max(mean_by_group)]
 
-# Calculate the summary statistics across columns; pivot table has columns with the same data type
+# Calculate the summary statistics across columns [per row as a group]; pivot table has columns with the same data type
 df_pivot_table.mean(axis="columns")
 
 # Access components of a date (year, month, day)
