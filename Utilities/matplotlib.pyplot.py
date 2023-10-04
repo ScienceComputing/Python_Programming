@@ -6,6 +6,10 @@ df.head() # Take a look at the first rows of the data frame
 df["numerical_var"].hist(bins=20) # Larger bins get higher numbers of bars
 plt.show()
 
+# Plot histograms for multiple variables
+df[["numerical_var_1", "numerical_var_2"]].hist()
+plt.show()
+
 # Bar plot - reveal the relationship between a categorical variable and a numerical variable
 df.head() # Take a look at the first rows of the data frame
 avg_var_by_group = df.groupby("group")["var"].mean()
