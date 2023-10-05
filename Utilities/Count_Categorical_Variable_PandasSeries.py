@@ -9,6 +9,8 @@ langs_count = {}
 
 # Extract column from DataFrame: col
 langs_col = news_df['lang']
+type(langs_col)
+# pandas.core.series.Series
 
 # Iterate over lang column in DataFrame
 for entry in langs_col:
