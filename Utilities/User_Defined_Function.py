@@ -54,3 +54,7 @@ def function_with_multiple_parameters_return_multiple_values(parameter_1, parame
 result = square(2, 8)
 print(result[0])
 print(result[1])
+
+result_1, result_2 = square(2, 8)
+print(result_1)
+print(result_2)
