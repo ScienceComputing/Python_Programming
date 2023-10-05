@@ -1,3 +1,4 @@
+# Unpacking lists
 data = [ 'XYZ', 90, 71.1, (2023, 12, 21) ] 
 _, shares, price, _ = data
 shares
@@ -10,6 +11,7 @@ shares
 price
 year
 
+# Unpacking tuples
 data = ( 'XYZ', 90, 71.1, (2023, 12, 21) )
 _, shares, price, (year, *_) = data
 shares
