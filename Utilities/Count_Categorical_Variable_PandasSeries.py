@@ -24,3 +24,32 @@ for entry in langs_col:
 
 # Print the populated dictionary
 print(langs_count)
+
+# Define count_entries()
+def count_entries(df, col_name):
+    """Return a dictionary with counts of occurrences as value for each key."""
+
+    # Initialize an empty dictionary: count
+    count = {}
+    
+    # Extract column from DataFrame: col
+    col = df[col_name]
+    
+    # Iterate over the column in DataFrame
+    for entry in col:
+
+        # If the entry is in the dictionary count, add 1
+        if entry in count.keys():
+            count[entry] += 1
+        # Else add the entry to count, set the value to 1
+        else:
+            count.update({entry: 1})
+
+    # Return the count dictionary
+    return count
+
+# Call count_entries(): result
+langs_count = count_entries(news_df, 'lang')
+
+# Print the number of news expressed per language
+print(langs_count)
