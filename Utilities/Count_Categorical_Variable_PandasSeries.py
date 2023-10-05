@@ -20,7 +20,7 @@ for entry in langs_col:
         langs_count[entry] += 1
     # Else add the language to langs_count, set the value to 1
     else:
-        langs_count.update({entry: 1})
+        langs_count.update({entry: 1}) #!
 
 # Print the populated dictionary
 print(langs_count)
