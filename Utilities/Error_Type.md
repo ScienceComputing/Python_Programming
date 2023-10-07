@@ -1,5 +1,6 @@
 # Topic: 3 types of errors in Python programming
 ## Syntax Errors
+The syntax errors are detected by the compiler or the interpreter.
 
 **Common reasons**: 
 - Wrongly written keywords
