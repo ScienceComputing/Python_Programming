@@ -3,7 +3,7 @@
 # Global scope means a name that is defined in the main body of a script
 # Local scope means a name which is defined inside a function, so once the execution of a function is done, any name inside the local scope ceases to exist
 # Built-in scope means a name that is defined in the pre-defined built-ins module, such as print and sum
-# When we reference a name in a function call, first the local scope is searched, then the global scope is searched, and last the built-in scope is searched.
+# LEGB rule: when we reference a name in a function call, first the local scope is searched, then the enclosing scope is searched, then the global scope is searched, and last the built-in scope is searched.
 
 new_value = 8
 def cubic(parameter): 
