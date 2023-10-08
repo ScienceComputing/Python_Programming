@@ -15,6 +15,6 @@ def mod3plus7(x1, x2, x3, …, xN)
     new_x1 = x1 % 3 + 7
     new_x2 = x2 % 3 + 7
     new_x3 = x3 % 3 + 7
-    …
+    """..."""
     new_xN = xN % 3 + 7
     return (new_x1, new_x2, new_x3, …, xN)
