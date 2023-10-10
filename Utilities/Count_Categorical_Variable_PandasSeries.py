@@ -105,7 +105,7 @@ def count_entries(df, col_name='lang'):
         else:
             cols_count[entry] = 1
         
-        # Return the cols_count dictionary
+    # Return the cols_count dictionary
     return cols_count
 
 count_entries(news_df, 'lang_1')
