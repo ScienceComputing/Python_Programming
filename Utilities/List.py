@@ -4,6 +4,7 @@ list_1.reverse()
 print(list_1)
 # [500, 'ccc', 300, 200, 'a']
 
+# List comprehensions allow us to create lists from other lists or from columns of DataFrames, among many other objects. 
 # Construct a list comprehension
 # newlist = [expression for item in iterable if condition == True]
 aa = ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'phenylalanine', 'threonine', 'tryptophan', 'valine']
