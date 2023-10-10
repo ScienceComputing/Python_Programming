@@ -10,6 +10,16 @@ def cubic(number):
 cubic('banana')
 
 # try-except-else
+# Case 1:
+def cubic(number): 
+    """Returns the cubic of a number."""
+    try: 
+        return number ** 3
+    except:
+        print("The number you've input must be an int or float.")
+cubic('hello')
+    
+# Case 2:
 nums = [1, 2, "A"]
 sum_nums = 0
 for item in nums:
@@ -21,7 +31,7 @@ for item in nums:
         sum_nums += float_num 
         print(f"{sum_nums=}")
 
-# Bioinformatics scenarior: load the BAM file and print reads in a specific region
+# Case 3: bioinformatics scenarior: load the BAM file and print reads in a specific region
 import pysam
 try:
     bam_file = pysam.AlignmentFile("alignment.bam", "rb")
