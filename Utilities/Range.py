@@ -1,6 +1,9 @@
 # Create a range object that would produce the values from 10 to 15 
 values = range(10, 26)
 
+# Calculate the sum of values
+sum(values)
+
 for x in range(6):
     print(x)
 # 0
