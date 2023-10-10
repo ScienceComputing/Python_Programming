@@ -25,7 +25,7 @@ def cubic(number):
     """Returns the cubic of a number."""
     try: 
         return number ** 3
-    except TypeError: # Allow other errors pass through
+    except TypeError: # Allow other errors except TypeError pass through
         print("The number you've input must be an int or float.")
         
 cubic('hello')
@@ -55,3 +55,16 @@ else:
         print(read)
         
     bam_file.close()
+
+# Case 4: 
+def sqrt(number): 
+    """Returns the square root of a number."""
+    if number < 0:
+        raise ValueError("The number you've input must be non-negative.")
+    try: 
+        return number ** 0.5
+    except TypeError:
+        print("The number you've input must be an int or float.")
+        
+sqrt('hello')
+sqrt(-8)
