@@ -5,6 +5,12 @@
 # An iterable produces an iterator only once it is iterated on.
 # An iterator produces the next value with its associated method called next().
 
+# Iterate over an iterable
+word = 'T cell'
+it = iter(word)
+next(it)
+print(*it) # Print all elements in an iterator
+
 # Iterate over a list
 for element_i in element_list:
     print(element_i)
@@ -22,8 +28,9 @@ aa_dict = {'Alanine': 'Ala', 'Cysteine': 'Cys'}
 for key, value in aa_dict.items():
     print(key, value)
 
-# Iterate over an iterable
-word = 'T cell'
-it = iter(word)
-next(it)
-print(*it) # Print all elements in an iterator
+# Iterate over a file connection
+file = open('aa.txt')
+it = iter(file)
+print(next(it)) # Output the first line
+print(next(it)) # Output the second line
+
