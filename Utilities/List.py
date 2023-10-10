@@ -31,7 +31,7 @@ aa_target = [x for x in aa if "t" in x]
 print(aa_target)
 # ['histidine', 'methionine', 'threonine', 'tryptophan']
 
-# Case 4:
+# Case 4: substitute phenylalanine with methionine
 aa_target_2 = [x if x != 'phenylalanine' else 'methionine' for x in aa]
 print(aa_target_2)
 # ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'methionine', 'threonine', 'tryptophan', 'valine']
