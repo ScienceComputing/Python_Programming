@@ -1,17 +1,14 @@
-# Import pandas
+# Set up the environment
 import pandas as pd
-
 # Import news data as DataFrame: df
 news_df = pd.read_csv("news.csv")  
-
 # Initialize an empty dictionary: langs_count
 langs_count = {}
-
 # Extract column from DataFrame: col
 langs_col = news_df['lang']
-type(langs_col)
-# pandas.core.series.Series
+type(langs_col) # pandas.core.series.Series
 
+# Method 1:
 # Iterate over lang column in DataFrame
 for entry in langs_col:
 
@@ -25,7 +22,7 @@ for entry in langs_col:
 # Print the populated dictionary
 print(langs_count)
 
-
+# Method 2:
 # Count values in a particular column specified by the user
 def count_entries(df, col_name):
     """Return a dictionary with counts of occurrences as value for each key."""
@@ -52,7 +49,7 @@ def count_entries(df, col_name):
 langs_count = count_entries(news_df, 'lang')
 print(langs_count) # Print the number of news expressed per language
 
-
+# Method 2.1:
 # Incorporate the error handling if the users specify the columns not in the dataframe
 def count_entries(df, col_name='lang'):
     """Return a dictionary with counts of occurrences as value for each key."""
@@ -84,6 +81,7 @@ def count_entries(df, col_name='lang'):
 
 count_entries(news_df, 'lang_1')
 
+# Method 3:
 # Count values in any arbitrary number of columns specified by the user
 def count_entries_2(df, *args):
     """Return a dictionary with counts of occurrences as value for each key."""
