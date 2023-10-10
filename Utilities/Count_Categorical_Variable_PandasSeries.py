@@ -158,7 +158,7 @@ for chunk in pd.read_csv('news.csv',chunksize=10):
 print(counts_dict)
 
 # Method 5: ask users to freely choose the input data file, chunk size, and target column
-def count_entries(csv_file, c_size, colname):
+def count_entries_3(csv_file, c_size, colname):
     """Return a dictionary with counts of occurrences as value for each key."""
     
     # Initialize an empty dictionary: counts_dict
@@ -178,5 +178,5 @@ def count_entries(csv_file, c_size, colname):
     return counts_dict
 
 
-result_counts = count_entries('news.csv', 100, 'lang')
+result_counts = count_entries_3('news.csv', 100, 'lang')
 print(result_counts)
