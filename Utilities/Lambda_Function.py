@@ -28,8 +28,13 @@ t = backtracking_line_search(
         theta=theta_estimate,
         direction=-gradient)
 
+# Case 5: filter with lambda
+# Select and print the news of which the first 3 characters are 'NYC'. 
+NYC_news = filter(lambda x: x[0:3] == 'NYC', df['text']) # df['text'] is a column
+for news_i in list(NYC_news):
+    print(news_i)
 
-# Case 5: integrate lambda with map
+# Case 6: map with lambda 
 # The map function accepts two parameters: a function and a sequence, e.g., a list, and then proceeds to apply the specified function to each element within the given sequence.
 # map(func, seq); map(lambda_func, seq)
 num_list = [6, 8, 15, 0, 90, 50]
@@ -37,7 +42,7 @@ cubic_all = map(lambda num: num ** 3, num_list)
 print(cubic_all) # This is a map object
 print(list(cubic_all)) # View the actual elements in the map object
 
-# Case 6: bioinformatics scenarior: calculate the average expression level of a specific gene across all spatial locations. 
+# Case 7: bioinformatics scenarior: calculate the average expression level of a specific gene across all spatial locations. 
 gene_data = [
     {'gene_name': 'GeneA', 'location1': 10, 'location2': 15, 'location3': 8},
     {'gene_name': 'GeneB', 'location1': 5, 'location2': 12, 'location3': 7},
