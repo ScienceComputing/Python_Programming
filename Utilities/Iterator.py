@@ -3,7 +3,7 @@
 # All iterators are also iterable. 
 # However, every iterable is not necessarily an iterator. 
 # An iterable produces an iterator only once it is iterated on.
-# An iterator produces the next value with next().
+# An iterator produces the next value with its associated method called next().
 
 # Iterate over a list
 for element_i in element_list:
