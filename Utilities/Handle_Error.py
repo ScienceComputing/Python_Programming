@@ -2,6 +2,7 @@
 float('hello')
 
 # TypeError
+# Case 1:
 def cubic(number): 
     """Returns the cubic of a number."""
     new_value = number ** 3
@@ -9,7 +10,11 @@ def cubic(number):
 
 cubic('banana')
 
-# try-except-else
+# Calse 2:
+len(9999999)
+
+
+# try-except-else or try-except
 # Case 1:
 def cubic(number): 
     """Returns the cubic of a number."""
