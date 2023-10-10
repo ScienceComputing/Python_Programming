@@ -1,0 +1,16 @@
+# zip accepts an arbitrary number of iterables and returns an iterator of tuples.
+list1 = [1, 2, 3]
+list2 = ['a', 'b', 'c']
+zip_iterator = zip(list1, list2) # Create a zip iterator by using the zip function
+result_list = list(zip_iterator)
+print(result_list)
+# [(1, 'a'), (2, 'b'), (3, 'c')]
+print(*zip_iterator) # Print all the elements
+# (1, 'a') (2, 'b') (3, 'c')
+
+for z1, z2 in zip(list1, list2):
+    print(z1, z2)
+# 1 a
+# 2 b
+# 3 c
+
