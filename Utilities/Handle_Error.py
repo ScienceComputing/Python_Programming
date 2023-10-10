@@ -17,6 +17,17 @@ def cubic(number):
         return number ** 3
     except:
         print("The number you've input must be an int or float.")
+        
+cubic('hello')
+
+# Case 1.1:
+def cubic(number): 
+    """Returns the cubic of a number."""
+    try: 
+        return number ** 3
+    except TypeError: # Allow other errors pass through
+        print("The number you've input must be an int or float.")
+        
 cubic('hello')
     
 # Case 2:
