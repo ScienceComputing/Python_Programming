@@ -7,7 +7,7 @@ print(list_1)
 # List comprehensions allow us to create lists from other lists or from columns of DataFrames, among many other objects.
 # It is a single line of code, and more efficient than a for loop.
 # Construct a list comprehension
-# newlist = [expression for item in iterable if condition == True]
+# newlist = [expression for item in iterable]
 # Case 1:
 nums = [2, 8, 10, 1, 21, 60]
 nums_plus_1 = [num + 1 for num in nums]
@@ -20,6 +20,7 @@ print(nums_minus_1)
 # [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 # Case 3:
+# newlist = [expression for item in iterable if condition == True]
 aa = ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'phenylalanine', 'threonine', 'tryptophan', 'valine']
 aa_target = [x for x in aa if "t" in x]
 print(aa_target)
