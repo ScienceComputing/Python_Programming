@@ -1,7 +1,9 @@
 # Iterable: a Python object which can be iterated over in a loop, and has an iter() method. 
 # Examples of iterables include lists, sets, tuples, dictionaries, strings, range objects, file connections, etc. 
 # All iterators are also iterable. 
-# However, every iterable is not necessarily an iterator. An iterable produces an iterator only once it is iterated on.
+# However, every iterable is not necessarily an iterator. 
+# An iterable produces an iterator only once it is iterated on.
+# An iterator produces the next value with next().
 
 # Iterate over a list
 for element_i in element_list:
