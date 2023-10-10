@@ -19,6 +19,11 @@ nums_minus_1 = [num - 1 for num in range(11)]
 print(nums_minus_1)
 # [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+# Case 3: nested for loops
+pairs = [(num1, num2) for num1 in range(5, 8) for num2 in range(9, 12)]
+print(pairs)
+# [(5, 9), (5, 10), (5, 11), (6, 9), (6, 10), (6, 11), (7, 9), (7, 10), (7, 11)]
+
 # Case 3:
 # newlist = [expression for item in iterable if condition == True]
 aa = ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'phenylalanine', 'threonine', 'tryptophan', 'valine']
