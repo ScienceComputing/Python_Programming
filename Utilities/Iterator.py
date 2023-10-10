@@ -7,7 +7,7 @@
 
 # Iterate over an iterable
 word = 'T cell'
-it = iter(word)
+it = iter(word) # Create an iterator
 next(it)
 print(*it) # Print all elements in an iterator
 
