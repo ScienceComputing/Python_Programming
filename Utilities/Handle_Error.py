@@ -14,7 +14,7 @@ cubic('banana')
 len(9999999)
 
 
-# try-except-else or try-except
+# Method 1: try-except-else or try-except
 # Case 1:
 def cubic(number): 
     """Returns the cubic of a number."""
@@ -61,7 +61,7 @@ else:
         
     bam_file.close()
 
-# Case 4: 
+# Method 2: raise: 
 def sqrt(number): 
     """Returns the square root of a number."""
     if number < 0:
