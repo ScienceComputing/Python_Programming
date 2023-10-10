@@ -11,13 +11,13 @@ for index, value in enumerate(programming_language_list):
 # 3 R
 # 4 C
 
-for index, value in enumerate(programming_language_list, start=9):
+for index, value in enumerate(programming_language_list, start=1): # Change the starting index
     print(index, value)
-# 9 Python
-# 10 JavaScript
-# 11 Julia
-# 12 R
-# 13 C
+# 1 Python
+# 2 JavaScript
+# 3 Julia
+# 4 R
+# 5 C
 
 programming_language_enumerate = enumerate(programming_language_list)
 print(list(programming_language_enumerate))
