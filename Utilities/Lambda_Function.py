@@ -34,8 +34,8 @@ t = backtracking_line_search(
 # map(func, seq); map(lambda_func, seq)
 num_list = [6, 8, 15, 0, 90, 50]
 cubic_all = map(lambda num: num ** 3, num_list)
-print(cubic_all)
-print(list(cubic_all))
+print(cubic_all) # This is a map object
+print(list(cubic_all)) # View the actual elements in the map object
 
 # Case 6: bioinformatics scenarior: calculate the average expression level of a specific gene across all spatial locations. 
 gene_data = [
