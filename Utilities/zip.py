@@ -14,3 +14,7 @@ for z1, z2 in zip(list1, list2):
 # 2 b
 # 3 c
 
+zip_iterator = zip(list1, list2)
+result1, result2 = zip(*zip_iterator)
+print(result1) # (1, 2, 3)
+print(result2) # ('a', 'b', 'c')
