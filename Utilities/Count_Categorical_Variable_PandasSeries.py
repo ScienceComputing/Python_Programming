@@ -156,3 +156,27 @@ for chunk in pd.read_csv('news.csv',chunksize=10):
 
 # Print the populated dictionary
 print(counts_dict)
+
+# Method 5: ask users to freely choose the input data file, chunk size, and target column
+def count_entries(csv_file, c_size, colname):
+    """Return a dictionary with counts of occurrences as value for each key."""
+    
+    # Initialize an empty dictionary: counts_dict
+    counts_dict = {}
+
+    # Iterate over the file chunk by chunk
+    for chunk in pd.read_csv(csv_file, chunksize=c_size):
+
+        # Iterate over the column in DataFrame
+        for entry in chunk[colname]:
+            if entry in counts_dict.keys():
+                counts_dict[entry] += 1
+            else:
+                counts_dict[entry] = 1
+
+    # Return counts_dict
+    return counts_dict
+
+
+result_counts = count_entries('news.csv', 100, 'lang')
+print(result_counts)
