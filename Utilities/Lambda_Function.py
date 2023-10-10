@@ -29,7 +29,7 @@ t = backtracking_line_search(
         direction=-gradient)
 
 
-# Integrate lambda with map
+# Case 5: integrate lambda with map
 # The map function accepts two parameters: a function and a sequence, e.g., a list, and then proceeds to apply the specified function to each element within the given sequence.
 # map(func, seq); map(lambda_func, seq)
 num_list = [6, 8, 15, 0, 90, 50]
@@ -37,7 +37,7 @@ cubic_all = map(lambda num: num ** 3, num_list)
 print(cubic_all)
 print(list(cubic_all))
 
-# Bioinformatics scenarior: calculate the average expression level of a specific gene across all spatial locations. 
+# Case 6: bioinformatics scenarior: calculate the average expression level of a specific gene across all spatial locations. 
 gene_data = [
     {'gene_name': 'GeneA', 'location1': 10, 'location2': 15, 'location3': 8},
     {'gene_name': 'GeneB', 'location1': 5, 'location2': 12, 'location3': 7},
