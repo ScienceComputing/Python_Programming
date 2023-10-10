@@ -48,11 +48,8 @@ def count_entries(df, col_name):
     # Return the count dictionary
     return count
 
-# Call count_entries(): result
 langs_count = count_entries(news_df, 'lang')
-
-# Print the number of news expressed per language
-print(langs_count)
+print(langs_count) # Print the number of news expressed per language
 
 
 # Count values in any arbitrary number of columns specified by the user
