@@ -15,6 +15,9 @@ print(next(num_gen))
 print(next(num_gen))
 print(next(num_gen))
 
+[2 * num for num in range(2 ** 10000000000)]
+(2 * num for num in range(2 ** 10000000000)]
+
 def yield_multiple_items():
     yield "The 1st item"
     yield "The 2nd item"  
