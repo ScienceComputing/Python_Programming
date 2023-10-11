@@ -9,7 +9,8 @@ for num in num_gen:
 
 print(list(num_gen)) # Convert the generator a list
 
-# Lazy evaluation whereby the evaluation of the expression is delayed until its value is needed
+# Lazy evaluation whereby the evaluation of the expression is delayed until its value is needed.
+# We prefer the generator when working with extremely large sequences, as we don't want to store the entire list in memory, which is what comprehensions would do. We want to generate elements of the sequence on the fly.
 print(next(num_gen))
 print(next(num_gen))
 print(next(num_gen))
