@@ -1,11 +1,24 @@
+# List comprehension returns a list; while the generator returns a generator object
+# Both can be iterated over
 [2 * num for num in range(5)]
 (2 * num for num in range(5)) # Create a generator
 
+num_gen = (2 * num for num in range(5))
+for num in num_gen:
+    print(num)  
+
+print(list(num_gen)) # Convert the generator a list
+
+# Lazy evaluation whereby the evaluation of the expression is delayed until its value is needed
+print(next(num_gen))
+print(next(num_gen))
+print(next(num_gen))
+
 def yield_multiple_items():
-  yield "The 1st item"
-  yield "The 2nd item"  
-  yield "The 3rd item"
-  yield "The last item. Do not call next again."
+    yield "The 1st item"
+    yield "The 2nd item"  
+    yield "The 3rd item"
+    yield "The last item. Do not call next again."
 example = yield_multiple_items()
 print(next(example))
 print(next(example))
