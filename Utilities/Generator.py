@@ -18,6 +18,13 @@ print(next(num_gen))
 [2 * num for num in range(2 ** 10000000000)]
 (2 * num for num in range(2 ** 10000000000)]
 
+ # Conditionals in the generator
+aa = ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'phenylalanine', 'threonine', 'tryptophan', 'valine']
+aa_target = (x for x in aa if "t" in x)
+print(list(aa_target))
+
+# Build the generator function that produces the generator objects when called. 
+# This function yields a sequence of values instead of returning a single value, using the keyword `yield`.
 def yield_multiple_items():
     yield "The 1st item"
     yield "The 2nd item"  
@@ -30,7 +37,19 @@ print(next(example))
 print(next(example))
 print(next(example))
 
-# Bioinformatics scenarior: parse large genomic data files
+def num_sequence(n):
+    """Generate values from 0 to n."""
+    i = 0
+    while i < n:
+        yield i
+        i += 1
+
+result = num_sequence(7)
+print(type(result)) # <class 'generator'>
+for item in result:
+    print(item)
+
+# Bioinformatics scenarior: parse a very large genomic data file
 def parse_fasta(file_path):
     with open(file_path, 'r') as fasta_file:
         sequence = ""
