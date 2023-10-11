@@ -26,7 +26,7 @@ print(pairs)
 
 # Case 4: nested list comprehensions
 # [[output expression] for iterator variable in iterable]
-# output expression is itself a list comprehension
+# Output expression is itself a list comprehension
 # Create a 10 x 10 matrix using a list of lists: matrix
 matrix = [[col for col in range(10)] for row in range(10)]
 
@@ -44,8 +44,9 @@ for row in matrix:
 # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-# Case 5:
+# Case 5: conditionals in comprehensions
 # newlist = [expression for item in iterable if condition == True]
+# Only do the operations on items that fit the condition
 aa = ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'phenylalanine', 'threonine', 'tryptophan', 'valine']
 aa_target = [x for x in aa if "t" in x]
 print(aa_target)
