@@ -44,7 +44,7 @@ for row in matrix:
 # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-# Case 5: conditionals in comprehensions
+# Case 5: conditionals on the iterable in comprehensions
 # newlist = [expression for item in iterable if condition == True]
 # Only do the operations on items that fit the condition
 aa = ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'phenylalanine', 'threonine', 'tryptophan', 'valine']
@@ -52,7 +52,8 @@ aa_target = [x for x in aa if "t" in x]
 print(aa_target)
 # ['histidine', 'methionine', 'threonine', 'tryptophan']
 
-# Case 6: substitute phenylalanine with methionine
+# Case 6: conditionals on the output expression in comprehensions
+# substitute phenylalanine with methionine
 aa_target_2 = [x if x != 'phenylalanine' else 'methionine' for x in aa]
 print(aa_target_2)
 # ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'methionine', 'threonine', 'tryptophan', 'valine']
