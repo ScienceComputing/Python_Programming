@@ -7,7 +7,7 @@ print(list_1)
 # List comprehensions allow us to create lists from other lists or from columns of DataFrames, among many other objects, except the integer object.
 # It is a single line of code, and more efficient than a for loop.
 # Construct a list comprehension
-# newlist = [expression for item in iterable]
+# newlist = [expression for iterator variable in iterable] # iterator variable = item
 # Case 1:
 nums = [2, 8, 10, 1, 21, 60]
 nums_plus_1 = [num + 1 for num in nums]
@@ -45,14 +45,15 @@ for row in matrix:
 # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 # Case 5: conditionals on the iterable in comprehensions
-# newlist = [expression for item in iterable if condition == True]
-# Only do the operations on items that fit the condition
+# newlist = [expression for iterator variable in iterable + conditional on iterable]
+# Only do the operations on iterator variables that fit the condition
 aa = ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'phenylalanine', 'threonine', 'tryptophan', 'valine']
 aa_target = [x for x in aa if "t" in x]
 print(aa_target)
 # ['histidine', 'methionine', 'threonine', 'tryptophan']
 
 # Case 6: conditionals on the output expression in comprehensions ~ if-else
+# newlist = [expression + conditional on expression for iterator variable in iterable]
 # substitute phenylalanine with methionine
 aa_target_2 = [x if x != 'phenylalanine' else 'methionine' for x in aa]
 print(aa_target_2)
