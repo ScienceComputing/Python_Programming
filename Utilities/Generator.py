@@ -1,3 +1,6 @@
+[2 * num for num in range(5)]
+(2 * num for num in range(5)) # Create a generator
+
 def yield_multiple_items():
   yield "The 1st item"
   yield "The 2nd item"  
