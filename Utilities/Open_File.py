@@ -1,7 +1,9 @@
+# Process a file line by line at once
 with open('trial.py') as f:
     for line in f:
         print(line)
 
+# Process a file line by line on the fly
 def read_large_file(file_object):
     """A generator function to read a large file."""
 
