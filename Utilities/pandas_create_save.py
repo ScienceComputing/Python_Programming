@@ -17,7 +17,7 @@ my_df = pd.DataFrame(list_of_dict)
 print(my_df)
 
 # Horizontally concatenate a new DataFrame to the old DataFrame
-df_whole = df_old.append(df_new)
+df_whole = pd.concat([df_old, df_new])
 
 # Share DataFrames in the comma-separated values files
 import pandas as pd
