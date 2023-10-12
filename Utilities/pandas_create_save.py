@@ -1,3 +1,6 @@
+# Initialize an empty DataFrame
+df = pd.DataFrame()
+
 # Create a dictionary 
 my_dict = {"key_1": val_1, "key_2": val_2, "key_3", val_3} 
 my_dict["key_1] # Access values of a dictionary 
