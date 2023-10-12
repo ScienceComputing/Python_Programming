@@ -71,8 +71,27 @@ for value in get_lengths(person_list):
 # Generators can be used to load a very large (streaming) data file line by line
 
 # Case 1: process the first 500 rows of a file line by line, to create a dictionary of the counts of how many times each country appears in a column in the dataset.
+counts_dict = {}
+
+# Define read_large_file()
+def read_large_file(file_object):
+    """A generator function to read a large file line by line on the fly."""
+
+    # Loop indefinitely until the end of the file
+    while True:
+
+        # Read a line from the file: data
+        data = file_object.readline()
+
+        # Break if this is the end of the file
+        if not data:
+            break
+
+        # Yield the line of data
+        yield data
+
 # Open a connection to a target file using a context manager 'with' statement, ensuring that resources are efficiently allocated when opening a connection to a file.
-with open('world_dev_ind.csv') as file:
+with open('large_data.csv') as file:
     
     # Skip the column names
     file.readline()
@@ -97,6 +116,26 @@ with open('world_dev_ind.csv') as file:
         else:
             counts_dict[first_col_val] = 1
 
+print(counts_dict)
+
+# Case 1.1: process each row of a file line by line on the file, to create a dictionary of the counts of how many times each country appears in a column in the dataset.
+counts_dict = {}
+
+# Open a connection to the file
+with open('large_data.csv') as file:
+
+    # Iterate over the generator from read_large_file()
+    for line in read_large_file(file):
+
+        row = line.split(',')
+        first_col = row[0]
+
+        if first_col in counts_dict.keys():
+            counts_dict[first_col] += 1
+        else:
+            counts_dict[first_col] = 1
+
+# Print            
 print(counts_dict)
 
 # Case 2: bioinformatics scenarior: parse a very large genomic data file
