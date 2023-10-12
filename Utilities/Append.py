@@ -1,3 +1,8 @@
+cakes = ['Chocolate Cake', 'Vanilla Cake', 'Coconut Cake']
+cakes.append('Marble Cake')
+cakes
+# ['Chocolate Cake', 'Vanilla Cake', 'Coconut Cake', 'Marble Cake']
+
 nums = [1, 7, 9, 0, 20, 59]
 new_nums = []
 for num in nums:
