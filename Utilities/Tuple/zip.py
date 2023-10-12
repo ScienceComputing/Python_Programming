@@ -4,6 +4,7 @@ list1 = ['cake1', 'cake2', 'cake3']
 list2 = ['Vanilla Cake', 'Red Velvet Cake', 'Black Forest Cake']
 zip_iterator = zip(list1, list2) # Create a zip iterator by using the zip function
 full_list = list(zip_iterator)
+# One step: full_list = list(zip(list1, list2))
 print(full_list)
 # [('cake1', 'Vanilla Cake'), ('cake2', 'Red Velvet Cake'), ('cake3', 'Black Forest Cake')]
 
