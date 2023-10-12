@@ -1,9 +1,3 @@
-# Reverse a list
-list_1 = ["a", 200, 300, "ccc", 500]
-list_1.reverse()
-print(list_1)
-# [500, 'ccc', 300, 200, 'a']
-
 # List comprehensions allow us to create lists from other lists or from columns of DataFrames, among many other objects, except the integer object.
 # It is a single line of code, and more efficient than a for loop.
 # Construct a list comprehension
