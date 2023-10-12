@@ -8,6 +8,10 @@ nums_plus_1 = [num + 1 for num in nums]
 print(nums_plus_1) 
 # [3, 9, 11, 2, 22, 61]
 
+# Case 1.1: 
+titlecase_cakes = [cakes.title() for cake in cakes]
+print(titlecase_cakes)
+
 # Case 2:
 nums_minus_1 = [num - 1 for num in range(11)]
 print(nums_minus_1)
