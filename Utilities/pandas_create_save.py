@@ -16,6 +16,9 @@ dict_of_list = {"col_1": [val_11, val_12], "col_2": [val_21, val_22]}
 my_df = pd.DataFrame(list_of_dict)
 print(my_df)
 
+# Horizontally concatenate a new DataFrame to the old DataFrame
+df_whole = df_old.append(df_new)
+
 # Share DataFrames in the comma-separated values files
 import pandas as pd
 df = pd.read_csv("data.csv")  
