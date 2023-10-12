@@ -1,5 +1,5 @@
 # Process a file line by line at once
-with open('trial.py') as f:
+with open('trial.py') as f: # Notice that f is a generator
     for line in f:
         print(line)
 
