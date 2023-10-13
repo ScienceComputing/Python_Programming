@@ -1,4 +1,6 @@
-# enumerate is a function that takes any iterable as argument, and returns an enumerate object, which consists of pairs containing the elements of the original iterable, along with their index within the iterable. 
+# Enumeration is used in loops to return the position and the data in that position while looping
+
+# enumerate() is a function that takes any iterable as argument, and returns an enumerate object, which consists of pairs containing the elements of the original iterable, along with their index within the iterable. 
 print(list(enumerate(range(100, 1001, 100))))
 # [(0, 100), (1, 200), (2, 300), (3, 400), (4, 500), (5, 600), (6, 700), (7, 800), (8, 900), (9, 1000)]`
 
