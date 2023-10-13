@@ -1,4 +1,21 @@
 # Enumeration is used in loops to return the position and the data in that position while looping
+list1 = ['cake1', 'cake2', 'cake3']
+list2 = ['Vanilla Cake', 'Red Velvet Cake', 'Black Forest Cake']
+full_list = list(zip(list1, list2))
+for idx, item in enumerate(full_list):
+    cake_idx, cake_name = item
+    print(idx, cake_idx, cake_name)
+    
+# 0 cake1 Vanilla Cake
+# 1 cake2 Red Velvet Cake
+# 2 cake3 Black Forest Cake
+
+for idx, item in enumerate(full_list):
+    print(idx, item)
+
+# 0 ('cake1', 'Vanilla Cake')
+# 1 ('cake2', 'Red Velvet Cake')
+# 2 ('cake3', 'Black Forest Cake')
 
 # enumerate() is a function that takes any iterable as argument, and returns an enumerate object, which consists of pairs containing the elements of the original iterable, along with their index within the iterable. 
 print(list(enumerate(range(100, 1001, 100))))
