@@ -1,11 +1,11 @@
 # Method 1: {}
-art_galleries = {}
+amino_acid_galleries = {}
 
-for name, area in gallery_info:
-    art_galleries[name] = area
+for name, function in gallery_info: # gallery_info is a given tuple
+    amino_acid_galleries[name] = function
 
-# Find the last 5 names
-for name in sorted(art_galleries)[-5:]: # Loop over the key
+# Find the last 5 amino acid names
+for name in sorted(amino_acid_galleries)[-5:]: # Loop over the key
     print(name)
 
 # Method 2: dict()
