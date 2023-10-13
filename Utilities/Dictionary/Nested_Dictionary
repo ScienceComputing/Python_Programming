@@ -5,5 +5,7 @@ amino_acid_galleries['Cysteine']['Formula']
 # 'HOOC−CH(−NH2)−CH2−SH'
 
 # Method 2:
+print(amino_acid_galleries['Cysteine'].keys())
+# dict_keys(['Formula', 'Function'])
 amino_acid_galleries['Cysteine'].get('Formula')
 # 'HOOC−CH(−NH2)−CH2−SH'
