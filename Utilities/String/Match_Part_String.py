@@ -10,3 +10,7 @@ quote = 'We are what we repeatedly do. Excellence, then, is not an act, but a ha
 # True
 'Habit' in quote
 # False
+
+quote_upper = 'We are what we repeatedly do. Excellence, then, is not an act, but a habit.'.upper()
+'HABIT' in quote_upper
+# True
