@@ -1,3 +1,10 @@
+list1 = [1, 2, 3]
+list2 = ['a', 'b', 'c']
+zip_iterator = zip(list1, list2)
+result_dict = dict(zip_iterator)
+print(result_dict)
+# {1: 'a', 2: 'b', 3: 'c'}
+
 def list2dict(key_list, value_list):
     """Return a dictionary where key_list provides the keys and value_list provides the values."""
     zipped_iterator = zip(key_list, value_list)
