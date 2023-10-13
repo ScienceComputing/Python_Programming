@@ -21,4 +21,6 @@ print(num)
 # 1e-08
 print(f"{num:10.8f}") 
 # 0.00000001
+print(f"{num:.8f}") 
+# 0.00000001
 
