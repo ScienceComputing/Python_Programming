@@ -4,3 +4,6 @@ del amino_acid['Cys'] # Cys is a key
 # Method 2:
 amino_acid_cys = amino_acid.pop('Cys') # Save the removed key-value pair
 print(amino_acid_cys) 
+
+# If the key does not exist, .pop will return an empty dictionary
+amino_acid_cys = amino_acid.pop('Cys', {})
