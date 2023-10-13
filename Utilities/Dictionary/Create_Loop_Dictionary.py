@@ -1,7 +1,8 @@
 # Method 1: {}
 amino_acid_galleries = {}
 
-for name, function in gallery_info: # gallery_info is a given tuple
+# Turn tuples into a dictionary
+for name, function in gallery_info: # gallery_info is a list of tuples
     amino_acid_galleries[name] = function
 
 # Find the last 5 amino acid names
