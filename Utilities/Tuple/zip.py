@@ -18,12 +18,14 @@ for z1, z2 in zip(list1, list2):
 # cake2 Red Velvet Cake
 # cake3 Black Forest Cake
 
+list1 = ['cake1', 'cake2', 'cake3']
+list2 = ['Vanilla Cake', 'Red Velvet Cake', 'Black Forest Cake']
 zip_iterator = zip(list1, list2)
 result1, result2 = zip(*zip_iterator)
 print(result1) 
-# (1, 2, 3)
+# ('cake1', 'cake2', 'cake3')
 print(result2) 
-# ('a', 'b', 'c')
+# ('Vanilla Cake', 'Red Velvet Cake', 'Black Forest Cake')
 
 # Case 2: 
 list1 = [1, 2, 3]
