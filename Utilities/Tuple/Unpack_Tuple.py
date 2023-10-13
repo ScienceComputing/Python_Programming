@@ -7,9 +7,10 @@ year
 
 list1 = ['cake1', 'cake2', 'cake3']
 list2 = ['Vanilla Cake', 'Red Velvet Cake', 'Black Forest Cake']
-full_list = list(zip(list1, list2))
+full_tuple = list(zip(list1, list2))
+# [('cake1', 'Vanilla Cake'), ('cake2', 'Red Velvet Cake'), ('cake3', 'Black Forest Cake')]
 
-for cake_index, cake_type in full_list:
+for cake_index, cake_type in full_tuple:
     print(cake_index)
     print(cake_type)
   
