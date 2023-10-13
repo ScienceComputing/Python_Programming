@@ -1,3 +1,9 @@
+# Access the elements in a nested dictionary
+# Method 1:
 amino_acid_galleries = {'Cysteine': {'Formula': 'HOOC−CH(−NH2)−CH2−SH', 'Function': 'Help prevent side effects due to drug reactions and toxic chemicals'}}
 amino_acid_galleries['Cysteine']['Formula']
+# 'HOOC−CH(−NH2)−CH2−SH'
+
+# Method 2:
+amino_acid_galleries['Cysteine'].get('Formula')
 # 'HOOC−CH(−NH2)−CH2−SH'
