@@ -5,7 +5,7 @@
 # We can also make custom properties that do more than just store a value. 
 # It's also possible to make frozen instances of a dataclass that doesn't allow any edits to the properties after the dataclass has been created.
 
-from dataclasses import dataclass # Import dataclasses from the dataclass module
+from dataclasses import dataclass # Import dataclass from the dataclasses module
 @dataclass
 class Amino_acid:
     name: str
@@ -16,3 +16,12 @@ print(First_aa.name)
 # Cysteine
 print(First_aa.function)
 # Help prevent side effects due to drug reactions and toxic chemicals
+
+from dataclasses import asdict, astuple
+First_aa = Amino_acid('Cysteine', 'Help prevent side effects due to drug reactions and toxic chemicals')
+First_aa_dict = asdict(First_aa)
+print(First_aa_dict)
+# {'name': 'Cysteine', 'function': 'Help prevent side effects due to drug reactions and toxic chemicals'}
+First_aa_tuple = astuple(First_aa)
+print(First_aa_tuple)
+# ('Cysteine', 'Help prevent side effects due to drug reactions and toxic chemicals')
