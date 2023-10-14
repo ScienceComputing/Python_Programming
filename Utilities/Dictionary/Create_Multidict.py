@@ -23,7 +23,10 @@ stock_data_list['GOOG'].append(136.23)
 stock_data_list['GOOG'].append(135.21)
 stock_data_list['GOOG'].append(130.75)
 stock_data_list['GOOG'].append(137.25)
+print(stock_data_list)
+# defaultdict(<class 'list'>, {'GOOG': [136.23, 135.21, 130.75, 137.25]})
 print(stock_data_list['GOOG'])
+# [136.23, 135.21, 130.75, 137.25]
 
 stock_data_set = defaultdict(set)
 stock_data_set['GOOG'].add(136.23)
