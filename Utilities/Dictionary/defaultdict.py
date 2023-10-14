@@ -4,7 +4,7 @@ stock_data_list = {
     'AAPL': [150.25, 151.50, 149.75, 148.60],
     'MSFT': [305.20, 307.40, 303.80, 305.60]
 }
-stock_data={}
+stock_data = {}
 for symbol, price_list in stock_data_list.items():
     if symbol not in stock_data:
         stock_data[symbol] = [] # Initialize the first value
@@ -14,7 +14,7 @@ print(stock_data)
 
 # Smart way to construct a multi-dictionary from a dictionary
 from collections import defaultdict
-stock_data=defaultdict(list)
+stock_data = defaultdict(list)
 for symbol, price_list in stock_data_list.items():
     stock_data[symbol].extend(price_list)
 
