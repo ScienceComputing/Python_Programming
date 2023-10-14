@@ -45,3 +45,27 @@ class Price_entry:
 Grazed_donut = Price_entry('Grazed_donut', 3, Decimal('2.5'))
 Grazed_donut.Total_price # @property decorator do not need us to add parentheses to call Total_price
 # Decimal('7.5')
+
+
+# Make a frozen class
+from dataclasses import dataclass # Import dataclass from the dataclasses module
+@dataclass
+class Amino_acid:
+    name: str
+    molecular_weight: float
+    
+cys = Amino_acid('Cysteine', 121.16)
+cys.molecular_weight = 130
+cys.molecular_weight
+# 130
+
+@dataclass(frozen=True)
+class Amino_acid:
+    name: str
+    molecular_weight: float
+
+cys = Amino_acid('Cysteine', 121.16)
+cys.molecular_weight = 130
+# dataclasses.FrozenInstanceError: cannot assign to field 'molecular_weight'
+
+
