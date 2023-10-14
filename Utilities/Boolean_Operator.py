@@ -5,6 +5,11 @@ if out_of_donut:
 # Truthy values: non 0; non-empty string; non-empty list; non-empty dictionary; non-empty tuple
 # Falsey valuees: 0; ""; []; {}; (); None
 
+donut_list = []
+# Check the truthiness of donut_list
+print(bool(donut_list))
+# False
+
 # ==
 # !=
 # < 
