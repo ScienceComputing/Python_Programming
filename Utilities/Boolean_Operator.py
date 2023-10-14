@@ -4,3 +4,19 @@ if out_of_donut:
 
 # Truthy values: non 0; non-empty string; non-empty list; non-empty dictionary
 # Falsey valuees: 0; ""; []; {}; None
+
+# ==
+# !=
+# < 
+# <=
+# >
+# >=
+
+donut_qty == 10
+
+# Be careful with equality comparisons of floats
+x = 0.1 + 1.1
+x == 2.1
+# False
+print(x)
+# 1.2000000000000002
