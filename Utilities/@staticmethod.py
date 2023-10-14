@@ -1,4 +1,5 @@
-# @staticmethod does not need us to instantiate a class to use the method of that class
+# @staticmethod is a decorator for the class we'are going to make.
+# It allows us to utilize the methods attached to a class, without having to create an instance of that class.
 
 # Case 1:
 import re
