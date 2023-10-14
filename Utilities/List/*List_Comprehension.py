@@ -75,3 +75,5 @@ penguins = [{'Species': 'Gentoo',
 penguins_sex_counts = Counter([penguin['Sex'] for penguin in penguins])
 print(penguins_sex_counts)
 # Counter({'MALE': 3})
+print(penguins_sex_counts.most_common())
+# [('MALE', 3)]
