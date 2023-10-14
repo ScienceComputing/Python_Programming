@@ -43,5 +43,5 @@ class Price_entry:
         return int(self.quantity) * self.unit_price
 
 Grazed_donut = Price_entry('Grazed_donut', 3, Decimal('2.5'))
-Grazed_donut.Total_price
+Grazed_donut.Total_price # @property decorator do not need us to add parentheses to call Total_price
 # Decimal('7.5')
