@@ -13,6 +13,7 @@ for symbol, price_list in stock_data_list.items():
 print(stock_data)
 
 # Smart way to construct a multi-dictionary from a dictionary
+from collections import defaultdict
 stock_data=defaultdict(list)
 for symbol, price_list in stock_data_list.items():
     stock_data[symbol].extend(price_list)
