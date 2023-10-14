@@ -40,6 +40,11 @@ stock_data_set['MSFT']
 print(stock_data_set)
 
 # Conventional way to construct a multi-dictionary from a dictionary
+stock_data_list = {
+    'GOOG': [136.23, 135.21, 130.75, 137.25],
+    'AAPL': [150.25, 151.50, 149.75, 148.60],
+    'MSFT': [305.20, 307.40, 303.80, 305.60]
+}
 stock_data={}
 for symbol, price_list in stock_data_list.items():
     if symbol not in stock_data:
