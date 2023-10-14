@@ -62,3 +62,17 @@ print(stock_data_set['GOOG'])
 # Caveat: defaultdict will automatically create values for non-exisitng keys
 stock_data_set['MSFT']
 print(stock_data_set)
+
+# Case: use a defaultdict as a type of counter for a list of dictionaries, where we are counting multiple keys from those dictionaries. 
+stock_data_dict_list = [
+    {'stock': 'GOOG', 'price': [136.23, 135.21, 130.75, 137.25]},
+    {'stock': 'AAPL', 'price': [150.25, 151.50, 149.75, 148.60]},
+    {'stock': 'MSFT', 'price': [305.20, 307.40, 303.80, 305.60]}]
+
+stock_num = defaultdict(int)
+for i in stock_data_dict_list:
+    if i.get('stock'):
+        stock_num['stock'] += 1
+
+print(stock_num) # How many stock do we have in total?
+# defaultdict(<class 'int'>, {'stock': 3})
