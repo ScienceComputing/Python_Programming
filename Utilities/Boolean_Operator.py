@@ -11,6 +11,7 @@ print(bool(donut_list))
 # False
 
 # ==
+# is True | is False
 # !=
 # < 
 # <=
