@@ -57,3 +57,21 @@ aa_target_2 = [x if x != 'phenylalanine' else 'methionine' for x in aa]
 print(aa_target_2)
 # ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'methionine', 'threonine', 'tryptophan', 'valine']
 
+# Case 7:
+from collections import Counter
+penguins = [{'Species': 'Gentoo',
+  'Flipper Length (mm)': 230.0,
+  'Body Mass (g)': 5500.0,
+  'Sex': 'MALE'},
+ {'Species': 'Chinstrap',
+  'Flipper Length (mm)': 201.0,
+  'Body Mass (g)': 4300.0,
+  'Sex': 'MALE'},
+ {'Species': 'Adlie',
+  'Flipper Length (mm)': 180.0,
+  'Body Mass (g)': 3800.0,
+  'Sex': 'MALE'}]
+
+penguins_sex_counts = Counter([penguin['Sex'] for penguin in penguins])
+print(penguins_sex_counts)
+# Counter({'MALE': 3})
