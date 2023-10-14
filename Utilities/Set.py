@@ -1,3 +1,5 @@
+# Sets are useful for finding all the unique values in a column of the data, a list of elements, or rows from a file.
+
 # See the length of a set = number of unique elements
 print(len(set(['a', 'a', 'b', 'c']))) # 3
 
