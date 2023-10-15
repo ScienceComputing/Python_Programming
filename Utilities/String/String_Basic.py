@@ -18,3 +18,7 @@ amino_acid[3:6]
 
 # Select from 3rd character to the end
 amino_acid[2:]
+
+# Capitalize the first chracter in a string
+print('cycle'.capitalize())
+# Cycle
