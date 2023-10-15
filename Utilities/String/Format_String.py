@@ -11,11 +11,16 @@ amino_acid = 'Cystein'
 str1.format(amino_acid)
 # 'Cystein helps prevent side effects due to drug reactions and toxic chemicals'
 
-# Reorder the value
+# Reorder the placeholder
 str2 = '{1} helps {0} side effects due to drug reactions and toxic chemicals'
 amino_acid = 'Cystein'
 function = 'prevent'
 str2.format(function, amino_acid)
+# 'Cystein helps prevent side effects due to drug reactions and toxic chemicals'
+
+# Specify the name for the placeholder
+str3 = '{amino_acid} helps {function} side effects due to drug reactions and toxic chemicals'
+str3.format(amino_acid=amino_acid, function=function)
 # 'Cystein helps prevent side effects due to drug reactions and toxic chemicals'
 
 # Pair up the girl and boy names: pairs
