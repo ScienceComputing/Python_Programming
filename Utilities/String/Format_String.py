@@ -23,6 +23,10 @@ str3 = '{amino_acid} helps {function} side effects due to drug reactions and tox
 str3.format(amino_acid=amino_acid, function=function)
 # 'Cystein helps prevent side effects due to drug reactions and toxic chemicals'
 
+str4 = {'method': 'Supervised learning', 'goal': 'find patterns'}
+print('{data[method]} tries to {data[goal]} in the dataset.'.format(data=str4))
+# Supervised learning tries to find patterns in the dataset.
+
 # Pair up the girl and boy names: pairs
 pairs = zip(gene_names, protein_names)
 
