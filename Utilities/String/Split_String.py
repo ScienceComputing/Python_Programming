@@ -7,3 +7,8 @@ str1.split(sep=' ', maxsplit=2) # left split
 
 str1.rsplit(sep=' ', maxsplit=2) # right split
 # ['Cysteine helps prevent side effects due to drug reactions and', 'toxic', 'chemicals']
+
+str2 = 'Cysteine \nhelps prevent side effects due to drug reactions and toxic chemicals'
+print(str2)
+# Cysteine
+# helps prevent side effects due to drug reactions and toxic chemicals
