@@ -1,3 +1,5 @@
+# Format the title in a graph; show the message or error
+
 # Pair up the girl and boy names: pairs
 pairs = zip(gene_names, protein_names)
 
