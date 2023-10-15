@@ -13,6 +13,6 @@ print(str2)
 # Cysteine
 # helps prevent side effects due to drug reactions and toxic chemicals
 
-str2.splitlines() # Split at lines
+str2.splitlines() # Split string at line boundaries
 # ['Cysteine ', 'helps prevent side effects due to drug reactions and toxic chemicals']
 
