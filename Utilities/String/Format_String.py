@@ -31,6 +31,7 @@ print('{data[method]} tries to {data[goal]} in the dataset.'.format(data=str4))
 # {index:specifier}
 print('Only {0:.2f}% of the {1} produced worldwide is {2}!'.format(0.12890, 'protein data', 'analyzed'))
 # Only 0.13% of the protein data produced worldwide is analyzed!
+# :.2f -> use the float with 2 decimals
 
 # Pair up the girl and boy names: pairs
 pairs = zip(gene_names, protein_names)
