@@ -7,3 +7,8 @@ str1.rstrip()
 
 str1.lstrip()
 # 'Cysteine helps prevent side effects due to drug reactions and toxic chemicals '
+
+
+str2 = '&Cysteine helps prevent side effects due to drug reactions and toxic chemicals'
+str2.strip('&')
+# 'Cysteine helps prevent side effects due to drug reactions and toxic chemicals'
