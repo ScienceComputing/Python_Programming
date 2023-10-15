@@ -16,3 +16,9 @@ str1.index('Cysteine')
 
 str1.index('Alanine')
 # ValueError: substring not found
+
+try:
+    str1.index('Alanine')
+except ValueError:
+    print("The string you've input are not found.")
+               
