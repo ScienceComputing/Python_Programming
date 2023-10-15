@@ -1,5 +1,9 @@
 # Format the title in a graph; show the message or error; pass the statement into a function
 
+# Method 1: positional formatting
+# 'text{}'.format(value)
+# The format method replaces the placeholders using the values.
+
 # Pair up the girl and boy names: pairs
 pairs = zip(gene_names, protein_names)
 
@@ -9,3 +13,4 @@ for rank, pair in enumerate(pairs):
     gene_names, protein_names = pair
     # Print the rank and names associated with each rank
     print(f'Rank {rank+1}: gene_name} and {protein_name}')
+
