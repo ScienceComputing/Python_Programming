@@ -11,6 +11,13 @@ amino_acid = 'Cystein'
 str1.format(amino_acid)
 # 'Cystein helps prevent side effects due to drug reactions and toxic chemicals'
 
+# Reorder the value
+str2 = '{1} helps {0} side effects due to drug reactions and toxic chemicals'
+amino_acid = 'Cystein'
+function = 'prevent'
+str2.format(function, amino_acid)
+# 'Cystein helps prevent side effects due to drug reactions and toxic chemicals'
+
 # Pair up the girl and boy names: pairs
 pairs = zip(gene_names, protein_names)
 
