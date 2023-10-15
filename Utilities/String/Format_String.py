@@ -27,9 +27,13 @@ str4 = {'method': 'Supervised learning', 'goal': 'find patterns'}
 print('{data[method]} tries to {data[goal]} in the dataset.'.format(data=str4))
 # Supervised learning tries to find patterns in the dataset.
 
+# Format specifier
+# {index:specifier}
+print('Only {0:.2f}% of the {1} produced worldwide is {2}!'.format(0.12890, 'protein data', 'analyzed'))
+# Only 0.13% of the protein data produced worldwide is analyzed!
+
 # Pair up the girl and boy names: pairs
 pairs = zip(gene_names, protein_names)
-
 # Iterate over pairs
 for rank, pair in enumerate(pairs):
     # Unpack pair: gene_names, protein_names
