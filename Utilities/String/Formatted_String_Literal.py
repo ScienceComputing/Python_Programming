@@ -24,3 +24,8 @@ print(f'{name!r} helps prevent side effects due to drug reactions and toxic chem
 number = 0.12890
 print(f'Only {number:.2f}% of the protein data produced worldwide is analyzed!')
 # Only 0.13% of the protein data produced worldwide is analyzed!
+# :.2f -> use the float with 2 decimals
+# f'{value:{width}.{precision}}'
+# value -> any expression that evaluates to a number
+# width -> the number of characters used in total to display, but if value needs more space than the width specifies, then the additional space is used.
+# precision -> the number of characters used after the decimal point
