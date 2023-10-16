@@ -36,13 +36,3 @@ print('Only {0:.2f}% of the {1} produced worldwide is {2}!'.format(0.12890, 'pro
 # value -> any expression that evaluates to a number
 # width -> the number of characters used in total to display, but if value needs more space than the width specifies, then the additional space is used.
 # precision -> the number of characters used after the decimal point
-
-# Pair up the girl and boy names: pairs
-pairs = zip(gene_names, protein_names)
-# Iterate over pairs
-for rank, pair in enumerate(pairs):
-    # Unpack pair: gene_names, protein_names
-    gene_names, protein_names = pair
-    # Print the rank and names associated with each rank
-    print(f'Rank {rank+1}: gene_name} and {protein_name}')
-
