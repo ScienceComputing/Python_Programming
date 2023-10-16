@@ -30,6 +30,10 @@ print(f'Only {number:.2f}% of the protein data produced worldwide is analyzed!')
 # width -> the number of characters used in total to display, but if value needs more space than the width specifies, then the additional space is used.
 # precision -> the number of characters used after the decimal point
 
+fact = 2500000000000000000
+print(f"About {fact:e} of data is produced daily in the world")
+# About 2.500000e+18 of data is produced daily in the world
+
 # Use the index
 data = {'method': 'Supervised learning', 'goal': 'find patterns'}
 print(f"{data['method']} tries to {data['goal']} in the dataset.")
