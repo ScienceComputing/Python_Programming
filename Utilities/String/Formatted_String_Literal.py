@@ -29,3 +29,8 @@ print(f'Only {number:.2f}% of the protein data produced worldwide is analyzed!')
 # value -> any expression that evaluates to a number
 # width -> the number of characters used in total to display, but if value needs more space than the width specifies, then the additional space is used.
 # precision -> the number of characters used after the decimal point
+
+# Use the index
+data = {'method': 'Supervised learning', 'goal': 'find patterns'}
+print(f"{data['method']} tries to {data['goal']} in the dataset.")
+# Supervised learning tries to find patterns in the dataset.
