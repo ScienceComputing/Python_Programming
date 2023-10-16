@@ -20,3 +20,7 @@ print(f'{name!r} helps prevent side effects due to drug reactions and toxic chem
 
 # Use the format specifier
 # e for scientific notation; f for float; d for digit
+# {index:specifier}
+number = 0.12890
+print(f'Only {number:.2f}% of the protein data produced worldwide is analyzed!')
+# Only 0.13% of the protein data produced worldwide is analyzed!
