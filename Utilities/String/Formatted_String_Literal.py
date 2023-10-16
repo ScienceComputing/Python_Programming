@@ -14,5 +14,7 @@ for rank, pair in enumerate(pairs):
 # !s: convert to a string
 # !r: convert to a printable string with quotes
 # !a: convert to a printable string with quotes, but escape the non-ASCII character
-
+name = "Cystein"
+print(f'{name!r} helps prevent side effects due to drug reactions and toxic chemicals.')
+# 'Cystein' helps prevent side effects due to drug reactions and toxic chemicals.
 
