@@ -18,3 +18,5 @@ name = "Cystein"
 print(f'{name!r} helps prevent side effects due to drug reactions and toxic chemicals.')
 # 'Cystein' helps prevent side effects due to drug reactions and toxic chemicals.
 
+# Use the format specifier
+# e for scientific notation; f for float; d for digit
