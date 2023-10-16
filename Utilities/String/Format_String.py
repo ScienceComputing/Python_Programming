@@ -1,7 +1,6 @@
 # Format the title in a graph; show the message or error; pass the statement into a function
 
-# Method 1: positional formatting
-# 'text{}'.format(value)
+# Positional formatting: 'text{}'.format(value)
 # The format method replaces the placeholders using the values.
 print('{} helps prevent side effects due to drug reactions and toxic chemicals'.format('Cystein'))
 # Cystein helps prevent side effects due to drug reactions and toxic chemicals
