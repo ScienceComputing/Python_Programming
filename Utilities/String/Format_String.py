@@ -35,3 +35,10 @@ print('Only {0:.2f}% of the {1} produced worldwide is {2}!'.format(0.12890, 'pro
 # value -> any expression that evaluates to a number
 # width -> the number of characters used in total to display, but if value needs more space than the width specifies, then the additional space is used.
 # precision -> the number of characters used after the decimal point
+
+# Call the function
+def multiply_two_num(m, n):
+  return m * n
+
+print(f'If you mulitply 5 by 6, the result will be {multiply_two_num(5, 6)}.')
+# If you mulitply 5 by 6, the result will be 30.
