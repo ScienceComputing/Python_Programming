@@ -57,6 +57,8 @@ aa_target_2 = [x if x != 'phenylalanine' else 'methionine' for x in aa]
 print(aa_target_2)
 # ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'methionine', 'threonine', 'tryptophan', 'valine']
 
+adata.obs['condition'] = ['stimulated' if sm_i == 'Oprozomib (ONX 0912)' else 'control' for sm_i in adata.obs['sm_name']]
+
 # Case 7:
 from collections import Counter
 penguins = [{'Species': 'Gentoo',
