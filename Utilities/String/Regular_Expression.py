@@ -30,9 +30,11 @@ re.sub(r'Lessions', 'Lessons', 'Love Lessions in Chemistry! Really love Lessions
 # 'Love Lessons in Chemistry! Really love Lessons in Chemistry!'
 
 # Usage: supported metacharacters
+# \d: a digit; \D: a non-digit
 re.findall(r'User\s\d', 'The winners are: User 80, User 12, User x')
 # ['User 8', 'User 1']
 re.findall(r'User\s\d{2}', 'The winners are: User 80, User 12, User x')
 # ['User 80', 'User 12']
-
+re.findall(r'User\s\D', 'The winners are: User 80, User 12, User x')
+# ['User x']
 
