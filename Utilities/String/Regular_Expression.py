@@ -14,7 +14,11 @@
 
 import re
 
-# Find all matches of a pattern
+# Find all matches of a pattern:
 # re.findall(r'regex', string)
 re.findall(r'Lessions in Chemistry', 'Love Lessions in Chemistry! Really love Lessions in Chemistry!')
 # ['Lessions in Chemistry', 'Lessions in Chemistry']
+
+# Split string at each match
+re.split(r'!', 'Love Lessions in Chemistry! Really love Lessions in Chemistry!')
+# ['Love Lessions in Chemistry', ' Really love Lessions in Chemistry', '']
