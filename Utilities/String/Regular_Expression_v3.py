@@ -6,6 +6,7 @@
 # . -> match any character except newline
 # .+ -> match any number of any character
 # ^ -> start of the string
+# \ -> escape the special characters
 
 import re
 str1 = 'There are 8900023 students attending the NYU graduate school fair!'
