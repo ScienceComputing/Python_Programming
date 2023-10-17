@@ -30,7 +30,8 @@ except KeyError:
 
 # Missing information
 
-# Set up safe substitution whereby missing placeholders will appear in resulting string
+# Set up safe substitution 
+# .safe_substitute() avoids raising a KeyError because it uses the original placeholder if it is missing and consequently, always returns a usable string
 favor_donut = dict(flavor='Glazed donut')
 str4 = Template('I enjoy $flavor $donut very much!')
 str4.safe_substitute(favor_donut)
