@@ -38,3 +38,13 @@ re.findall(r'User\s\d{2}', 'The winners are: User 80, User 12, User x')
 re.findall(r'User\s\D', 'The winners are: User 80, User 12, User x')
 # ['User x']
 
+# \w: a word; \W: a non-word
+re.findall(r'User\s\w{1,2}', 'The winners are: User 80, User 12, User x')
+# ['User 80', 'User 12', 'User x']
+re.findall(r'\W\d', 'The donuts are on sale: only $1 today!')
+# ['$1']
+
+# \s: whitespace; \S: a non-whitespace
+# # re.sub(r'regex', new, string)
+re.sub(r'glazed\Sdonut', 'glazed donut', 'I really like glazed-donut!')
+# 'I really like glazed donut!'
