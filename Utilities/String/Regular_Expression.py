@@ -11,6 +11,7 @@
 # \s: a whitespace
 # \w: a word character
 # {3, 10}: \w should appear between 3 and 10 times
+# These numbers are quantifiers, a metacharacter that tells the regex engine how many times to match a character immediately to its left
 
 import re
 
