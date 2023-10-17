@@ -38,7 +38,7 @@ re.findall(r'User\s\d{2}', 'The winners are: User 80, User 12, User x')
 re.findall(r'User\s\D', 'The winners are: User 80, User 12, User x')
 # ['User x']
 
-# \w: a word; \W: a non-word
+# \w: a word; \W: a non-word (e.g., !, $, &, #)
 re.findall(r'User\s\w{1,2}', 'The winners are: User 80, User 12, User x')
 # ['User 80', 'User 12', 'User x']
 re.findall(r'\W\d', 'The donuts are on sale: only $1 today!')
