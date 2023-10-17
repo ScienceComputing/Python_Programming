@@ -1,1 +1,4 @@
-# Simpler syntax; slower than f-strings; don't allow format specifiers (); good when working with externally formatted strings
+# Simpler syntax; 
+# Slower than f-strings; 
+# Don't allow format specifiers (e for scientific notation; f for float; d for digit); 
+# Good when working with externally formatted strings
