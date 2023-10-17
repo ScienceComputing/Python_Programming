@@ -1,7 +1,11 @@
 # Topic: Regex metacharacters
 # re.match -> anchor at the begining of a string
 # re.search
-# special characters: . -> match any character except newline
+
+# Special characters: 
+# . -> match any character except newline
+# .+ -> match any number of any character
+# ^ -> start of the string
 
 import re
 str1 = 'There are 8900023 students attending the NYU graduate school fair!'
@@ -14,3 +18,7 @@ re.match(r'\d+', str1)
 str2 = 'https://www.harvard.edu'
 re.findall(r'www.+edu', str2)
 # ['www.harvard.edu']
+
+str3 = 'There are 8900 male and 900 female students attending the NYU graduate school fair!'
+re.findall(r'^There\sare\s\d+', str3)
+# ['There are 8900']
