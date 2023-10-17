@@ -11,3 +11,7 @@ str1.substitute(amino_acid='Cysteine')
 Cys = 'Cysteine'
 str1.substitute(amino_acid=Cys)
 # 'Cysteine helps prevent side effects due to drug reactions and toxic chemicals.'
+
+str2 = Template('Cysteine helps prevent side effects due to ${function}s and toxic chemicals.')
+str2.substitute(function='drug reaction')
+# 'Cysteine helps prevent side effects due to drug reactions and toxic chemicals.'
