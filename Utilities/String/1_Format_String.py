@@ -2,25 +2,25 @@
 
 # Positional formatting: 'text{}'.format(value)
 # The format method replaces the placeholders using the values.
-print('{} helps prevent side effects due to drug reactions and toxic chemicals'.format('Cystein'))
-# Cystein helps prevent side effects due to drug reactions and toxic chemicals
+print('{} helps prevent side effects due to drug reactions and toxic chemicals'.format('Cysteine'))
+# Cysteine helps prevent side effects due to drug reactions and toxic chemicals
 
 str1 = '{} helps prevent side effects due to drug reactions and toxic chemicals'
-amino_acid = 'Cystein'
+amino_acid = 'Cysteine'
 str1.format(amino_acid)
-# 'Cystein helps prevent side effects due to drug reactions and toxic chemicals'
+# 'Cysteine helps prevent side effects due to drug reactions and toxic chemicals'
 
 # Reorder the placeholder
 str2 = '{1} helps {0} side effects due to drug reactions and toxic chemicals'
-amino_acid = 'Cystein'
+amino_acid = 'Cysteine'
 function = 'prevent'
 str2.format(function, amino_acid)
-# 'Cystein helps prevent side effects due to drug reactions and toxic chemicals'
+# 'Cysteine helps prevent side effects due to drug reactions and toxic chemicals'
 
 # Specify the name for the placeholder
 str3 = '{amino_acid} helps {function} side effects due to drug reactions and toxic chemicals'
 str3.format(amino_acid=amino_acid, function=function)
-# 'Cystein helps prevent side effects due to drug reactions and toxic chemicals'
+# 'Cysteine helps prevent side effects due to drug reactions and toxic chemicals'
 
 str4 = {'method': 'Supervised learning', 'goal': 'find patterns'}
 print('{data[method]} tries to {data[goal]} in the dataset.'.format(data=str4))
