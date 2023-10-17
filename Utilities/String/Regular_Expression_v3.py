@@ -19,6 +19,8 @@ str2 = 'https://www.harvard.edu'
 re.findall(r'www.+edu', str2)
 # ['www.harvard.edu']
 
-str3 = 'There are 8900 male and 900 female students attending the NYU graduate school fair!'
-re.findall(r'^There\sare\s\d+', str3)
-# ['There are 8900']
+str3 = '8900 males and 900 females'
+re.findall(r'^\d+\smales', str3)
+# ['8900 males']
+re.findall(r'\d+\sfemales$', str3)
+# ['900 females']
