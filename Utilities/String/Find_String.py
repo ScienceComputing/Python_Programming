@@ -22,3 +22,8 @@ try:
 except ValueError:
     print("The string you've input are not found.")
                
+# Method 3: str.contains() or str.startswith()
+import pandas as pd
+df_col = adata.obs['sm_name']
+is_ONX0912 = df_col.str.contains('ONX 0912')
+df_col[is_ONX0912]
