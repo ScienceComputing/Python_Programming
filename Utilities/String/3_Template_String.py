@@ -15,3 +15,8 @@ str1.substitute(amino_acid=Cys)
 str2 = Template('Cysteine helps prevent side effects due to ${function}s and toxic chemicals.')
 str2.substitute(function='drug reaction')
 # 'Cysteine helps prevent side effects due to drug reactions and toxic chemicals.'
+
+# $$ -> escape the dollar sign
+str3 = Template('I paid for the Roma tomatoes only $$$price, amazing!')
+str3.substitute(price='1.5')
+# 'I paid for the Roma tomatoes only $1.5, amazing!'
