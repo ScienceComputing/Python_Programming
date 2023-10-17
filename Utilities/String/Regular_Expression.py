@@ -14,11 +14,25 @@
 
 import re
 
-# Find all matches of a pattern:
+# Usage: find all matches of a pattern:
 # re.findall(r'regex', string)
 re.findall(r'Lessions in Chemistry', 'Love Lessions in Chemistry! Really love Lessions in Chemistry!')
 # ['Lessions in Chemistry', 'Lessions in Chemistry']
 
-# Split string at each match
+# Usage: split string at each match
+# re.split(r'regex', string)
 re.split(r'!', 'Love Lessions in Chemistry! Really love Lessions in Chemistry!')
 # ['Love Lessions in Chemistry', ' Really love Lessions in Chemistry', '']
+
+# Usage: replace one or many matches with a string
+# re.sub(r'regex', new, string)
+re.sub(r'Lessions', 'Lessons', 'Love Lessions in Chemistry! Really love Lessions in Chemistry!')
+# 'Love Lessons in Chemistry! Really love Lessons in Chemistry!'
+
+# Usage: supported metacharacters
+re.findall(r'User\s\d', 'The winners are: User 80, User 12, User x')
+# ['User 8', 'User 1']
+re.findall(r'User\s\d{2}', 'The winners are: User 80, User 12, User x')
+# ['User 80', 'User 12']
+
+
