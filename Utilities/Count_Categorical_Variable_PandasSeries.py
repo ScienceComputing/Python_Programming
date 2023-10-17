@@ -110,7 +110,7 @@ def count_entries(df, col_name='lang'):
 
 count_entries(news_df, 'lang_1')
 
-# Method 3:
+# !Method 3:
 # Count values in any arbitrary number of columns specified by the user
 def count_entries_2(df, *args):
     """Return a dictionary with counts of occurrences as value for each key."""
@@ -140,6 +140,12 @@ def count_entries_2(df, *args):
 
 multi_col_count = count_entries_2(df, 'lang', 'source')
 print(multi_col_count)
+
+df = adata.obs
+sm_name_count = count_entries_2(df, 'sm_name')
+print(sm_name_count)
+sm_cluster_3_count = count_entries_2(df, 'sm_cluster_3')
+print(sm_cluster_3_count)
 
 # Method 4: if the given dataframe is very large
 counts_dict={}
