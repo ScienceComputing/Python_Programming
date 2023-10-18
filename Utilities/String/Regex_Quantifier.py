@@ -17,6 +17,9 @@ re.findall(r'@\w+\W*\w+', str2)
 str3 = 'The color of this image is wonderful! But, the colour could be more colorful.'
 re.findall(r'colou?r', str3)
 # ['color', 'colour', 'color']
+# or re.findall(r'colo[u]{0,1}r', str3)
+# ['color', 'colour', 'color']
 
 # Non-greedy matching
 # The quantifiers tend to match as few characters as needed and they return the shortest match
+# Append ? to the greedy quantifiers
