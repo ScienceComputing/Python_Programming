@@ -1,5 +1,6 @@
 # Initialize an empty DataFrame
 df = pd.DataFrame()
+submission_df['label'] = predictions # predictions is a pandas series
 
 # Create a dictionary 
 my_dict = {"key_1": val_1, "key_2": val_2, "key_3", val_3} 
