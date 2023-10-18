@@ -8,6 +8,8 @@
 # ^ -> start of a string
 # $ -> end of a string
 # \ -> escape the special characters
+# | -> OR operand
+# [] -> OR operand
 
 import re
 str1 = 'There are 8900023 students attending the NYU graduate school fair!'
@@ -30,3 +32,7 @@ re.findall(r'\d+\sfemales$', str3)
 str4 = 'I love the growth-mind culture of this company. I learn lots of from this company!.'
 re.split(r'\.\s', str4) # \. escape the actual meaning of ., that is, match any character except newline
 # ['I love the growth-mind culture of this company', 'I learn lots of from this company!.']
+
+str5 = 'I love the growth-mind culture of this Company. I learn lots of from this company!.'
+re.findall(r'Company|company', str5)
+# ['Company', 'company']
