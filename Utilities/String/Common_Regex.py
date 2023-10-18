@@ -6,3 +6,8 @@ email_regex = r'[A-Za-z0-9!#%&*$.]+@\w+\.com'
 email_user_account = r'([A-Za-z0-9]+)@\S+' # e.g., oppert009@hotmail.com -> oppert009
 password_regex = r'[a-zA-Z0-9*#$%!&.]{8,20}'
 html_tag_regex = r'<.+?>'
+
+flight_regex = r'([A-Z]{2})(\d{4})\s([A-Z]{3})-([A-Z]{3})\s(\d{2}[A-Z]{3})'
+flight_info = 'Here you have your boarding pass CB5678 AMS-MAD 01NOV.'
+re.findall(flight_regex, flight_info)
+# [('CB', '5678', 'AMS', 'MAD', '01NOV')]
