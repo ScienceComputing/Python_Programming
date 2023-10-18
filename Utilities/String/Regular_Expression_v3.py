@@ -36,3 +36,6 @@ re.split(r'\.\s', str4) # \. escape the actual meaning of ., that is, match any 
 str5 = 'I love the growth-mind culture of this Company. I learn lots of from this company!.'
 re.findall(r'Company|company', str5)
 # ['Company', 'company']
+
+re.findall(r'[Cc]ompany', str5)
+# ['Company', 'company']
