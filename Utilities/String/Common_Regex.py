@@ -11,3 +11,12 @@ flight_regex = r'([A-Z]{2})(\d{4})\s([A-Z]{3})-([A-Z]{3})\s(\d{2}[A-Z]{3})'
 flight_info = 'Here you have your boarding pass CB5678 AMS-MAD 01NOV.'
 re.findall(flight_regex, flight_info)
 # [('CB', '5678', 'AMS', 'MAD', '01NOV')]
+
+flight_matches = re.findall(flight_regex, flight_info)
+print("Airline: {} Flight number: {}".format(flight_matches[0][0], flight_matches[0][1]))
+print("Departure: {} Destination: {}".format(flight_matches[0][2], flight_matches[0][3]))
+print("Date: {}".format(flight_matches[0][4]))
+
+# Airline: CB Flight number: 5678
+# Departure: AMS Destination: MAD
+# Date: 01NOV
