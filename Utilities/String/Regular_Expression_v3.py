@@ -39,3 +39,6 @@ re.findall(r'Company|company', str5)
 
 re.findall(r'[Cc]ompany', str5)
 # ['Company', 'company']
+
+regex = '[a-zA-Z]+\d' # Match the lower-case/upper-case letter any times followed by a digit
+regex_non_word = '[#$%&]'
