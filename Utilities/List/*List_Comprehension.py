@@ -59,7 +59,14 @@ print(aa_target_2)
 
 adata.obs['condition'] = ['stimulated' if sm_i == 'Oprozomib (ONX 0912)' else 'control' for sm_i in adata.obs['sm_name']]
 
-# Case 7:
+# Case 7: nested conditionals on the output expression in comrehension ~ if-elif-else
+# expression1 if condition1 else expression2 if condition2 else expresion3
+# expression1 if condition1 else (expression2 if condition2 else expresion3)
+# amino_acid = ['His', 'Val', 'Cys']
+# ['Cysteine' if aa == 'Cys' else 'Histidine' if aa == 'His' else 'Valine' if aa == 'Val' else 'Other' for aa in amino_acid]
+# ['Histidine', 'Valine', 'Cysteine']
+
+# Case 8:
 from collections import Counter
 penguins = [{'Species': 'Gentoo',
   'Flipper Length (mm)': 230.0,
