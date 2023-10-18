@@ -10,6 +10,7 @@
 # \ -> escape the special characters
 # | -> OR operand
 # [] -> OR operand
+# [^] -> take the opposite operation
 
 import re
 str1 = 'There are 8900023 students attending the NYU graduate school fair!'
@@ -42,3 +43,4 @@ re.findall(r'[Cc]ompany', str5)
 
 regex = '[a-zA-Z]+\d' # Match the lower-case/upper-case letter any times followed by a digit
 regex_non_word = '[#$%&]'
+regex_no_digit = '[^0-9]'
