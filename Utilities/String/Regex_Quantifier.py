@@ -19,6 +19,8 @@ re.findall(r'colou?r', str3)
 # ['color', 'colour', 'color']
 # or re.findall(r'colo[u]{0,1}r', str3)
 # ['color', 'colour', 'color']
+re.match(r'[0-9]+?', str1) # Match any digt 0 times or once
+# <re.Match object; span=(0, 1), match='1'>
 
 # Non-greedy matching
 # The quantifiers tend to match as few characters as needed and they return the shortest match
