@@ -1,5 +1,5 @@
 # Topic: Regex metacharacters
-# re.match -> anchor at the begining of a string
+# re.match -> anchor at the begining of a string; so if the first character of a string does not match the regex, then re.match will return nothing
 # re.search
 
 # Special characters: 
