@@ -23,3 +23,5 @@ re.findall(r'colou?r', str3)
 # Non-greedy matching
 # The quantifiers tend to match as few characters as needed and they return the shortest match
 # Append ? to the greedy quantifiers
+re.match(r'\d+?', str1)
+# <re.Match object; span=(0, 1), match='1'>
