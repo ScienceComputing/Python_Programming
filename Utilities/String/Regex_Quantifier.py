@@ -33,3 +33,4 @@ re.match(r'\d+', str1)
 # Summary:
 # When longer matches are necessary, the greedy quantifiers are the best option.
 # When we hope to match as few as possible, the lazy quantifiers sound perfect.
+# Making quantifiers lazy by adding ? to match a shorter pattern is a very important consideration to keep in mind when handling data for text mining. 
