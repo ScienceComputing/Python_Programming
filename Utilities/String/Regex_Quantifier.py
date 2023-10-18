@@ -1,4 +1,4 @@
-# Quantifier - immediately to the left
+# Quantifier - apply to the character immediately to the left
 # The following quantifiers are greedy; they tend to match as many characters as possible and return the longest match
 # {3} {3, 4} {3,} -> 3 times; 3 times at least, 4 times at most; 3 times at least
 # +: once or more -> r'violin+': + applies to n, not to violin 
