@@ -7,7 +7,7 @@
 # .+ -> match any number of any character except newline
 # ^ -> start of a string
 # $ -> end of a string
-# \ -> escape the special characters
+# \ -> escape the special characters; e.g., \(.+\)
 # | -> OR operand
 # [] -> OR operand
 # [^] -> take the opposite operation
