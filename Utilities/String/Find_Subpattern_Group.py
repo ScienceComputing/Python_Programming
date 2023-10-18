@@ -14,5 +14,5 @@ str2 = '8F0j3r'
 re.search(r'(\d[A-Za-z])+', str2)
 # <re.Match object; span=(0, 6), match='8F0j3r'>
 
-re.search(r'\d[A-Za-z]+', str2)
+re.search(r'\d[A-Za-z]+', str2) # +: once or more -> + applies to [A-Za-z], not to \d[A-Za-z]
 # <re.Match object; span=(0, 2), match='8F'>
