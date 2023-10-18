@@ -19,4 +19,4 @@ re.findall(r'colou?r', str3)
 # ['color', 'colour', 'color']
 
 # Non-greedy matching
-# The quantifiers tend to match as few characters as needed
+# The quantifiers tend to match as few characters as needed and they return the shortest match
