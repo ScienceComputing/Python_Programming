@@ -16,3 +16,10 @@ re.search(r'(\d[A-Za-z])+', str2)
 
 re.search(r'\d[A-Za-z]+', str2) # +: once or more -> + applies to [A-Za-z], not to \d[A-Za-z]
 # <re.Match object; span=(0, 2), match='8F'>
+
+str3 = 'My luck number is 90035 and 99.'
+re.findall(r'(\d+)', str3)
+# ['90035', '99']
+
+re.findall(r'(\d)+', str3)
+# ['5', '9']
