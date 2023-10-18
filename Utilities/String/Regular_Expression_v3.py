@@ -4,8 +4,9 @@
 
 # Special characters: 
 # . -> match any character except newline
-# .+ -> match any number of any character
-# ^ -> start of the string
+# .+ -> match any number of any character except newline
+# ^ -> start of a string
+# $ -> end of a string
 # \ -> escape the special characters
 
 import re
@@ -25,3 +26,7 @@ re.findall(r'^\d+\smales', str3)
 # ['8900 males']
 re.findall(r'\d+\sfemales$', str3)
 # ['900 females']
+
+str4 = 'I love the growth-mind culture of this company. I learn lots of from this company!.'
+re.split(r'\.\s', str4) # \. escape the actual meaning of ., that is, match any character except newline
+# ['I love the growth-mind culture of this company', 'I learn lots of from this company!.']
