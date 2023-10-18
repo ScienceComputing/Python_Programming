@@ -25,3 +25,5 @@ re.findall(r'colou?r', str3)
 # Append ? to the greedy quantifiers
 re.match(r'\d+?', str1)
 # <re.Match object; span=(0, 1), match='1'>
+re.match(r'\d+', str1)
+# <re.Match object; span=(0, 4), match='1681'>
