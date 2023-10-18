@@ -29,3 +29,7 @@ re.match(r'\d+?', str1)
 # <re.Match object; span=(0, 1), match='1'>
 re.match(r'\d+', str1)
 # <re.Match object; span=(0, 4), match='1681'>
+
+# Summary:
+# When longer matches are necessary, the greedy quantifiers are the best option.
+# When we hope to match as few as possible, the lazy quantifiers sound perfect.
