@@ -50,6 +50,27 @@ aa_target = [x for x in aa if "t" in x]
 print(aa_target)
 # ['histidine', 'methionine', 'threonine', 'tryptophan']
 
+# Case 5.1:estimate the proportion of positives/negatives/zeros in a list
+def calc_prop(data): 
+    total = len(data)
+    num_pos = sum([1 for i in data if i > 0]) # Notice
+    num_neg = sum([1 for i in data if i < 0])
+    num_zero = total - (num_pos + num_neg)
+    
+    ratio_pos = num_pos / total
+    ratio_neg = num_neg / total
+    ratio_zero = num_zero / total
+    
+    print(f'{ratio_pos:.2f}')
+    print(f'{ratio_neg:.2f}')
+    print(f'{ratio_zero:.2f}')
+
+sample = [-9, 2, 3, 0, 0, 2, 3, 6]
+calc_prop(data=sample)
+# 0.62
+# 0.12
+# 0.25
+
 # Case 6: conditionals on the output expression in comprehensions ~ if-else
 # newlist = [expression + conditional on expression for iterator variable in iterable]
 # substitute phenylalanine with methionine
