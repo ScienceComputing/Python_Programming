@@ -52,3 +52,9 @@ re.findall(r'Tesla|Audi|BMW|Mercedes-Benz|Toyota', str6)
 str7 = "I want to order a bunch of cars for my company. But I don't know if I want 2 Tesla, 3 Audi, 1 BMW, 2 Mercedes-Benz, or 5 Toyota."
 re.findall(r'\d+\sTesla|Audi|BMW|Mercedes-Benz|Toyota', str7)
 # ['2 Tesla', 'Audi', 'BMW', 'Mercedes-Benz', 'Toyota']
+
+re.findall(r'\d+\s(Tesla|Audi|BMW|Mercedes-Benz|Toyota)', str7)
+# ['Tesla', 'Audi', 'BMW', 'Mercedes-Benz', 'Toyota']
+
+re.findall(r'(\d+)\s(Tesla|Audi|BMW|Mercedes-Benz|Toyota)', str7)
+# [('2', 'Tesla'), ('3', 'Audi'), ('1', 'BMW'), ('2', 'Mercedes-Benz'), ('5', 'Toyota')]
