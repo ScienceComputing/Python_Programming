@@ -9,7 +9,7 @@
 # .+? -> match any number of any character
 # ^ -> start of a string
 # $ -> end of a string
-# \ -> escape the special characters; e.g., \(.+\)
+# \ -> escape the special characters; e.g., \(.+\); \.
 # | -> OR operand
 # [] -> OR operand
 # [^] -> take the opposite operation
@@ -69,3 +69,10 @@ re.findall(r'(?:\d{2}-){2}(\d{4})', str8)
 str9 = 'Today is 2nd March 2023. Tomorrow is 3rd March 2023.'
 re.findall(r'(\d+)(?:nd|rd)', str9)
 # ['2', '3']
+
+str10 = 'I totally love the concert Peace of Love World Tour. It kinda wonderful!'
+re.findall(r'(love|like|enjoy).+?(movie|concert)\s(.+?)\.', str10)
+# [('love', 'concert', 'Peace of Love World Tour')]
+
+re.findall(r'(love|like|enjoy).+?(?:movie|concert)\s(.+?)\.', str10)
+# [('love', 'Peace of Love World Tour')]
