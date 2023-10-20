@@ -4,7 +4,9 @@
 
 # Special characters: 
 # . -> match any character except newline
-# .+ -> match any number of any character except newline
+# .+ -> match any number (once or more) of any character except newline
+# .? -> match any number (zero or once) of any character
+# .+? -> match any number of any character
 # ^ -> start of a string
 # $ -> end of a string
 # \ -> escape the special characters; e.g., \(.+\)
