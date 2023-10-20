@@ -14,7 +14,7 @@ for rank, pair in enumerate(pairs):
 # !s: convert to a string
 # !r: convert to a printable string with quotes
 # !a: convert to a printable string with quotes, but escape the non-ASCII character
-name = "Cystein"
+name = 'Cystein'
 print(f'{name!r} helps prevent side effects due to drug reactions and toxic chemicals.')
 # 'Cystein' helps prevent side effects due to drug reactions and toxic chemicals.
 
@@ -31,7 +31,7 @@ print(f'Only {number:.2f}% of the protein data produced worldwide is analyzed!')
 # precision -> the number of characters used after the decimal point
 
 fact = 2500000000000000000
-print(f"About {fact:e} of data is produced daily in the world")
+print(f'About {fact:e} of data is produced daily in the world')
 # About 2.500000e+18 of data is produced daily in the world
 
 # Use the index
