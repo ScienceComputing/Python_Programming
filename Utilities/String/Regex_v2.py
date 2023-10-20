@@ -63,3 +63,7 @@ re.findall(r'(\d+)\s(Tesla|Audi|BMW|Mercedes-Benz|Toyota)', str7)
 str8 = 'Andy Wang: 56-56-9820'
 re.findall(r'(?:\d{2}-){2}(\d{4})', str8)
 # ['9820']
+
+str9 = 'Today is 2nd March 2023. Tomorrow is 3rd March 2023.'
+re.findall(r'(\d+)(?:nd|rd)', str9)
+# ['2', '3']
