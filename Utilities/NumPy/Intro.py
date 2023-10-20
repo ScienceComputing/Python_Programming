@@ -12,10 +12,24 @@ array_1 = np.array(list_1)
 print(array_1)
 # array(['T cell', 'B cell', 'NK cell'], dtype='<U7')
 
-# 2: create a 2-d NumPy array from a list
+# 2: create a 2-d NumPy array from a tuple of lists
 list_1 = ['T cell', 'B cell', 'NK cell']
 list_2 = ['patient1', 'patient2', 'patient3']
-array_2 = np.array((list_1, list_2)) # Use tuple than list, giving more efficiency
+array_2 = np.array((list_1, list_2)) # Use tuple than list (though you can use list here), giving more efficiency
 print(array_2)
 # [['T cell' 'B cell' 'NK cell']
 #  ['patient1' 'patient2' 'patient3']]
+
+# 3: create a 1-d NumPy array from a range -> useful for creating the synthetic data which is for testing the NumPy code
+array_3 = np.array(range(0, 30))
+print(array_3)
+# [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+# 24 25 26 27 28 29]
+
+# 4: create a 2-d NumPy array from a tuple of ranges
+array_4 = np.array((range(0, 30), range(10, 40)))
+print(array_4)
+# [[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+#  24 25 26 27 28 29]
+# [10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33
+#  34 35 36 37 38 39]]
