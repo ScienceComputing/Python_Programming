@@ -6,7 +6,7 @@
 # . -> match any character except newline
 # .+ -> match any number (once or more) of any character except newline
 # .? -> match any number (zero or once) of any character
-# .+? -> match any number of any character
+# .+? -> match any number (once or more) of any character except newline, using the **non-greedy** matching
 # ^ -> start of a string
 # $ -> end of a string
 # \ -> escape the special characters; e.g., \(.+\); \.
