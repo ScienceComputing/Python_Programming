@@ -19,14 +19,19 @@ re.findall(r'colou?r', str3)
 # ['color', 'colour', 'color']
 # or re.findall(r'colo[u]{0,1}r', str3)
 # ['color', 'colour', 'color']
-re.match(r'[0-9]+?', str1) # Match any digt 0 times or once
-# <re.Match object; span=(0, 1), match='1'>
+
+
 
 # Non-greedy matching
 # The quantifiers tend to match as few characters as needed and they return the shortest match
 # Append ? to the greedy quantifiers
+str1 = '1681 Broadway WMM OP 9-0'
+re.match(r'[0-9]+?', str1) # Match any digt once or more using the non-greedy matching
+# <re.Match object; span=(0, 1), match='1'>
+
 re.match(r'\d+?', str1)
 # <re.Match object; span=(0, 1), match='1'>
+
 re.match(r'\d+', str1)
 # <re.Match object; span=(0, 4), match='1681'>
 
