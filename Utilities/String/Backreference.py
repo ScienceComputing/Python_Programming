@@ -14,7 +14,7 @@ info.group(2)
 info.group(3)
 # '10'
 
-# Use named groups
+# Use named groups to backreference
 # Assign a name to a group: (?P<name>(regex))
 str2 = 'New York, 10021'
 city_info = re.search(r'(?P<city>[A-Za-z]+\s*[A-Za-z]*).*?(?P<zipcode>\d{5})', str2)
@@ -34,3 +34,9 @@ re.sub(r'(\w+)\s\1', r'\1', str3)
 
 html_tag = '<body>To be a bioinformatician, you need to have knowledge in statistics and mathematics</body>'
 re.findall(r'(<(\S+?)>)(?:.*)(</\S+?>)', html_tag) # TD
+
+# Use the named group to reference back
+str4 = 'Your one-time password is 904809. Please enter 904809 to login in the online system.'
+re.findall(r'(?P<code>\d{6}).*?(?P=code)', str4)
+# ['904809']
+
