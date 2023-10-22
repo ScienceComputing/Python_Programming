@@ -51,3 +51,6 @@ re.findall(r'(?P<code>\d{6}).*?(?P=code)', str4)
 str5 = 'This function is not working! It often repeats error messages messages!'
 re.sub(r'(?P<word>\w+)\s(?P=word)', r'\g<word>', str5) 
 # 'This function is not working! It often repeats error messages!'
+
+# Lookaround
+
