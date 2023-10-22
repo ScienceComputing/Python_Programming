@@ -18,7 +18,14 @@ info.group(3)
 # Assign a name to a group: (?P<name>(regex))
 str2 = 'New York, 10021'
 city_info = re.search(r'(?P<city>[A-Za-z]+\s*[A-Za-z]*).*?(?P<zipcode>\d{5})', str2)
+# city_info = re.search(r'(?P<city>\w+\s*\w*).*?(?P<zipcode>\d{5})', str2)
 city_info.group('city')
 # 'New York'
 city_info.group('zipcode')
 # '10021'
+
+# Use \number to backreference a group
+# (\d{1,2})\1
+str3 = "You're very great great great!"
+re.findall(r'(\w+)\s\1', str3) # Find the first occurence of the repeated words
+# ['great']
