@@ -20,3 +20,13 @@ print("Date: {}".format(flight_matches[0][4]))
 # Airline: CB Flight number: 5678
 # Departure: AMS Destination: MAD
 # Date: 01NOV
+
+# Obtain all phone numbers not preceded by area code
+cellphones = ['4263-699221-05', '390-1723-500215', '8126-079012-09']
+for phone in cellphones:
+	number = re.findall(r"(?<!\d{3}-)\d{4}-\d{6}-\d{2}", phone)
+	print(number)
+
+# ['4263-699221-05']
+# []
+# ['8126-079012-09']
