@@ -24,9 +24,19 @@ print("Date: {}".format(flight_matches[0][4]))
 # Obtain all phone numbers not preceded by area code
 cellphones = ['4263-699221-05', '390-1723-500215', '8126-079012-09']
 for phone in cellphones:
-	number = re.findall(r"(?<!\d{3}-)\d{4}-\d{6}-\d{2}", phone)
-	print(number)
+    number = re.findall(r"(?<!\d{3}-)\d{4}-\d{6}-\d{2}", phone)
+    print(number)
 
 # ['4263-699221-05']
 # []
 # ['8126-079012-09']
+
+# Obtain all phone numbers not followed by optional extension
+cellphones2 = ['126-4263-699221-05', '390-1723-500215', '109-8126-079012']
+for phone in cellphones2:
+    number = re.findall(r"\d{3}-\d{4}-\d{6}(?!-\d{2})", phone)
+    print(number)
+
+# []
+# ['390-1723-500215']
+# ['109-8126-079012']
