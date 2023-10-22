@@ -36,7 +36,10 @@ html_tag = '<body>To be a bioinformatician, you need to have knowledge in statis
 re.findall(r'(<(\S+?)>)(?:.*)(</\S+?>)', html_tag) # TD
 
 # Use the named group to reference back
+# ?P<name>
 str4 = 'Your one-time password is 904809. Please enter 904809 to login in the online system.'
 re.findall(r'(?P<code>\d{6}).*?(?P=code)', str4)
 # ['904809']
 
+str5 = 'This software is not working! It often repeats the error message message!'
+re.sub(r'(?P<word>\w+)\s(?P=word)', r'\g<word>', str5) # TD
