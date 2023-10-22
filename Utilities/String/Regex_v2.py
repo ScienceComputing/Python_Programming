@@ -1,6 +1,6 @@
 # Topic: Regex metacharacters
 # re.match -> anchor at the begining of a string; so if the first character of a string does not match the regex, then re.match will return nothing
-# re.search
+# re.search -> searche for a pattern within the string; return a match object or None otherwise; the search is usually followed by an if-statement to test if the search succeeds
 
 # Special characters: 
 # . -> match any character except newline
@@ -18,6 +18,12 @@ import re
 str1 = 'There are 8900023 students attending the NYU graduate school fair!'
 re.search(r'\d+', str1)
 # <re.Match object; span=(10, 17), match='8900023'>
+
+match = re.search(r'\d+', str1)
+if match:
+  print('found', match.group()) 
+else:
+  print('did not find the number of students')
 
 re.match(r'\d+', str1)
 # Nothing returns
