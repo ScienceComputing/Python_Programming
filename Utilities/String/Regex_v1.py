@@ -9,7 +9,7 @@
 # ---The followings are the metacharacters
 # \d: a digit
 # \s: a whitespace
-# \w: a word character
+# \w: a word character (letters, digits, or underscores)
 # {3, 10}: \w should appear between 3 and 10 times
 # These numbers are quantifiers, a metacharacter that tells the regex engine how many times to match a character immediately to its left
 
