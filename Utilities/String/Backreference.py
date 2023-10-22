@@ -15,3 +15,6 @@ info.group(3)
 # '10'
 
 # Use named groups
+# Assign a name to a group: (?P<name>(regex))
+str2 = 'New York, 10021'
+
