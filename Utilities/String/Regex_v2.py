@@ -7,6 +7,7 @@
 # .+ -> match any number (once or more) of any character except newline
 # .? -> match any number (zero or once) of any character
 # .+? -> match any number (once or more) of any character except newline, using the **non-greedy** matching
+# ? matches a single character, so 200?.txt will match 2002.txt or 2009.txt, but not 2002-01.txt.
 # ^ -> start of a string
 # $ -> end of a string
 # \ -> escape the special characters; e.g., \(.+\); \.
