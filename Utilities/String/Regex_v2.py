@@ -26,6 +26,13 @@ else:
   print('did not find the number of students')
 # found 8900023
 
+match2 = re.search(r'(\d+)', str1)
+if match2:
+  print('found', match2.group(1)) 
+else:
+  print('did not find the number of students')
+# found 8900023
+
 re.match(r'\d+', str1)
 # Nothing returns
 
