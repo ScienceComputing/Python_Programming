@@ -61,7 +61,7 @@ re.findall(r'\d+\s(Tesla|Audi|BMW|Mercedes-Benz|Toyota)', str7)
 re.findall(r'(\d+)\s(Tesla|Audi|BMW|Mercedes-Benz|Toyota)', str7)
 # [('2', 'Tesla'), ('3', 'Audi'), ('1', 'BMW'), ('2', 'Mercedes-Benz'), ('5', 'Toyota')]
 
-# Match but not capture a group (:?Regex)
+# Match but not capture a group (?:Regex)
 str8 = 'Andy Wang: 56-56-9820'
 re.findall(r'(?:\d{2}-){2}(\d{4})', str8)
 # ['9820']
