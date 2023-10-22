@@ -32,6 +32,13 @@ re.findall(r'(\w+)\s\1', str3) # Find the first occurence of the repeated words
 re.sub(r'(\w+)\s\1', r'\1', str3)
 # "You're very great great!"
 
+regex = r"\w*(\w)\1\w*"
+# \w*: This part matches zero or more word characters (letters, digits, or underscores).
+# (\w): This is a capturing group that matches a single word character and captures it for later use.
+# \1: This is a backreference to the first capturing group, **ensuring that the same character that was captured earlier is repeated**.
+# \w*: This part matches zero or more word characters after the repeated character.
+# In summary, this regular expression will match any sequence of word characters where the same character is repeated at least once. For example, it would match words like "hello," "bookkeeper," or "mississippi" because they contain repeated characters.
+
 html_tag = '<body>To be a bioinformatician, you need to have knowledge in statistics and mathematics</body>'
 re.findall(r'(<(\S+?)>)(?:.*)(</\S+?>)', html_tag) # TD
 
@@ -41,5 +48,6 @@ str4 = 'Your one-time password is 904809. Please enter 904809 to login in the on
 re.findall(r'(?P<code>\d{6}).*?(?P=code)', str4)
 # ['904809']
 
-str5 = 'This software is not working! It often repeats the error message message!'
-re.sub(r'(?P<word>\w+)\s(?P=word)', r'\g<word>', str5) # TD
+str5 = 'This function is not working! It often repeats error messages messages!'
+re.sub(r'(?P<word>\w+)\s(?P=word)', r'\g<word>', str5) 
+# 'This function is not working! It often repeats error messages!'
