@@ -29,3 +29,5 @@ city_info.group('zipcode')
 str3 = "You're very great great great!"
 re.findall(r'(\w+)\s\1', str3) # Find the first occurence of the repeated words
 # ['great']
+re.sub(r'(\w+)\s\1', r'\1', str3)
+# "You're very great great!"
