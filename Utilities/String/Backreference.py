@@ -33,4 +33,4 @@ re.sub(r'(\w+)\s\1', r'\1', str3)
 # "You're very great great!"
 
 html_tag = '<body>To be a bioinformatician, you need to have knowledge in statistics and mathematics</body>'
-re.findall(r'(<(\S+?)>)(?:.*)(</\S+?>)', html_tag)
+re.findall(r'(<(\S+?)>)(?:.*)(</\S+?>)', html_tag) # TD
