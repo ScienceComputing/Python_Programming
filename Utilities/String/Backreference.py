@@ -17,4 +17,8 @@ info.group(3)
 # Use named groups
 # Assign a name to a group: (?P<name>(regex))
 str2 = 'New York, 10021'
-
+city_info = re.search(r'(?P<city>[A-Za-z]+\s*[A-Za-z]*).*?(?P<zipcode>\d{5})', str2)
+city_info.group('city')
+# 'New York'
+city_info.group('zipcode')
+# '10021'
