@@ -1,0 +1,2 @@
+- The `Test R squared` of the Linear Regression, and the Decision Tree Regression model is {a smaller number} and {a larger number}, meaning the Decision Tree Regression model fits the features better. 
+- The `RMSE` of the Linear Regression, and the Decision Tree Regression model is {a larger number} and {a lower number}, meaning the Decision Tree Regression model has less error in predicting values.
