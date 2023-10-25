@@ -18,3 +18,5 @@ fig, ax = plt.subplots()
 ax.plot(np.arange(1,50), train_score, label = "Training R^2",color='lightcoral')
 ax.plot(np.arange(1,50), test_score, label = "Testing R^2",color='lime')
 print(f'Best max_depth is: {max_pair[0]} \nTesting R^2 is: {max_pair[1]}')
+
+# TD: AI in Medicine
