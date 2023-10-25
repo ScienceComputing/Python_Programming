@@ -13,6 +13,7 @@ from sklearn.metrics import r2_score,mean_squared_error
 plt.style.use('ggplot')
 
 # Build the tree model
+# https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html
 tree = DecisionTreeRegressor(max_depth=12,min_samples_split=2,random_state=99)
 tree.fit(X_train,y_train)
 y_pred_2 = tree.predict(X_test)
