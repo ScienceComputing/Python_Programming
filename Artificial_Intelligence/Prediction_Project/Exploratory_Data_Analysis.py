@@ -47,7 +47,8 @@ for ax in fig.axes:
     plt.sca(ax)
     plt.xticks(rotation=90);
 
-# Use the boxplot to examine how continuous Price changes along with the increasing categorical Year or Engine Size
+# Relationships between categorical variables (Year/Engine Size/Model/Transmission/fuelType) and the target variable (Price)
+# Use the boxplot to examine how continuous Price changes with the increasing categorical Year or Engine Size
 fig, axes = plt.subplots(1,2,figsize=(20,5))
 sns.boxplot(data=df, x='year',y='price',color='gray', ax=axes[0]).set(title='The Relationship Between Year and Price')
 sns.boxplot(data=df, x='engineSize',y='price',color='gray', ax=axes[1]).set(title='The Distribution of Price by Engine Size')
@@ -57,3 +58,12 @@ for ax in fig.axes:
 
 # Optional: use the scatterplot to show the relationship between Price, Year, and Engine Size in one visual
 sns.scatterplot(data=df, x='year',y='price',color='gray', hue='engineSize').set(title='The Relationship Between Manufacture Year, Price and Engine Size');
+
+# Use the boxplot to examine how continuous Price changes per Model, per Transmission, per fuelType
+fig, axes = plt.subplots(1,3,figsize=(20,5))
+sns.boxplot(data=df, x='model',y='price',color='gray',ax=axes[0]).set(title='The Distribution of Price by Model')
+sns.boxplot(data=df, x='transmission',y='price',color='gray',ax=axes[1]).set(title='The Distribution of Price by Transmission')
+sns.boxplot(data=df, x='fuelType',y='price',color='gray',ax=axes[2]).set(title='The Distribution of Price by Fuel Type')
+for ax in fig.axes:
+    plt.sca(ax)
+    plt.xticks(rotation=90);
