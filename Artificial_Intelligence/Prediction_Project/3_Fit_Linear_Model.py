@@ -5,6 +5,20 @@
 # R squared assesses how effectively the model uses the features to model the dependent variables.
 # On the other hand, RMSE quantifies the extent to which the predicted outcomes differ from the actual values.
 
+# Set up the environment
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.style as style
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import PowerTransformer
+from sklearn.metrics import r2_score,mean_squared_error
+plt.style.use('ggplot')
+
 # Prepare data to fit the model
 # Normalize the numeric features
 df['log_price'] = np.log(df['price'])
