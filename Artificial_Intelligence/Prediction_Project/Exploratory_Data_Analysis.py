@@ -31,7 +31,7 @@ sns.scatterplot(y=df['price'],x=df['tax'],color='gray',ax=axes[1]).set(title='Th
 sns.scatterplot(y=df['price'],x=df['mileage'],color='gray',ax=axes[2]).set(title='The Scatterplot between Price and Mileage');
 # Since there exist **clusters** in the scatterplot between price and tax, we'are going to create an **ordinal variable** from the tax variable.
 
-# Characteristics of categorical variables - Year, Engine Size, Model, Transmission, fuelType
+# Characteristics of categorical variables - **Year**, **Engine Size**, Model, Transmission, fuelType
 # Use the barplot to study the count per categorical level
 fig, axes = plt.subplots(1,2,figsize=(15,5))
 sns.countplot(x=df['year'], color='gray',ax=axes[0]).set(title='Count of Cars Sold per Manufacture Year')
@@ -43,6 +43,14 @@ fig, axes = plt.subplots(1,3,figsize=(15,5))
 sns.countplot(x=df['model'],color='gray',ax=axes[0]).set(title='Count of Cars Sold per Model')
 sns.countplot(x=df['transmission'],color='gray',ax=axes[1]).set(title='Count of Cars Sold per Transmission')
 sns.countplot(x=df['fuelType'],color='gray',ax=axes[2]).set(title='Count of Cars Sold per Fuel Type')
+for ax in fig.axes:
+    plt.sca(ax)
+    plt.xticks(rotation=90);
+
+# Use the boxplot to examine how continuous price changes along with the increasing categorical Year or Engine Size
+fig, axes = plt.subplots(1,2,figsize=(20,5))
+sns.boxplot(data=df, x='year',y='price',color='gray', ax=axes[0]).set(title='The Relationship Between Year and Price')
+sns.boxplot(data=df, x='engineSize',y='price',color='gray', ax=axes[1]).set(title='The Distribution of Price by Engine Size')
 for ax in fig.axes:
     plt.sca(ax)
     plt.xticks(rotation=90);
