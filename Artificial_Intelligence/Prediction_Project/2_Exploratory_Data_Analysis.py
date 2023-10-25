@@ -29,7 +29,8 @@ fig, axes = plt.subplots(1,3,figsize=(15,5))
 sns.scatterplot(y=df['price'],x=df['mpg'],color='gray',ax=axes[0]).set(title='The Scatterplot between Price and Mpg')
 sns.scatterplot(y=df['price'],x=df['tax'],color='gray',ax=axes[1]).set(title='The Scatterplot between Price and Tax')
 sns.scatterplot(y=df['price'],x=df['mileage'],color='gray',ax=axes[2]).set(title='The Scatterplot between Price and Mileage');
-# Since there exist **clusters** in the scatterplot between price and tax, we'are going to create an **ordinal variable** from the tax variable.
+# Since there exists **clusters** in the scatterplot between price and tax, we'are going to create an **ordinal variable** from the tax variable.
+# Since there exists a **curve** in the scatterplot between price and mileage, we'are going to power transform the mileage variable.
 
 # Characteristics of categorical variables - **Year**, **Engine Size**, Model, Transmission, fuelType
 # Use the barplot to study the count per categorical level
