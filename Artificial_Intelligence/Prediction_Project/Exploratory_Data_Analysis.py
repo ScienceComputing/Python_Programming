@@ -19,13 +19,22 @@ fig, axes = plt.subplots(1,2,figsize=(15,5))
 sns.histplot(df['price'],color='gray',ax=axes[0]).set(title='The Distribution of Price')
 sns.histplot(df['price'],log_scale=True,color='gray',ax=axes[1]).set(title='The Distribution of Log-Transformed Price');
 
-# Relationships between numeric variables (mileage/tax/mpg) and the target variable
-# Study the linear relationships between two continous variables
+# Relationships between numeric variables (mileage/tax/mpg) and the target variable (price)
+# Use the correlation heatmap to study the linear relationships between two continous variables
 numeric = df[['price','mileage','tax','mpg']]
 sns.heatmap(numeric.corr(),annot=True).set(title='The Correlation Heatmap between Numeric Variables');
 
-# Study the **non-linear** relationships between two continous variables
+# Use the scatterplot to study the **non-linear** relationships between two continous variables
 fig, axes = plt.subplots(1,3,figsize=(15,5))
 sns.scatterplot(y=df['price'],x=df['mpg'],color='gray',ax=axes[0]).set(title='The Scatterplot between Price and Mpg')
 sns.scatterplot(y=df['price'],x=df['tax'],color='gray',ax=axes[1]).set(title='The Scatterplot between Price and Tax')
 sns.scatterplot(y=df['price'],x=df['mileage'],color='gray',ax=axes[2]).set(title='The Scatterplot between Price and Mileage');
+# Since there exist **clusters** in the scatterplot between price and tax, we'are going to create an **ordinal variable** from the tax variable.
+
+# Characteristics of categorical variables - Year, Engine Size, Model, Transmission, fuelType
+# Use the barplot to study the count per categorical level
+fig, axes = plt.subplots(1,2,figsize=(15,5))
+sns.countplot(x=df['year'], color='gray',ax=axes[0]).set(title='Count of Cars Sold per Manufacture Year')
+sns.countplot(x=df['engineSize'],color='gray',ax=axes[1]).set(title='Count of Cars Sold per EngineSize')
+axes[0].tick_params(axis='x', labelrotation=45)
+axes[1].tick_params(axis='x', labelrotation=45);
