@@ -37,6 +37,15 @@ lr.fit(X_train, y_train)
 # Make the predictions
 y_pred = lr.predict(X_test)
 
+# Use R squared and RMSE to evaluate the model performance
 print('Linear Regression r2_score: ', r2_score(y_test,y_pred))
 print('Linear Regression Root Mean Squared Error: ', np.sqrt(mean_squared_error(np.exp(y_test),np.exp(y_pred))))
 
+# Use coefficients to estimate the feature importance
+coef_dict = {}
+for i in range(len(features)):
+    coef_dict[features[i]] = lr.coef_[i]
+    
+plt.bar(coef_dict.keys(),coef_dict.values(),alpha=0.5,color='gray')
+plt.xticks(rotation='vertical')
+plt.title('Feature Importance in Linear Regression Model');
