@@ -11,3 +11,8 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import PowerTransformer
 from sklearn.metrics import r2_score,mean_squared_error
 plt.style.use('ggplot')
+
+# Build the tree model
+tree = DecisionTreeRegressor(max_depth=12,min_samples_split=2,random_state=42)
+tree.fit(X_train,y_train)
+y_pred2 = tree.predict(X_test)
