@@ -1,3 +1,4 @@
+# TD: AI in Medicine: tune more parameters
 # Set up the environment
 import pandas as pd
 import numpy as np
@@ -24,12 +25,15 @@ for i in range(1,50):
     tree = DecisionTreeRegressor(max_depth=i,random_state=99)
     tree.fit(X_train,y_train)
     y_pred = tree.predict(X_test)
+    
     # Calculate training R2 and append it to the train_score list
     train_score.append(tree.score(X_train,y_train))
+    
     # Calculate test R2 and append it to the test_score list
     temp = r2_score(y_test,y_pred)
     test_score.append(temp)
     test_pair = (i,temp)
+    
     # Calculate RMSE and append it to the rmse_scores list
     rmse = np.sqrt(mean_squared_error(np.exp(y_pred), np.exp(y_test)))
     rmse_score.append(rmse)
@@ -64,8 +68,6 @@ print(f'Best max_depth (RMSE) is: {min_pair_rmse[0]}\nMinimum RMSE is: {min_pair
 # Testing R^2 is: 0.9444455033877253
 # Best max_depth (RMSE) is: 10
 # Minimum RMSE is: 1483.2072295396115
-
-# TD: AI in Medicine: tune more parameters
 
 # Use the barplot to show the feature importance
 importance = tree.feature_importances_ # Return an array
