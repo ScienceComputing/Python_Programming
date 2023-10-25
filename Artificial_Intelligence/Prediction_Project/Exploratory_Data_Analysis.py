@@ -38,3 +38,11 @@ sns.countplot(x=df['year'], color='gray',ax=axes[0]).set(title='Count of Cars So
 sns.countplot(x=df['engineSize'],color='gray',ax=axes[1]).set(title='Count of Cars Sold per EngineSize')
 axes[0].tick_params(axis='x', labelrotation=45)
 axes[1].tick_params(axis='x', labelrotation=45);
+
+fig, axes = plt.subplots(1,3,figsize=(15,5))
+sns.countplot(x=df['model'],color='gray',ax=axes[0]).set(title='Count of Cars Sold per Model')
+sns.countplot(x=df['transmission'],color='gray',ax=axes[1]).set(title='Count of Cars Sold per Transmission')
+sns.countplot(x=df['fuelType'],color='gray',ax=axes[2]).set(title='Count of Cars Sold per Fuel Type')
+for ax in fig.axes:
+    plt.sca(ax)
+    plt.xticks(rotation=90);
