@@ -20,5 +20,23 @@ df['fuelType'] = labelencoder.fit_transform(df['fuelType'])
 
 # Split the data into a training set and a test set
 features = ['year','transmission','fuelType','engineSize','tax','model','mileage']
-X = df[features] # Features
-y = df['price'] # Target variable
+X = df[features] 
+y = df['log_price'] 
+
+# Define the scaler 
+scaler = PowerTransformer()
+# Fit and transform the training set
+X[['mileage']] = scaler.fit_transform(X[['mileage']])
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=99)
+
+# Build the linear regression
+lr = LinearRegression()
+lr.fit(X_train, y_train)
+
+# Make the predictions
+y_pred = lr.predict(X_test)
+
+print('Linear Regression r2_score: ', r2_score(y_test,y_pred))
+print('Linear Regression Root Mean Squared Error: ', np.sqrt(mean_squared_error(np.exp(y_test),np.exp(y_pred))))
+
