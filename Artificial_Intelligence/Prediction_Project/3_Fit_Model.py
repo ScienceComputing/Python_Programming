@@ -6,4 +6,19 @@
 # On the other hand, RMSE quantifies the extent to which the predicted outcomes differ from the actual values.
 
 # Prepare data to fit the model
+# Normalize the numeric features
 df['log_price'] = np.log(df['price'])
+
+# Convert the categorical variables into numeric features
+labelencoder = LabelEncoder()
+df['model'] = labelencoder.fit_transform(df['model'])
+df['transmission'] = labelencoder.fit_transform(df['transmission'])
+df['fuelType'] = labelencoder.fit_transform(df['fuelType'])
+
+# columns_to_encode = ['model', 'transmission', 'fuelType']
+# df[columns_to_encode] = df[columns_to_encode].apply(lambda col: labelencoder.fit_transform(col))
+
+# Split the data into a training set and a test set
+features = ['year','transmission','fuelType','engineSize','tax','model','mileage']
+X = df[features] # Features
+y = df['price'] # Target variable
