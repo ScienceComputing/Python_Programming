@@ -26,3 +26,5 @@ plt.hist(y, bins=100)
 
 # Visualize the distribution of the partial data from 0 to 100
 plt.hist(y, bins=np.linspace(0,100, 101))
+
+# TD
