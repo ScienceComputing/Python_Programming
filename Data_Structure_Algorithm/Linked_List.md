@@ -60,8 +60,9 @@ class LinkedList:
     return False
   ```
 
-  - Example
-    ```
+
+- Example
+  ```
     Sequencing = LinkedList()
     Sequencing.insert_at_end('TCGA')
     Sequencing.insert_at_end('AAAGGGGG')
@@ -70,4 +71,4 @@ class LinkedList:
     # True
     Sequencing.search('NNNN')
     # False
-    ```
+  ```
