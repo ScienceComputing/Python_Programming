@@ -35,6 +35,22 @@ class LinkedList:
   ```
 - remove_at_beginning()
   ```
+  def remove_at_beginning(self):
+    self.head = self.head.next # The "next" node of the head becomes the new head
+  ```
+- insert_at_end()
+  ```
+  def insert_at_end(self, data):
+    new_node = Node(data)
+    if self.head: # Check if the list is not empty
+      self.tail.next = new_node # Next -> point to right
+      self.tail = new_node
+    else:
+      self.head = new_node
+      self.tail = new_node
+  ```
+- remove_at_end()
+  ```
   def remove_at_end(self):
     # If the list is empty, there's nothing to remove
     if not self.head:
@@ -54,22 +70,6 @@ class LinkedList:
         # Remove the last node
         current.next = None
         self.tail = current
-  ```
-- insert_at_end()
-  ```
-  def insert_at_end(self, data):
-    new_node = Node(data)
-    if self.head: # Check if the list is not empty
-      self.tail.next = new_node # Next -> point to right
-      self.tail = new_node
-    else:
-      self.head = new_node
-      self.tail = new_node
-  ```
-- remove_at_end()
-  ```
-  def remove_at_end(self):
-    self.tail = self.head.next # The "next" node of the head becomes the new head
   ```
 - insert_at()
 - remove_at()
