@@ -72,6 +72,46 @@ class LinkedList:
         self.tail = current
   ```
 - insert_at()
+  ```
+  class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+    def insert_at(self, index, data):
+        new_node = Node(data)
+
+        # Case 1: Inserting at the beginning
+        if index == 0:
+            new_node.next = self.head
+            self.head = new_node
+            # If the list was empty, update the tail as well
+            if self.tail is None:
+                self.tail = new_node
+            return
+
+        # Case 2: Inserting at an index greater than 0
+        current = self.head
+        position = 0
+
+        while current is not None and position < index - 1:
+            current = current.next
+            position += 1
+
+        # If the index is out of bounds
+        if current is None:
+            print("Index out of bounds")
+            return
+
+        # Inserting the new node
+        new_node.next = current.next
+        current.next = new_node
+
+        # Case 3: Update tail if inserting at the end
+        if new_node.next is None:
+            self.tail = new_node
+
+  ```
 - remove_at()
 - search(): search for a value in a LinkedList
   ```
