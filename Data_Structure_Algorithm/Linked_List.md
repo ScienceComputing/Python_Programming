@@ -20,3 +20,32 @@ class LinkedList:
     self.head = None
     self.tail = None
 ```
+
+- The methods of the linked lists, as follows:
+- insert_at_beginning()
+  ```
+  def insert_at_beginning(self, data):
+    new_node = Node(data)
+    if self.head: # Check if the list is not empty
+      new_node.next = self.head # Next -> point to right
+      self.head = new_node
+    else:
+      self.tail = new_node
+      self.head = new_node
+  ```
+- remove_at_beginning()
+- insert_at_end()
+  ```
+  def insert_at_end(self, data):
+    new_node = Node(data)
+    if self.head:
+      self.tail.next = new_node # Next -> point to right
+      self.tail = new_node
+    else:
+      self.head = new_node
+      self.tail = new_node
+  ```
+- remove_at_end()
+- insert_at()
+- remove_at()
+- search()
