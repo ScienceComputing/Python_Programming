@@ -34,6 +34,27 @@ class LinkedList:
       self.head = new_node
   ```
 - remove_at_beginning()
+  ```
+  def remove_at_end(self):
+    # If the list is empty, there's nothing to remove
+    if not self.head:
+        return
+
+    # If the list has only one element
+    if self.head == self.tail:
+        self.head = None
+        self.tail = None
+        return
+
+    # Traverse the list to find the second-to-last node
+    current = self.head
+        while current.next != self.tail:
+          current = current.next
+  
+        # Remove the last node
+        current.next = None
+        self.tail = current
+  ```
 - insert_at_end()
   ```
   def insert_at_end(self, data):
@@ -46,6 +67,10 @@ class LinkedList:
       self.tail = new_node
   ```
 - remove_at_end()
+  ```
+  def remove_at_end(self):
+    self.tail = self.head.next # The "next" node of the head becomes the new head
+  ```
 - insert_at()
 - remove_at()
 - search(): search for a value in a LinkedList
