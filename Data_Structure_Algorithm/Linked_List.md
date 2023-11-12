@@ -1,3 +1,3 @@
 - A linked list is a sequence of data connected through links.
-- Each element is a ndoe, containing data and pointer to the next node. The last link points to null.
+- Each element is a node, containing data and pointer to the next node. The last link points to null.
 - The first node is the head, and the final node is the tail. 
