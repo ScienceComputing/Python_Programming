@@ -5,6 +5,13 @@
 - Doesn't use seconds/bytes: different results depend on the hardware
 - Use the mathematical expression: $O(1)$, $O(n)$, $O(n^2)$
 
-## $O(1)$
+## O(1)
 ```
+variant_index = [0, 1, 2, 3]
+
+def retrieve(object):
+    print(object[1])
+
+retrieve(variant_index)
+# 1
 ```
