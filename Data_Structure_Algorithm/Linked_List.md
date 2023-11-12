@@ -63,12 +63,12 @@ class LinkedList:
 
 - Example
   ```
-    Sequencing = LinkedList()
-    Sequencing.insert_at_end('TCGA')
-    Sequencing.insert_at_end('AAAGGGGG')
-    Sequencing.insert_at_beginning('TGCCCN')
-    Sequencing.search('TCGA')
-    # True
-    Sequencing.search('NNNN')
-    # False
+  Sequencing = LinkedList()
+  Sequencing.insert_at_end('TCGA')
+  Sequencing.insert_at_end('AAAGGGGG')
+  Sequencing.insert_at_beginning('TGCCCN')
+  Sequencing.search('TCGA')
+  # True
+  Sequencing.search('NNNN')
+  # False
   ```
