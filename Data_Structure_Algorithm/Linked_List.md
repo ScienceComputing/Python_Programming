@@ -113,6 +113,48 @@ class LinkedList:
 
   ```
 - remove_at()
+  ```
+  class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+    def remove_at(self, index):
+        # If the list is empty or index is negative
+        if not self.head or index < 0:
+            print("Index out of range")
+            return
+
+        # Case 1: Removing the first node
+        if index == 0:
+            self.head = self.head.next
+            # If the list becomes empty, update the tail
+            if not self.head:
+                self.tail = None
+            return
+
+        # Case 2: Removing a node from a position other than the first
+        current = self.head
+        position = 0
+
+        # Traverse the list to find the node before the one to be removed
+        while current is not None and position < index - 1:
+            current = current.next
+            position += 1
+
+        # If the index is out of bounds or points to the last node
+        if current is None or current.next is None:
+            print("Index out of range")
+            return
+
+        # Remove the node
+        current.next = current.next.next
+
+        # Case 3: Update tail if removing the last node
+        if current.next is None:
+            self.tail = current
+
+  ```
 - search(): search for a value in a LinkedList
   ```
   def search(self, data):
