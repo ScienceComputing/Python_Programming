@@ -3,9 +3,9 @@
   - Time complexity: time taken to run completely
   - Space complexity: extra memory space
 - Doesn't use seconds/bytes: different results depend on the hardware
-- Use the mathematical expression: $O(1)$, $O(n)$, $O(n^2)$
+- Use the mathematical symbols to express the complexity: $O(1)$, $O(n)$, $O(n^2)$
 
-## O(1)
+## O(1) - constant
 ```
 variant_index = [0, 1, 2, 3]
 variant_index_2 = [0, 1, 2, 3, 4, 5, 6, 7, 8]
@@ -18,4 +18,18 @@ retrieve(variant_index)
 
 retrieve(variant_index_2)
 # 1
+```
+
+## O(n) - linear
+```
+variant_index = [0, 1, 2, 3]
+variant_index_2 = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+def print_element(object):
+    for i in object:
+        print(i)
+
+print_element(variant_index) # o(4)
+
+print_element(variant_index_2) # o(9)
 ```
