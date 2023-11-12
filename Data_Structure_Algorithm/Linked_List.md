@@ -38,7 +38,7 @@ class LinkedList:
   ```
   def insert_at_end(self, data):
     new_node = Node(data)
-    if self.head:
+    if self.head: # Check if the list is not empty
       self.tail.next = new_node # Next -> point to right
       self.tail = new_node
     else:
@@ -48,4 +48,13 @@ class LinkedList:
 - remove_at_end()
 - insert_at()
 - remove_at()
-- search()
+- search(): search for a value in a LinkedList
+  ```
+  def search(self, data):
+    current_node = self.head()
+    while current_node: # Check if the list is not empty
+      if current_node.data == data:
+        return True
+      else:
+        current_node = current_node.next # Search from the left most to the right most
+  ```
