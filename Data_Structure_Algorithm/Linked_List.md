@@ -26,8 +26,8 @@ class LinkedList:
   ```
   def insert_at_beginning(self, data):
     new_node = Node(data)
-    if self.head: # Check if the list is not empty
-      new_node.next = self.head # Next -> point to right
+    if self.head: # Check if the list is not empty = check whether the linked list has a head node
+      new_node.next = self.head # Point the next node to the head
       self.head = new_node
     else:
       self.tail = new_node
