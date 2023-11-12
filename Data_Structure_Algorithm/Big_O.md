@@ -8,10 +8,14 @@
 ## O(1)
 ```
 variant_index = [0, 1, 2, 3]
+variant_index_2 = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
 def retrieve(object):
     print(object[1])
 
 retrieve(variant_index)
+# 1
+
+retrieve(variant_index_2)
 # 1
 ```
