@@ -22,7 +22,7 @@ class LinkedList:
 ```
 
 - The methods of the linked lists, as follows:
-- insert_at_beginning()
+- insert_at_beginning() - this is $O(1)$ complexity
   ```
   def insert_at_beginning(self, data):
     new_node = Node(data)
