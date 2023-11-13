@@ -48,3 +48,16 @@ print_element(variant_index) # o(16)
 
 print_element(variant_index_2) # o(81)
 ```
+
+## O(n^2) - cubic
+```
+variant_index = [0, 1, 2, 3]
+
+def print_element(object):
+    for i in object:
+        for j in object:
+            for k in object:
+                print(i, j, k)
+
+print_element(variant_index) # o(64)
+```
