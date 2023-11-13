@@ -33,3 +33,18 @@ print_element(variant_index) # o(4)
 
 print_element(variant_index_2) # o(9)
 ```
+
+## O(n^2) - quadratic
+```
+variant_index = [0, 1, 2, 3]
+variant_index_2 = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+def print_element(object):
+    for i in object:
+        for j in object:
+            print(i, j)
+
+print_element(variant_index) # o(16)
+
+print_element(variant_index_2) # o(81)
+```
