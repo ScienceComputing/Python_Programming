@@ -61,3 +61,8 @@ def print_element(object):
 
 print_element(variant_index) # o(64)
 ```
+
+## Simplify the big O notation
+- Remove the constants: $O(2 + m + 2n)$ -> $O(m + n)$
+- Consider different variables for different inputs: $O(m + n)$
+- Remove the smaller term: $O(n^2 + n)$ -> $O(n^2)$
