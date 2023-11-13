@@ -32,6 +32,7 @@ class Stack:
       return popped_node.data 
 ```
 
+Quick way: use the LifeQueue
 ```
 import queue
 book_stack = queue.LifoQueue(maxsize=0) # Create an infinite LifoQueue; maxsize = 0 -> the stack will be infinite.
