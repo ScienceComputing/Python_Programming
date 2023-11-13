@@ -1,4 +1,6 @@
 - Last-In-First-Out: the last inserted item will be the first item to be removed
+
+The following `push` and `pop` algorithms have $O(1)$ complexity.
 ```
 class Node:
   def __init__(self, data):
@@ -10,6 +12,7 @@ class Stack:
     self.top = None # No node at the top of the stack
     self.size = 0 # Zero elements in the stack
 
+  # Push an element onto a stack using singly linked lists
   def push(self, data):
     new_node = Node(data) # Create a node with the data
     if self.top:
@@ -17,6 +20,7 @@ class Stack:
     self.top = new_node # Set the new node as the top node
     self.size += 1 # Update the size of the stack by one
 
+  # Pop an element from a stack using singly linked lists
   def pop(self):
     if self.top is None: # Check if there is a top element
       return None
