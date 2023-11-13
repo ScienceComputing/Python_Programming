@@ -7,6 +7,7 @@
 - Doubly linked list: each node has two links in either direction.
 - Why use linked lists? Implement other data structures like stacks, queues, and graphs. A common application of a linked list is to access information by navigating backward and forward, such as on a web browser or music playlist.
 
+The class `Node` has two attributes: `data` and `next`
 ```
 class Node:
   def __init__(self, data):
