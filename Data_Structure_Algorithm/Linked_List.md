@@ -156,6 +156,7 @@ class LinkedList:
 
   ```
 - search(): search for a value in a LinkedList
+- The algorithm contains one iterator that, in the worst-case visits all the nodes of the linked list. This amounts to a complexity of O(n) for the whole algorithm.
   ```
   def search(self, data):
     current_node = self.head()
