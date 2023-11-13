@@ -1,0 +1,1 @@
+- Last-In-First-Out: the last inserted item will be the first item to be removed
