@@ -1,4 +1,4 @@
-- Last-In-First-Out: the last inserted item will be the first item to be removed
+Last-In-First-Out: the last inserted item will be the first item to be removed
 
 The following `push` and `pop` algorithms have $O(1)$ complexity.
 ```
@@ -30,4 +30,11 @@ class Stack:
       self.top = self.top.next # Update the top node with the next node
       popped_node.next = None
       return popped_node.data 
+```
+
+```
+import queue
+book_stack = queue.LifoQueue(maxsize=0) # Create an infinite LifoQueue
+book_stack.put('Olga Dies Dreaming') # Add an element to the stack
+book_stack.get() # Remove an element from the stack
 ```
