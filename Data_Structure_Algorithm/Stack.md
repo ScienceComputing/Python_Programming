@@ -16,4 +16,14 @@ class Stack:
       new_node.next = self.top
     self.top = new_node # Set the new node as the top node
     self.size += 1 # Update the size of the stack by one
+
+  def pop(self):
+    if self.top is None: # Check if there is a top element
+      return None
+    else:
+      popped_node = self.top
+      self.size -= 1 # Decrement the size of the stack
+      self.top = self.top.next # Update the top node with the next node
+      popped_node.next = None
+      return popped_node.data 
 ```
