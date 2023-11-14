@@ -1,1 +1,3 @@
-
+- First-In First-Out: first inserted item is the first to be removed
+- Head and tail: the beginning and the end of the queue
+- As in stacks, 
