@@ -37,5 +37,10 @@ def dequeue(self):
 
 ```
 # Use the Queue or SimpleQueue classes from the module queue
-
+import queue
+order_queue = queue.SimpleQueue() # Create a SimpleQueue
+order_queue.put('Apple Pie') # Add an element to the queue
+order_queue.qsize() # Check the number of elements in the queue
+order_queue.get() # Remove an element from the queue
+order_queue.empty() # Check if the queue has zero element
 ```
