@@ -23,4 +23,5 @@ def enqueue(self, data):
     self.tail = new_node
   else:
     self.tail.next = new_node # The tail's next pointer points to the new_node
+    self.tail = new_node
 ```
