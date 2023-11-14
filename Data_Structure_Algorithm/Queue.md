@@ -16,7 +16,7 @@ class Queue:
     self.head = None
     self.tail = None
 
-def enqueue(self, data):
+def enqueue(self, data): # O(1) complexity
   new_node = Node(data)
   if self.head == None:
     self.head = new_node
@@ -25,7 +25,7 @@ def enqueue(self, data):
     self.tail.next = new_node # The tail's next pointer points to the new_node
     self.tail = new_node
 
-def dequeue(self):
+def dequeue(self): # O(1) complexity
   if self.head:
     current_node = self.head
     self.head = current_node.next
