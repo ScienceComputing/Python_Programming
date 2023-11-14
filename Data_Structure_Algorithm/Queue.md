@@ -34,3 +34,8 @@ def dequeue(self):
     if self.head == None:
       self.tail = None
 ```
+
+```
+# Use the Queue or SimpleQueue classes from the module queue
+
+```
