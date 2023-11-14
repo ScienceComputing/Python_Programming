@@ -39,5 +39,5 @@ book_stack = queue.LifoQueue(maxsize=0) # Create an infinite LifoQueue; maxsize 
 book_stack.put('Olga Dies Dreaming') # Add an element to the stack
 book_stack.qsize() # Check the number of elements in the stack
 book_stack.get() # Remove an element from the stack
-book_stack.empty() # # Check if the stack has zero element
+book_stack.empty() # Check if the stack has zero element
 ```
