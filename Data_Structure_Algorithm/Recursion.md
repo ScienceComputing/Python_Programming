@@ -2,8 +2,8 @@
   - Recursion is the function calling itself
   - We can substitute the most loops with recursion
 
+- Factorial example
 ```
-# Factorial example
 def factorial(n):
   outcome = 1
   while n > 1:
@@ -20,6 +20,7 @@ factorial(3)
   - Define a factorial base case (n = 1), such that we will not make any recursive calls
   - If n > 1, we make recursive calls
 ```
+# Standard recursive function
 def factorial_recursion(n)
   if n == 1:
     return 1
@@ -29,6 +30,21 @@ def factorial_recursion(n)
 factorial_recursion(6)
 # 3
 ```
+
+```
+# Tail-recursive function
+def factorial(n: int, accumulator: int = 1) -> int:
+    if n == 0:
+        return accumulator
+    else:
+        return factorial(n-1, n * accumulator)
+
+# factorial(3, 1) calls factorial(2, 3 * 1)
+# factorial(2, 3) calls factorial(1, 2 * 3)
+# factorial(1, 6) calls factorial(0, 1 * 6)
+# factorial(0, 6) hits the base case and returns 6, which is 3!
+```
+
 
 - How does recursion work?
   - Use a [stack](Stack.md) to keep track of the functions; this stack is the call stack.
@@ -40,9 +56,10 @@ factorial_recursion(6)
   - Reduce the complexity of recursive algorithms
   - Used for any problem that can be divided into smaller subproblems that overlap
   - The solutions of the subproblems are saved, avoiding recalculating them if needed later. This can be done with the memoization technique
- 
+
+- Fibonacci example
 ```
-# Fibonacci example: Fibonacci sequence is a sequence in which each number is the sum of the two preceding ones; e.g., 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
+# Fibonacci sequence is a sequence in which each number is the sum of the two preceding ones; e.g., 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
 def fibonacci(n):
   # Define the base case
   if n <= 1:
