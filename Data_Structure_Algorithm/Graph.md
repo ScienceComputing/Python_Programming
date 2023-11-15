@@ -1,0 +1,5 @@
+- A graph is a data structure formed by a set of nodes (vertices)
+- Nodes are connected by links (edges)
+- Trees are a type of graph
+- Directed and undirected graphs: the relationship between 2 nodes is mutual
+- 
