@@ -17,6 +17,10 @@ amino_acid_galleries = {
 amino_acid_galleries['Cysteine']['Formula']
 # 'HOOC−CH(−NH2)−CH2−SH'
 
+# Iterate over a nested dictionary
+for amino_acid, values in amino_acid_galleries.items():
+  print(f"The function of {amino_acid.title()} is {values['Function']}.")
+
 # Method 2:
 print(amino_acid_galleries['Cysteine'].keys())
 # dict_keys(['Formula', 'Function'])
