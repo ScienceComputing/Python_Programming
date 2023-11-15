@@ -30,5 +30,6 @@ factorial(3)
   ```
 
 - How does recursion work?
-  - Use a [stack](Stack.md) to keep track of the functions
-  
+  - Use a [stack](Stack.md) to keep track of the functions; this stack is the call stack.
+  - factorial(3) starts
+  -  
