@@ -17,7 +17,7 @@ class Stack:
     new_node = Node(data) # Create a node with the data
     if self.top:
       new_node.next = self.top
-    self.top = new_node # Set the new node as the top node
+    self.top = new_node # *Set the new node as the top node
     self.size += 1 # Update the size of the stack by one
 
   # Pop an element from a stack using singly linked lists
