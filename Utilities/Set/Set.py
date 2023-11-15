@@ -46,5 +46,10 @@ set1.union(set2) # Return a union set
 set1.intersection(set2) # Return an intersection set
 set1.difference(set2) # Return a set with unique elemements in set1
 set2.difference(set1) # Return a set with unique elemements in set2
+set1 = {1, 2, 3, 4, 5} 
+set2 = {4, 5, 6, 7, 8}
+sym_diff = set1 ^ set2 # Return a set of elements that are in either of the sets but not in their intersection
+print("Symmetric difference using ^:", sym_diff)
+# Symmetric difference using ^: {1, 2, 3, 6, 7, 8}
 
 
