@@ -43,12 +43,12 @@ class WeightedGraph:
 
 f_graph = WeightedGraph()
 
-# Create the vertices
+# Add vertices
 f_graph.add_vertex('Paris')
 f_graph.add_vertex('Nice')
 f_graph.add_vertex('Strasbourg')
 
-# Create the edges
+# Add edges
 f_graph.add_edge('Paris', 'Nice', 3621)
 f_graph.add_edge('Nice', 'Strasbourg', 596)
 f_graph.add_edge('Strasbourg', 'Paris', 305)
