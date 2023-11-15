@@ -2,4 +2,8 @@
 - Nodes are connected by links (edges)
 - Trees are a type of graph
 - Directed and undirected graphs: the relationship between 2 nodes is mutual
-- 
+- Weighted graphs: numeric values associated with the edges; can be directed or undirected
+- Tree vs graph:
+  - Trees cannot have cycles: each node cannot reference each other circularly
+  - Trees require that all nodes must be connected
+- Real application: 1) social networks; 2) drug-drug interaction; 3) location and distance; 4) graph database; 5) search and sort algorithm
