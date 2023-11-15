@@ -30,5 +30,5 @@ factorial(3)
   ```
 
 - How does recursion work?
-  - Use a [stack](Data_Structure_Algorithm/Stack.md) to keep track of the functions
+  - Use a [stack](Stack.md) to keep track of the functions
   
