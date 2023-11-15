@@ -45,6 +45,7 @@ def factorial(n: int, accumulator: int = 1) -> int:
 # factorial(0, 6) hits the base case and returns 6, which is 3!
 ```
 
+While the tail-recursive version can be more efficient in languages that optimize tail calls, in Python, both approaches will have similar performance characteristics due to the lack of this optimization. The standard recursive method might be preferred for its simplicity and readability.
 
 - How does recursion work?
   - Use a [stack](Stack.md) to keep track of the functions; this stack is the call stack.
