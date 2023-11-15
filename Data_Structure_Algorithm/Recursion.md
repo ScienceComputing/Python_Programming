@@ -33,3 +33,9 @@ factorial(3)
   - Use a [stack](Stack.md) to keep track of the functions; this stack is the call stack.
   - factorial(3) starts; before factorial(3) finishes, factorial(2) starts; before factorial(2) finishes, factorial(1) starts; factorial(1) finishes, returning 1
   - factorial(2) finishes, returning 2 (2 * factorial(1)); factorial(3) finishes, returning 6 (3 * factorial(2))
+
+- Dynamic programming
+  - An optimization technique mainly applied to recursion
+  - Reduce the complexity of recursive algorithms
+  - Used for any problem that can be divided into smaller subproblems that overlap
+  - The solutions of the subproblems are saved, avoiding recalculating them if needed later. This can be done with the memoization technique
