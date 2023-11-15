@@ -19,16 +19,16 @@ factorial(3)
   - Add a condition to ensure that our algorithm does not execute forever
   - Define a factorial base case (n = 1), such that we will not make any recursive calls
   - If n > 1, we make recursive calls
-  ```
-  def factorial_recursion(n)
-    if n == 1:
-      return 1
-    else:
-      return n * factorial_recursion(n - 1)
+```
+def factorial_recursion(n)
+  if n == 1:
+    return 1
+  else:
+    return n * factorial_recursion(n - 1)
 
-  factorial_recursion(6)
-  # 3
-  ```
+factorial_recursion(6)
+# 3
+```
 
 - How does recursion work?
   - Use a [stack](Stack.md) to keep track of the functions; this stack is the call stack.
@@ -40,3 +40,28 @@ factorial(3)
   - Reduce the complexity of recursive algorithms
   - Used for any problem that can be divided into smaller subproblems that overlap
   - The solutions of the subproblems are saved, avoiding recalculating them if needed later. This can be done with the memoization technique
+ 
+```
+# Fibonacci example: Fibonacci sequence is a sequence in which each number is the sum of the two preceding ones; e.g., 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
+def fibonacci(n):
+  # Define the base case
+  if n <= 1:
+    return n
+  else:
+    # Call recursively to fibonacci
+    return fibonacci(n - 1) + fibonacci(n - 2)
+    
+print(fibonacci(6))
+
+# Use the dynamic problem to save the solutions of the subproblems in the cache variable, to avoid recalculating it later
+cache = [None]*(100)
+
+def fibonacci(n): 
+    if n <= 1:
+        return n
+    if not cache[n]: # Check if the value exists
+        cache[n] = fibonacci(n-1) + fibonacci(n-2) # Save the result in cache
+    return cache[n]
+    
+print(fibonacci(6))
+```
