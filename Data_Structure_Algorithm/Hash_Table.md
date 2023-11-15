@@ -1,2 +1,3 @@
 - A data structure that stores a collection of key-value pairs
 - Almost every programming language has a built-in hash table: hashes, hash maps, dictionaries (python), associative arrays
+- In a hash table, each position is a slot or bucket
