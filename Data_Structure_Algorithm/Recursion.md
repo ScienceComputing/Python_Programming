@@ -60,6 +60,7 @@ def factorial(n: int, accumulator: int = 1) -> int:
 - Fibonacci example
 ```
 # Fibonacci sequence is a sequence in which each number is the sum of the two preceding ones; e.g., 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
+# Standard recursive function
 def fibonacci(n):
   # Define the base case
   if n <= 1:
@@ -84,6 +85,7 @@ print(fibonacci(6))
 ```
 
 ```
+# Tail-recursive function
 def fibonacci(n: int) -> int:
     def f(n, a, b):
         if n == 0: return a
