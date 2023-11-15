@@ -35,6 +35,9 @@ for key, value in my_yogurt.items():
   print(f'\nproduct: {key}')
   print(f'price: {value}')
 
+for key, value in my_yogurt.items():
+  print(f"The price of the {key} is {value}.")
+
 # Iterate the key
 for key in my_yogurt:
   print(f'\nproduct: {key}')
