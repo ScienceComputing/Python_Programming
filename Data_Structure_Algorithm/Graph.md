@@ -7,6 +7,8 @@
   - Trees cannot have cycles: each node cannot reference each other circularly
   - Trees require that all nodes must be connected
 - Real application: 1) social networks; 2) drug-drug interaction; 3) location and distance; 4) graph database; 5) search and sort algorithm
+
+- Create a graph
 ```
 class Graph:
     def __init__(self):
@@ -27,5 +29,29 @@ my_graph.add_edge('Ho', 'Varasa')
 
 print(my_graph.vertices)
 # {'Ann': ['Varasa', 'Ho'], 'Ho': ['Varasa'], 'Varasa': []}
+```
 
+- Create a weighted graph
+```
+class WeightedGraph:
+  def __init__(self):
+    self.vertices = {} 
+  def add_vertex(self, vertex):
+    self.vertices[vertex] = []
+  def add_edge(self, source, target, weight):
+    self.vertices[source].append([target, weight])
+
+f_graph = WeightedGraph()
+
+# Create the vertices
+f_graph.add_vertex('Paris')
+f_graph.add_vertex('Nice')
+f_graph.add_vertex('Strasbourg')
+
+# Create the edges
+f_graph.add_edge('Paris', 'Nice', 3621)
+f_graph.add_edge('Nice', 'Strasbourg', 596)
+f_graph.add_edge('Strasbourg', 'Paris', 305)
+print(f_graph.vertices)
+# {'Paris': [['Nice', 3621]], 'Nice': [['Strasbourg', 596]], 'Strasbourg': [['Paris', 305]]}
 ```
