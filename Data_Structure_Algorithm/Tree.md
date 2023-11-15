@@ -1,0 +1,6 @@
+- Trees are node-based data structures
+- Each node can have links to more than one node
+- Root: the first node of a tree
+- Parent nodes and children nodes
+- Trees have levels
+- A binary tree: each node has 0, 1, or 2 children
