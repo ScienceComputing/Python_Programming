@@ -2,3 +2,5 @@
 - Almost every programming language has a built-in hash table: hashes, hash maps, dictionaries (python), associative arrays
 - In a hash table, each position is a slot or bucket
 - Every time a hash function is applied, it must return the same value for the same input
+- $O(1)$ complexity: find a value associated with a key
+- Collision: hash function returns the same output for different inputs
