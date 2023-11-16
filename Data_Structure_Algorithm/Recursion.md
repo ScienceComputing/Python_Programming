@@ -58,7 +58,7 @@ While the tail-recursive version can be more efficient in languages that optimiz
   - Used for any problem that can be divided into smaller subproblems that overlap
   - The solutions of the subproblems are saved, avoiding recalculating them if needed later. This can be done with the memoization technique
 
-- A Fibonacci example
+- A Fibonacci example:
 ```
 # Fibonacci sequence is a sequence in which each number is the sum of the two preceding ones; e.g., 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
 # Design a standard recursive function
