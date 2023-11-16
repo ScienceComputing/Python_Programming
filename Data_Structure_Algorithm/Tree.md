@@ -20,3 +20,17 @@ root_node = TreeNode('N', node1, node2)
 ```
 
 ## Binary search tree
+- The left subtree of a node contains only nodes with values less than the node itself, whereas the right subtree contains nodes with values greater than the node
+- The left and right subtrees must also be binary search trees
+
+```
+class TreeNode:
+  def __init__(self, data, left=None, right=None):
+    self.data = data
+    self.left_children = left
+    self.right_children = right
+
+class BinarySearchTree:
+  def __init__self():
+    self.root = None
+```
