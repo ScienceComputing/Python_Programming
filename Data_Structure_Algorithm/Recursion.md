@@ -114,3 +114,5 @@ target_rod = 'C'
 hanoi(num_disks, source_rod, target_rod, auxiliar_rod)
 ```
 
+Link to [Logistic Regresion in GWAS](QuantitativeGenomicsGenetics/LogisticGWAS_Recursive.R)
+
