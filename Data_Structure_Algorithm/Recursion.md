@@ -1,5 +1,5 @@
 - What is recursion?
-  - Recursion is the function calling itself
+  - Recursive function refers to a **function calling itself**
   - We can substitute the most loops with recursion
 
 - Factorial example
