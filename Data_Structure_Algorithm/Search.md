@@ -45,3 +45,6 @@ def binary_search_recursive(ordered_list_obj, search_val):
   
 print(binary_search_recursive([2,7,8,11,15,30,70,99], 7)) # True
 ```
+- Why use recursion?
+  - Recursive functions are more intuitive and easier to understand. The logic of splitting the problem into smaller subproblems aligns well with a recursive approach
+  - Recursive code, due to its declarative nature, can be easier to maintain and modify. It often requires fewer lines of code to implement the same logic as a loop, making the codebase cleaner and more manageable
