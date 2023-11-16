@@ -32,7 +32,7 @@ print(binary_search([2,7,8,11,15,30,70,99], 7)) # True
 - Implement the binary search algorithm using [recursion](Recursion.md)
 ```
 def binary_search_recursive(ordered_list_obj, search_val):
-  if len(ordered_list_obj) == 0: # Define the base case
+  if len(ordered_list_obj) == 0: # Define the base case such that no any recursive calls will be made
     return False
   else:
     middle = len(ordered_list_obj)//2
