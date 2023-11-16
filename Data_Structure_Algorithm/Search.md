@@ -25,4 +25,6 @@ def binary_search(ordered_list_obj, search_val):
     else:
       first = middle + 1
   return False
+
+print(binary_search([2,7,8,11,15,30,70,99], 7)) # True
 ```
