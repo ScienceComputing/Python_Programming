@@ -28,3 +28,20 @@ def binary_search(ordered_list_obj, search_val):
 
 print(binary_search([2,7,8,11,15,30,70,99], 7)) # True
 ```
+
+- Implement the binary search algorithm using [recursion]()
+```
+def binary_search_recursive(ordered_list_obj, search_val):
+  if len(ordered_list_obj) == 0: # Define the base case
+    return False
+  else:
+    middle = len(ordered_list_obj)//2
+    if search_val == ordered_list_obj[middle]: # Check whether the search value equals the value in the middle
+        return True
+    elif search_val < ordered_list_obj[middle]:
+        return binary_search_recursive(ordered_list_obj[:middle], search_val) # Call recursively with the left half of the list
+    else:
+        return binary_search_recursive(ordered_list_obj[middle + 1:], search_val) # Call recursively with the right half of the list
+  
+print(binary_search_recursive([2,7,8,11,15,30,70,99], 7)) # True
+```
