@@ -1,6 +1,6 @@
 - What is recursion?
   - Recursive function refers to a **function calling itself**
-  - We can substitute the most loops with recursion
+  - We can replace most loops with recursion
 
 - Factorial example
 ```
