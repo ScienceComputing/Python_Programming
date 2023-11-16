@@ -1,4 +1,4 @@
-Last-In-First-Out: the last inserted item will be the first item to be removed
+**Last-In-First-Out**: the last inserted item will be the first item to be removed
 
 The following `push` and `pop` algorithms have $O(1)$ complexity.
 ```
