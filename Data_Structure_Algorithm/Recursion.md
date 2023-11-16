@@ -2,7 +2,7 @@
   - Recursive function refers to a **function calling itself**
   - We can replace most loops with recursion
 
-- Factorial example
+- A factorial example: 
 ```
 def factorial(n):
   outcome = 1
@@ -20,7 +20,7 @@ factorial(3)
   - Define a factorial base case (n = 1), such that we will not make any recursive calls
   - If n > 1, we make recursive calls
 ```
-# Standard recursive function
+# Design a standard recursive function
 def factorial_recursion(n)
   if n == 1:
     return 1
@@ -32,7 +32,7 @@ factorial_recursion(6)
 ```
 
 ```
-# Tail-recursive function
+# Design a tail-recursive function
 def factorial(n: int, accumulator: int = 1) -> int:
     if n == 0:
         return accumulator
@@ -58,10 +58,10 @@ While the tail-recursive version can be more efficient in languages that optimiz
   - Used for any problem that can be divided into smaller subproblems that overlap
   - The solutions of the subproblems are saved, avoiding recalculating them if needed later. This can be done with the memoization technique
 
-- Fibonacci example
+- A Fibonacci example
 ```
 # Fibonacci sequence is a sequence in which each number is the sum of the two preceding ones; e.g., 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
-# Standard recursive function
+# Design a standard recursive function
 def fibonacci(n):
   # Define the base case
   if n <= 1:
@@ -86,7 +86,7 @@ print(fibonacci(6))
 ```
 
 ```
-# Tail-recursive function
+# Design a tail-recursive function
 def fibonacci(n: int) -> int:
     def f(n, a, b):
         if n == 0: return a
