@@ -48,7 +48,10 @@ def search(self, search_value):
     else:
       current_node = current_node.right_child
   return False
+```
 
+### Insert
+```
 def insert(self, data):
     new_node = TreeNode(data)
     if self.root == None:
@@ -69,6 +72,11 @@ def insert(self, data):
                     return
                 else:
                     current_node = current_node.right_child
-
 ```
+
 *The insert() adds a new node to a binary search tree. It creates the new node and, if the tree is empty, sets this node as the root. Otherwise, it traverses the tree, starting from the root, to find the correct position for the new node. During the traversal, it compares the data of the new node with the current node's data. If the new data is less, it moves to the left child; if greater, to the right child. This process continues until it finds an empty spot where it can insert the new node as a left or right child, depending on the data comparison. The insertion process stops once the new node is correctly placed.*
+
+### Delete
+- If the node to delete has no children, it is deleted
+- If the [node] to delete has one child, it is deleted and its child node is connected with the [node's] parent
+- If the node to delete has 2 children, it is replaced with its successor, which is the smallest value greater than the value of the node to delete
