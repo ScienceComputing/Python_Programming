@@ -184,7 +184,7 @@ bst.insert('CG')
 print(bst.find_min()) # AT
 ```
 
-*The nodes are properly inserted following the rules of a binary search tree, with the root node being 'N', and 'AT' and 'CG' being placed as left and right children, respectively, based on your comparison logic in the insert method. The find_min method finds the minimum value in the binary search tree by traversing leftward from the root until the leftmost leaf is reached. This leftmost leaf has the smallest value in a binary search tree.*
+*The nodes are properly inserted following the rules of a binary search tree, with the root node being 'N', and 'AT' and 'CG' being placed as left and right children, respectively, based on our comparison logic in the insert method. The find_min method finds the minimum value in the binary search tree by traversing leftward from the root until the leftmost leaf is reached. This leftmost leaf has the smallest value in a binary search tree.*
 
 
 ### Find the maximum
