@@ -31,8 +31,8 @@ root_node = TreeNode('N', node1, node2)
 class TreeNode:
   def __init__(self, data, left=None, right=None):
     self.data = data
-    self.left_children = left
-    self.right_children = right
+    self.left_child = left
+    self.right_child = right
 
 class BinarySearchTree:
   def __init__(self):
@@ -77,20 +77,12 @@ def insert(self, data):
 
 *The insert() adds a new node to a binary search tree. It creates the new node and, if the tree is empty, sets this node as the root. Otherwise, it traverses the tree, starting from the root, to find the correct position for the new node. During the traversal, it compares the data of the new node with the current node's data. If the new data is less, it moves to the left child; if greater, to the right child. This process continues until it finds an empty spot where it can insert the new node as a left or right child, depending on the data comparison. The insertion process stops once the new node is correctly placed.*
 
-### Delete
-- If the node to delete has no children, it is deleted
-- If the [node] to delete has one child, it is deleted and its child node is connected with the [node's] parent
-- If the node to delete has 2 children, it is replaced with its successor, which is the smallest value greater than the value of the node to delete
-  - To find the successor, we visit the right child of the node to delete, and keep visiting the left nodes until the visited node shows the smallest value greater than the value of the node to delete
-  - If the successor has a right child, this child becomes the left child of successor's parent
-
-
 ```
 class TreeNode:
   def __init__(self, data, left=None, right=None):
     self.data = data
-    self.left_children = left
-    self.right_children = right
+    self.left_child = left
+    self.right_child = right
 
 class BinarySearchTree:
   def __init__(self):
@@ -130,4 +122,68 @@ bst = BinarySearchTree()
 bst.insert('Bioinformatics Algorithm')
 print(bst.search('Bioinformatics Algorithm')) # True
 ```
+
+### Delete
+- If the node to delete has no children, it is deleted
+- If the [node] to delete has one child, it is deleted and its child node is connected with the [node's] parent
+- If the node to delete has 2 children, it is replaced with its successor, which is the smallest value greater than the value of the node to delete
+  - To find the successor, we visit the right child of the node to delete, and keep visiting the left nodes until the visited node shows the smallest value greater than the value of the node to delete
+  - If the successor has a right child, this child becomes the left child of successor's parent
+
+### Find the minimum
+```
+class TreeNode:
+  def __init__(self, data, left=None, right=None):
+    self.data = data
+    self.left_child = left
+    self.right_child = right
+
+class BinarySearchTree:
+  def __init__(self):
+    self.root = None
+  def search(self, search_value):
+    current_node = self.root
+    while current_node:
+      if search_value == current_node.data:
+        return True
+      elif search_value < current_node.data:
+        current_node = current_node.left_child
+      else:
+        current_node = current_node.right_child
+    return False
+  def insert(self, data):
+      new_node = TreeNode(data)
+      if self.root == None:
+          self.root = new_node
+          return # Finish the execution
+      else:
+          current_node = self.root
+          while True: # Iterate until the new_node is inserted
+              if data < current_node.data:
+                  if current_node.left_child == None:
+                      current_node.left_child = new_node
+                      return
+                  else:
+                      current_node = current_node.left_child
+              elif data > current_node.data:
+                  if current_node.right_child == None:
+                      current_node.right_child = new_node
+                      return
+                  else:
+                      current_node = current_node.right_child
+  def find_min(self):
+    current_node = self.root
+    while current_node.left_child:
+      current_node = current_node.left_child
+    return current_node.data
+  
+bst = BinarySearchTree()
+bst.insert('N')
+bst.insert('AT')
+bst.insert('CG')
+print(bst.find_min())
+```
+
+*The nodes are properly inserted following the rules of a binary search tree, with the root node being 'N', and 'AT' and 'CG' being placed as left and right children, respectively, based on your comparison logic in the insert method. The find_min method finds the minimum value in the binary search tree by traversing leftward from the root until the leftmost leaf is reached. This leftmost leaf has the smallest value in a binary search tree.*
+
   
