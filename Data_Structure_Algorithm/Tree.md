@@ -52,6 +52,7 @@ def search(self, search_value):
 
 ### Insert
 ```
+# This function is expected to be defined in the class BinarySearchTree
 def insert(self, data):
     new_node = TreeNode(data)
     if self.root == None:
