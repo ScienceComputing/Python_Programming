@@ -52,7 +52,7 @@ def insert(self, data):
         return # Finish the execution
     else:
         current_node = self.root
-        while True:
+        while True: # Iterate until the new_node is inserted
             if data < current_node.data:
                 if current_node.left_child == None:
                     current_node.left_child = new_node
