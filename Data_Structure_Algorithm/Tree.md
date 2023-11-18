@@ -22,10 +22,10 @@ root_node = TreeNode('N', node1, node2)
 ## Binary search tree
 - The left subtree of a node contains only nodes with values less than the node itself, whereas the right subtree contains nodes with values greater than the node
 - The left and right subtrees must also be binary search trees
-- Used to order the lists efficiently
+- Used to order the lists efficiently. When adding or removing elements, there is no need to re-order all of them again.
 - **Much faster at searching** than arrays and linked lists
 - **Much faster at inserting and deleting** than arrays
-- Used to implement advanced data structures: dynamic sets; lookup tables; priority queues
+- [TD] Used to implement advanced data structures: dynamic sets; lookup tables; priority queues
 
 ```
 class TreeNode:
@@ -82,4 +82,4 @@ def insert(self, data):
 - If the node to delete has 2 children, it is replaced with its successor, which is the smallest value greater than the value of the node to delete
   - To find the successor, we visit the right child of the node to delete, and keep visiting the left nodes until the visited node shows the smallest value greater than the value of the node to delete
   - If the successor has a right child, this child becomes the left child of successor's parent
-- 
+  
