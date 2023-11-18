@@ -181,9 +181,70 @@ bst = BinarySearchTree()
 bst.insert('N')
 bst.insert('AT')
 bst.insert('CG')
-print(bst.find_min())
+print(bst.find_min()) # AT
 ```
 
 *The nodes are properly inserted following the rules of a binary search tree, with the root node being 'N', and 'AT' and 'CG' being placed as left and right children, respectively, based on your comparison logic in the insert method. The find_min method finds the minimum value in the binary search tree by traversing leftward from the root until the leftmost leaf is reached. This leftmost leaf has the smallest value in a binary search tree.*
+
+
+### Find the maximum
+```
+class TreeNode:
+  def __init__(self, data, left=None, right=None):
+    self.data = data
+    self.left_child = left
+    self.right_child = right
+
+class BinarySearchTree:
+  def __init__(self):
+    self.root = None
+  def search(self, search_value):
+    current_node = self.root
+    while current_node:
+      if search_value == current_node.data:
+        return True
+      elif search_value < current_node.data:
+        current_node = current_node.left_child
+      else:
+        current_node = current_node.right_child
+    return False
+  def insert(self, data):
+      new_node = TreeNode(data)
+      if self.root == None:
+          self.root = new_node
+          return # Finish the execution
+      else:
+          current_node = self.root
+          while True: # Iterate until the new_node is inserted
+              if data < current_node.data:
+                  if current_node.left_child == None:
+                      current_node.left_child = new_node
+                      return
+                  else:
+                      current_node = current_node.left_child
+              elif data > current_node.data:
+                  if current_node.right_child == None:
+                      current_node.right_child = new_node
+                      return
+                  else:
+                      current_node = current_node.right_child
+  def find_min(self):
+    current_node = self.root
+    while current_node.left_child:
+      current_node = current_node.left_child
+    return current_node.data
+  def find_max(self):
+    current_node = self.root
+    while current_node.right_child:
+      current_node = current_node.right_child
+    return current_node.data
+  
+bst = BinarySearchTree()
+bst.insert('C')
+bst.insert('AT')
+bst.insert('CG')
+bst.insert('N')
+print(bst.find_max()) # N
+```
 
   
