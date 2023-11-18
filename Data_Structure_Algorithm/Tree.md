@@ -49,7 +49,7 @@ def insert(self, data):
     new_node = TreeNode(data)
     if self.root == None:
         self.root = new_node
-        return # Finish the executi
+        return # Finish the execution
     else:
         current_node = self.root
         while True:
