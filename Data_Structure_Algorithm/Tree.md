@@ -22,6 +22,8 @@ root_node = TreeNode('N', node1, node2)
 ## Binary search tree
 - The left subtree of a node contains only nodes with values less than the node itself, whereas the right subtree contains nodes with values greater than the node
 - The left and right subtrees must also be binary search trees
+- Used to order the lists efficiently
+- **Much faster at searching** than arrays and linked lists
 
 ```
 class TreeNode:
@@ -67,4 +69,4 @@ def insert(self, data):
                     current_node = current_node.right_child
 
 ```
-*The insert() adds a new node to a binary search tree. It begins by creating a new node with the given data. If the tree is currently empty (i.e., the root is None), it sets the new node as the root. Otherwise, it traverses the tree, starting from the root, to find the correct position for the new node. During the traversal, it compares the data of the new node with the current node's data. If the new data is less, it moves to the left child; if greater, to the right child. This process continues until it finds an empty spot where it can insert the new node as a left or right child, depending on the data comparison. The function ends once the new node is inserted.*
+*The insert() adds a new node to a binary search tree. It creates the new node and, if the tree is empty, sets this node as the root. Otherwise, it traverses the tree, starting from the root, to find the correct position for the new node. During the traversal, it compares the data of the new node with the current node's data. If the new data is less, it moves to the left child; if greater, to the right child. This process continues until it finds an empty spot where it can insert the new node as a left or right child, depending on the data comparison. The insertion process stops once the new node is correctly placed.*
