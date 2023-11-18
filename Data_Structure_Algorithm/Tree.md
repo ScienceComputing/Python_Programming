@@ -24,6 +24,8 @@ root_node = TreeNode('N', node1, node2)
 - The left and right subtrees must also be binary search trees
 - Used to order the lists efficiently
 - **Much faster at searching** than arrays and linked lists
+- **Much faster at inserting and deleting** than arrays
+- Used to implement advanced data structures: dynamic sets; lookup tables; priority queues
 
 ```
 class TreeNode:
