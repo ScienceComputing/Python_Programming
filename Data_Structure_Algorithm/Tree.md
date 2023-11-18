@@ -80,3 +80,6 @@ def insert(self, data):
 - If the node to delete has no children, it is deleted
 - If the [node] to delete has one child, it is deleted and its child node is connected with the [node's] parent
 - If the node to delete has 2 children, it is replaced with its successor, which is the smallest value greater than the value of the node to delete
+  - To find the successor, we visit the right child of the node to delete, and keep visiting the left nodes until the visited node shows the smallest value greater than the value of the node to delete
+  - If the successor has a right child, this child becomes the left child of successor's parent
+- 
