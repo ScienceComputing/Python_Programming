@@ -35,7 +35,7 @@ class TreeNode:
     self.right_children = right
 
 class BinarySearchTree:
-  def __init__self():
+  def __init__(self):
     self.root = None
 
 def search(self, search_value):
@@ -43,7 +43,7 @@ def search(self, search_value):
   while current_node:
     if search_value == current_node.data:
       return True
-    elif search_value < current_node.data
+    elif search_value < current_node.data:
       current_node = current_node.left_child
     else:
       current_node = current_node.right_child
@@ -83,4 +83,51 @@ def insert(self, data):
 - If the node to delete has 2 children, it is replaced with its successor, which is the smallest value greater than the value of the node to delete
   - To find the successor, we visit the right child of the node to delete, and keep visiting the left nodes until the visited node shows the smallest value greater than the value of the node to delete
   - If the successor has a right child, this child becomes the left child of successor's parent
+
+
+```
+class TreeNode:
+  def __init__(self, data, left=None, right=None):
+    self.data = data
+    self.left_children = left
+    self.right_children = right
+
+class BinarySearchTree:
+  def __init__(self):
+    self.root = None
+  def search(self, search_value):
+    current_node = self.root
+    while current_node:
+      if search_value == current_node.data:
+        return True
+      elif search_value < current_node.data:
+        current_node = current_node.left_child
+      else:
+        current_node = current_node.right_child
+    return False
+  def insert(self, data):
+      new_node = TreeNode(data)
+      if self.root == None:
+          self.root = new_node
+          return # Finish the execution
+      else:
+          current_node = self.root
+          while True: # Iterate until the new_node is inserted
+              if data < current_node.data:
+                  if current_node.left_child == None:
+                      current_node.left_child = new_node
+                      return
+                  else:
+                      current_node = current_node.left_child
+              elif data > current_node.data:
+                  if current_node.right_child == None:
+                      current_node.right_child = new_node
+                      return
+                  else:
+                      current_node = current_node.right_child
+
+bst = BinarySearchTree()
+bst.insert('Bioinformatics Algorithm')
+print(bst.search('Bioinformatics Algorithm')) # True
+```
   
