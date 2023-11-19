@@ -39,5 +39,5 @@ def bfs(graph, initial_vertex):
     return visited_vertices
 ```
 
-## comparison between breadth first search and depth first search
+## Breadth first search vs depth first search
 Breadth first search is suitable for targets closer to the starting vertex and is used in applications like web crawling, finding the shortest path in unweighted graphs, locating connected places via GPS, and as a component in more complex algorithms. In contrast, depth first search is better for targets that are far from the starting vertex and is applied in solving puzzles that have a single solution, like mazes, detecting cycles in graphs, finding the shortest path in weighted graphs, and also as part of more sophisticated algorithms.
