@@ -20,4 +20,4 @@ def bfs(self):
 ```
 
 ## Breadth first search - graph
-- As graphs have cycles, we need to check if the vertices have already been visited.
+- As graphs have cycles, we need to check if the vertices have already been visited. Its complexity is $O(V + E)$, where V is the number of vertices and E is the number of edges.
