@@ -83,6 +83,7 @@ graph_1 = {'0': ['1', '2'],
   '3': ['1', '4'],
   '4': ['2', '3']}
 
+# Visit all the vertices of the graph by applying the depth first search algorithm
 dfs(set(), graph_1, '0')
 # 0
 # 1
