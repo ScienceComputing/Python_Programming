@@ -17,6 +17,18 @@ def in_order(self, current_node):
 tree_1.in_order(tree_1.root)
 ```
 
+```
+class BinarySearchTree:
+  def __init__(self):
+    self.root = None
+
+  def in_order(self, current_node):
+    if current_node:
+      self.in_order(current_node.left_child)
+      print(current_node.data)
+      self.in_order(current_node.right_child)
+```
+
 ### Pre-order traversal
 - Traverse the current node, followed by the left subtree of the current node, and finally, the right subtree. Its complexity is $O(n)$ where n is the number of nodes.
 - Pre-order is used to create copies of a binary tree and get prefix expressions.
