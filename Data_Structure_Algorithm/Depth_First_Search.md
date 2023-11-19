@@ -3,6 +3,8 @@
 - Three methods exist for traversing a binary tree with depth-first search: in-order traversal, pre-order traversal, and post-order traversal.
 
 ## Depth first search - binary tree
+Expression trees are a kind of binary tree that represent arithmetic expressions.
+
 ### In-order traversal
 - Traverse the left subtree of the current node, followed by the current node, and finally, the right subtree (left -> current -> right). Its complexity is $O(n)$ where n is the number of nodes.
 - In-order traversal is commonly used in binary search trees to obtain the nodes' values in ascending order. 
