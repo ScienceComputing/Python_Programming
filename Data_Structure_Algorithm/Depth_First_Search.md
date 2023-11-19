@@ -76,4 +76,17 @@ def dfs(visited_vertices, graph, current_vertex):
         visited_vertices.add(current_vertex)
         for adjacent_vertex in graph[current_vertex]:
             dfs(visited_vertices, graph, adjacent_vertex)
+
+graph_1 = {'0': ['1', '2'],
+  '1': ['0', '2', '3'],
+  '2': ['0', '1', '4'],
+  '3': ['1', '4'],
+  '4': ['2', '3']}
+
+dfs(set(), graph_1, '0')
+# 0
+# 1
+# 2
+# 4
+# 3
 ```
