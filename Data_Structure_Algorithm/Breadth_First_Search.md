@@ -2,6 +2,8 @@
 - Breadth first search initiates from the root and thoroughly explores all nodes at each level of the tree before progressing to the subsequent level. Its complexity is $O(n)$.
 
 ```
+import queue
+
 def bfs(self):
     if self.root:
         visited_nodes = []
@@ -16,3 +18,6 @@ def bfs(self):
                 bfs_queue.put(current_node.right)
         return visited_nodes
 ```
+
+## Breadth first search - graph
+- As graphs have cycles, we need to check if the vertices have already been visited.
