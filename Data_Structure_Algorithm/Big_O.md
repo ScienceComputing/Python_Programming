@@ -5,6 +5,10 @@
 - Doesn't use seconds/bytes: different results depend on the hardware settings
 - Use the mathematical symbols to express the complexity: $O(1)$, $O(n)$, $O(n^2)$
 
+```diff
+- **Time complexity**
+```
+
 ## O(1) - constant
 ```
 variant_index = [0, 1, 2, 3]
