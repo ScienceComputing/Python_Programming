@@ -5,11 +5,9 @@
 - Doesn't use seconds/bytes: different results depend on the hardware settings
 - Use the mathematical symbols to express the complexity: $O(1)$, $O(n)$, $O(n^2)$
 
-```
-$$
-{\color{red}Time complexity}
-$$
-```
+
+$${\color{red}Welcome \space \color{lightblue}To \space \color{orange}Stackoverflow}$$
+
 
 ## O(1) - constant
 ```
