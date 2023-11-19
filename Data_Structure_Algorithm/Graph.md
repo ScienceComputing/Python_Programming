@@ -1,3 +1,4 @@
+## Graph
 - A graph is a data structure formed by a set of nodes (vertices)
 - Nodes are connected by links (edges)
 - Trees are a type of graph
@@ -8,7 +9,7 @@
   - Trees require that all nodes must be connected
 - Real application: 1) social networks; 2) drug-drug interaction; 3) location and distance; 4) graph database; 5) search and sort algorithm
 
-- Create a graph
+## Create a graph
 ```
 class Graph:
     def __init__(self):
@@ -31,7 +32,7 @@ print(my_graph.vertices)
 # {'Ann': ['Varasa', 'Ho'], 'Ho': ['Varasa'], 'Varasa': []}
 ```
 
-- Create a weighted graph
+## Create a weighted graph
 ```
 class WeightedGraph:
   def __init__(self):
