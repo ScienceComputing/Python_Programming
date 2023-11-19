@@ -66,7 +66,7 @@ class ExpressionTree:
 
 ## Depth first search - graph
 - As graphs have cycles, we need to keep track of which vertices have been visited.
-- Algorithm: 1) start at any vertex; 2) tracks the current vertex in a list; 3) for each current node's adjacent vertex, if it has been visited, we ignore, but if it hasn't been visited, we recursively perform depth first search.
+- Algorithm: 1) start at any vertex; 2) tracks the current vertex in a visited vertices list; 3) for each current node's adjacent vertex, if it has been visited, we ignore, but if it hasn't been visited, we recursively perform depth first search.
 - Its complexity is $O(V + E)$, where V is the number of vertices, and the E is the number of edges.
 
 ```
