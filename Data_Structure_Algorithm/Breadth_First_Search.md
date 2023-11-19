@@ -40,7 +40,7 @@ def bfs(graph, initial_vertex):
 ```
 
 ```
-# Search for a given vertex within a graph
+# Search for a given vertex within a graph; vertex in this case is a genetic variant
 import queue
 
 def bfs(graph, initial_vertex, search_value):
