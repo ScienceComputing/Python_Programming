@@ -1,6 +1,6 @@
 ## Big O Notation
 - It measures the worst-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm
-  - ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) **Time complexity**: time taken to run completely [focus]
+  - <span style="color:orange;">**Time complexity**: time taken to run completely [focus]</span>
   - Space complexity: extra memory space
 - Doesn't use seconds/bytes: different results depend on the hardware settings
 - Use the mathematical symbols to express the complexity: $O(1)$, $O(n)$, $O(n^2)$
