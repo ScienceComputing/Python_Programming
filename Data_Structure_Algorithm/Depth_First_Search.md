@@ -39,3 +39,13 @@ tree_1.pre_order(tree_1.root)
 ## Depth first search - graph
 - As graphs have cycles, we need to keep track of which vertices have been visited.
 - Algorithm: 1) start at any vertex; 2) tracks the current vertex in a list; 3) for each current node's adjacent vertex, if it has been visited, we ignore, but if it hasn't been visited, we recursively perform depth first search.
+- Its complexity is $O(V + E)$, where V is the number of vertices, and the E is the number of edges.
+
+```
+def dfs(visited_vertices, graph, current_vertex):
+    if current_vertex not in visited_vertices:
+        print(current_vertex)
+        visited_vertices.add(current_vertex)
+        for adjacent_vertex in graph[current_vertex]:
+            dfs(visited_vertices, graph, adjacent_vertex)
+```
