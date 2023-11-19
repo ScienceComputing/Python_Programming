@@ -17,3 +17,13 @@ tree_1.in_order(tree_1.root)
 
 ## Pre-order traversal
 - Traverse the current node, followed by the left subtree of the current node, and finally,the right subtree. Its complexity is $O(n)$ where n is the number of nodes.
+
+```
+def pre_order(self, current_node):
+  if current_node:
+    print(current_node.data)
+    self.pre_order(current_node.left_child)
+    self.pre_order(current_node.right_child)
+
+tree_1.pre_order(tree_1.root)
+```
