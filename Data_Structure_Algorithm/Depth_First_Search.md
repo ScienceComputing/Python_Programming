@@ -62,6 +62,25 @@ class ExpressionTree:
 ### Post-order traversal
 - Traverse the left subtree of the current node, followed by the right subtree, and finally, the current node (left -> right -> current). Its complexity is $O(n)$ where n is the number of nodes.
 - Post-order is used to delete binary trees and get postfix expressions.
+```
+import queue
+
+class ExpressionTree:
+    def __init__(self):
+        self.root = None
+
+    def pre_order(self, current_node):
+        if current_node:
+            print(current_node.data)
+            self.pre_order(current_node.left_child)
+            self.pre_order(current_node.right_child)
+
+    def post_order(self, current_node):
+        if current_node:
+            self.post_order(current_node.left_child)
+            self.post_order(current_node.right_child)
+            print(current_node.data)
+```
 
 
 ## Depth first search - graph
