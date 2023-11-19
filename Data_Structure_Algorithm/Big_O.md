@@ -6,7 +6,7 @@
 - Use the mathematical symbols to express the complexity: $O(1)$, $O(n)$, $O(n^2)$
 
 ```diff
-- We focus on **Time Complexity**
+- We focus on Time Complexity
 ```
 
 ## O(1) - constant
