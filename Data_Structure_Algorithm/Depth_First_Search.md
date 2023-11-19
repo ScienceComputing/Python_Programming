@@ -4,7 +4,7 @@
 
 ## Depth first search - binary tree
 ### In-order traversal
-- Traverse the left subtree of the current node, followed by the current node, and finally, the right subtree. Its complexity is $O(n)$ where n is the number of nodes.
+- Traverse the left subtree of the current node, followed by the current node, and finally, the right subtree (left -> current -> right). Its complexity is $O(n)$ where n is the number of nodes.
 - In-order traversal is commonly used in binary search trees to obtain the nodes' values in ascending order. 
 
 ```
@@ -30,7 +30,7 @@ class BinarySearchTree:
 ```
 
 ### Pre-order traversal
-- Traverse the current node, followed by the left subtree of the current node, and finally, the right subtree. Its complexity is $O(n)$ where n is the number of nodes.
+- Traverse the current node, followed by the left subtree of the current node, and finally, the right subtree (current -> left -> right). Its complexity is $O(n)$ where n is the number of nodes.
 - Pre-order is used to create copies of a binary tree and get prefix expressions.
 
 ```
@@ -44,7 +44,7 @@ tree_1.pre_order(tree_1.root)
 ```
 
 ### Post-order traversal
-- Traverse the left subtree of the current node, followed by the right subtree, and finally, the current node. Its complexity is $O(n)$ where n is the number of nodes.
+- Traverse the left subtree of the current node, followed by the right subtree, and finally, the current node (left -> right -> current). Its complexity is $O(n)$ where n is the number of nodes.
 - Post-order is used to delete binary trees and get postfix expressions.
 
 
