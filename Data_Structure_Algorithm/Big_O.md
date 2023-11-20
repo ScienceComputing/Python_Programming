@@ -12,6 +12,9 @@
 ## Big omega notation
 - It measures the best-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm
 
+## Big theta notation
+- It measures the average-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm
+
 ## O(1) - constant
 ```
 variant_index = [0, 1, 2, 3]
