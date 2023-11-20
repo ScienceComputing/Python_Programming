@@ -1,3 +1,6 @@
+"""
+Case 1
+"""
 # Process a file line by line at once
 with open('trial.py') as f: # Notice that f is a generator
     for line in f:
@@ -11,6 +14,9 @@ for line in f:
     print(line)
 f.close()
 
+"""
+Case 2
+"""
 target_dictionary = {} 
 # Open the input file for reading and the output file for writing
 with open("trial_input.txt", 'r') as file1, open("trial_output.txt", 'w') as file2:
@@ -23,7 +29,9 @@ with open("trial_input.txt", 'r') as file1, open("trial_output.txt", 'w') as fil
         
 # The file1 and file2 are automatically closed when we exit the 'with' block
 
-
+"""
+Case 3
+"""
 # Process a file line by line on the fly
 def read_large_file(file_object):
     """A generator function to read a large file."""
