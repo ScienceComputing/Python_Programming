@@ -4,6 +4,7 @@
 - Process:
   - Initial iteration: begin with the first index and compare it with the second element. If the first element is larger than the second, swap them. Continue this process for the second and third elements, swapping if necessary. Repeat these steps until reaching the last element.
   - Subsequent iterations: repeat the same process for the remaining iterations. After each iteration, the largest element among the unsorted ones is moved to the end. During each iteration, comparisons are made up to the last unsorted element. The array is considered sorted when all unsorted elements are in their correct positions.
+- This algorithm does not perform well for highly unsorted and large lists; but performs well for small lists.
 
 ```
 def bubble_sort(my_list):
@@ -19,7 +20,8 @@ print(bubble_sort([6,1,2,3,7])) # [1, 2, 3, 6, 7]
 # for j in range(list_length-1-i): with each pass, the largest number in the remaining part of the list bubbles up to its correct position, so there is no need to check it again.
 ```
 
-- Optimize the bubble sorting algorithm so that it can detect the list which is already sorted and terminate the execution. Its best case complexity is $\Omega(n)$, when the list is already sorted.  
+- Optimize the bubble sorting algorithm so that it can detect the list which is already sorted and terminate the execution. Its best case complexity is $\Omega(n)$, when the list is already sorted.
+- This algorithm performs well for sorted/almost sorted and large lists, and small lists.
 ```
 def bubble_sort_optimize(my_list):
     list_length = len(my_list)
