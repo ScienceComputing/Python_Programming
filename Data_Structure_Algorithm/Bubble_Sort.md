@@ -19,7 +19,7 @@ print(bubble_sort([6,1,2,3,7])) # [1, 2, 3, 6, 7]
 # for j in range(list_length-1-i): with each pass, the largest number in the remaining part of the list bubbles up to its correct position, so there is no need to check it again.
 ```
 
-- Optimize the bubble sorting algorithm so that it can detect the list which is already sorted and terminate the execution
+- Optimize the bubble sorting algorithm so that it can detect the list which is already sorted and terminate the execution. Its best case complexity is $\Omega(n)$. 
 ```
 def bubble_sort_optimize(my_list):
     list_length = len(my_list)
