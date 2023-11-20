@@ -5,3 +5,4 @@ print(square)
 
 import anndata as ad
 sum_dict = {gene: 'sum' for gene in adata_replicate.var_names}
+# The 'sum' specifies the aggregation method to compute the sum of gene expression values when aggregating data for each gene within the adata_replicate 
