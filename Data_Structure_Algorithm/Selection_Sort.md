@@ -1,6 +1,6 @@
 ## Selection sort algorithm
 - Selection sort is a sorting technique that, during each iteration, picks the smallest element from an unsorted list and positions it at the start of the unsorted list.
-- Its worst-case, average-case, best-base complexity is $O(n^2)$, &Theta(n^2), and $\Omega(n^2)$, respectively.
+- Its worst-case, average-case, best-base complexity is $O(n^2)$, $$Theta(n^2)$$, and $\Omega(n^2)$, respectively.
 
 ```
 def selection_sort(my_list):
