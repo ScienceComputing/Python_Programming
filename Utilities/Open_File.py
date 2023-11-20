@@ -21,7 +21,7 @@ with open("trial_input.txt", 'r') as file1, open("trial_output.txt", 'w') as fil
         target = words1[1] + "\t" + words1[2]  
         target_dictionary[name] = target
         
-# File1 and file2 are automatically closed when we exit the 'with' block
+# The file1 and file2 are automatically closed when we exit the 'with' block
 
 
 # Process a file line by line on the fly
