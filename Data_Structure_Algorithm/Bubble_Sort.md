@@ -32,7 +32,7 @@ def bubble_sort_optimize(my_list):
             if my_list[i] > my_list[i+1]:
                 my_list[i], my_list[i+1] = my_list[i+1], my_list[i]
                 is_sorted = False
-        list_length -= 1
+        list_length -= 1 # Since the largest element will be in its final position after each pass, we can ignore it in the next pass
     return my_list
 
 # for i in range(list_length-1): if no swaps are made during a full pass of the inner loop (meaning no elements are out of order), the is_sorted flag remains True, which indicates that the list is sorted. Consequently, the while loop condition while not is_sorted: becomes False, and the loop exits.
