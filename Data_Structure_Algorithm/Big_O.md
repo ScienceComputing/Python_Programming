@@ -1,4 +1,4 @@
-## Big O Notation
+## Big O notation
 - It measures the worst-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm
     - **Time complexity**: time taken to run completely
     - Space complexity: extra memory space
@@ -8,6 +8,9 @@
 ```diff
 - We focus on Time Complexity
 ```
+
+## Big omega notation
+- It measures the best-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm
 
 ## O(1) - constant
 ```
