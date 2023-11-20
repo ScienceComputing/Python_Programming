@@ -15,8 +15,8 @@ line = 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE85nnn/GSE85241/suppl/GSE85241
 ncbi, base_name = line.split('suppl/')
 base_name
 
+# Unpack list elements into column names
 df = pd.DataFrame(columns=[*adata_cell_pop.var_names, *obs_to_keep])
-
 # The * operator is used to unpack elements from the lists (or any iterable) adata_cell_pop.var_names and obs_to_keep. 
 # This operator is often used to unpack iterables in Python.
 # For example, if adata_cell_pop.var_names is ['gene1', 'gene2', 'gene3'] and obs_to_keep is ['age', 'gender'], then [*adata_cell_pop.var_names, *obs_to_keep] becomes ['gene1', 'gene2', 'gene3', 'age', 'gender'].
