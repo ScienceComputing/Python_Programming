@@ -3,7 +3,6 @@
 - Its worst-case, average-case, best-base complexity is $O(n^2)$, $\Theta(n^2)$, and $\Omega(n)$, respectively.
 
 ```
-# TD
 def insertion_sort(my_list):
     for i in range(1, len(my_list)): # Start from the second element (index 1) to the end of the list (len(my_list)), since the first element is considered sorted by default
         number_to_order = my_list[i]
