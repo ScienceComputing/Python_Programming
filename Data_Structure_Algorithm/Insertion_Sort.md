@@ -1,6 +1,6 @@
 ## Insertion sort algorithm
 - Insertion sort is a sorting technique that, during each iteration, positions an unsorted element into its appropriate location.
-- Its worst-case, average-case, best-base complexity is $O(n^2)$, $\Theta(n^2)$, and $\Omega(n)$, respectively.
+- Its worst-case, average-case, best-case complexity is $O(n^2)$, $\Theta(n^2)$, and $\Omega(n)$, respectively.
 
 ```
 def insertion_sort(my_list):
