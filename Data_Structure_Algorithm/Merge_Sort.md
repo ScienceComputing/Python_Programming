@@ -3,8 +3,8 @@
   - It begins with the **Divide** phase, where the problem is divided into smaller, manageable sub-problems.
   - Next, during the **Conquer** phase, these sub-problems are solved recursively.
   - Finally, in the **Combine** phase, the solutions to these sub-problems are integrated to obtain the ultimate solution.
-- Its complexity is O($n log n$), which is a significant improvement over bubble sort, selection sort, and insertion sort, which have a complexity of O($n^2$). Hence, merge sort is suitable for sorting large lists of numbers. In average and best cases, it also has a complexity of O($n log n$). Other algorithms like bubble sort or insertion sort have better best case complexity $\Omega(n)$.
-- The inconvenience of this algorithm is its space complexity O($n$). 
+- Its complexity is $O(n log n)$, which is a significant improvement over bubble sort, selection sort, and insertion sort, which have a complexity of $O(n^2)$. Hence, merge sort is suitable for sorting large lists of numbers. In average and best cases, it also has a complexity of $O(n log n)$. Other algorithms like bubble sort or insertion sort have better best case complexity $\Omega(n)$.
+- The inconvenience of this algorithm is its space complexity $O(n)$. 
 
 ```
 Merge sort - implementation
