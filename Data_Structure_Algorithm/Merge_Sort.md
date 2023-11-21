@@ -7,8 +7,6 @@
 - The inconvenience of this algorithm is its space complexity $O(n)$. 
 
 ```
-Merge sort - implementation
-
 def merge_sort(my_list):
     if len(my_list) > 1:
         mid = len(my_list)//2
@@ -37,8 +35,7 @@ def merge_sort(my_list):
             j += 1
             k += 1
 
-        my_list = [35, 22, 90, 4, 50, 20, 30, 40, 1]
-        merge_sort(my_list)
-        print(my_list)
+list_1 = [12, 11, 46, 29, 3, 1, 77, 0, 108]
+print(merge_sort(list_1))
 
 ```
