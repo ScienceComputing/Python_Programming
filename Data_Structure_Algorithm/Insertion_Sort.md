@@ -10,7 +10,7 @@ def insertion_sort(my_list):
         while j >= 0 and number_to_order < my_list[j]: # This is the condition to find the correct position for number_to_order.
             my_list[j + 1] = my_list[j] # If the condition is true, the element at my_list[j] is moved one position to the right to make space for number_to_order.
             j -= 1
-        my_list[j + 1] = number_to_order
+        my_list[j + 1] = number_to_order # TD
     return my_list
 ```
 
