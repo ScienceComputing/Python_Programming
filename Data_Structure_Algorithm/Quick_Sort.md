@@ -1,0 +1,2 @@
+## Quick sort algorithm
+Quicksort adheres to the divide and conquer approach. This sorting algorithm employs a partitioning technique in which it selects a value, known as the pivot, from the list. It arranges all items smaller than the pivot to its left and places greater elements to its right. Quicksort proceeds to recursively call itself on the elements located to the left and right of the pivot.
