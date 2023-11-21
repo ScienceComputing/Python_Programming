@@ -14,7 +14,6 @@ def merge_sort(my_list):
         right_half = my_list[mid:]
         merge_sort(left_half)
         merge_sort(right_half) # Recursively divide the list until each left/right list has only one element
-
         i = j = k = 0 # Proceed to merge the sorted parts. Declare the i variable for the index of the left_half, the j variable for the index of the right_half, and the k variable for the index of the final list. 
         while i < len(left_half) and j < len(right_half): # TD
             if left_half[i] < right_half[j]:
@@ -24,18 +23,16 @@ def merge_sort(my_list):
                 my_list[k] = right_half[j]
                 j += 1
             k += 1
-
         while i < len(left_half):
             my_list[k] = left_half[i]
             i += 1
             k += 1
-
         while j < len(right_half):
             my_list[k] = right_half[j]
             j += 1
             k += 1
 
 list_1 = [12, 11, 46, 29, 3, 1, 77, 0, 108]
-print(merge_sort(list_1))
-
+merge_sort(list_1)
+print(list_1) # [0, 1, 3, 11, 12, 29, 46, 77, 108]
 ```
