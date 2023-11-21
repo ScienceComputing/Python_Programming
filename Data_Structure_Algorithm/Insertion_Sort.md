@@ -16,6 +16,6 @@ def insertion_sort(my_list):
 
 Let's walk through the insertion_sort algorithm using the list [4, 3, 7, 2]:
 
-- Start with the second element (3): compare 3 with the first element 4.Since 3 is less than 4, swap them. Now the list looks like [3, 4, 7, 2].
+- Start with the second element (3): compare 3 with the first element 4. Since 3 is less than 4, swap them. Now the list looks like [3, 4, 7, 2].
 - Move to the third element (7): compare 7 with the previous element 4. No swap is needed because 7 is greater than 4. The list remains [3, 4, 7, 2].
 - Move to the fourth element (2): compare 2 with the previous element 7. 2 is less, so swap 2 and 7. Now the list is [3, 4, 2, 7]. Now compare 2 with 4. Again, 2 is less, so swap 2 and 4. The list is now [3, 2, 4, 7]. Compare 2 with 3. 2 is less, so swap 2 and 3. The list becomes [2, 3, 4, 7].
