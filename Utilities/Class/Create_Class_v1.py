@@ -1,3 +1,16 @@
+class IntronicVariant:
+    def set_variant_info(self, gene, location, description):
+        self.gene = gene
+        self.location = location
+        self.description = description
+
+variant = IntronicVariant()
+variant.set_variant_info('Gene_XYZ', 'Intron 3', 'A common intronic variant associated with disease M')
+
+print(f"Gene: {variant.gene}")
+print(f"Location: {variant.location}")
+print(f"Description: {variant.description}")
+
 class RNASample:
     def __init__(self):
         self.name = None
