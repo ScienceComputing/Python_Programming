@@ -1,7 +1,7 @@
 # Add methods/functions to a class
 class Falafel:
     def __init__(self,type='baked'): # use self as the 1st argument in method definition; self refers to the data of a particualr object
-        self.ingrediate = ['Chickpeas', 'Onion', 'Parsley', 'Garlic', 'Green Chile Pepper', 'Oil', 'Baking Soda']
+        self.ingrediate = ['Chickpeas', 'Onion', 'Parsley', 'Garlic', 'Green Chile Pepper', 'Oil', 'Baking Soda'] # Create the attribute ingrediate
         self.type = type
         if self.type not in ['fried','baked']:
             print('Unrecognized type: ' + str(self.type))
