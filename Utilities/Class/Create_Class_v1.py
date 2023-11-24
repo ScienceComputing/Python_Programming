@@ -14,10 +14,8 @@ print(f"Description: {variant.description}")
 variant.gene = variant.gene + ' Gene_ABC'
 print(f"Gene: {variant.gene}")
 
+# Define attributes in methods
 class RNASample:
-    def __init__(self):
-        self.name = None
-        self.expression_values = []
     def set_name(self, new_name): # Add methods/functions to a class
         self.name = new_name
     def set_expression_values(self, values): # Add methods/functions to a class
@@ -44,6 +42,31 @@ print(f"Max Expression: {max_expression}")
 
 dir(rna_sample) # List all the attributes and methods of an object
 help(rna_sample) # Show the documentation of a class associated with an object
+
+# Define attributes in the __init__ constructor; avoid defining attributes outside the constructor
+class RNASample2:
+    def __init__(self, new_name, values):
+        self.name = new_name
+        self.expression_values = values
+    def calculate_mean_expression(self): # Add methods/functions to a class
+        if not self.expression_values:
+            return 0
+        return sum(self.expression_values) / len(self.expression_values)
+    def calculate_max_expression(self): # Add methods/functions to a class
+        if not self.expression_values:
+            return 0
+        return max(self.expression_values)
+
+rna_sample = RNASample2()
+rna_sample.set_name('Sample_001')
+expression_values = [10.1, 16.3, 2.1, 1.1, 10.8]
+rna_sample.set_expression_values(expression_values)
+
+mean_expression = rna_sample.calculate_mean_expression()
+print(f"Mean Expression: {mean_expression}")
+
+max_expression = rna_sample.calculate_max_expression()
+print(f"Max Expression: {max_expression}")
 
 class Falafel:
     def __init__(self,type='baked'): # use self as the 1st argument in method definition; self refers to the data of a particualr object
