@@ -1,8 +1,8 @@
-- What is recursion?
+## What is recursion?
   - Recursive function refers to a **function calling itself**
   - We can replace most loops with recursion
 
-- A factorial example: 
+## A factorial example: 
 ```
 def factorial(n):
   outcome = 1
@@ -15,7 +15,7 @@ factorial(3)
 # 6
 ```
 
-- How to develop recursion algorithm?
+## How to develop recursion algorithm?
   - Add a condition to ensure that our algorithm does not execute forever
   - Define a factorial base case (n = 1), such that we will not make any recursive calls
   - If n > 1, we make recursive calls
@@ -45,20 +45,20 @@ def factorial(n: int, accumulator: int = 1) -> int:
 # factorial(0, 6) hits the base case and returns 6, which is 3!
 ```
 
-While the tail-recursive version can be more efficient in languages that optimize tail calls, in Python, both approaches will have similar performance characteristics due to the lack of this optimization. The standard recursive method might be preferred for its simplicity and readability.
+*While the tail-recursive version can be more efficient in languages that optimize tail calls, in Python, both approaches will have similar performance characteristics due to the lack of this optimization. The standard recursive method might be preferred for its simplicity and readability.*
 
-- How does recursion work?
+## How does recursion work?
   - Use a [stack](Stack.md) to keep track of the functions; this stack is the call stack
   - factorial(3) starts; before factorial(3) finishes, factorial(2) starts; before factorial(2) finishes, factorial(1) starts; factorial(1) finishes, returning 1
   - factorial(2) finishes, returning 2 (2 * factorial(1)); factorial(3) finishes, returning 6 (3 * factorial(2))
 
-- Dynamic programming
+## Dynamic programming
   - An optimization technique mainly applied to recursion
   - Reduce the complexity of recursive algorithms
   - Used for any problem that can be divided into smaller subproblems that overlap
   - The solutions of the subproblems are saved, avoiding recalculating them if needed later. This can be done with the memoization technique
 
-- A Fibonacci example:
+## A Fibonacci example:
 ```
 # Fibonacci sequence is a sequence in which each number is the sum of the two preceding ones; e.g., 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
 # Design a standard recursive function
@@ -98,7 +98,7 @@ print(fibonacci(6))
 # 8
 ```
 
-- Towers of Hanoi example
+## Towers of Hanoi example
 ```
 def hanoi(num_disks, from_rod, to_rod, aux_rod):
   if num_disks == 1:
