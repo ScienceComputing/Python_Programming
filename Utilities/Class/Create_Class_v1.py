@@ -1,17 +1,16 @@
-# Add methods/functions to a class
 class RNASample:
     def __init__(self):
         self.name = None
         self.expression_values = []
-    def set_name(self, new_name):
+    def set_name(self, new_name): # Add methods/functions to a class
         self.name = new_name
-    def set_expression_values(self, values):
+    def set_expression_values(self, values): # Add methods/functions to a class
         self.expression_values = values
-    def calculate_mean_expression(self):
+    def calculate_mean_expression(self): # Add methods/functions to a class
         if not self.expression_values:
             return 0
         return sum(self.expression_values) / len(self.expression_values)
-    def calculate_max_expression(self):
+    def calculate_max_expression(self): # Add methods/functions to a class
         if not self.expression_values:
             return 0
         return max(self.expression_values)
