@@ -45,7 +45,7 @@ help(rna_sample) # Show the documentation of a class associated with an object
 
 # Define attributes in the __init__ constructor; avoid defining attributes outside the constructor, making it easier for collaborators to locate all attributes
 class RNASample2:
-    def __init__(self, new_name, values):
+    def __init__(self, new_name, values=None):
         self.name = new_name
         self.expression_values = values
     def calculate_mean_expression(self): 
@@ -58,7 +58,6 @@ class RNASample2:
         return max(self.expression_values)
 
 rna_sample_2 = RNASample2('Sample_001', [10.1, 16.3, 2.1, 1.1, 10.8])
-
 mean_expression = rna_sample_2.calculate_mean_expression()
 print(f"Mean Expression: {mean_expression}")
 
