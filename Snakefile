@@ -154,7 +154,6 @@ rule bcftools_call:
 #         "bcftools mpileup -f {input.fa} {input.bam} | "
 #         "bcftools call -mv - > {output}"
 
-
 rule plot_quals:
     input:
         "calls/all.vcf"
@@ -162,3 +161,4 @@ rule plot_quals:
         "plots/quals.svg"
     script:
         "scripts/plot-quals.py"
+
