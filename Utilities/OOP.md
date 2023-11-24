@@ -25,8 +25,8 @@ dir(obj)
 ```
 
 ## Class
-It is an abstract template for objects, describing possible attributs and methods
-In python, everything has a class
+- It is an abstract template for objects, describing possible attributs and methods
+- In python, everything has a class
 ```
 # Find the class of an object
 type(obj)
@@ -34,4 +34,10 @@ type(obj)
 # Show the documentation of a class associated with an object
 help(obj)
 ```
+
+- Best practices
+  - Use `__init__()` to define all attributes in one place
+  - Use `CamelCase` to define the name of a class, use `lower_snake_case` to define functions and attributes
+  - Keep `self` as `self`
+  - Use docstrings to show the function of a class
 
