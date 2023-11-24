@@ -39,8 +39,8 @@ print(f"Mean Expression: {mean_expression}")
 max_expression = rna_sample.calculate_max_expression()
 print(f"Max Expression: {max_expression}")
 
-dir(rna_sample)
-help(rna_sample)
+dir(rna_sample) # List all the attributes and methods of an object
+help(rna_sample) # Show the documentation of a class associated with an object
 
 class Falafel:
     def __init__(self,type='baked'): # use self as the 1st argument in method definition; self refers to the data of a particualr object
