@@ -1,5 +1,5 @@
 ## Merge sort algorithm
-- Merge sort adheres to the divide and conquer approach. It works by recursively splitting the input list into smaller halves, sorting those halves, and then merging them back together to produce a sorted list.
+- Merge sort adheres to the divide and conquer approach. It works by [recursively](Recursion.md) splitting the input list into smaller halves, sorting those halves, and then merging them back together to produce a sorted list.
   - It begins with the **divide** phase, where the problem is divided into smaller, manageable sub-problems.
   - Next, during the **conquer** phase, these sub-problems are solved recursively.
   - Finally, in the **combine** phase, the solutions to these sub-problems are integrated to obtain the ultimate solution.
