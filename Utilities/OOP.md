@@ -15,9 +15,9 @@ A programming language can be either object-oriented or procedural, or both
 ```
 object = attributes/variables + methods/functions
 ```
-Encapsulation is a distinctive feature of OOP, which bundles the attributes with the methods operating on them
-The object is a realization of a class with particular attribute values
-In python, everything is an object, even a function
+- Encapsulation is a distinctive feature of OOP, which bundles the attributes with the methods operating on them
+- The object is a realization of a class with particular attribute values
+- In python, everything is an object, even a function is an object
 
 ```
 # List all the attributes and methods of an object
