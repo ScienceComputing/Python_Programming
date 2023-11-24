@@ -11,7 +11,7 @@ def quicksort(my_list, first_index, last_index):
     first_index: the index of the first element of the current sub-list
     last_index: the index of the last element of the current sub-list
     """
-    if first_index < last_index:
+    if first_index < last_index: # Check if first_index is less than last_index. If not, the function returns without doing anything, as it's considered a **base case** for recursion
         partition_index = partition(my_list, first_index, last_index)
         quicksort(my_list, first_index, partition_index)
         quicksort(my_list, partition_index + 1, last_index)
