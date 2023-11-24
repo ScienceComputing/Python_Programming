@@ -4,7 +4,6 @@
 - Its space complexity is $O(n \ log \ n)$.
 
 ```
-# TD
 def quicksort(my_list, first_index, last_index):
     """
     my_list: the list to be sorted
@@ -16,7 +15,7 @@ def quicksort(my_list, first_index, last_index):
         quicksort(my_list, first_index, partition_index)
         quicksort(my_list, partition_index + 1, last_index)
 
-def partition(my_list, first_index, last_index):
+def partition(my_list, first_index, last_index): # TD
     """
     my_list: the list to be partitioned
     first_index: the index of the first element of the current sub-list
