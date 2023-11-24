@@ -1,8 +1,8 @@
 ## Merge sort algorithm
-- Merge sort adheres to the divide and conquer approach, which involves breaking the task down into several distinct phases.
-  - It begins with the **Divide** phase, where the problem is divided into smaller, manageable sub-problems.
-  - Next, during the **Conquer** phase, these sub-problems are solved recursively.
-  - Finally, in the **Combine** phase, the solutions to these sub-problems are integrated to obtain the ultimate solution.
+- Merge sort adheres to the divide and conquer approach. It works by recursively splitting the input list into smaller halves, sorting those halves, and then merging them back together to produce a sorted list.
+  - It begins with the **divide** phase, where the problem is divided into smaller, manageable sub-problems.
+  - Next, during the **conquer** phase, these sub-problems are solved recursively.
+  - Finally, in the **combine** phase, the solutions to these sub-problems are integrated to obtain the ultimate solution.
 - Its complexity is $O(n log n)$, which is a significant improvement over bubble sort, selection sort, and insertion sort, which have a complexity of $O(n^2)$. Hence, merge sort is suitable for sorting large lists of numbers. In average and best cases, it also has a complexity of $O(n log n)$. Other algorithms like bubble sort or insertion sort have better best case complexity $\Omega(n)$.
 - Its space complexity $O(n)$, as it needs extra space to treat the two halves. The other algorithms have space compexity $O(1)$.
 
