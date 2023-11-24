@@ -30,5 +30,8 @@ In python, everything has a class
 ```
 # Find the class of an object
 type(obj)
+
+# Show the documentation of a class associated with an object
+help(obj)
 ```
 
