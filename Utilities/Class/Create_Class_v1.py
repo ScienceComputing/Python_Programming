@@ -6,7 +6,7 @@ class Falafel:
         if self.type not in ['fried','baked']:
             print('Unrecognized type: ' + str(self.type))
             print('Type will be set to baked')
-            self.type ='baked'
+            self.type = 'baked'
         self.origin = 'Egyptian cuisine'
     def eat(self):
         print('I got eaten')
