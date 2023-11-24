@@ -1,5 +1,5 @@
 ## Quick sort algorithm
-- Quicksort adheres to the divide and conquer approach. This sorting algorithm employs a partitioning technique in which it selects a value, known as the pivot, from the list. It arranges all items smaller than the pivot to its left and places greater elements to its right. Quicksort then recursively sorts the elements located to the left and right of the pivot.
+- Quicksort adheres to the divide and conquer approach. This sorting algorithm employs a partitioning technique in which it selects a value, known as the pivot, from the list. It arranges all items smaller than the pivot to its left and places greater elements to its right. Quicksort then [recursively](Recursion.md) sorts the elements located to the left and right of the pivot.
 - Its worst-case complexity is $O(n^2)$, while its average-case and best-case complexity are $\Theta(n \ log \ n)$ and $\Omega(n \ log \ n)$.
 - Its space complexity is $O(n \ log \ n)$.
 
