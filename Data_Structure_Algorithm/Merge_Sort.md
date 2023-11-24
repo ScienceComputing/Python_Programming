@@ -7,22 +7,22 @@
 - Its space complexity $O(n)$, as it needs extra space to treat the two halves. The other algorithms have space compexity $O(1)$.
 
 ```
-def merge_sort(my_list):
-    if len(my_list) > 1:
-        mid = len(my_list)//2
-        left_half = my_list[:mid]
-        right_half = my_list[mid:]
+def merge_sort(my_list): # Input a list to sort
+    if len(my_list) > 1: # A list with zero or one element is inherently sorted
+        mid = len(my_list)//2 # Floor division of the length of my_list by 2
+        left_half = my_list[:mid] # Elements from the start of my_list up to (but not including) the mid index
+        right_half = my_list[mid:] # Elements from the mid index to the end of my_list
         merge_sort(left_half)
         merge_sort(right_half) # Recursively divide the list until each left/right list has only one element
-        i = j = k = 0 # Proceed to merge the sorted parts. Declare the i variable for the index of the left_half, the j variable for the index of the right_half, and the k variable for the index of the final list. 
-        while i < len(left_half) and j < len(right_half): # TD
-            if left_half[i] < right_half[j]:
-                my_list[k] = left_half[i]
-                i += 1
-            else:
+        i = j = k = 0 # Proceed to merge the sorted parts. Declare the i variable for the index of the left_half, the j variable for the index of the right_half, and the k variable for the index of the final list
+        while i < len(left_half) and j < len(right_half): 
+            if left_half[i] < right_half[j]: # Compare elements at indices i and j in left_half and right_half
+                my_list[k] = left_half[i] # Add the smaller element to the my_list at index k
+                i += 1 # It then increments the index variable i
+            else: # if left_half[i] >= right_half[j]
                 my_list[k] = right_half[j]
-                j += 1
-            k += 1
+                j += 1 # It then increments the index variable j
+            k += 1 # It then increments the index variable k
         while i < len(left_half):
             my_list[k] = left_half[i]
             i += 1
