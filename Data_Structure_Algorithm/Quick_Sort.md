@@ -6,6 +6,11 @@
 ```
 # TD
 def quicksort(my_list, first_index, last_index):
+    """
+    my_list: the list to be sorted
+    first_index: the index of the first element of the current sub-list
+    last_index: the index of the last element of the current sub-list
+    """
     if first_index < last_index:
         partition_index = partition(my_list, first_index, last_index)
         quicksort(my_list, first_index, partition_index)
