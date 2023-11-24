@@ -48,21 +48,18 @@ class RNASample2:
     def __init__(self, new_name, values):
         self.name = new_name
         self.expression_values = values
-    def calculate_mean_expression(self): # Add methods/functions to a class
+    def calculate_mean_expression(self): 
         if not self.expression_values:
             return 0
         return sum(self.expression_values) / len(self.expression_values)
-    def calculate_max_expression(self): # Add methods/functions to a class
+    def calculate_max_expression(self): 
         if not self.expression_values:
             return 0
         return max(self.expression_values)
 
-rna_sample = RNASample2()
-rna_sample.set_name('Sample_001')
-expression_values = [10.1, 16.3, 2.1, 1.1, 10.8]
-rna_sample.set_expression_values(expression_values)
+rna_sample_2 = RNASample2('Sample_001', [10.1, 16.3, 2.1, 1.1, 10.8])
 
-mean_expression = rna_sample.calculate_mean_expression()
+mean_expression = rna_sample_2.calculate_mean_expression()
 print(f"Mean Expression: {mean_expression}")
 
 max_expression = rna_sample.calculate_max_expression()
