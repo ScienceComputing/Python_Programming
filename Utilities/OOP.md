@@ -15,6 +15,11 @@ Encapsulation is a distinctive feature of OOP, which bundles the attributes with
 The object is a realization of a class with particular attribute values
 In python, everything is an object, even a function
 
+```
+# List all the attributes and methods of an object
+dir(obj)
+```
+
 ## Class
 It is a blueprint for objects, outlining possible attributs and methods
 In python, everything has a class
