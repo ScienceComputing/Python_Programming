@@ -17,19 +17,25 @@ def quicksort(my_list, first_index, last_index):
         quicksort(my_list, partition_index + 1, last_index)
 
 def partition(my_list, first_index, last_index):
-    pivot = my_list[first_index]
+    """
+    my_list: the list to be partitioned
+    first_index: the index of the first element of the current sub-list
+    last_index: the index of the last element of the current sub-list
+    """
+    pivot = my_list[first_index] # Select the pivot element, which is typically the first element of the sub-list
     left_pointer = first_index + 1
     right_pointer = last_index
     while True:
+        # Repeatedly increment left_pointer until an element greater than or equal to the pivot is found, and repeatedly decrement right_pointer until an element less than or equal to the pivot is found
         while my_list[left_pointer] < pivot and left_pointer < last_index:
             left_pointer += 1
         while my_list[right_pointer] > pivot and right_pointer >= first_index:
             right_pointer -= 1
         if left_pointer >= right_pointer:
             break
-        my_list[left_pointer], my_list[right_pointer] = my_list[right_pointer], my_list[left_pointer]
-    my_list[first_index], my_list[right_pointer] = my_list[right_pointer], my_list[first_index]
-    return right_pointer
+        my_list[left_pointer], my_list[right_pointer] = my_list[right_pointer], my_list[left_pointer] # Ensure that elements less than the pivot end up on the left side, and elements greater than the pivot end up on the right side
+    my_list[first_index], my_list[right_pointer] = my_list[right_pointer], my_list[first_index] # This positions the pivot in its correct sorted position
+    return right_pointer # Represent the new index of the pivot element after partitioning.
 
 list_1 = [5, 67, 2, 1, 199, 20, 50]
 quicksort(list_1, 0, len(list_1) - 1)
