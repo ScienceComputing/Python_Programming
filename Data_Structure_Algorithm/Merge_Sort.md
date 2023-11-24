@@ -23,6 +23,8 @@ def merge_sort(my_list): # Input a list to sort
                 my_list[k] = right_half[j]
                 j += 1 # It then increments the index variable j
             k += 1 # It then increments the index variable k
+
+        # The following 2 while loops are responsible for copying any remaining elements from the left_half and right_half sub-lists into the final merged list, ensuring that no elements are left out during the merging process
         while i < len(left_half):
             my_list[k] = left_half[i]
             i += 1
