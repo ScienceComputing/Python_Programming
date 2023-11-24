@@ -1,3 +1,5 @@
+A programming language can be either object-oriented or procedural, or both
+
 ## Procedural programming
 - We treat codes asn a sequence of steps
 - It is suitable for data analysis and scripts
@@ -21,7 +23,7 @@ dir(obj)
 ```
 
 ## Class
-It is a blueprint for objects, outlining possible attributs and methods
+It is an abstract template for objects, describing possible attributs and methods
 In python, everything has a class
 ```
 # Find the class of an object
