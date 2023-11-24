@@ -11,6 +11,9 @@ print(f"Gene: {variant.gene}")
 print(f"Location: {variant.location}")
 print(f"Description: {variant.description}")
 
+variant.gene = variant.gene + ' Gene_ABC'
+print(f"Gene: {variant.gene}")
+
 class RNASample:
     def __init__(self):
         self.name = None
