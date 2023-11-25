@@ -1,9 +1,9 @@
 class IntronicVariant:
     def set_variant_info(self, gene, location, description):
-        self.gene = gene
+        self.gene = gene 
         self.location = location
         self.description = description
-
+        # Alternatively, we can write self.gene, self.location, self.description = gene, location, description
 variant = IntronicVariant()
 variant.set_variant_info('Gene_XYZ', 'Intron 3', 'A common intronic variant associated with disease M')
 
