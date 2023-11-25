@@ -3,7 +3,7 @@ A programming language can be either object-oriented or procedural, or both
 ## Procedural programming
 In the realm of programming, we often perceive code as a sequence of steps that guide a computer in executing tasks. Procedural programming, in particular, finds its niche when it comes to handling data analysis and creating scripts. One of its defining features is its inclination to prompt us to ponder the fundamental question: What is the intended objective of this program? This approach emphasizes a step-by-step, logical progression in designing and implementing software solutions.
 
-## Object-oriented programming (OOP)
+## Object-oriented programming
 In object-oriented programming (OOP), we view code as interactions between objects. This approach is particularly well-suited for constructing frameworks and tools, including application program interfaces and graphical user interfaces, as well as working with structures like pandas DataFrames. OOP helps us enhance the organization of our code, making it more reusable and easier to maintain. It encourages us to think about the environment created by a program, the entities within it, and how they collaborate. This holistic perspective fosters a deeper understanding of the software's design and functionality.
 
 ## Object
