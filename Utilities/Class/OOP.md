@@ -116,7 +116,7 @@ class Gene:
     @classmethod
     def from_file(cls, filename):
         with open(filename, "r") as f:
-            data = f.readline().strip().split(':')
+            data = f.readline().strip().split(':') # strip() removes any extra whitespace at the beginning or end of the line
             name = data[0]
             intronic_variant = data[1] if len(data) > 1 else cls.DEFAULT_INTRONIC_VARIANT
         return cls(name, intronic_variant)
@@ -126,3 +126,5 @@ gene = Gene.from_file("ClinVar_data.txt")
 print(gene.name) # Output: BRCA1
 print(gene.intronic_variant) # Output: c.5277+1G>A
 ```
+
+## Class inheritance
