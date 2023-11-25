@@ -24,14 +24,16 @@ class Car3:
 # Create a child class that will inherit all of the attributes and methods of the parent class
 class Car:
     def __init__(self, brand, max_speed, mileage):
-        self.brand = brand
-        self.max_speed = max_speed
-        self.mileage = mileage
+        self.brand, self.max_speed, self.mileage  = brand, max_speed, mileage
 
 class Tesla(Car): # An empty class inheritated from Car
     pass
+    
 m4 = Tesla("Tesla", 360, 30)
 print ("Car brand: {}, Maximum speed: {}, Mileage: {}.".format(m4.brand, m4.max_speed, m4.mileage))
+
+isinstance(m4, Tesla) # True
+isinstance(m4, Car) # True
 
 # Create a class with attributes and method 
 class Car:
