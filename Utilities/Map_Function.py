@@ -1,6 +1,6 @@
-# Case 1:
 # The map function accepts two parameters: a function and a sequence, e.g., a list, and then proceeds to apply the specified function to each element within the given sequence.
 # map(func, seq); map(lambda_func, seq)
+# Case 1:
 num_list = [6, 8, 15, 0, 90, 50]
 cubic_all = map(lambda num: num ** 3, num_list)
 print(cubic_all) # This is a map object
