@@ -88,7 +88,7 @@ class MyClass:
         self.value = value  # Instance-level variable
     def instance_method(self):
         print(f"Instance method called with value: {self.value}")
-    @classmethod
+    @classmethod # A decorator
     def class_method(cls): # Notice cls, not self; cls refers to a class
         cls.class_variable += 1
         print(f"Class method called. Class variable is now: {cls.class_variable}")
