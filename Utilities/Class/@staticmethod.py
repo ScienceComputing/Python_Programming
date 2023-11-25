@@ -1,4 +1,4 @@
-# @staticmethod is a decorator for a class. It allows us to utilize the methods attached to a class, without having to create an instance of that class.
+# @staticmethod is a decorator for a class. It allows us to utilize the methods attached to a class, **without having to create an instance of that class**.
 # Reference: https://docs.python.org/3/library/functions.html#staticmethod
 class S:
     @staticmethod
