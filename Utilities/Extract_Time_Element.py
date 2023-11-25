@@ -5,7 +5,8 @@ class ExtractTimeElement:
     @classmethod
     def from_str(cls, date_str):
         element = date_str.split("-")
-        year, month, day = int(element[0]), int(element[1]), int(element[2])
+        year, month, day = map(int, datestr.split("-")) # Convert each element of the list from a string to an integer.
+        # Old code: year, month, day = int(element[0]), int(element[1]), int(element[2])
         return cls(year, month, day)
     @classmethod
     def from_datetime(cls, date_obj):
