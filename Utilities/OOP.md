@@ -62,7 +62,7 @@ class IntronicVariant:
         self.gene = gene
         self.location = location
         self.description = description
-        if intron_length >= IntronicVariant.min_intron_length:
+        if intron_length >= IntronicVariant.min_intron_length: # Use ClassName.attrite_name to access the class-level attribute value
             self.intron_length = intron_length
         else:
             self.intron_length = IntronicVariant.min_intron_length # Use ClassName.attrite_name to access the class-level attribute value
