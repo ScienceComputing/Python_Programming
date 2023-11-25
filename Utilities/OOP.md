@@ -81,7 +81,6 @@ variant_1 = IntronicVariant('Gene_XYZ', 'Intron 3', 'A common intronic variant a
 IntronicVariant.min_intron_length = 25
 variant_1.min_intron_length # 25
 variant_1.intron_length # 25
-
 ```
 
 ## Class-level methods
