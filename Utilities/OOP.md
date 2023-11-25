@@ -71,3 +71,7 @@ variant_1 = IntronicVariant('Gene_XYZ', 'Intron 3', 'A common intronic variant a
 variant_1.min_intron_length # 20
 variant_1.intron_length # 20
 ```
+
+### Usage of class-level attributes
+By using the class attributes, we can set up the global constants related to the class, for example, min and max values for attributes or commonly used values (e.g., pi).
+
