@@ -119,6 +119,7 @@ class Gene:
             intronic_variant = data[1] if len(data) > 1 else cls.DEFAULT_INTRONIC_VARIANT
         return cls(name, intronic_variant)
 
+help(Gene)
 gene = Gene.from_file("ClinVar_data.txt")
 print(gene.name) # Output: BRCA1
 print(gene.intronic_variant) # Output: c.5277+1G>A
