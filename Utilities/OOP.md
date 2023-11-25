@@ -77,3 +77,29 @@ By using the class attributes, we can set up the global constants related to the
 
 ## Class-level methods
 While it is feasible to define methods associated with a class rather than an instance, their practical use is limited since these methods cannot access any instance-level data.
+```
+class MyClass:
+    class_variable = 0  # Class-level variable
+    def __init__(self, value):
+        self.value = value  # Instance-level variable
+    def instance_method(self):
+        print(f"Instance method called with value: {self.value}")
+    @classmethod
+    def class_method(cls):
+        cls.class_variable += 1
+        print(f"Class method called. Class variable is now: {cls.class_variable}")
+
+# Create instances of MyClass
+obj1 = MyClass(1)
+obj2 = MyClass(2)
+
+# Call instance methods
+obj1.instance_method() # Instance method called with value: 1
+obj2.instance_method()
+
+# Call class method
+MyClass.class_method()
+MyClass.class_method()
+MyClass.class_method() # Class method called. Class variable is now: 3
+
+```
