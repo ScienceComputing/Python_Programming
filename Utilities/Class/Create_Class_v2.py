@@ -28,7 +28,7 @@ class Car:
         self.max_speed = max_speed
         self.mileage = mileage
 
-class Tesla(Car):
+class Tesla(Car): # An empty class inheritated from Car
     pass
 m4 = Tesla("Tesla", 360, 30)
 print ("Car brand: {}, Maximum speed: {}, Mileage: {}.".format(m4.brand, m4.max_speed, m4.mileage))
