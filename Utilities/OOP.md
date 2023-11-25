@@ -41,3 +41,33 @@ help(obj)
   - Keep `self` as `self`
   - Use docstrings to show the function of a class
 
+## Instance-level data
+```
+class IntronicVariant:
+    def __init__(self, gene, location, description):
+        self.gene = gene
+        self.location = location
+        self.description = description
+
+variant_1 = IntronicVariant('Gene_XYZ', 'Intron 3', 'A common intronic variant associated with disease M')
+variant_1.gene # Instance-level attribute
+
+```
+
+## Class-level data
+```
+class IntronicVariant:
+    min_intron_length = 20 # Define a class-level attribute, which is shared among all instances
+    def __init__(self, gene, location, description, intron_length):
+        self.gene = gene
+        self.location = location
+        self.description = description
+        if intron_length >= IntronicVariant.min_intron_length:
+            self.intron_length = intron_length
+        else:
+            self.intron_length = IntronicVariant.min_intron_length # Use ClassName.attrite_name to access the class-level attribute value
+
+variant_1 = IntronicVariant('Gene_XYZ', 'Intron 3', 'A common intronic variant associated with disease M', 10)
+variant_1.min_intron_length # 20
+variant_1.intron_length # 20
+```
