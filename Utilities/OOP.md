@@ -73,7 +73,16 @@ variant_1.intron_length # 20
 ```
 
 ## Class-level attributes
-By using the class attributes, we can set up the global constants related to the class, for example, min and max values for attributes or commonly used values (e.g., $\pi$, Euler's number, Planck's constant).
+- By using the class attributes, we can set up the global constants related to the class, for example, min and max values for attributes or commonly used values (e.g., $\pi$, Euler's number, Planck's constant).
+- By changing the value of a class attribute, we change the value of this class attribute for all instances associated with a class.
+
+```
+variant_1 = IntronicVariant('Gene_XYZ', 'Intron 3', 'A common intronic variant associated with disease M', 10)
+IntronicVariant.min_intron_length = 25
+variant_1.min_intron_length # 25
+variant_1.intron_length # 25
+
+```
 
 ## Class-level methods
 - While it is feasible to define methods associated with a class rather than an instance, their practical use is limited since these methods cannot access any instance-level data.
