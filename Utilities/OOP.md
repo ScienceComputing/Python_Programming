@@ -91,8 +91,7 @@ class MyClass:
         print(f"Class method called. Class variable is now: {cls.class_variable}")
 
 # Create instances of MyClass
-obj1 = MyClass(1)
-obj2 = MyClass(2)
+obj1, obj2 = MyClass(1), MyClass(2)
 
 # Call instance methods
 obj1.instance_method() # Instance method called with value: 1
