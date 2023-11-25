@@ -85,7 +85,7 @@ class MyClass:
     def instance_method(self):
         print(f"Instance method called with value: {self.value}")
     @classmethod
-    def class_method(cls):
+    def class_method(cls): # Notice cls, not self
         cls.class_variable += 1
         print(f"Class method called. Class variable is now: {cls.class_variable}")
 
@@ -101,5 +101,4 @@ obj2.instance_method()
 MyClass.class_method()
 MyClass.class_method()
 MyClass.class_method() # Class method called. Class variable is now: 3
-
 ```
