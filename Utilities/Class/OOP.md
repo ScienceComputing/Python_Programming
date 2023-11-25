@@ -131,3 +131,4 @@ print(gene.intronic_variant) # Output: c.5277+1G>A
 ```
 The new class functionality is an extension of the existing class functionality, with the addition of extra features.
 ```
+In the context of inheritance, a child class inherits characteristics from a parent class and can also extend or modify those characteristics in some manner. For example, an IntronVariant class is essentially a specialized type of Variant class; Variant serves as the fundamental or overarching class. This relationship can be described as an 'is-a' relationship, meaning that an IntronVariant is a specific type of Variant.
