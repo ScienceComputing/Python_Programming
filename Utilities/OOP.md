@@ -73,7 +73,7 @@ variant_1.intron_length # 20
 ```
 
 ## Class-level attributes
-By using the class attributes, we can set up the global constants related to the class, for example, min and max values for attributes or commonly used values (e.g., pi).
+By using the class attributes, we can set up the global constants related to the class, for example, min and max values for attributes or commonly used values (e.g., $\pi$, Euler's number, Planck's constant).
 
 ## Class-level methods
 While it is feasible to define methods associated with a class rather than an instance, their practical use is limited since these methods cannot access any instance-level data.
