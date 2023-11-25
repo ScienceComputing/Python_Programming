@@ -76,7 +76,8 @@ variant_1.intron_length # 20
 By using the class attributes, we can set up the global constants related to the class, for example, min and max values for attributes or commonly used values (e.g., $\pi$, Euler's number, Planck's constant).
 
 ## Class-level methods
-While it is feasible to define methods associated with a class rather than an instance, their practical use is limited since these methods cannot access any instance-level data.
+- While it is feasible to define methods associated with a class rather than an instance, their practical use is limited since these methods cannot access any instance-level data.
+- Its main usage is to provide an alternative constructor. A class can only have one `__init__` method, but there could be more than one way to initialize an object. 
 ```
 class MyClass:
     class_variable = 0  # Class-level variable
@@ -85,7 +86,7 @@ class MyClass:
     def instance_method(self):
         print(f"Instance method called with value: {self.value}")
     @classmethod
-    def class_method(cls): # Notice cls, not self
+    def class_method(cls): # Notice cls, not self; cls refers to a class
         cls.class_variable += 1
         print(f"Class method called. Class variable is now: {cls.class_variable}")
 
