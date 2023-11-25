@@ -128,3 +128,6 @@ print(gene.intronic_variant) # Output: c.5277+1G>A
 ```
 
 ## Class inheritance
+```
+The new class functionality is an extension of the existing class functionality, with the addition of extra features.
+```
