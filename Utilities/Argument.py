@@ -1,5 +1,5 @@
 # Topic: arguments
-# Default arguments
+# Default arguments must follow non-default argument; calculate_power(pow_val=2, number) is incorrect
 def calculate_power(number, pow_val=2):
     """Raise number to the power of pow_val."""
     new_value = number ** pow_val
