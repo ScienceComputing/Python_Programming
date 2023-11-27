@@ -134,3 +134,33 @@ The new class functionality is an extension of the existing class functionality,
 In the context of inheritance, a child class inherits **ALL** characteristics from a parent class and can also extend or modify those characteristics in some manner. For example, an `IntronicVariant` class is essentially a specialized type of `Variant` class; `Variant` serves as the fundamental or overarching class. This relationship can be described as an 'is-a' relationship, meaning that an `IntronicVariant` is a specific type of `Variant`.
 
 Inheritance is a valuable feature in OOP languages, enabling us to tailor the functionality of existing classes without the need to start re-implement methods from scratch.
+
+```
+class Variant:
+    def __init__(self, chrom, position, ref, alt):
+        self.chrom = chrom
+        self.position = position
+        self.ref = ref
+        self.alt = alt
+    def describe(self):
+        return f"Variant at {self.chrom}:{self.position} ({self.ref}->{self.alt})"
+    def annotate(self):
+        return "No annotation available for this variant"
+
+class IntronicVariant(Variant):
+    def __init__(self, chrom, position, ref, alt, gene_name):
+        super().__init__(chrom, position, ref, alt) #!
+        self.gene_name = gene_name
+    def describe(self):
+        return f"Intronic Variant at {self.chrom}:{self.position} in {self.gene_name} ({self.ref}->{self.alt})"
+    def annotate(self, annotation):
+        return f"This variant in {self.gene_name} is: {annotation}"
+
+variant = Variant("chr17", "43057051 (GRCh38)", "G", "A")
+print(variant.describe())
+print(variant.annotate())
+
+intronic_variant = IntronicVariant("chr17", "43057051 (GRCh38)", "G", "A", "BRCA1")
+print(intronic_variant.describe())
+print(intronic_variant.annotate("Located in an intron"))
+```
