@@ -1,3 +1,4 @@
+# Reference: https://docs.python.org/3/library/stdtypes.html#str.format
 # Format the title in a graph; show the message or error; pass the statement into a function
 
 # Positional formatting: 'text{}'.format(value)
