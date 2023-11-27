@@ -166,3 +166,5 @@ intronic_variant = IntronicVariant("chr17", "43057051 (GRCh38)", "G", "A", "BRCA
 print(intronic_variant.describe())
 print(intronic_variant.annotate("Located in an intron"))
 ```
+
+We use `super().__init__(chrom, position, ref, alt)` to call the constructor of the base class (Variant) instead of explicitly referencing Variant.__init__(self, chrom, position, ref, alt). This is a more modern and recommended way to call the base class constructor.
