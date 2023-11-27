@@ -168,3 +168,39 @@ print(intronic_variant.annotate("Located in an intron"))
 ```
 
 We use `super().__init__(chrom, position, ref, alt)` to call the constructor of the base class (Variant) instead of explicitly referencing `Variant.__init__(self, chrom, position, ref, alt)`. This is a more modern and recommended way to call the base class constructor.
+
+## Object comparison
+```
+class Variant:
+    def __init__(self, chrom, position, ref, alt):
+        self.chrom = chrom
+        self.position = position
+        self.ref = ref
+        self.alt = alt
+    def describe(self):
+        return f"Variant at {self.chrom}:{self.position} ({self.ref}->{self.alt})"
+    def annotate(self):
+        return "No annotation available for this variant"
+
+variant_1 = Variant("chr17", "43057051 (GRCh38)", "G", "A")
+variant_2 = Variant("chr17", "43057051 (GRCh38)", "G", "A")
+variant_1 == variant_2 # False
+
+class Variant:
+    def __init__(self, chrom, position, ref, alt):
+        self.chrom = chrom
+        self.position = position
+        self.ref = ref
+        self.alt = alt
+    def describe(self):
+        return f"Variant at {self.chrom}:{self.position} ({self.ref}->{self.alt})"
+    def annotate(self):
+        return "No annotation available for this variant"
+    def __eq__(self, other):
+        print("__eq__() is called")
+        return (self.chrom == other.chrom) and (self.position == other.position) and (self.ref == other.ref) and (self.alt == other.alt)
+
+variant_1 = Variant("chr17", "43057051 (GRCh38)", "G", "A")
+variant_2 = Variant("chr17", "43057051 (GRCh38)", "G", "A")
+variant_1 == variant_2 # True  
+```
