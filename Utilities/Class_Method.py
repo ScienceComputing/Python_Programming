@@ -16,7 +16,7 @@ class DataAnalyzer:
         for car in self.car_data:
             description = car.record()
             print(description)
-    @classmethod # Build a class-level method, such that we can call this method directly from the class DataAnalyzer, instead of an object
+    @classmethod # Build a class-level method, such that we can call this method directly from the class DataAnalyzer, instead of from an object
     def from_csv(cls, csv_path):
         # Use Pandas to read data from the CSV file
         df = pd.read_csv(csv_path)
