@@ -8,6 +8,12 @@ my_yogurt = {
 print(my_yogurt['filmjolk'])
 print(my_yogurt.get['filmjolk2']) # None
 
+def make_dict(**kwargs):
+    return kwargs
+
+make_dict(alpha = 1, beta = 2, gamma = 6)
+# {'alpha': 1, 'beta': 2, 'gamma': 6}
+
 # Obtain items
 print(my_yogurt.items())
 print(my_yogurt.keys())
