@@ -135,6 +135,8 @@ In the context of inheritance, a child class inherits **ALL** characteristics fr
 
 Inheritance is a valuable feature in OOP languages, enabling us to tailor the functionality of existing classes without the need to start re-implement methods from scratch.
 
+Inheritance allows class attributes to be passed down, and it's possible to modify the values of these class attributes in the child class.
+
 ```
 class Variant:
     def __init__(self, chrom, position, ref, alt):
