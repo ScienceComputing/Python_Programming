@@ -11,3 +11,8 @@ custom_df = LoggedDF(custom_data)
 
 print(custom_df.values)
 print(custom_df.created_at)
+
+# Recap: create DataFrames from a dictionary of lists - construct the df column by column 
+dict_of_list = {"col_1": [val_11, val_12], "col_2": [val_21, val_22]}
+my_df = pd.DataFrame(list_of_dict)
+print(my_df)
