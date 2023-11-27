@@ -16,7 +16,7 @@ class DataAnalyzer:
         for car in self.car_data:
             description = car.record()
             print(description)
-    @classmethod
+    @classmethod # Build a class-level method, such that we can call this method directly from the class DataAnalyzer, instead of an object
     def from_csv(cls, csv_path):
         # Use Pandas to read data from the CSV file
         df = pd.read_csv(csv_path)
@@ -42,7 +42,7 @@ class DataAnalyzer:
 
 # Example usage:
 # Assume we have a CSV file named "car_data.csv" with columns "Make", "Year", and "Model"
-analyzer_1 = DataAnalyzer.from_csv("Desktop/car_data.csv")
+analyzer_1 = DataAnalyzer.from_csv("Desktop/car_data.csv") #! Class-level method
 analyzer_1.analyze()
 
 # Assume we have a pandas data frame names "car_data" at hand with columns "Make", "Model", and "Year"
