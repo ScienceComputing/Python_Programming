@@ -18,3 +18,22 @@ result = divider.divide(10, 3)
 # IntegerDivisionError: Result is not an integer!
 result = divider.divide(10, 0)  
 # DivisionError: Division by zero!
+
+
+# We should place the except block for child exceptions before the parent exceptions. If not, the parent except block will capture all child exceptions, preventing the child except block from ever running.
+try:  
+    divider.divide(10, 3)
+except DivisionError:  
+    print("DivisionError caught")
+except IntegerDivisionError:  
+    print("IntegerDivisionError caught")
+
+# DivisionError caught
+
+try:  
+    divider.divide(10, 3)
+except IntegerDivisionError:  
+    print("IntegerDivisionError caught")
+except DivisionError:  
+    print("DivisionError caught")
+# IntegerDivisionError caught
