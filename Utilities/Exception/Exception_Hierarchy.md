@@ -1,5 +1,6 @@
 Reference: https://docs.python.org/3/library/exceptions.html
 
+Within Python, exceptions are class instances derived from either the built-in classes `BaseException` or `Exception`.
 ```
 BaseException
  ├── BaseExceptionGroup
