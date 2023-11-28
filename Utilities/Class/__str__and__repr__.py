@@ -6,9 +6,7 @@ class Stock:
         """
         Initialize a Stock object with a symbol, price per share, and quantity of shares.
         """
-        self.symbol = symbol
-        self.price = price
-        self.quantity = quantity
+        self.symbol, self.price, self.quantity = symbol, price, quantity
     def buy(self, amount: float):
         """
         Buy a specified dollar amount of shares and update the quantity of shares.
@@ -36,7 +34,7 @@ class Stock:
 
 
 # Example usage with Google's stock
-google_stock = Stock("GOOG (NASDAQ)", 135.37, 20)
+google_stock = Stock("GOOG (NASDAQ)", 138.05, 20)
 print(google_stock) # This will call the __str__ method 
 
 # Buy more shares
