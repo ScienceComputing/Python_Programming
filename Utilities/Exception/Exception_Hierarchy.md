@@ -1,5 +1,6 @@
 Reference: https://docs.python.org/3/library/exceptions.html
 
+```
 BaseException
  ├── BaseExceptionGroup
  ├── GeneratorExit
@@ -67,3 +68,4 @@ BaseException
            ├── SyntaxWarning
            ├── UnicodeWarning
            └── UserWarning
+```
