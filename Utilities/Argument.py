@@ -9,7 +9,7 @@ calculate_power(2, 3) # 8
 calculate_power(2, 2) # 4
 calculate_power(2) # 4
 
-# Flexible arguments: not sure the exact number of arguments a user wants to pass to the function
+# *Flexible* arguments: not sure the exact number of arguments a user wants to pass to the function
 def add_all(*args):
     """Sum all values in *args together."""
     # Initialize sum
@@ -18,7 +18,19 @@ def add_all(*args):
     for num in args:
         sum_all += num
     return sum_all
+
 print(add_all(9))
+print(add_all(9, 10, 11, 29))
+# add_all() takes all the input parametersand packs them into a single iterable object named args. 
+# Notice that we can choose any name we like, not limited to args.
+
+def add_all(*elements):
+    """Sum all values in *elements together."""
+    sum_all = 0
+    for num in elements:
+        sum_all += num
+    return sum_all
+
 print(add_all(9, 10, 11, 29))
 
 # Flexible arguments: pass an arbitrary number of keyword arguments
