@@ -21,7 +21,7 @@ def add_all(*args):
 
 print(add_all(9))
 print(add_all(9, 10, 11, 29))
-# add_all() takes all the input parametersand packs them into a single iterable object named args, which is a tuple. 
+# add_all() takes all the input parametersand packs them into a single immutable iterable object named args, which is a tuple. 
 # Notice that we can choose any name we like, not limited to args.
 
 def add_all(*elements):
