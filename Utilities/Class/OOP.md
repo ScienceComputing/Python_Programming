@@ -204,3 +204,7 @@ variant_1 = Variant("chr17", "43057051 (GRCh38)", "G", "A")
 variant_2 = Variant("chr17", "43057051 (GRCh38)", "G", "A")
 variant_1 == variant_2 # True  
 ```
+
+## Polymorphism
+Polymorphism involves employing a single interface to perform operations on objects belonging to various classes.
+
