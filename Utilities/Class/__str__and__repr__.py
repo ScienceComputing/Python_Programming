@@ -21,7 +21,7 @@ class Stock:
             return True
         else:
             return False
-    def __str__(self):
+    def __str__(self): # can only accept self, and should return a string
         """
         Return a string representation of the Stock object.
         """
