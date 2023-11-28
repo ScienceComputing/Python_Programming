@@ -10,6 +10,7 @@ for item in nums:
         print(f"{sum_nums=}")
 
 # Bioinformatics scenarior: load the BAM file and print reads in a specific region
+# It showcases the application of multiple excepts
 import pysam
 try:
     bam_file = pysam.AlignmentFile("alignment.bam", "rb")
