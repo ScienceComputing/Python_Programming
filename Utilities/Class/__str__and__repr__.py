@@ -36,13 +36,17 @@ class Stock:
 # Example usage with Google's stock
 google_stock = Stock("GOOG (NASDAQ)", 138.05, 20)
 print(google_stock) # This will call the __str__ method 
+# GOOG (NASDAQ): 20 shares at $138.05 per share
 
 # Buy more shares
 google_stock.buy(5000)
 print(repr(google_stock)) # This will call the __repr__ method 
+# Stock(GOOG (NASDAQ), 138.05, 56.21876131836291)
 
 # Sell some shares
 if google_stock.sell(10000):
     print(f"Sold 10000 dollars worth of {google_stock.symbol} shares successfully.")
 else:
     print(f"Not enough shares to sell 10000 dollars worth of {google_stock.symbol} shares.")
+
+# Not enough shares to sell 10000 dollars worth of GOOG (NASDAQ) shares.
