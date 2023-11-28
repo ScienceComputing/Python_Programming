@@ -14,7 +14,7 @@ for item in nums:
 import pysam
 try:
     bam_file = pysam.AlignmentFile("alignment.bam", "rb")
-except FileNotFoundError:
+except FileNotFoundError: # If this except runs, the following except will not run
     print("Error: The BAM file 'alignment.bam' was not found.")
 except (IOError, ValueError) as e:
     print(f"Error: An error occurred while reading the BAM file: {e}")
