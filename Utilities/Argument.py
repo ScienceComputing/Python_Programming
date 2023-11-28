@@ -9,7 +9,7 @@ calculate_power(2, 3) # 8
 calculate_power(2, 2) # 4
 calculate_power(2) # 4
 
-# *Flexible* arguments: not sure the exact number of arguments a user wants to pass to the function
+# *Flexible* arguments: not sure the exact number of positional arguments a user wants to pass to the function
 def add_all(*args):
     """Sum all values in *args together."""
     # Initialize sum
@@ -44,3 +44,6 @@ def print_all(**kwargs):
         print(key + ':  ' + value)
 
 print_all(name='cysteine', location='nails, skin, hair', function='make collagen')
+# name:  cysteine
+# location:  nails, skin, hair
+# function:  make collagen
