@@ -1,3 +1,6 @@
+# The methods __str__ and __repr__ will return a printable representation (rather than the object's address in memory) of an object associated with a class.
+# The recommended approach is to utilize 'repr' to display a string that can be used to recreate the object.
+
 class Stock:
     def __init__(self, symbol: str, price: float, quantity: int):
         """
