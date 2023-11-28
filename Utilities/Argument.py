@@ -1,5 +1,6 @@
 # Topic: arguments
 # Default arguments must follow non-default argument; calculate_power(pow_val=2, number) is incorrect
+# *args must precede **kwargs
 def calculate_power(number, pow_val=2):
     """Raise number to the power of pow_val."""
     new_value = number ** pow_val
@@ -36,7 +37,7 @@ print(add_all(9, 10, 11, 29))
 # <class 'tuple'>
 # 59
 
-# Flexible arguments: pass an arbitrary number of keyword arguments
+# Flexible arguments: pass an arbitrary number of keyword/named arguments
 def print_all(**kwargs):
     """Print out key-value pairs in **kwargs."""
     # Print out the key-value pairs
