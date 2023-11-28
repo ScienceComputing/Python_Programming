@@ -21,12 +21,12 @@ class Stock:
             return True
         else:
             return False
-    def __str__(self): # can only accept self, and should return a string
+    def __str__(self): # Only accepts self, and should return a string
         """
         Return a string representation of the Stock object.
         """
         return f"{self.symbol}: {self.quantity} shares at ${self.price} per share"
-    def __repr__(self):
+    def __repr__(self): # Only accepts self, and should return a string
         """
         Return a string representation for creating a new Stock object.
         """
