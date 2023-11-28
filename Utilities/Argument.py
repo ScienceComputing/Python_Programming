@@ -47,3 +47,17 @@ print_all(name='cysteine', location='nails, skin, hair', function='make collagen
 # name:  cysteine
 # location:  nails, skin, hair
 # function:  make collagen
+
+def print_all(**elements):
+    """Print out key-value pairs in **elements."""
+    print(type(elements))
+    for key, value in elements.items():
+        print(key + ':  ' + value)
+
+print_all(name='cysteine', location='nails, skin, hair', function='make collagen')
+# <class 'dict'>
+# name:  cysteine
+# location:  nails, skin, hair
+# function:  make collagen
+
+# print_all() takes all the input key-value parameters and packs them into a single mutable iterable object named elements, which is a dictionary. 
