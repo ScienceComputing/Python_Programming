@@ -206,5 +206,30 @@ variant_1 == variant_2 # True
 ```
 
 ## Polymorphism
-Polymorphism involves employing a single interface to perform operations on objects belonging to various classes.
+Polymorphism involves employing a single interface to perform operations on objects belonging to various classes. Polymorphism guarantees that the exact method called is determined dynamically according to the instance.
+```
+class Shape:
+    def describe(self):
+        print("This is a shape.")
 
+class Circle(Shape):
+    def describe(self):
+        print("This is a circle.")
+
+class Triangle(Shape):
+    def describe(self):
+        print("This is a triangle.")
+        Shape.describe(self)
+
+shape_obj = Shape()
+circle_obj = Circle()
+triangle_obj = Triangle()
+
+for obj in (shape_obj, circle_obj, triangle_obj):
+    obj.describe()
+
+# This is a shape.
+# This is a circle.
+# This is a triangle.
+# This is a shape.
+```
