@@ -1,4 +1,4 @@
-A programming language can be either object-oriented or procedural, or both
+A programming language can be either object-oriented or procedural, or both.
 
 ## Procedural programming
 In the realm of programming, we often perceive code as a sequence of steps that guide a computer in executing tasks. Procedural programming, in particular, finds its niche when it comes to handling data analysis and creating scripts. One of its defining features is its inclination to prompt us to ponder the fundamental question: What is the intended objective of this program? This approach emphasizes a step-by-step, logical progression in designing and implementing software solutions.
@@ -236,5 +236,8 @@ for obj in (shape_obj, circle_obj, triangle_obj):
 
 ## [Liskov substitution principle](https://www.youtube.com/watch?v=-Z-17h3jG0A)
 The following situations violate the Liskov substitution principle.
-- The method of a parent class needs 1 parameter input, whereas this method of a child class needs 2 parameter input.
-- 
+- While the method in the parent class requires only one parameter, the corresponding method in the subclass is designed to take two parameters.
+- The subclass's method introduces additional constraints on the input parameters compared to its parent class counterpart.
+- Compared to the method in the parent class, the method in the subclass imposes fewer restrictions on its output.
+- The subclass's method introduces changes in additional attributes compared to its parent class counterpart.
+- The subclass's method raises more exceptions compared to its parent class counterpart.
