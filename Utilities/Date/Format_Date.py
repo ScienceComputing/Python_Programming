@@ -7,6 +7,7 @@ print(date(2023, 10, 9))
 
 print(date(2023, 10, 9).isoformat())
 # 2023-10-09
+# ISO dates offer clarity and, when sorted 'alphabetically,' such as in filenames, dates in the ISO format will be in the correct chronological order.
 
 type(date(2023, 10, 9))
 # <class 'datetime.date'>
@@ -19,3 +20,4 @@ print(date(2023, 10, 9).strftime('%Y/%m/%d'))
 
 print(date(2023, 10, 9).strftime('%Y%b%d'))
 # 2023Oct09
+
