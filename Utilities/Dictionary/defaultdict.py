@@ -1,4 +1,4 @@
-# Conventional way to construct a multi-dictionary from a dictionary
+# Traditional way to construct a multi-dictionary from a dictionary, which involves initializing the first value
 stock_data_list = {
     'GOOG': [136.23, 135.21, 130.75, 137.25],
     'AAPL': [150.25, 151.50, 149.75, 148.60],
@@ -12,9 +12,9 @@ for symbol, price_list in stock_data_list.items():
 
 print(stock_data)
 
-# Smart way to construct a multi-dictionary from a dictionary
+# We can turn to defaultdict() to construct a multi-dictionary from a dictionary, without initializing the first value
 from collections import defaultdict
-stock_data = defaultdict(list)
+stock_data = defaultdict(list) # Values for non-existing keys default to a specified initial value (list)
 for symbol, price_list in stock_data_list.items():
     stock_data[symbol].extend(price_list)
 
@@ -60,6 +60,7 @@ stock_data_set['GOOG'].add(137.25)
 print(stock_data_set['GOOG'])
 
 # Caveat: defaultdict will automatically create values for non-exisitng keys
+# On the other hand, when we try to access a key that doesn't exist in a standard Python dictionary, it raises a KeyError. defaultdict eliminates this issue by automatically creating the key with the default value (set() in this case) if it doesn't exist.
 stock_data_set['MSFT']
 print(stock_data_set)
 
