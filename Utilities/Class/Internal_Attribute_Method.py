@@ -8,6 +8,7 @@ class IntronicVariant:
         chrom, position, ref, alt = variantstr.split(":")
         return cls(chrom, int(position), ref, alt)
     # _is_valid(): check if the variant attributes are within valid ranges
+    # This is an internal method which does not belong to the public class interface, and can be subject to change without notice
     def _is_valid(self):
         return (0 < self._position <= IntronicVariant._MAX_POSITION) and \
                (1 <= len(self._ref) <= IntronicVariant._MAX_ALLELE_LENGTH) and \
