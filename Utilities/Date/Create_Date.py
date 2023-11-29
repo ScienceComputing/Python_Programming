@@ -54,4 +54,9 @@ for birthdate in patient_birthdates:
 for month, count in patients_each_month.items():
     print(f"Patients born in month {month}: {count}")
 
-
+"""
+Sort patients' birthdates
+"""
+patient_birthdates_sorted = sorted(patient_birthdates)
+print(patient_birthdates_sorted[0]) # 1990-01-15
+print(patient_birthdates_sorted[-1]) # 1995-06-10
