@@ -235,3 +235,6 @@ for obj in (shape_obj, circle_obj, triangle_obj):
 ```
 
 ## [Liskov substitution principle](https://www.youtube.com/watch?v=-Z-17h3jG0A)
+The following situations violate the Liskov substitution principle.
+- The method of a parent class needs 1 parameter input, whereas this method of a child class needs 2 parameter input.
+- 
