@@ -35,6 +35,7 @@ Count patients born in each calendar month
 """
 from datetime import date
 from collections import defaultdict
+# https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/Dictionary/defaultdict.py
 
 patient_birthdates = [
     date(1990, 1, 15),
