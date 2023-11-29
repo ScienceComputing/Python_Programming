@@ -64,6 +64,7 @@ print(stock_data_set['GOOG'])
 stock_data_set['MSFT']
 print(stock_data_set)
 
+
 # Case: use a defaultdict as a type of counter for a list of dictionaries, where we are counting multiple keys from those dictionaries. 
 stock_data_dict_list = [
     {'stock': 'GOOG', 'price': [136.23, 135.21, 130.75, 137.25]},
