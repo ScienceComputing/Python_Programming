@@ -233,3 +233,5 @@ for obj in (shape_obj, circle_obj, triangle_obj):
 # This is a triangle.
 # This is a shape.
 ```
+
+## [Liskov substitution principle](https://www.youtube.com/watch?v=-Z-17h3jG0A)
