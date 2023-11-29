@@ -10,6 +10,7 @@ print(birthdate_list_2[1].weekday()) # Find the weekday of a date
 # Weekdays in python: 0 -> Monday, 1 -> Tuesday, ..., 6 -> Sunday
 
 """
+Count how many patients were born before June 1
 """
 from datetime import datetime
 patient_birthdates = [
@@ -22,7 +23,6 @@ patient_birthdates = [
 
 birthdates = [datetime.strptime(i, "%Y-%m-%d") for i in patient_birthdates] # Convert birthdate strings to datetime objects
 
-# Count how many patients were born before June 1
 early_birthdays = 0
 for birthdate in birthdates:
     if birthdate.month < 6 or (birthdate.month == 6 and birthdate.day < 1):
@@ -31,6 +31,7 @@ for birthdate in birthdates:
 print(f"There are {early_birthdays} patients born before June 1") # There are 2 patients born before June 1
 
 """
+Count patients born in each calendar month
 """
 from datetime import date
 from collections import defaultdict
