@@ -34,3 +34,10 @@ print(time_2)
 # How many hours between time_2 and time_1?
 print((time_2 - time_1).total_seconds()/(3600))
 # 7
+
+"""
+Absolute time differences
+"""
+time_diff = (time_2.astimezone(timezone.utc) - time_1.astimezone(timezone.utc)).total_seconds()/3600
+print(time_diff)
+# 6
