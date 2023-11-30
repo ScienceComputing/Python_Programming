@@ -54,6 +54,7 @@ list_1[:6] # Select from the beginning to the 5th item in a list
 list_1[:] # Return the whole list
 
 # Subset the DataFrame by row and column numbers
+df.iloc[2] # Select the 2nd row
 df.iloc[1:6, 1:6] # Select the 2nd to 5th rows and the 2nd to 5th columns
 
 # Calculate the summary statistics across rows [per column as a group]
