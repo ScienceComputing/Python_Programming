@@ -28,6 +28,10 @@ dt_3 = datetime.strptime('2023-01-06 14:18:09', '%Y-%m-%d %H:%M:%S')
 print(dt_3)
 # 2023-01-06 14:18:09
 
+dt_3 = datetime.strptime('2023-1-6 14:18:09', '%Y-%m-%d %H:%M:%S') 
+print(dt_3)
+# 2023-01-06 14:18:09
+
 dt_4 = 19203489.0 # Number of seconds since January 1, 1970. 
 print(datetime.fromtimestamp(dt_4))
 # 1970-08-11 02:18:09
