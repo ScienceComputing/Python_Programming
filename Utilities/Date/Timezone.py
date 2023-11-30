@@ -42,5 +42,27 @@ print(Paris_time.astimezone(timezone.utc))
 # 2023-06-07 05:06:06+00:00
 # When we adjust the timezone using astimezone(), both the UTC offset (+00:00) and the clock time (05:06:06) are adjusted to match the new timezone (UTC). 
 
+"""
+Update all outpatient datetimes to Paris time
+"""
+from dateutil import tz
+
+paris_tz = tz.gettz('Europe/Paris')
+
+outpatient_datetimes_strings = [
+    "2023-11-01 08:30:00",
+    "2023-11-02 10:45:00",
+    "2023-11-03 14:20:00",
+]
+
+updated_outpatient_datetimes = []
+
+for dt_string in outpatient_datetimes_strings:
+    dt = datetime.strptime(dt_string, "%Y-%m-%d %H:%M:%S")
+    dt_paris = dt.replace(tzinfo=paris_tz)
+    updated_outpatient_datetimes.append(dt_paris)
+
+for dt_paris in updated_outpatient_datetimes:
+    print(f"Outpatient Datetime in Paris Time: {dt_paris}")
 
 
