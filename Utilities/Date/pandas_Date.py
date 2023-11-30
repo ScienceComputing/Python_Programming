@@ -18,4 +18,4 @@ print(eb['duration'].head(3))
 Transform the duration into seconds
 """
 eb['duration'].dt.total_seconds().head(3)
-# Access all of the typical datetime methods within the namespace `.dt`.
+# Get typical datetime methods within the namespace `.dt`.
