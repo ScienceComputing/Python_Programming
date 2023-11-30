@@ -14,6 +14,10 @@ NYC_time_2 = NYC_time.astimezone(NYC_ET)
 print(NYC_time_2)
 # 2023-06-07 06:06:06-05:00
 
+"""
+Recommend
+"""
+# The Internet Assigned Numbers Authority (IANA) time zone data is refreshed approximately every 3-4 months to accommodate various jurisdictional adjustments to their time-related regulations and to incorporate newly discovered historical information about time zones.
 from datetime import datetime
 from dateutil import tz # Import tz class from the package dateutil
 NYC_ET_2 = tz.gettz('America/New_York') # Continent/City
