@@ -67,5 +67,8 @@ eb.resample('D', on = 'start date')['duration in seconds'].mean().plot()
 # Visualize the size of each month in a line plot
 eb.resample('M', on = 'start date').size().plot()
 
-
-
+"""
+Get year and weekdays
+"""
+eb['start date'].dt.year
+eb['start date'].dt.day_names()
