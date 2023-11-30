@@ -1,3 +1,10 @@
+# Reference: https://docs.python.org/3/library/datetime.html#timedelta-objects
+# datetime.timedelta(days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=0, weeks=0)
+# A millisecond is converted to 1000 microseconds.
+# A minute is converted to 60 seconds.
+# An hour is converted to 3600 seconds.
+# A week is converted to 7 days.
+
 from datetime import datetime
 
 datetime(2023, 6, 6, 8, 10, 22) - datetime(2023, 6, 5, 8, 10, 22)
@@ -13,6 +20,9 @@ day_diff = timedelta(days=1)
 print(datetime(2023, 6, 5, 8, 10, 22) + day_diff)
 # 2023-06-06 08:10:22
 
+day_diff = timedelta(days=-1)
+print(datetime(2023, 6, 6, 8, 10, 22) + day_diff)
+# 2023-06-05 08:10:22
 
 """
 Estimate the patients' treatment duration
