@@ -50,10 +50,10 @@ print(Paris_time.astimezone(timezone.utc))
 What time was it in Paris?
 """
 paris_tz = tz.gettz('Europe/Paris')
-UTC_time = datetime(2023, 6, 7, 6, 6, 6)
+UTC_time = datetime(2023, 6, 7, 6, 6, 6, tzinfo=timezone.utc)
 Paris_time_2 = UTC_time.astimezone(paris_tz)
 print(Paris_time_2)
-# 2023-06-07 12:06:06+02:00
+# 2023-06-07 08:06:06+02:00
 
 """
 Update all outpatient datetimes to Paris time
