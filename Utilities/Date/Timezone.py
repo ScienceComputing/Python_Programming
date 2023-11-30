@@ -29,3 +29,6 @@ print(Paris_time)
 
 print(datetime(2023, 6, 7, 6, 6, 6).replace(tzinfo=Paris_CET))
 # 2023-06-07 06:06:06+01:00
+
+print(Paris_time.astimezone(timezone.utc))
+# 2023-06-07 05:06:06+00:00
