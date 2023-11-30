@@ -1,3 +1,10 @@
+
+
+
+
+"""
+Estimate the patients' treatment duration
+"""
 from datetime import datetime
 
 fmt = "%Y-%m-%d %H:%M:%S"
