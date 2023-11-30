@@ -11,14 +11,28 @@ print(eb.iloc[0]) # Retrieve the 0th row
 # Alternative approach
 eb['start date'] = pd.to_datetime(eb['start date'], format = '%Y-%m-%d %H:%M:%S')
 
-eb['duration'] = eb['end date'] - eb['start date']
-print(eb['duration'].head(3))
+"""
+Parse the date columns in a particular timezone
+"""
+eb['start date'] = eb['start date'].dt.tz_localize('America/New_York', ambiguous='NaT')
+eb['end date'] = eb['end date'].dt.tz_localize('America/New_York', ambiguous='NaT')
+eb['duration'] = eb['end date'] - eb['start date'] 
+eb['duration'].dt.total_seconds().min() # No negative value
 
 """
 Transform the duration into seconds
 """
+eb = pd.read_csv('energy_bar_sales.csv', 
+                 parse_dates = ['start date', 'end date'])
+eb['duration'] = eb['end date'] - eb['start date'] # Naive date, not timezone-aware
+print(eb['duration'].head(3))
 eb['duration'].dt.total_seconds().head(3)
 # Get typical datetime methods within the namespace `.dt`.
+
+"""
+Find the smallest duration in seconds
+"""
+eb['duration'].dt.total_seconds().min()
 
 """
 Summarize date time
