@@ -7,6 +7,11 @@ print(NYC_ET)
 UTC_time = datetime(2023, 6, 7, 6, 6, 6)
 print(UTC_time)
 # 2023-06-07 06:06:06
+
+UTC_time_2 = datetime(2023, 6, 7, 6, 6, 6, tzinfo=timezone.utc)
+print(UTC_time_2)
+# 2023-06-07 06:06:06+00:00
+
 NYC_time = datetime(2023, 6, 7, 6, 6, 6, tzinfo=NYC_ET)
 print(NYC_time)
 # 2023-06-07 06:06:06-05:00 # 5-hour UTC offset
