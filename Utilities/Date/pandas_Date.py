@@ -24,3 +24,15 @@ eb['duration'].dt.total_seconds().head(3)
 Summarize date time
 """
 eb['duration'].mean()
+eb['duration'].median()
+eb['duration'].mode()
+eb['duration'].min()
+eb['duration'].max()
+eb['duration'].var()
+eb['duration'].std()
+eb['duration'].sum()
+eb['duration'].quantile()
+eb['product type'].value_counts()
+eb['product type'].value_counts()/len(eb)
+db['duration in seconds'] = eb['duration'].dt.total_seconds()
+
