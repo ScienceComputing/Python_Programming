@@ -1,3 +1,5 @@
+# # https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
+
 # import datetime class from the datetime package
 from datetime import datetime
 
