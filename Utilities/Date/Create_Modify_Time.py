@@ -1,4 +1,4 @@
-# # https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
+#  https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
 
 # import datetime class from the datetime package
 from datetime import datetime
@@ -16,3 +16,11 @@ dt_2 = dt.replace(minute=18, second=9, microsecond=0)
 print(dt_2)
 # 2023-01-06 14:18:09
 
+# Parse string into datetime
+dt_3 = datetime.strptime('2023-01-06 14:18:09', '%Y-%m-%d %H:%M:%S') 
+print(dt_3)
+# 2023-01-06 14:18:09
+
+dt_4 = 19203489.0 # Number of seconds since January 1, 1970. 
+print(datetime.fromtimestamp(dt_4))
+# 1970-08-11 02:18:09
