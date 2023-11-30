@@ -71,4 +71,4 @@ eb.resample('M', on = 'start date').size().plot()
 Get year and weekdays
 """
 eb['start date'].dt.year
-eb['start date'].dt.day_names()
+eb['start date'].dt.day_name()
