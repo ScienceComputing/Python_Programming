@@ -46,6 +46,8 @@ eb.groupby('product type').first()
 
 # Visualize the average duration in seconds grouped by month in a line plot
 eb.resample('M', on = 'start date')['duration in seconds'].mean().plot()
+# Visualize the size of each month in a line plot
+eb.resample('M', on = 'start date').size().plot()
 # Visualize the average duration in seconds grouped by day in a line plot
 eb.resample('D', on = 'start date')['duration in seconds'].mean().plot()
 
