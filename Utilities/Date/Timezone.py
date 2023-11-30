@@ -36,6 +36,11 @@ print(Paris_time)
 
 print(datetime(2023, 6, 7, 6, 6, 6).replace(tzinfo=Paris_CET))
 # 2023-06-07 06:06:06+01:00
+# When set the timezone information of the datetime object to a new timezone (e.g., Paris_CET), we keep the same clock time.
 
 print(Paris_time.astimezone(timezone.utc))
 # 2023-06-07 05:06:06+00:00
+# When we adjust the timezone using astimezone(), both the UTC offset (+00:00) and the clock time (05:06:06) are adjusted to match the new timezone (UTC). 
+
+
+
