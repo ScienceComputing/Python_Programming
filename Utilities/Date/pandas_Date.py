@@ -16,6 +16,7 @@ Parse the date columns in a particular timezone
 """
 eb['start date'] = eb['start date'].dt.tz_localize('America/New_York', ambiguous='NaT')
 eb['end date'] = eb['end date'].dt.tz_localize('America/New_York', ambiguous='NaT')
+# eb['Start date'] = eb['Start date'].dt.tz_convert('Europe/Paris')
 eb['duration'] = eb['end date'] - eb['start date'] 
 eb['duration'].dt.total_seconds().min() # No negative value
 
