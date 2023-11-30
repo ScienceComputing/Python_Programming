@@ -1,5 +1,17 @@
+from datetime import datetime
 
+datetime(2023, 6, 6, 8, 10, 22) - datetime(2023, 6, 5, 8, 10, 22)
+# datetime.timedelta(days=1)
+print(datetime(2023, 6, 6, 8, 10, 22) - datetime(2023, 6, 5, 8, 10, 22))
+# 1 day, 0:00:00
+time_diff = datetime(2023, 6, 6, 8, 10, 22) - datetime(2023, 6, 5, 8, 10, 22)
+print(time_diff.total_seconds())
+# 86400.0
 
+from datetime import timedelta
+day_diff = timedelta(days=1)
+print(datetime(2023, 6, 5, 8, 10, 22) + day_diff)
+# 2023-06-06 08:10:22
 
 
 """
