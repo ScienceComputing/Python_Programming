@@ -19,3 +19,8 @@ Transform the duration into seconds
 """
 eb['duration'].dt.total_seconds().head(3)
 # Get typical datetime methods within the namespace `.dt`.
+
+"""
+Summarize date time
+"""
+eb['duration'].mean()
