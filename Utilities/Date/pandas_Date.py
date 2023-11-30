@@ -34,5 +34,18 @@ eb['duration'].sum()
 eb['duration'].quantile()
 eb['product type'].value_counts()
 eb['product type'].value_counts()/len(eb)
-db['duration in seconds'] = eb['duration'].dt.total_seconds()
+eb['duration in seconds'] = eb['duration'].dt.total_seconds()
+eb.groupby('product type')['duration in seconds'].mean()
+
+# Estimate the average duration in seconds grouped by month
+eb.resample('M', on = 'start date')['duration in seconds'].mean()
+# Estimate the size of each group
+eb.groupby('product type').size() 
+# Retrieve the first row of each group
+eb.groupby('product type').first()
+
+# Visualize the average duration in seconds grouped by month in a line plot
+eb.resample('M', on = 'start date')['duration in seconds'].mean().plot()
+# Visualize the average duration in seconds grouped by day in a line plot
+eb.resample('D', on = 'start date')['duration in seconds'].mean().plot()
 
