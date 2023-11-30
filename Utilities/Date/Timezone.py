@@ -26,3 +26,6 @@ Paris_CET = timezone(timedelta(hours=1))
 Paris_time = datetime(2023, 6, 7, 6, 6, 6, tzinfo=Paris_CET) 
 print(Paris_time)
 # 2023-06-07 06:06:06+01:00
+
+print(datetime(2023, 6, 7, 6, 6, 6).replace(tzinfo=Paris_CET))
+# 2023-06-07 06:06:06+01:00
