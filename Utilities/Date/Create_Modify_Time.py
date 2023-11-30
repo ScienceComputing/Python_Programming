@@ -1,4 +1,11 @@
-#  https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
+# https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
+# %Y: 4 digit year (0000-9999)
+# %m: 2 digit month (1-12)
+# %d: 2 digit day (1-31)
+# %H: 2 digit hour (0-23)
+# %M: 2 digit minute (0-59)
+# %S: 2 digit second (0-59)
+
 
 # import datetime class from the datetime package
 from datetime import datetime
