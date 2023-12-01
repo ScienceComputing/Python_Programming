@@ -1,6 +1,6 @@
 import inspect
 import queue
-print(inspect.getsource(queue)) # View the imported queue class
+print(inspect.getsource(queue)) # View the source code of imported queue class
 
 '''A multi-producer, multi-consumer queue.'''
 
