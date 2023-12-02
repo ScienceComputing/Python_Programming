@@ -1,3 +1,6 @@
+"""
+Pass the html content from a variable to the Selector
+"""
 from scrapy.selector import Selector
 
 html = """
@@ -43,3 +46,12 @@ def print_attribute(xpath, html_content):
         print("%d) %s" % (i+1, el))
 
 print_attribute('//p[@id="p2"]/a/@href', html)
+
+"""
+Pass the html content from a website to the Selector
+"""
+from scrapy.selector import Selector
+import requests
+target_url = 'https://www.ncbi.nlm.nih.gov/clinvar/?term=BRCA1%5Bgene%5D&redir=gene'
+html = requests.get(target_url).content
+sel = Selector(text=html) 
