@@ -55,3 +55,6 @@ import requests
 target_url = 'https://www.ncbi.nlm.nih.gov/clinvar/?term=BRCA1%5Bgene%5D&redir=gene'
 html = requests.get(target_url).content
 sel = Selector(text=html) 
+print(f"We have found: {len(sel.xpath('//*'))} elements in this website!")
+# We have found: 7778 elements in this website!
+
