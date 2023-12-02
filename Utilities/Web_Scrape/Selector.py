@@ -1,7 +1,7 @@
 from scrapy.selector import Selector
 
 def print_attribute(xpath, html_content):
-    sel = Selector(text=html_content)
+    sel = Selector(text=html_content) # Set up the selector, which selects the entire html content
     print("You have selected:")
     for i, el in enumerate(sel.xpath(xpath).extract()):
         print("%d) %s" % (i+1, el))
