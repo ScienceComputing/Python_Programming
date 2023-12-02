@@ -23,6 +23,10 @@ sel.xpath('//p') # Return a SelectorList of Selector objects
 # [<Selector query='//p' data='<p class="class-1 class-2">Hello Prot...'>, <Selector query='//p' data='<p id="p2" class="class-2">Choose \n  ...'>, <Selector query='//p' data='<p class="class-2">Enjoy IntAct!</p>'>]
 sel.xpath('//p').extract()
 # ['<p class="class-1 class-2">Hello Protein-Protein Interaction!</p>', '<p id="p2" class="class-2">Choose \n            <a href="https://www.ebi.ac.uk/intact/home">IntAct!</a>!\n        </p>', '<p class="class-2">Enjoy IntAct!</p>']
+sel.xpath('//p').extract_first() # Return the data of the first Selector object
+# '<p class="class-1 class-2">Hello Protein-Protein Interaction!</p>'
+sel.xpath('//p')[1].extract() # Return the data of the second Selector object
+# '<p id="p2" class="class-2">Choose \n            <a href="https://www.ebi.ac.uk/intact/home">IntAct!</a>!\n        </p>'
 
 def print_attribute(xpath, html_content):
     sel = Selector(text=html_content) # Set up the selector, which selects the entire html content
