@@ -28,6 +28,14 @@ sel.xpath('//p').extract_first() # Return the data of the first Selector object
 sel.xpath('//p')[1].extract() # Return the data of the second Selector object
 # '<p id="p2" class="class-2">Choose \n            <a href="https://www.ebi.ac.uk/intact/home">IntAct!</a>!\n        </p>'
 
+# XPath chaining: the following 3 lines are equivalent
+sel.xpath('/html/body/div[1]')
+# [<Selector query='/html/body/div[1]' data='<div id="div1" class="class-1">\n     ...'>]
+sel.xpath('/html').xpath('./body/div[1]')
+# [<Selector query='./body/div[1]' data='<div id="div1" class="class-1">\n     ...'>]
+sel.xpath('/html').xpath('./body').xpath('./div[1]')
+# [<Selector query='./div[1]' data='<div id="div1" class="class-1">\n     ...'>]
+
 def print_attribute(xpath, html_content):
     sel = Selector(text=html_content) # Set up the selector, which selects the entire html content
     print("You have selected:")
