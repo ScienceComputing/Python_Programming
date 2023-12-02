@@ -1,4 +1,5 @@
 # f-strings: f'literal string{expression}'
+# More reading: https://realpython.com/python-f-strings/
 
 # Example:
 # Pair up the gene and protein names: pairs
