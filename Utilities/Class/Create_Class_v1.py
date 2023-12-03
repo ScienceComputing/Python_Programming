@@ -92,6 +92,15 @@ class MultiFalafel(Falafel):
         print(str(self.number_eat)+' falafel(s) got eaten')
         self.remaining = self.number - self.number_eat
 
+def inspect_falafel_class(c):
+    if issubclass(c, Falafel):
+        print(f"{c.__name__} inherits from the Falafel class")
+    else:
+        print(f"{c.__name__} does not inherit from the Falafel class")
+
+inspect_falafel_class(MultiFalafel)
+# MultiFalafel inherits from the Falafel class
+
 # Test the code
 # six_falafels = MultiFalafel(num=6,num_to_eat=7) # Ignore self when calling method on an object
 # six_falafels.eat()
