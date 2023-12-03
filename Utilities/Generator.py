@@ -31,20 +31,27 @@ print(list(aa_target))
 
 # Build the generator function that produces the generator objects when called. 
 # This function yields a sequence of values instead of returning a single value, using the keyword `yield`.
-# Case 1:
-def yield_multiple_items():
-    yield "The 1st item"
-    yield "The 2nd item"  
-    yield "The 3rd item"
-    yield "The last item. Do not call next again."
-example = yield_multiple_items()
-print(next(example))
-print(next(example))
-print(next(example))
-print(next(example))
-print(next(example))
+"""
+Case 1
+"""
+def yield_gene_expression():
+    genes = ["Gene1", "Gene2", "Gene3", "Gene4", "Gene5"]
+    values = [10.5, 15.2, 8.7, 12.0, 9.8]  
+    for gene, value in zip(genes, values):
+        yield f"Gene: {gene}, Expression: {value} TPM"
 
-# Case 2:
+gene_expression_generator = yield_gene_expression()
+
+print(next(gene_expression_generator))
+print(next(gene_expression_generator))
+print(next(gene_expression_generator))
+print(next(gene_expression_generator))
+print(next(gene_expression_generator))
+
+
+"""
+Case 2
+"""
 def num_sequence(n):
     """Generate values from 0 to n."""
     i = 0
@@ -57,7 +64,9 @@ print(type(result)) # <class 'generator'>
 for item in result:
     print(item)
 
-# Case 3:
+"""
+Case 3
+"""
 person_list = ['John', 'Katie', 'Angel', 'Julia', 'Peter']
 # Define generator function get_lengths that allows users to input any list
 def get_lengths(input_list):
