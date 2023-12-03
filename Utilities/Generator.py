@@ -1,4 +1,4 @@
-# List comprehension returns a list; while the generator returns a generator object
+# List comprehension [] returns a list; while the generator () returns a generator object
 # Both can be iterated over
 [2 * num for num in range(5)]
 (2 * num for num in range(5)) # Create a generator
