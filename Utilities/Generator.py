@@ -47,7 +47,7 @@ print(next(gene_expression_generator))
 print(next(gene_expression_generator))
 print(next(gene_expression_generator))
 print(next(gene_expression_generator))
-
+# Gene: Gene5, Expression: 9.8 TPM
 
 """
 Case 2
