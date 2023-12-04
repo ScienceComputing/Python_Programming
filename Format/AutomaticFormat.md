@@ -1,2 +1,2 @@
-# Black saves our time and mental energy for thinking more important scientific questions
-https://github.com/psf/black
+[Black](https://github.com/psf/black) allows us to focus on addressing more critical scientific inquiries
+
