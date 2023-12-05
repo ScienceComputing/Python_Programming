@@ -44,4 +44,16 @@ element_counter(list2)
 # [('a', 4), ('c', 2), ('b', 1)]
 plot_most_common_element(element_counter(list2))
 
+"""
+Case 4
+"""
+def sum_counters(counters):
+    return sum(counters, Counter())
 
+counter1 = Counter({'apple': 3, 'banana': 2, 'cherry': 1})
+counter2 = Counter({'apple': 2, 'banana': 4, 'date': 3})
+counter3 = Counter({'banana': 1, 'date': 2, 'elderberry': 5})
+counters_list = [counter1, counter2, counter3]
+result_counter = sum_counters(counters_list)
+print(result_counter)
+# Counter({'banana': 7, 'apple': 5, 'date': 5, 'elderberry': 5, 'cherry': 1})
