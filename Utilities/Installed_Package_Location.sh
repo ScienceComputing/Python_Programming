@@ -6,7 +6,7 @@ python -c "import scanpy as _; print(_.__path__)"
 # ['/Users/user_name/.pyenv/versions/3.11.6/lib/python3.11/site-packages/scanpy']
 
 python -c "import scanpy as _; print(_.__file__)"
-# /Users/anniliu/.pyenv/versions/3.11.6/lib/python3.11/site-packages/scanpy/__init__.py
+# /Users/user_name/.pyenv/versions/3.11.6/lib/python3.11/site-packages/scanpy/__init__.py
 
 pip show scanpy
 # Name: scanpy
