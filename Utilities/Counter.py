@@ -57,3 +57,38 @@ counters_list = [counter1, counter2, counter3] #!
 result_counter = sum_counters(counters_list)
 print(result_counter)
 # Counter({'banana': 7, 'apple': 5, 'date': 5, 'elderberry': 5, 'cherry': 1})
+
+"""
+Case 5
+"""
+from collections import Counter
+
+class Document:
+    def __init__(self, text):
+        self.text = text
+        self.tokens = self._tokenize()
+        self.word_counts = self._count_words()
+    def _tokenize(self):
+        # Tokenize the document using a non-public method.
+        return tokenize(self.text)
+    def _count_words(self):
+        # Tally the document's word counts using Counter (non-public method).
+        return Counter(self.tokens)
+      
+def select_word_counts(word_counts, first_char):
+    """
+    Count the words selected by the first character
+
+    :param word_counts: Word counts attribute of a Document class instance
+    :param first_char: Select counts of words that start with this character
+
+    >>> # Count the words which start with 'Z'
+    >>> select_word_counts(document.word_counts, 'Z')
+    """
+    return Counter({w: c for w, c in word_counts.items() if w[0] == first_char})
+
+quote = 'It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.'
+quote_doc = Document(text=quote)
+select_word_counts(quote_doc.word_counts, 'i')
+# Counter({'it': 9, 'incredulity': 1})
+
