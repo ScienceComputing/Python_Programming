@@ -90,5 +90,5 @@ def select_word_counts(word_counts, first_char):
 quote = 'It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.'
 quote_doc = Document(text=quote)
 select_word_counts(quote_doc.word_counts, 'i')
-# Counter({'it': 9, 'incredulity': 1})
+# Counter({'it': 9, 'It': 1, 'incredulity': 1})
 
