@@ -108,3 +108,18 @@ inspect_falafel_class(MultiFalafel)
 # six_falafels.type
 # six_falafels.ingrediate
 # six_falafels.new_origin()
+
+# Build a grandchild class
+class SuperFalafel(MultiFalafel):
+    def __init__(self, num=1, num_to_eat=1, supersize=False):
+        super().__init__(num, num_to_eat) # Call the constructor of the parent class (MultiFalafel)
+        self.supersize = supersize
+    def eat(self):
+        if self.supersize:
+            print(f"{str(self.number_eat)} supersized falafel(s) got eaten")
+        else:
+            super().eat() # Call the eat method of the parent class (MultiFalafel)
+
+super_falafel = SuperFalafel(num=3, num_to_eat=2, supersize=True) # 3 falafel(s) created
+super_falafel.eat() # 2 supersized falafel(s) got eaten
+
