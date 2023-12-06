@@ -85,7 +85,7 @@ def select_word_counts(word_counts, first_char):
     >>> # Count the words which start with 'Z'
     >>> select_word_counts(document.word_counts, 'Z')
     """
-    return Counter({w: c for w, c in word_counts.items() if w[0] == first_char})
+    return Counter({w: c for w, c in word_counts.items() if w[0].lower() == first_char.lower()})
 
 quote = 'It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.'
 quote_doc = Document(text=quote)
