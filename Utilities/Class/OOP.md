@@ -28,6 +28,9 @@ type(obj)
 
 # Show the documentation of a class associated with an object
 help(obj)
+
+# Keep track of all the public and non-public methods and attributes of a class associated with an object
+dir(obj)
 ```
 
 - Best practices
@@ -35,6 +38,7 @@ help(obj)
   - Use `CamelCase` to define the name of a class, use `lower_snake_case` to define functions and attributes
   - Keep `self` as `self`
   - Use docstrings to show the function of a class
+  - Use `dir` primarily at an interactive prompt, not in scripts
 
 ## Instance-level data
 ```
