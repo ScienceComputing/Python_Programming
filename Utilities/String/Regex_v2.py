@@ -47,6 +47,42 @@ re.findall(r'^\d+\smales', str3)
 re.findall(r'\d+\sfemales$', str3)
 # ['900 females']
 
+"""
+A complex case
+"""
+from collections import Counter
+import re
+
+def tokenize(text):
+    """
+    Tokenize the text using a regular expression. 
+    This function serves as a wrapper for re.findall, performing case-insensitive matching.
+    :param text: text to be tokenized
+    :return: a list of resulting tokens
+    >>> tokenize("Hello, word!")
+    ['Hello', 'word']
+    """
+    return re.findall(r'[a-zA-z]+', text, flags=re.IGNORECASE)
+
+class Document:
+    def __init__(self, text):
+        self.text = text
+        self.tokens = self._tokenize()
+        self.word_counts = self._count_words()
+    def _tokenize(self):
+        # Tokenize the document using a non-public method.
+        return tokenize(self.text)
+    def _count_words(self):
+        # Tally the document's word counts using Counter (non-public method).
+        return Counter(self.tokens)
+
+quote = 'It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.'
+quote_doc = Document(text=quote)
+print(quote_doc.tokens[:3]) 
+# ['It', 'was', 'the']
+print(quote_doc.word_counts.most_common(3))
+# [('was', 10), ('the', 10), ('of', 10)]
+
 str4 = 'I love the growth-mind culture of this company. I learn lots of from this company!.'
 re.split(r'\.\s', str4) # \. escape the actual meaning of ., that is, match any character except newline
 # ['I love the growth-mind culture of this company', 'I learn lots of from this company!.']
