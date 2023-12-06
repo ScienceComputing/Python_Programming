@@ -169,6 +169,17 @@ print(intronic_variant.annotate("Located in an intron"))
 
 We use `super().__init__(chrom, position, ref, alt)` to call the constructor of the base class (Variant) instead of explicitly referencing `Variant.__init__(self, chrom, position, ref, alt)`. `super().__init__(...)` is a more modern and recommended way to call the base class constructor.
 
+## Multilevel and multiple inheritance
+- Multilevel inheritance occurs when a class inherits from another class, which itself inherits from another class, and so on. This creates a hierarchy of classes, where each class inherits the features of its parent class.
+- Multiple inheritance occurs when a child class inherits from more than one parent class. This allows the child class to inherit all the features of its parent classes. However, this can also lead to ambiguity, as the child class may have multiple methods or attributes with the same name.
+
+| Feature | Multilevel Inheritance | Multiple Inheritance |
+|---|---|---|
+| Number of base classes | One | Two or more |
+| Inheritance hierarchy | Chain-like | Network-like |
+| Complexity | Lower | Higher |
+| Ambiguity | Lower | Higher |
+
 ## Object comparison
 ```
 class Variant:
