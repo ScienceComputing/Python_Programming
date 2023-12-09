@@ -63,6 +63,17 @@ Case 5
 """
 from collections import Counter
 
+def tokenize(text):
+    """
+    Tokenize the text using a regular expression. 
+    This function serves as a wrapper for re.findall, performing case-insensitive matching.
+    :param text: text to be tokenized
+    :return: a list of resulting tokens
+    >>> tokenize("Hello, word!")
+    ['Hello', 'word']
+    """
+    return re.findall(r'[a-zA-z]+', text, flags=re.IGNORECASE)
+  
 class Document:
     def __init__(self, text):
         self.text = text
