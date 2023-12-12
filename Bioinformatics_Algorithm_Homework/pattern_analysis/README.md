@@ -1,6 +1,6 @@
 ### pattern_analysis
 
-A package for analyzing patterns for genome sequences.
+A [package](https://pypi.org/project/pattern-analysis/) for analyzing patterns for genome sequences.
 
 ### Features
 
