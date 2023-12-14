@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pattern_analysis/__init__.py
+pattern_analysis/pattern_analysis.py
+pattern_analysis.egg-info/PKG-INFO
+pattern_analysis.egg-info/SOURCES.txt
+pattern_analysis.egg-info/dependency_links.txt
+pattern_analysis.egg-info/top_level.txt
