@@ -6,4 +6,6 @@ setup(
     name="pattern_analysis",
     packages=find_packages(include=["pattern_analysis", "pattern_analysis.*"]),
     version="0.1.0",
+    python_requires=">=2.7"
 )
+
