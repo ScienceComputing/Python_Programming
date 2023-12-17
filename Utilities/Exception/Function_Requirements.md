@@ -1,0 +1,7 @@
+- Normal arguments
+- Special arguments
+  - Boundary values
+  - Arguments triggering special logic
+- Bad arguments
+- Return values
+- Exceptions
