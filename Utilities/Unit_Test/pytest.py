@@ -37,3 +37,11 @@ def test_trigonometric_functions(angle_degrees, expected):
 # test_trigonometric_func.py ...                                           [100%]
 
 # ============================== 3 passed in 0.01s ===============================
+
+# Add error message to improve the readability of the default output of pytest results
+def test_trigonometric_functions(angle_degrees, expected):
+    result = trigonometric_functions(angle_degrees)
+    expect = (0.49999999999999994, 0.8660254037844387, 0.5773502691896256)
+    error_message = "trigonometric_functions(30) should return the floats {0}, but it actually returned {1}".format(expect, result)
+    assert pytest.approx(result, rel=1e-9) == expect, error_message
+    
