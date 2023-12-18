@@ -8,7 +8,7 @@ We need a metric for estimating algorithm efficiency and assessing algorithm qua
 - Doesn't use seconds/bytes: different results depend on the hardware settings
 - We use the mathematical symbols to express the complexity: $O(1)$, $O(n)$, $O(n^2)$
 
-When describing the speed of an algorithm in terms of its runtime, the **total number of steps executed in the algorithm** becomes particularly important. We can assume that the runtime of each line of code is represented by a constant 'Btime'. Therefore, the total runtime of the algorithm equals the total number of lines of code executed."
+When describing the speed of an algorithm in terms of its runtime, the **total number of steps executed in the algorithm** becomes particularly important. We can assume that the runtime of each line of code is represented by a constant `Btime`. Therefore, the total runtime of the algorithm equals the total number of lines of code executed."
 
 ```diff
 - We focus on Time Complexity
