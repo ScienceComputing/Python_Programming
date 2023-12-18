@@ -1,9 +1,14 @@
+## Complexity of an algorithm
+We need a metric for estimating algorithm efficiency and assessing algorithm quality that is independent of external factors like hardware/software performance and scale. Complexity analysis inherently serves this purpose.
+
 ## Big O notation
 - It measures the worst-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm
     - **Time complexity**: time taken to run completely
     - Space complexity: extra memory space required by an algorithm
 - Doesn't use seconds/bytes: different results depend on the hardware settings
-- Use the mathematical symbols to express the complexity: $O(1)$, $O(n)$, $O(n^2)$
+- We use the mathematical symbols to express the complexity: $O(1)$, $O(n)$, $O(n^2)$
+
+When describing the speed of an algorithm in terms of its runtime, the **total number of steps executed in the algorithm** becomes particularly important. We can assume that the runtime of each line of code is represented by a constant 'Btime'. Therefore, the total runtime of the algorithm equals the total number of lines of code executed."
 
 ```diff
 - We focus on Time Complexity
