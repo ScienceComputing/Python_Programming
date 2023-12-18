@@ -97,7 +97,7 @@ def custom_sum(n):
 
     return sum1 + sum2 + sum3
 ```
-Normally, T(n) = $O(n)$ + $O(n^2)$ + $O(n^3)$. However, when n approaches infinity, it's evident that the first two terms can be disregarded, leaving us with a final complexity of $T(n)$ = $O(n^3)$.
+Normally, $T(n)$ = $O(n)$ + $O(n^2)$ + $O(n^3)$. However, when $n$ approaches infinity, it's evident that the first two terms can be disregarded, leaving us with a final complexity of $T(n)$ = $O(n^3)$.
 
 ## Simplify the big O notation
 - Remove the constants: $O(2 + m + 2n)$ -> $O(m + n)$
