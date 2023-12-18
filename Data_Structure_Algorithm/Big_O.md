@@ -77,6 +77,28 @@ def print_element(object):
 print_element(variant_index) # o(64)
 ```
 
+Another example below:
+```
+def custom_sum(n):    
+    sum1 = 0    
+    for var1 in range(n):        
+        sum1 += var1
+
+    sum2 = 0    
+    for var2 in range(n):        
+        for i in range(n):            
+            sum2 += var2 * i
+    
+    sum3 = 0    
+    for var3 in range(n):        
+        for i in range(n):            
+            for j in range(n):                
+                sum3 += var3 * i * j
+
+    return sum1 + sum2 + sum3
+```
+Normally, T(n) = $O(n)$ + $O(n^2)$ + $O(n^3)$. However, when n approaches infinity, it's evident that the first two terms can be disregarded, leaving us with a final complexity of $T(n)$ = $O(n^3)$.
+
 ## Simplify the big O notation
 - Remove the constants: $O(2 + m + 2n)$ -> $O(m + n)$
 - Consider different variables for different inputs: $O(m + n)$
