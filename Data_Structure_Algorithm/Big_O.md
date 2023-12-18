@@ -8,11 +8,24 @@ We need a metric for estimating algorithm efficiency and assessing algorithm qua
 - We do not use seconds/bytes to quantify the complexity of an algorithm, as different time/space complexities depend on the hardware/software settings
 - We use the mathematical symbols to express the complexity: $O(1)$, $O(n)$, $O(n^2)$
 
+When describing the speed of an algorithm in terms of its runtime, the **total number of steps executed in the algorithm** becomes particularly important. We can assume that the runtime of each line of code is represented by a constant `Btime`. Therefore, the total runtime of the algorithm equals the total number of lines of code executed.
+
+## Typical time complexity
+
 ```diff
 - We focus on Time Complexity
 ```
 
-When describing the speed of an algorithm in terms of its runtime, the **total number of steps executed in the algorithm** becomes particularly important. We can assume that the runtime of each line of code is represented by a constant `Btime`. Therefore, the total runtime of the algorithm equals the total number of lines of code executed.
+| Name                       | Complexity   | Equivalent Expression |
+|----------------------------|--------------|-----------------------|
+| Constant Time Complexity   | $O(1)$         | 1                     |
+| Logarithmic Time Complexity| $O(logn)$      | logn + 1              |
+| Linear Time Complexity     | $O(n)$        | n + 1                 |
+| Linearithmic Time Complexity| $O(nlogn)$    | nlogn + 1             |
+| Polynomial Time Complexity | $O(n^2)$, $O(n^3)$, ... | $n^2$ + n + 1         |
+| Exponential Time Complexity| $O(2n)$        | 2n + 1                |
+| Factorial Time Complexity  | $O(n!)$        | n! + 1                |
+
 
 ## Big omega notation
 - It measures the best-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm
