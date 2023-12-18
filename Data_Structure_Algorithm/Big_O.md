@@ -5,7 +5,7 @@ We need a metric for estimating algorithm efficiency and assessing algorithm qua
 - It measures the worst-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm
     - **Time complexity**: time taken to run completely
     - Space complexity: extra memory space required by an algorithm
-- We do not use seconds/bytes to quantify the complexity of an algorithm, as different time complexities depend on the hardware/software settings
+- We do not use seconds/bytes to quantify the complexity of an algorithm, as different time/space complexities depend on the hardware/software settings
 - We use the mathematical symbols to express the complexity: $O(1)$, $O(n)$, $O(n^2)$
 
 ```diff
