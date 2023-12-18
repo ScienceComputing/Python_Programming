@@ -43,5 +43,8 @@ def str_to_int(number_with_commas):
     :return: An integer representation of the input number.
     """
     return int(number_with_commas.replace(",", ""))
-
+    try:
+        return int(number_with_commas.replace(",", ""))
+    except ValueError:
+        return None
 ```
