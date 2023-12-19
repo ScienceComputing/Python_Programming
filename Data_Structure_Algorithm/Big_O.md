@@ -199,4 +199,7 @@ def create_list(n):
         result_list.append(inner_list)
     return result_list
 ```
-`result_list` stores `n` inner lists, each of which contains `n` integers. Therefore, the space required for `result_list` is $O(n^2)$. Each `inner_list` contains $n$ integers, and there are $n$ such inner lists created. Therefore, the space required for all `inner_list` instances is $O(n^2)$. Temporary variables `i` and `j` do not significantly contribute to the space complexity as they occupy constant space, $O(1)$. So, the dominant factor in the space complexity is the storage of the `result_list` and the `inner_list` instances, both of which scale with the square of the input value $n$, resulting in $O(n^2)$ space complexity.
+- `result_list` stores `n` inner lists, each of which contains `n` integers. Therefore, the space required for `result_list` is $O(n^2)$.
+- Each `inner_list` contains `n` integers, and there are `n` such inner lists created. Therefore, the space required for all `inner_list` instances is $O(n^2)$.
+- Temporary variables `i` and `j` do not significantly contribute to the space complexity as they occupy constant space, $O(1)$.
+- The dominant factor in the space complexity is the storage of the `result_list` and the `inner_list` instances, both of which scale with the square of the input value `n`, resulting in the overall $O(n^2)$ space complexity.
