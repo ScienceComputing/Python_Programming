@@ -3,8 +3,8 @@ We need a metric for estimating algorithm efficiency and assessing algorithm qua
 
 ## Big O notation
 - It measures the worst-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm.
-    - **Time complexity**: time taken to run completely
-    - Space complexity: extra memory space required by an algorithm
+    - **Time complexity $T(n)$**: time taken to run completely
+    - **Space complexity $S(n)$**: extra memory space required by an algorithm
 - We do not use seconds/bytes to quantify the complexity of an algorithm, as different time/space complexities depend on the hardware/software settings.
 - We use the mathematical symbols to express the complexity: $O(1)$, $O(n)$, $O(n^2)$.
 
@@ -154,3 +154,4 @@ def custom_count(n):
 - Remove the smaller term: $O(n^2 + n)$ -> $O(n^2)$
 - $O(log_2{n})$ = $O(log_2{any \ number} \times log_{any \ number}{n})$ = $O(log_{any \ number}{n})$ -> $O(logn)$
 
+## Space complexity
