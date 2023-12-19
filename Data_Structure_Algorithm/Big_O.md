@@ -114,7 +114,7 @@ def custom_sum(n):
 Normally, $T(n)$ = $O(n)$ + $O(n^2)$ + $O(n^3)$. However, when $n$ approaches infinity, it's evident that the first two terms can be disregarded, leaving us with a final complexity of $T(n)$ = $O(n^3)$.
 
 ## O(logn) - logarithmic
-Let us initialize `var1` to 1, and determine how many times it needs to be multiplied by 2 to become greater than or equal to $n$. $2^{times} \ge n$. Times = $log_2^{n}$.
+Let us initialize `var1` to 1, and determine how many times it needs to be multiplied by 2 to become greater than or equal to $n$. $2^{times} \ge n$. Times = $log_2{n}$.
 ```
 var1 = 1
 while var1 < n:    
