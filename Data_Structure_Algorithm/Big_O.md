@@ -2,11 +2,11 @@
 We need a metric for estimating algorithm efficiency and assessing algorithm quality that is independent of external factors like hardware/software performance and scale. Complexity analysis inherently serves this purpose.
 
 ## Big O notation
-- It measures the worst-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm
+- It measures the worst-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm.
     - **Time complexity**: time taken to run completely
     - Space complexity: extra memory space required by an algorithm
-- We do not use seconds/bytes to quantify the complexity of an algorithm, as different time/space complexities depend on the hardware/software settings
-- We use the mathematical symbols to express the complexity: $O(1)$, $O(n)$, $O(n^2)$
+- We do not use seconds/bytes to quantify the complexity of an algorithm, as different time/space complexities depend on the hardware/software settings.
+- We use the mathematical symbols to express the complexity: $O(1)$, $O(n)$, $O(n^2)$.
 
 When describing the speed of an algorithm in terms of its runtime, the **total number of steps executed in the algorithm** becomes particularly important. We can assume that the runtime of each line of code is represented by a constant `Btime`. Therefore, the total runtime of the algorithm equals the total number of lines of code executed.
 
@@ -28,10 +28,10 @@ When describing the speed of an algorithm in terms of its runtime, the **total n
 
 
 ## Big omega notation
-- It measures the best-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm
+- It measures the best-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm.
 
 ## Big theta notation
-- It measures the average-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm
+- It measures the average-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm.
 
 ## O(1) - constant
 The increase in the input size does not change the time taken to execute an algorithm.
@@ -114,7 +114,7 @@ def custom_sum(n):
 Normally, $T(n)$ = $O(n)$ + $O(n^2)$ + $O(n^3)$. However, when $n$ approaches infinity, it's evident that the first two terms can be disregarded, leaving us with a final complexity of $T(n)$ = $O(n^3)$.
 
 ## O(logn) - logarithmic
-Let us initialize `var1` to 1, and determine how many times it needs to be multiplied by 2 to become greater than or equal to $n$. $2^{times} \ge n$. Times = $log_2{n}$.
+Let us initialize `var1` to 1, and determine how many times it needs to be multiplied by 2 to become greater than or equal to $n$. $2^{times} \ge n$. $Times$ = $log_2{n}$.
 ```
 var1 = 1
 while var1 < n:    
