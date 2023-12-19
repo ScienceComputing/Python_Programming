@@ -166,3 +166,14 @@ def custom_count(n):
 - $O(log_2{n})$ = $O(log_2{any \ number} \times log_{any \ number}{n})$ = $O(log_{any \ number}{n})$ -> $O(logn)$
 
 ## Space complexity
+- Space complexity, like time complexity, reflects a trend, but it pertains to the amount of memory space the temporary variables occupy during the execution of the code.
+
+### O(1)
+```
+def calculate_sum(numbers):    
+    result = 0    
+    for num in numbers:        
+        result += num
+    return result
+```
+The temporary variables are `result` and `num`. `result` stores the sum of values, which is of constant order, and `i` stores the element in the `numbers`, which is also of constant order. The space allocated for these two variables is independent of the size `n`, so the overall space complexity of the code is $O(1)$.
