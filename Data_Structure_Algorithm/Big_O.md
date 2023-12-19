@@ -16,15 +16,15 @@ When describing the speed of an algorithm in terms of its runtime, the **total n
 - We focus on Time Complexity
 ```
 
-| Name                       | Complexity   | Equivalent Expression |
+| Name                       | Complexity   | Total number of steps executed by the algorithm |
 |----------------------------|--------------|-----------------------|
 | Constant Time Complexity   | $O(1)$         | 1                     |
-| Logarithmic Time Complexity| $O(logn)$      | logn + 1              |
-| Linear Time Complexity     | $O(n)$        | n + 1                 |
-| Linearithmic Time Complexity| $O(nlogn)$    | nlogn + 1             |
-| Polynomial Time Complexity | $O(n^2)$, $O(n^3)$, ... | $n^2$ + n + 1         |
-| Exponential Time Complexity| $O(2n)$        | 2n + 1                |
-| Factorial Time Complexity  | $O(n!)$        | n! + 1                |
+| Logarithmic Time Complexity| $O(logn)$      | $logn$ + 1              |
+| Linear Time Complexity     | $O(n)$        | $n$ + 1                 |
+| Linearithmic Time Complexity| $O(nlogn)$    | $nlogn$ + 1             |
+| Polynomial Time Complexity | $O(n^2)$, $O(n^3)$, ... | $n^2$ + $n$ + 1         |
+| Exponential Time Complexity| $O(2n)$        | $2n$ + 1                |
+| Factorial Time Complexity  | $O(n!)$        | $n!$ + 1                |
 
 
 ## Big omega notation
