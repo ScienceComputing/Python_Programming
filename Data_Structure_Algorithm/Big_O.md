@@ -34,6 +34,7 @@ When describing the speed of an algorithm in terms of its runtime, the **total n
 - It measures the average-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm
 
 ## O(1) - constant
+The increase in the input size does not change the time taken to execute an algorithm.
 ```
 variant_index = [0, 1, 2, 3]
 variant_index_2 = [0, 1, 2, 3, 4, 5, 6, 7, 8]
