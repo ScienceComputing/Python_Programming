@@ -1,3 +1,15 @@
+## Table of Contents
+
+* [Complexity of an algorithm](#Complexity-of-an-algorithm)
+* [Big O notation](#Big-O-notation)
+* [Big omega notation](#Big-omega-notation)
+* [Big theta notation](#Big-theta-notation)
+* [Typical time complexity](#Typical-time-complexity)
+* [Simplify the big O notation](#Simplify-the-big-O-notation)
+* [Space complexity](#Space-complexity)
+
+
+
 ## Complexity of an algorithm
 We need a metric for estimating algorithm efficiency and assessing algorithm quality that is independent of external factors like hardware/software performance and scale. Complexity analysis inherently serves this purpose.
 
