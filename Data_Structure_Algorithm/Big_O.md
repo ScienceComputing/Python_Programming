@@ -176,4 +176,27 @@ def calculate_sum(numbers):
         result += num
     return result
 ```
-The temporary variables are `result` and `num`. `result` stores the sum of values, which is of constant order, and `i` stores the element in the `numbers`, which is also of constant order. The space allocated for these two variables is independent of the size `n`, so the overall space complexity of the code is $O(1)$.
+The temporary variables are `result` and `num`. `result` stores the sum of values, which is of constant order, and `i` stores the element in the `numbers`, which is also of constant order. The space allocated for these two variables is independent of the size $n$, so the overall space complexity of the code is $O(1)$.
+
+### O(n)
+```
+def generate_list(n):
+    my_list = []
+    for num in range(n):
+        my_list.append(num)
+    return my_list
+```
+`my_list` is an initially empty list that occupies memory which increases with the growth of the for loop, reaching a maximum of `n`. Therefore, the space complexity of `my_list` is $O(n)$. `num` represents a constant-order storage for element positions, independent of the scale `n`. As a result, the space complexity of this code remains $O(n)$.
+
+### O(n^2)
+```
+def create_list(n):
+    result_list = []
+    for i in range(n):
+        inner_list = []
+        for j in range(n):
+            inner_list.append(j)
+        result_list.append(inner_list)
+    return result_list
+```
+`result_list` stores `n` inner lists, each of which contains `n` integers. Therefore, the space required for `result_list` is $O(n^2)$. Each `inner_list` contains $n$ integers, and there are $n$ such inner lists created. Therefore, the space required for all `inner_list` instances is $O(n^2)$. Temporary variables `i` and `j` do not significantly contribute to the space complexity as they occupy constant space, $O(1)$. So, the dominant factor in the space complexity is the storage of the `result_list` and the `inner_list` instances, both of which scale with the square of the input value $n$, resulting in $O(n^2)$ space complexity.
