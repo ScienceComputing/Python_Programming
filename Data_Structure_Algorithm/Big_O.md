@@ -50,13 +50,13 @@ The variable `target_word` can appear at any position within the list `word_list
 
 | Name                       | Complexity   | Total number of steps executed by the algorithm |
 |----------------------------|--------------|-----------------------|
-| Constant Time Complexity   | $O(1)$         | 1                     |
-| Logarithmic Time Complexity| $O(logn)$      | $logn$ + 1              |
-| Linear Time Complexity     | $O(n)$        | $n$ + 1                 |
-| Linearithmic Time Complexity| $O(nlogn)$    | $nlogn$ + 1             |
-| Polynomial Time Complexity | $O(n^2)$, $O(n^3)$, ... | $n^2$ + $n$ + 1         |
-| Exponential Time Complexity| $O(2n)$        | $2n$ + 1                |
-| Factorial Time Complexity  | $O(n!)$        | $n!$ + 1                |
+| Constant Time Complexity   | $O(1)$         | $1$                     |
+| Logarithmic Time Complexity| $O(logn)$      | $logn + 1$              |
+| Linear Time Complexity     | $O(n)$        | $n + 1$                 |
+| Linearithmic Time Complexity| $O(nlogn)$    | $nlogn + 1$             |
+| Polynomial Time Complexity | $O(n^2)$, $O(n^3)$, ... | $n^2 + n + 1$         |
+| Exponential Time Complexity| $O(2n)$        | $2n + 1$                |
+| Factorial Time Complexity  | $O(n!)$        | $n! + 1$                |
 
 ### O(1) - constant
 The increase in the input size does not change the time taken to execute an algorithm.
