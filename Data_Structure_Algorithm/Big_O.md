@@ -121,6 +121,19 @@ while var1 < n:
     var1 = var1 * 2 
 ```
 
+## O(nlogn) - linearithmic
+```
+def custom_count(n):    
+    count = 0    
+    for j in range(n):      
+        my_var = 1 # 
+        
+        while my_var < n:            
+            my_var = my_var * 2 #         
+            count += 1    
+    return count
+```
+
 ## Simplify the big O notation
 - Remove the constants: $O(2 + m + 2n)$ -> $O(m + n)$
 - Consider different variables for different inputs: $O(m + n)$
