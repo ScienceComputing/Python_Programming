@@ -125,5 +125,6 @@ while var1 < n:
 - Remove the constants: $O(2 + m + 2n)$ -> $O(m + n)$
 - Consider different variables for different inputs: $O(m + n)$
 - Remove the smaller term: $O(n^2 + n)$ -> $O(n^2)$
+- $O(log_2{n})$ = $O(log_2{any number} \times log_{any number}{n})$ = $O(log_{any number}{n})$ = $O(logn)$
 
 ## [TD] More examples
