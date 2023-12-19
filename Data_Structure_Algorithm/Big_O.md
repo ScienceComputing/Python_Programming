@@ -28,10 +28,23 @@ When describing the speed of an algorithm in terms of its runtime, the **total n
 
 
 ## Big omega notation
-- It measures the best-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm.
+- It measures the **best-case** complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm.
 
 ## Big theta notation
-- It measures the average-case complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm.
+- It measures the **average-case** complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm.
+
+```
+def search_word(word_list, target_word): 
+    for i in range(len(word_list)):        
+        if word_list[i] == target_word:
+            break
+```
+
+The variable `target_word` can appear at any position within the list `word_list`, where this list is given as `['FIJI', 'Evian', 'Poland Spring', 'Essentia']`:
+
+- When `target_word` is 'FIJI', it matches the first item in the `word_list`, and there is no need to traverse the rest of the list. In this case, the time complexity is $O(1)$, which is the **best-case** complexity.
+- When `target_word` is 'Essentia' or any non-existent 'VOSS', the entire list is traversed. In these two scenarios, the time complexity is $O(n)$, which is the **worse-case** complexity.
+- The **average-case** complexity is $\frac{1}{2n} + \frac{2}{2n} + \frac{3}{2n} + \cdots + \frac{n}{2n} + \frac{n}{2} = \frac{3n+1}{4}$ -> $O(n)$
 
 ## O(1) - constant
 The increase in the input size does not change the time taken to execute an algorithm.
