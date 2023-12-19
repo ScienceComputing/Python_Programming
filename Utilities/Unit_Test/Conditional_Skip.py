@@ -7,7 +7,7 @@ class TestGetDataAsNumpyArray(object):
         sys.version_info > (2, 7) or sys.platform != "linux",
         reason="Skipped on Python 2.7 or higher and non-Linux platforms"
     )
-    def test_on_clean_file(self):
+    def test_on_clean_data(self):
         expected = np.array([[2366.9, 3567.0],
                              [35.0, 789.7],
                              [129.0, 2.0],
