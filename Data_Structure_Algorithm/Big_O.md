@@ -10,23 +10,6 @@ We need a metric for estimating algorithm efficiency and assessing algorithm qua
 
 When describing the speed of an algorithm in terms of its runtime, the **total number of steps executed in the algorithm** becomes particularly important. We can assume that the runtime of each line of code is represented by a constant `Btime`. Therefore, the total runtime of the algorithm equals the total number of lines of code executed.
 
-## Typical time complexity
-
-```diff
-- We focus on Time Complexity
-```
-
-| Name                       | Complexity   | Total number of steps executed by the algorithm |
-|----------------------------|--------------|-----------------------|
-| Constant Time Complexity   | $O(1)$         | 1                     |
-| Logarithmic Time Complexity| $O(logn)$      | $logn$ + 1              |
-| Linear Time Complexity     | $O(n)$        | $n$ + 1                 |
-| Linearithmic Time Complexity| $O(nlogn)$    | $nlogn$ + 1             |
-| Polynomial Time Complexity | $O(n^2)$, $O(n^3)$, ... | $n^2$ + $n$ + 1         |
-| Exponential Time Complexity| $O(2n)$        | $2n$ + 1                |
-| Factorial Time Complexity  | $O(n!)$        | $n!$ + 1                |
-
-
 ## Big omega notation
 - It measures the **best-case** complexity of an algorithm: how the increase in the input size increases the time taken to execute an algorithm.
 
@@ -47,7 +30,23 @@ The variable `target_word` can appear at any position within the list `word_list
 - The **average-case** complexity is $\frac{1}{2n} + \frac{2}{2n} + \frac{3}{2n} + \cdots + \frac{n}{2n} + \frac{n}{2} = \frac{3n+1}{4}$ -> $O(n)$.
 - In most cases, we do not need to distinguish between best-case, worst-case, and average-case time complexity. We only differentiate these three cases when the same piece of code exhibits significant variations in time complexity under different cases. This is done to describe the time complexity of the code more effectively.
 
-## O(1) - constant
+## Typical time complexity
+
+```diff
+- We focus on Time Complexity
+```
+
+| Name                       | Complexity   | Total number of steps executed by the algorithm |
+|----------------------------|--------------|-----------------------|
+| Constant Time Complexity   | $O(1)$         | 1                     |
+| Logarithmic Time Complexity| $O(logn)$      | $logn$ + 1              |
+| Linear Time Complexity     | $O(n)$        | $n$ + 1                 |
+| Linearithmic Time Complexity| $O(nlogn)$    | $nlogn$ + 1             |
+| Polynomial Time Complexity | $O(n^2)$, $O(n^3)$, ... | $n^2$ + $n$ + 1         |
+| Exponential Time Complexity| $O(2n)$        | $2n$ + 1                |
+| Factorial Time Complexity  | $O(n!)$        | $n!$ + 1                |
+
+### O(1) - constant
 The increase in the input size does not change the time taken to execute an algorithm.
 ```
 variant_index = [0, 1, 2, 3]
@@ -63,7 +62,7 @@ retrieve(variant_index_2)
 # 1
 ```
 
-## O(n) - linear
+### O(n) - linear
 ```
 variant_index = [0, 1, 2, 3]
 variant_index_2 = [0, 1, 2, 3, 4, 5, 6, 7, 8]
@@ -77,7 +76,7 @@ print_element(variant_index) # o(4)
 print_element(variant_index_2) # o(9)
 ```
 
-## O(n^2) - quadratic
+### O(n^2) - quadratic
 ```
 variant_index = [0, 1, 2, 3]
 variant_index_2 = [0, 1, 2, 3, 4, 5, 6, 7, 8]
@@ -92,7 +91,7 @@ print_element(variant_index) # o(16)
 print_element(variant_index_2) # o(81)
 ```
 
-## O(n^3) - cubic
+### O(n^3) - cubic
 ```
 variant_index = [0, 1, 2, 3]
 
@@ -127,7 +126,7 @@ def custom_sum(n):
 ```
 Normally, $T(n)$ = $O(n)$ + $O(n^2)$ + $O(n^3)$. However, when $n$ approaches infinity, it's evident that the first two terms can be disregarded, leaving us with a final complexity of $T(n)$ = $O(n^3)$.
 
-## O(logn) - logarithmic
+### O(logn) - logarithmic
 Let us initialize `var1` to 1, and determine how many times it needs to be multiplied by 2 to become greater than or equal to $n$. $2^{times} \ge n$. $Times$ = $log_2{n}$.
 ```
 var1 = 1
@@ -135,7 +134,7 @@ while var1 < n:
     var1 = var1 * 2 
 ```
 
-## O(nlogn) - linearithmic
+### O(nlogn) - linearithmic
 ```
 def custom_count(n):    
     count = 0    
