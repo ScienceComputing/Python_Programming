@@ -154,4 +154,3 @@ def custom_count(n):
 - Remove the smaller term: $O(n^2 + n)$ -> $O(n^2)$
 - $O(log_2{n})$ = $O(log_2{any \ number} \times log_{any \ number}{n})$ = $O(log_{any \ number}{n})$ -> $O(logn)$
 
-## [TD] More examples
