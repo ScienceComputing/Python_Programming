@@ -42,9 +42,10 @@ def search_word(word_list, target_word): 
 
 The variable `target_word` can appear at any position within the list `word_list`, where this list is given as `['FIJI', 'Evian', 'Poland Spring', 'Essentia']`:
 
-- When `target_word` is 'FIJI', it matches the first item in the `word_list`, and there is no need to traverse the rest of the list. In this case, the time complexity is $O(1)$, which is the **best-case** complexity.
-- When `target_word` is 'Essentia' or any non-existent 'VOSS', the entire list is traversed. In these two scenarios, the time complexity is $O(n)$, which is the **worse-case** complexity.
-- The **average-case** complexity is $\frac{1}{2n} + \frac{2}{2n} + \frac{3}{2n} + \cdots + \frac{n}{2n} + \frac{n}{2} = \frac{3n+1}{4}$ -> $O(n)$
+- When `target_word` is `FIJI`, it matches the first item in the `word_list`, and there is no need to traverse the rest of the list. In this case, the time complexity is $O(1)$, which is the **best-case** complexity.
+- When `target_word` is `Essentia` or any non-existent `VOSS`, the entire list is traversed. In these two scenarios, the time complexity is $O(n)$, which is the **worse-case** complexity.
+- The **average-case** complexity is $\frac{1}{2n} + \frac{2}{2n} + \frac{3}{2n} + \cdots + \frac{n}{2n} + \frac{n}{2} = \frac{3n+1}{4}$ -> $O(n)$.
+- In most cases, we do not need to distinguish between best-case, worst-case, and average-case time complexity. We only differentiate these three cases when the same piece of code exhibits significant variations in time complexity under different cases. This is done to describe the time complexity of the code more effectively.
 
 ## O(1) - constant
 The increase in the input size does not change the time taken to execute an algorithm.
