@@ -10,7 +10,7 @@ df.reset_index()
 # Reset the row index as default and drop the previous index such that the previous index will not appear as a column
 df.reset_index(drop=True)
 
-# Slicing and subsetting using loc method
+# Slicing and subsetting using the index name locator - loc
 # Slice the rows
 df[df["column_name_1"].isin(["value_1", "value_2"])] # This is a cumbersome way to select eligible rows
 df.set_index("column_name") # Set the variable to be filtered as the index
