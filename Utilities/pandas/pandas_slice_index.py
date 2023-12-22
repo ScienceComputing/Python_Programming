@@ -96,8 +96,29 @@ df[(df["date"] >= "2010-09-02") & (df["date"] <= "2012-09-02")]
 
 df.loc[("val_1_for_col_1", "val_1_for_col_2"):("val_3_for_col_1", "val_3_for_col_2")] # Subset the outer index level that meet val_1_for_col_1, val_2_for_col_1, val_3_for_col_1, and then subset the inner index level that meet val_1_for_col_2, val_2_for_col_2, val_3_for_col_2
 
-# Slice columns
+"""Slice columns using the index name locator "loc" versus the index number locator "iloc""""
+# The speeds across loc, iloc, and [[]] are similar; may choose [[]] for convenient typing
+
 df.loc[:, "col_name_1":"col_name_3"] # Select columns beginning from col_name_1 to col_name_3, and keep all rows
+
+import time
+start_time = time.time()
+df.loc[:, "Column_1":"Column_3"]
+end_time = time.time()
+print(end_time - start_time) # 0.010194063186645508 seconds
+
+start_time = time.time()
+df.iloc[:, :3]
+end_time = time.time()
+print(end_time - start_time) # 0.00931406021118164 seconds
+
+start_time = time.time()
+df[["Column_1", "Column_2", "Column_3"]]
+end_time = time.time()
+print(end_time - start_time) # 0.009947061538696289 seconds
+
+
+
 
 # Slice rows and columns at the same time
 df.loc[("val_1_for_col_1", "val_1_for_col_2", "val_1_for_col_3"):("val_3_for_col_1", "val_3_for_col_2", "val_3_for_col_3"), "col_name_1":"col_name_3"] 
