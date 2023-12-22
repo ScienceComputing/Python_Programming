@@ -65,7 +65,7 @@ end_time = time.time()
 print(end_time - start_time) # 0.01716899871826172
 
 
-# Slicing and subsetting based on one/multiple columns using the index name locator - loc
+"""Slicing and subsetting based on one/multiple columns using the index name locator - loc"""
 # Slice the rows
 df[df["column_name_1"].isin(["value_1", "value_2"])] # This is a cumbersome way to select eligible rows
 df.set_index("column_name") # Set the variable to be filtered as the index
