@@ -1,5 +1,5 @@
 # List comprehensions allow us to create lists from other lists or from columns of DataFrames, among many other objects, except the integer object.
-# It is a single line of code, and more efficient than a for loop.
+# It is a single line of code, and more efficient than a for loop. See case 1.2
 # Construct a list comprehension
 # newlist = [expression for iterator variable in iterable] # iterator variable = item
 # Case 1:
@@ -8,7 +8,20 @@ nums_plus_1 = [num + 1 for num in nums]
 print(nums_plus_1) 
 # [3, 9, 11, 2, 22, 61]
 
-# Case 1.1: 
+# Case 1.2:
+import time
+nums = range(0, 1000000)
+start_time = time.time()
+nums_plus_1 = [num + 1 for num in nums]
+print(time.time() - start_time) # 0.26391100883483887 seconds
+
+nums_plus_1 = []
+start_time = time.time()
+for num in nums:
+    nums_plus_1.append(num)  
+print(time.time() - start_time) # 7.955948829650879 seconds
+
+# Case 1.3: 
 titlecase_cakes = [cakes.title() for cake in cakes]
 print(titlecase_cakes)
 
