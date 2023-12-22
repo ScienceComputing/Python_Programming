@@ -1,8 +1,26 @@
 # Topic: slice and index DataFrames
-# Show the explicit column and row indices
-df.columns
-df.index
 
+"""Prepare a sample dataset"""
+import pandas as pd
+import numpy as np
+num_rows = 10000
+num_columns = 20
+data = np.random.rand(num_rows, num_columns)
+column_names = [f"Column_{i+1}" for i in range(num_columns)]
+df = pd.DataFrame(data, columns=column_names)
+print(df.head())
+
+"""Show the explicit column and row indices"""
+df.columns
+# Index(['Column_1', 'Column_2', 'Column_3', 'Column_4', 'Column_5', 'Column_6',
+#        'Column_7', 'Column_8', 'Column_9', 'Column_10', 'Column_11',
+#        'Column_12', 'Column_13', 'Column_14', 'Column_15', 'Column_16',
+#        'Column_17', 'Column_18', 'Column_19', 'Column_20'],
+#       dtype='object')
+df.index
+# RangeIndex(start=0, stop=10000, step=1)
+
+"""Set up the index"""
 # Set a column as the row index
 df.set_index("column_name_1") # Index values in this column can be repetitive 
 # Reset the row index as default
@@ -10,7 +28,44 @@ df.reset_index()
 # Reset the row index as default and drop the previous index such that the previous index will not appear as a column
 df.reset_index(drop=True)
 
-# Slicing and subsetting using the index name locator - loc
+"""Locate rows using the index name locator "loc" versus the index number locator "iloc""""
+# When the selected row numbers are small, use iloc, otherwise, use loc
+# Select the first 100 rows
+import time
+start_time = time.time()
+df.loc[range(0, 100)]
+end_time = time.time()
+print(end_time - start_time) # 0.019807100296020508
+
+start_time = time.time()
+df.iloc[range(0, 100)]
+end_time = time.time()
+print(end_time - start_time) # 0.013633012771606445
+
+# Select the first 500 rows
+start_time = time.time()
+df.loc[range(0, 500)]
+end_time = time.time()
+print(end_time - start_time) # 0.020083904266357422 seconds
+
+start_time = time.time()
+df.iloc[range(0, 500)]
+end_time = time.time()
+print(end_time - start_time) # 0.019440889358520508 seconds
+
+# Select the first 5000 rows
+start_time = time.time()
+df.loc[range(0, 5000)]
+end_time = time.time()
+print(end_time - start_time) # 0.015697956085205078 seconds
+
+start_time = time.time()
+df.iloc[range(0, 5000)]
+end_time = time.time()
+print(end_time - start_time) # 0.01716899871826172
+
+
+# Slicing and subsetting based on one/multiple columns using the index name locator - loc
 # Slice the rows
 df[df["column_name_1"].isin(["value_1", "value_2"])] # This is a cumbersome way to select eligible rows
 df.set_index("column_name") # Set the variable to be filtered as the index
