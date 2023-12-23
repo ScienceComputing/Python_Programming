@@ -74,6 +74,14 @@ Randomly select rows
 df.sample(int(0.8 * df.shape[0]), axis=0, replace = True)
 
 """
+Slicing and subsetting based on one/multiple columns
+"""
+df["column_name_1"] > 50 # subset rows and return a logical column
+df[df["column_name_1"] > 50] # subset rows and return a subsetted data frame
+df[df["column_name_1"]  == "labrador"] # subset rows and return a subsetted data frame
+df[df["column_name_1"]  < "2017-09-09"] # subset rows and return a subsetted data frame
+
+"""
 Slicing and subsetting based on one/multiple columns using the index name locator - loc
 """
 # Subset the rows based on the particular values of a column
