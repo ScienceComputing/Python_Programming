@@ -80,6 +80,12 @@ df["column_name_1"] > 50 # subset rows and return a logical column
 df[df["column_name_1"] > 50] # subset rows and return a subsetted data frame
 df[df["column_name_1"]  == "labrador"] # subset rows and return a subsetted data frame
 df[df["column_name_1"]  < "2017-09-09"] # subset rows and return a subsetted data frame
+is_lab = df["column_name_1"]  == "labrador"
+is_lab2 = df["column_name_1"]  == "labrador2"
+df[is_lab & is_lab2] # subset rows based on multiple conditions
+df[(df["column_name_1"]  == "labrador") & (df["column_name_1"]  == "labrador2")] # One-line expression
+is_lab_or_lab2 = df["column_name_1"].isin(["labrador", "labrador"])
+df[is_lab_or_lab2] # subset rows based on multiple values of a categorical variable
 
 """
 Slicing and subsetting based on one/multiple columns using the index name locator - loc
