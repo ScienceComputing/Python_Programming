@@ -66,6 +66,12 @@ df.iloc[range(0, 5000)]
 end_time = time.time()
 print(end_time - start_time) # 0.01716899871826172
 
+"""
+Randomly select rows
+"""
+# Reference: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sample.html
+# DataFrame.sample(n=None, frac=None, replace=False, weights=None, random_state=None, axis=None, ignore_index=False)
+df.sample(int(0.8 * df.shape[0]), axis=0, replace = True)
 
 """Slicing and subsetting based on one/multiple columns using the index name locator - loc"""
 # Slice the rows
@@ -123,6 +129,12 @@ print(end_time - start_time) # 0.009947061538696289 seconds
 
 df.iloc[:,[0,2,5,9]] # Select the first, third, sixth, and tenth columns
 
+"""
+Randomly select columns
+"""
+# Reference: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sample.html
+# DataFrame.sample(n=None, frac=None, replace=False, weights=None, random_state=None, axis=None, ignore_index=False)
+df.sample(int(0.8 * df.shape[1]), axis=1, replace = False)
 
 # Slice rows and columns at the same time
 df.loc[("val_1_for_col_1", "val_1_for_col_2", "val_1_for_col_3"):("val_3_for_col_1", "val_3_for_col_2", "val_3_for_col_3"), "col_name_1":"col_name_3"] 
