@@ -73,11 +73,19 @@ Randomly select rows
 # DataFrame.sample(n=None, frac=None, replace=False, weights=None, random_state=None, axis=None, ignore_index=False)
 df.sample(int(0.8 * df.shape[0]), axis=0, replace = True)
 
-"""Slicing and subsetting based on one/multiple columns using the index name locator - loc"""
-# Slice the rows
-df[df["column_name_1"].isin(["value_1", "value_2"])] # This is a cumbersome way to select eligible rows
-df.set_index("column_name") # Set the variable to be filtered as the index
-df.loc[["value_1", "value_2"]] # We then use loc to filter on index values; here we select that rows that meet 2 values; Notice that .loc[] makes our code less burdensome to maintain and easy for our collaborators to read 
+"""
+Slicing and subsetting based on one/multiple columns using the index name locator - loc
+"""
+# Subset the rows based on the particular values of a column
+# Approach 1: a cumbersome way to select eligible rows
+df[df["column_name_1"].isin(["value_1", "value_2"])] 
+
+# Approach 2: we first build the column index; and then filter on index values
+# Set the variable to be filtered as the index
+df.set_index("column_name") 
+# We then use loc to filter on index values, here we select rows that meet 2 values; 
+# Notice that .loc[] makes our code less burdensome to maintain and easy for our collaborators to read 
+df.loc[["value_1", "value_2"]] 
 df.loc["value_1"]
 
 # Set multi-level/hierarchical indices made out of multiple columns when one category is nested inside another category
