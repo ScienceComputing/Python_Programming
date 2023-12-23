@@ -28,7 +28,9 @@ df.reset_index()
 # Reset the row index as default and drop the previous index such that the previous index will not appear as a column
 df.reset_index(drop=True)
 
-"""Locate rows using the index name locator "loc" versus the index number locator "iloc""""
+"""
+Locate rows using the index name locator "loc" versus the index number locator "iloc
+""""
 # When the selected row numbers are small, use iloc, otherwise, use loc
 # Select the first 100 rows
 import time
@@ -96,7 +98,9 @@ df[(df["date"] >= "2010-09-02") & (df["date"] <= "2012-09-02")]
 
 df.loc[("val_1_for_col_1", "val_1_for_col_2"):("val_3_for_col_1", "val_3_for_col_2")] # Subset the outer index level that meet val_1_for_col_1, val_2_for_col_1, val_3_for_col_1, and then subset the inner index level that meet val_1_for_col_2, val_2_for_col_2, val_3_for_col_2
 
-"""Slice columns using the index name locator "loc" versus the index number locator "iloc""""
+"""
+Slice columns using the index name locator "loc" versus the index number locator "iloc
+""""
 # The speeds across loc, iloc, and [[]] are similar; may choose [[]] for convenient typing
 
 df.loc[:, "col_name_1":"col_name_3"] # Select columns beginning from col_name_1 to col_name_3, and keep all rows
@@ -108,7 +112,7 @@ end_time = time.time()
 print(end_time - start_time) # 0.010194063186645508 seconds
 
 start_time = time.time()
-df.iloc[:, :3]
+df.iloc[:, :3] # Select the first 3 columns
 end_time = time.time()
 print(end_time - start_time) # 0.00931406021118164 seconds
 
@@ -117,7 +121,7 @@ df[["Column_1", "Column_2", "Column_3"]]
 end_time = time.time()
 print(end_time - start_time) # 0.009947061538696289 seconds
 
-
+df.iloc[:,[0,2,5,9]] # Select the first, third, sixth, and tenth columns
 
 
 # Slice rows and columns at the same time
