@@ -48,6 +48,9 @@ df["column_name_1"].value_counts() # Count the number of each categorical level
 df["column_name_1"].value_counts(sort=True) # Sort the count
 df["column_name_1"].value_counts(normalize=True) # Count the proportion of each categorical level
 
+# Count the sample size of each group
+df.groupby("group_column").count()
+
 # Calculate one or multiple grouped summary statistics for one or multiple variables
 df.groupby("group_column")["column_name_1"].mean()
 df.groupby("group_column")["column_name_1"].agg([mean, max, sum])
