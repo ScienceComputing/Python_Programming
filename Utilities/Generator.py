@@ -7,7 +7,7 @@ num_gen = (2 * num for num in range(5))
 for num in num_gen:
     print(num)  
 
-print(list(num_gen)) # Convert the generator a list
+print(list(num_gen)) # Convert a generator to a list
 
 # Calculate the length of each string element
 person_list = ['John', 'Katie', 'Angel', 'Julia', 'Peter']
