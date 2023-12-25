@@ -12,3 +12,8 @@ df_generator = df.iterrows()
 first_row = next(df_generator)
 second_row = next(df_generator)
 print(first_row, second_row)
+
+for idx, vals in df_generator:
+    if (idx%2) != 0:
+        val_sum = sum([vals[0], vals[1], vals[2], vals[3], vals[4]])/5
+        print(val_sum)
