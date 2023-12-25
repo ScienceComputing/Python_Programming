@@ -8,14 +8,28 @@ with open('trial.py') as f: # Notice that f is a generator
 # The with statement, also known as a context manager, ensures that the file is properly opened and closed, even if an exception occurs during file operations. 
 # It helps with resource management and prevents common issues like forgetting to close the file.
 
-# The following code is not good practice
+# The following code is not considered good practice, becuase it relies on explicitly calling f.close() to close the file. If an exception occurs before this line, the file might remain open, potentially leading to resource leaks or issues with subsequent file operations.
 f = open('trial.py', 'r')
 for line in f:
     print(line)
 f.close()
 
+with open('trial.py') as f: 
+    lines = f.readlines() # lines is a list; each element of this list represents a line from the file.
+
+for l in lines:
+    print(l)
+
 """
 Case 2
+"""
+with open('trial.csv') as f:
+    for line in f:
+        row = line.rstrip().split(',') # rstrip() removes the white space on the right side
+        print(f"{row[0]} and {row[1]}")
+
+"""
+Case 3
 """
 target_dictionary = {} 
 # Open the input file for reading and the output file for writing
@@ -30,7 +44,7 @@ with open("trial_input.txt", 'r') as file1, open("trial_output.txt", 'w') as fil
 # The file1 and file2 are automatically closed when we exit the 'with' block
 
 """
-Case 3
+Case 4
 """
 # Process a file line by line on the fly
 def read_large_file(file_object):
