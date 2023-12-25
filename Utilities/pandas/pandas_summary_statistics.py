@@ -1,6 +1,6 @@
 # Compute built-in summary statistics
 df["column_name_1"].mean()
-df[df["column_name_1"] == "group1"]["column_name_2"].mean() # Calculate the mean by the specific group
+df[df["column_name_1"] == "group1"]["column_name_2"].mean() # Calculate the mean of a variable (column_name_2) by the specific group (group1)
 df["column_name_1"].median()
 df["column_name_1"].mode()
 df["column_name_1"].min()
@@ -22,7 +22,7 @@ def pct70(column):
     return column.quantile(70)
 
 df["column_name_1"].agg(pct90)
-df[["column_name_1”, "column_name_2"]].agg(pct90)
+df[["column_name_1", "column_name_2"]].agg(pct90)
 df["column_name_1"].agg([pct90, pct70])
 
 # Build a custom IQR function and mix it with np.median
