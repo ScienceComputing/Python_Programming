@@ -19,8 +19,8 @@ for idx, vals in df_generator:
         print(val_sum)
 
 
+# Case study: select patients with Stage 1/2 hypertension using .iterrows()
 # Reference: https://www.health.harvard.edu/heart-health/a-look-at-diastolic-blood-pressure
-# Select patients with Stage 1/2 hypertension using .iterrows()
 data = {'Patient ID': [1, 2, 3, 4, 5],
         'Age': [35, 42, 28, 50, 62],
         'Gender': ['M', 'F', 'M', 'F', 'F'],
@@ -33,6 +33,9 @@ data = {'Patient ID': [1, 2, 3, 4, 5],
 
 df = pd.DataFrame(data)
 
+# Approach 1:
+import time
+t0 = time.time()
 stage1_hypertension_patients = []
 stage2_hypertension_patients = []
 for _, row in df.iterrows():
@@ -47,4 +50,29 @@ print("Patients with Stage 1 Hypertension have the following IDs:")
 print(stage1_hypertension_patients) # [1]
 print("Patients with Stage 2 Hypertension have the following IDs:")
 print(stage2_hypertension_patients) # [3, 5]
+t1 = time.time() 
+t1 - t0 # 0.007513761520385742 seconds
 
+# Approach 2:
+t0 = time.time()
+stage1_hypertension_patients = []
+stage2_hypertension_patients = []
+def is_stage1_hypertension(row):
+  systolic_bp = row['Systolic Blood Pressure']
+  diastolic_bp = row['Diastolic Blood Pressure']
+  return (130 <= systolic_bp <= 139) or (80 <= diastolic_bp <= 89)
+
+def is_stage2_hypertension(row):
+  systolic_bp = row['Systolic Blood Pressure']
+  diastolic_bp = row['Diastolic Blood Pressure']
+  return (systolic_bp >= 140) or (diastolic_bp >= 90)
+
+stage1_hypertension_patients = df[df.apply(is_stage1_hypertension, axis=1)]['Patient ID'].tolist()
+stage2_hypertension_patients = df[df.apply(is_stage1_hypertension, axis=1)]['Patient ID'].tolist()
+
+print("Patients with Stage 1 Hypertension have the following IDs:")
+print(stage1_hypertension_patients) 
+print("Patients with Stage 2 Hypertension have the following IDs:")
+print(stage2_hypertension_patients)
+t1 = time.time() 
+t1 - t0 # 0.011487960815429688 seconds
