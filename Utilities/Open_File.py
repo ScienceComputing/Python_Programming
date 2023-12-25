@@ -40,7 +40,9 @@ with open("trial_input.txt", 'r') as file1, open("trial_output.txt", 'w') as fil
         name = words1[0] 
         target = words1[1] + "\t" + words1[2]  
         target_dictionary[name] = target
-        
+    for name, target in target_dictionary.items():
+        file2.write(f"{name}\t{target}\n")  # Write name and target to output file with a tab separator
+
 # The file1 and file2 are automatically closed when we exit the 'with' block
 
 """
