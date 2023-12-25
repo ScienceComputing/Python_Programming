@@ -48,6 +48,12 @@ min_max_fun = lambda x: (x - x.min()) / (x.max() - x.min())
 df["column_name_1"].transform(min_max_fun)
 df[["column_name_1", "column_name_2", "column_name_3"]].transform(min_max_fun)
 
+# Impute the missing values using median or mean
+miss_median = lambda x: x.fillna(x.median())
+df["column_name_1"].transform(miss_median)
+miss_mean = lambda x: x.fillna(x.mean())
+df["column_name_1"].transform(miss_mean)
+
 # Drop the records with the duplicate values on variables
 df.drop_duplicates(subset=["column_name_1", "column_name_2"])
 
