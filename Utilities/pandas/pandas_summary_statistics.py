@@ -40,9 +40,11 @@ df["column_name_1"].cummax()
 df["column_name_1"].cummin()
 df["column_name_1"].cumprod()
 
-# Normalize the column using z-score
+# Normalize the column using z-score or min-max
 z_fun = lambda x: (x - x.mean()) / x.std()
 df["column_name_1"].transform(z_fun)
+min_max_fun = lambda x: (x - x.min()) / (x.max() - x.min())
+df["column_name_1"].transform(min_max_fun)
 
 # Drop the records with the duplicate values on variables
 df.drop_duplicates(subset=["column_name_1", "column_name_2"])
