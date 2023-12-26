@@ -1,9 +1,10 @@
-# PyTorch uses tensors to encode the inputs and outputs of a model, and the model’s parameters
+# PyTorch uses the fundamental data structure tensors (essentially arrays) to encode the inputs and outputs of a model, and the model’s parameters
+# Tensors serve as multi-dimensional representations of their individual elements
 import torch
 import numpy as np
 
 # Initilize a tensor 
-# Method 1: initialization from data
+# Method 1: initialization from a list
 original_data = [[5, 1, 0],[2, 0, 0]]
 tensor_data = torch.tensor(original_data)
 
