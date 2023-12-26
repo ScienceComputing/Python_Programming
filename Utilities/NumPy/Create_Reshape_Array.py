@@ -66,3 +66,7 @@ array_3.reshape((1, 3, 2, 5)) # (num_3-d_array, num_2-d_array, num_row, num_col)
 
 #         [[20, 21, 22, 23, 24],
 #          [25, 26, 27, 28, 29]]]])
+
+# 8: save and reload the created NumPy array
+np.save("array_final", array_3)
+a = np.load("array_final.npy")
