@@ -27,6 +27,12 @@ rgb_1
 #         [  0, 150, 255],
 #         [  0,   0,   0]]])
 
+# Update all 0 values with 255
+rgb_1 = np.where(rgb_1 == 0, 255, rgb_1)
+
+# Update all colors represented by 1-d array [0, 150, 255] with [97, 12, 228]
+rgb_1 = np.where(rgb_1 == [0, 150, 255], [97, 12, 228], rgb_1)
+
 # Visualize the image
 import matplotlib.pyplot as plt
 plt.imshow(rgb_1)
