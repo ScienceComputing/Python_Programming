@@ -52,3 +52,15 @@ array_3.reshape((3, 2, 5)) # (num_2-d_array, num_row, num_col)
 
 #        [[20, 21, 22, 23, 24],
 #         [25, 26, 27, 28, 29]]])
+
+
+# 7: reshape a 1-d NumPy array to a 4-d one, which is a list of 3-d arrays, or a list of a list of 2-d arrays
+array_3.reshape((1, 3, 2, 5)) # (num_3-d_array, num_2-d_array, num_row, num_col)
+# array([[[[ 0,  1,  2,  3,  4],
+#          [ 5,  6,  7,  8,  9]],
+
+#         [[10, 11, 12, 13, 14],
+#          [15, 16, 17, 18, 19]],
+
+#         [[20, 21, 22, 23, 24],
+#          [25, 26, 27, 28, 29]]]])
