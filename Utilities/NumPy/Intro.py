@@ -5,6 +5,7 @@ import numpy as np
 # NumPy main oject is array.
 # NumPy arrays store the data in any number of dimensions (1, 2, 3, ..., n).
 # NumPy arrays come with certain restrictions: 1) they lack column names, and 2) all the data within an array must be of a uniform type.
+# NumPy speeds up the processing with large numerical datasets
 
 # We can create the NumPy arrays from lists/csv files/NumPy functions (e.g., np.arange())/pandas dataframe
 # 1: create a 1-d NumPy array from a list
@@ -53,7 +54,6 @@ array_3.reshape((3, 2, 5)) # (num_2-d_array, num_row, num_col)
 
 #        [[20, 21, 22, 23, 24],
 #         [25, 26, 27, 28, 29]]])
-
 
 # 7: reshape a 1-d NumPy array to a 4-d one, which is a list of 3-d arrays, or a list of a list of 2-d arrays
 array_3.reshape((1, 3, 2, 5)) # (num_3-d_array, num_2-d_array, num_row, num_col)
