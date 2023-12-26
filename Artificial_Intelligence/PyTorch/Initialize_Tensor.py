@@ -7,6 +7,13 @@ import numpy as np
 # Method 1: initialization from a list
 original_data = [[5, 1, 0],[2, 0, 0]]
 tensor_data = torch.tensor(original_data)
+# tensor([[5, 1, 0],
+#         [2, 0, 0]])
+
+# Access the tensor attributes
+tensor_data.shape # torch.Size([2, 3])
+tensor_data.dtype # torch.int64
+tensor_data.device # device(type='cpu'); GPU boosts parallel computing capabilities
 
 # Method 2: initialization from a numpy array
 original_data = np.array([[5, 1, 0],[2, 0, 0]])
