@@ -8,7 +8,7 @@ with open('trial.py') as f: # Notice that f is a generator
 # The with statement, also known as a context manager, ensures that the file is properly opened and closed, even if an exception occurs during file operations. 
 # It helps with resource management and prevents common issues like forgetting to close the file.
 
-# The following code is not considered good practice, becuase it relies on explicitly calling f.close() to close the file. If an exception occurs before this line, the file might remain open, potentially leading to resource leaks or issues with subsequent file operations.
+# The following code is not considered good practice, because it relies on explicitly calling f.close() to close the file. If an exception occurs before this line, the file might remain open, potentially leading to resource leaks or issues with subsequent file operations.
 f = open('trial.py', 'r')
 for line in f:
     print(line)
