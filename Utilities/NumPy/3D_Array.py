@@ -12,7 +12,7 @@ rgb_1[0, 0, 0] = 128
 rgb_1[-1, -1, 2] = 0
 
 # Update all green values above 150 to 150
-rgb_1[rgb_1[:, :, 1] > 150, 1] = 150
+rgb_1[rgb_1[:, :, 1] > 150, 1] = 150 # The second 1 refers to the green channel of the RGB array.
 
 rgb_1
 # array([[[128,   0,   0],
