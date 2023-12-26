@@ -2,8 +2,9 @@
 # TensorFlow/SciPy/pandas/matplotlib/scikit-learn are built upon NumPy
 import numpy as np
 
-# NumPy main oject is array
-# NumPy arrays store the data in any number of dimensions (1, 2, 3)
+# NumPy main oject is array.
+# NumPy arrays store the data in any number of dimensions (1, 2, 3, ..., n).
+# NumPy arrays come with certain restrictions: 1) they lack column names, and 2) all the data within an array must be of a uniform type.
 
 # We can create the NumPy arrays from lists/csv files/NumPy functions (e.g., np.arange())/pandas dataframe
 # 1: create a 1-d NumPy array from a list
