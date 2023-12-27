@@ -4,7 +4,7 @@
 # Detect the missing values
 df.isna() # Return a Boolean for every single element in the dataset
 df.isna().any() # Return a Boolean for every column in the dataset
-df.isna().sum() # Return a count for missing values for every column in the dataset
+df.isna().sum() # *Return a count for missing values for every column in the dataset
 
 # Visualize the missing values across different variables using the bar plot 
 Import matplotlib.pyplot as plt
