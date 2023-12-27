@@ -1,5 +1,7 @@
 df.head()
 
+df.col_name.sample(n=6)
+
 df.info() # this info method shows information on each of the columns, such as the data type and number of missing values
 df = pd.read_csv('data/data_raw.csv')
 df.info()
