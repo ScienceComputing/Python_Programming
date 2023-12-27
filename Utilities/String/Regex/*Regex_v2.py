@@ -14,6 +14,7 @@
 # | -> OR operand
 # [] -> OR operand
 # [^] -> take the opposite operation
+# () -> capturing groups; enclose a part of the pattern of interest to extract or reference later
 
 """Extract any sequence of digits and/or periods starting at the beginning of the string in a old column, and assign it to a new column"""
 df['new_col'] = df['old_col'].str.extract('^([\d.]+)').astype(float)
