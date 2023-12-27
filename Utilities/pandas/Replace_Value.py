@@ -5,6 +5,8 @@ df['col_name'].replace('ori_val', 'new_val', inplace=True)
 df['col_name'].replace(['ori_val_1', 'ori_val_2'], 'new_val', inplace=True)
 """Replace missing values with NaN (not a number) in the disease column"""
 df.disease.replace(['Unknown', 'Unk', 'UNK', 'None', 'none', 'missing', 'No', 'no'], np.nan, inplace=True)
+"""Replace ':' with '|' """
+df['disease'] = df.disease.str.replace(':', '|')
 
 """Chainning replace and extract"""
 df['disease_code'] = df['disease'].str.replace(',', '').str.extract('(\d+)').astype(float)
