@@ -1,6 +1,19 @@
 df.head()
 
 df.info() # this info method shows information on each of the columns, such as the data type and number of missing values
+df = pd.read_csv('data/data_raw.csv')
+df.info()
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 874 entries, 0 to 873
+Data columns (total 3 columns):
+ #   Column       Non-Null Count  Dtype 
+---  ------       --------------  ----- 
+ 0   name         874   non-null  object
+ 1   author       874   non-null  object
+ 2   time         874   non-null  object
+
+dtypes: object(3)
+memory usage: 1.3+ MB
 
 df.describe() # descriptive statistics
 
