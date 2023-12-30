@@ -12,7 +12,7 @@ def run_gsea(input_file, output_file):
     # Ensure genes are in Entrez IDs:
     data.index = data.index.map(gp.get_geneset(data.index, organism='hsapiens', gene_type='entrez'))
     genes_of_interest = list(data.index)  
-    pathway_database = Msigdb().get_gmt(category='mh.all', dbver="2023.1.Mm")  # Mouse hallmark gene sets
+    pathway_database = Msigdb().get_gmt(category='mh.all', dbver="2023.1.Mm") # Mouse hallmark gene sets
     gsea_results = gp.gsea(data=genes_of_interest,
                            gene_sets=pathway_database,
                            permutation_num=1000,
