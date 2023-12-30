@@ -5,7 +5,6 @@ import gseapy as gp
 from gseapy import Msigdb
 from multiprocessing import Pool
 import os
-msig = Msigdb()
 
 def run_gsea(input_file, output_file):
     data = pd.read_csv(input_file, index_col=0)
