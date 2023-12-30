@@ -7,9 +7,7 @@ from multiprocessing import Pool
 import os
 
 def run_gsea(input_file, output_file):
-    data = pd.read_csv(input_file, index_col=0)
-    # Ensure genes are in Entrez IDs:
-    data.index = data.index.map(gp.get_geneset(data.index, organism='hsapiens', gene_type='entrez'))
+    data = pd.read_csv(input_file, index_col=0)   
     genes_of_interest = list(data.index)  
     pathway_database = Msigdb().get_gmt(category='mh.all', dbver="2023.1.Mm") # Mouse hallmark gene sets
     gsea_results = gp.gsea(data=genes_of_interest,
