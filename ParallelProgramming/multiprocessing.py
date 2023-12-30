@@ -1,4 +1,4 @@
-# Reference: https://github.com/ScienceComputing/GSEApy
+# Reference: https://github.com/zqfang/GSEApy
 
 import pandas as pd
 import gseapy as gp
