@@ -1,4 +1,6 @@
-# Reference: https://github.com/zqfang/GSEApy
+# Reference: 
+# https://github.com/zqfang/GSEApy
+# https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/pandas/*pandas_intro_sort.py
 
 import pandas as pd
 import gseapy as gp
