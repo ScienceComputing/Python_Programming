@@ -95,6 +95,10 @@ features_dict = {feature["variable"]: feature["code"] for feature in features}
 print(dict(sorted(features_dict.items(), key=lambda item : item[0])))
 print(dict(sorted(features_dict.items(), key=lambda item : item[1])))
 
+# An elegant solution:
+for feature in sorted(features, key=lambda feature : feature['variable']): 
+    print(f"{feature['variable']} is coded as follows: {feature['code']}")
+
 """
 Case 3
 """
