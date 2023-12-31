@@ -1,7 +1,8 @@
 # Reference:
 # https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/String/*Remove_Character.py
 # https://github.com/ScienceComputing/Python_Programming/blob/main/Python_Overview.ipynb
-# https://docs.python.org/3/howto/sorting.html
+# https://docs.python.org/3/library/functions.html#sorted
+# sorted(iterable, /, *, key=None, reverse=False)
 # https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/Lambda_Function.py
 
 """
