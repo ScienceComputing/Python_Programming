@@ -1,6 +1,6 @@
 import csv
 
-# If a CSV file has only 2 columns without column headers
+"""Case: If a CSV file has only 2 columns without column headers"""
 features = []
 with open('variable_dictionary.csv') as f:
     r = csv.reader(f) # A reader returns lists
@@ -11,7 +11,7 @@ with open('variable_dictionary.csv') as f:
 for feature in sorted(features, key=lambda feature : feature['variable']): 
     print(f"{feature['variable']} is coded as follows: {feature['code']}")
 
-# If a CSV file more than 2 columns without column headers
+"""Case: If a CSV file more than 2 columns without column headers"""
 features = []
 with open('variable_dictionary.csv') as f:
     r = csv.reader(f)
@@ -21,7 +21,7 @@ with open('variable_dictionary.csv') as f:
 for feature in sorted(features, key=lambda feature : feature['variable']): 
     print(f"{feature['variable']} is coded as follows: {feature['code']}")
 
-# If a CSV file more than 2 columns with column headers: variable name, variable type, code
+"""Case: If a CSV file more than 2 columns with column headers: variable name, variable type, code"""
 # csv.DictReader is robust against changing the orders of columns; while csv.reader is sensitive to this.
 features = []
 with open('variable_dictionary.csv') as f:
