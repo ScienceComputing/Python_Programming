@@ -87,7 +87,13 @@ for feature in sorted(features, key=get_variable):
 
 for feature in sorted(features, key=get_code, reverse=True): 
     print(f"{feature['variable']} is coded as follows: {feature['code']}")
-    
+
+# Another way:
+# Transform the list of dictionaries into a single dictionary, and then use lambda to sort this dictionary by key or value
+features_dict = {feature["variable"]: feature["code"] for feature in features}
+print(dict(sorted(features_dict.items(), key=lambda item : item[0])))
+print(dict(sorted(features_dict.items(), key=lambda item : item[1])))
+
 """
 Case 3
 """
