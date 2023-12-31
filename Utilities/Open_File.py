@@ -1,5 +1,6 @@
 # Reference:
 # https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/String/*Remove_Character.py
+# https://github.com/ScienceComputing/Python_Programming/blob/main/Python_Overview.ipynb
 
 """
 Case 1
