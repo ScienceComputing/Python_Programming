@@ -29,6 +29,14 @@ with open('trial.csv') as f:
         print(f"{row[0]} and {row[1]}")
 
 """
+Case 2.1
+"""
+with open('trial.csv') as f:
+    for line in f:
+        feature1, feature2 = line.rstrip().split(',')
+        print(f"{feature1} and {feature2}")
+
+"""
 Case 3
 """
 target_dictionary = {} 
