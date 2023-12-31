@@ -70,3 +70,7 @@ BaseException
            ├── UnicodeWarning
            └── UserWarning
 ```
+
+## ValueError example
+- too many value to unpack
+
