@@ -124,7 +124,7 @@ Case 4
 def read_large_file(file_object):
     """A generator function to read a large file."""
     while True: # Read a line from the file: data
-        line = file_object.readline() # Read a line from the file: data
+        line = file_object.readline()
         if not line:
             break # Break if this is the end of the file
         yield line # Yield the line of data
