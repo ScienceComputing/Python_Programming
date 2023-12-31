@@ -87,16 +87,11 @@ Case 4
 # Process a file line by line on the fly
 def read_large_file(file_object):
     """A generator function to read a large file."""
-
-    # Loop indefinitely until the end of the file
-    while True:
-        # Read a line from the file: data
-        line = file_object.readline()
-        # Break if this is the end of the file
+    while True: # Read a line from the file: data
+        line = file_object.readline() # Read a line from the file: data
         if not line:
-            break
-        # Yield the line of data
-        yield line
+            break # Break if this is the end of the file
+        yield line # Yield the line of data
         
 # Open a connection to the file
 with open('large_data.csv') as file:
