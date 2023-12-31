@@ -40,6 +40,18 @@ with open('trial.csv') as f:
         print(f"{feature1} and {feature2}")
 
 """
+Case 2.2
+"""
+features = []
+with open('trial.csv') as f:
+    for line in f:
+        feature1, feature2 = line.rstrip().split(',')
+        features.append(f"{feature1} and {feature2}")
+
+for feature in sorted(features):
+    print(feature)
+        
+"""
 Case 3
 """
 target_dictionary = {} 
