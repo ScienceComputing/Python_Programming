@@ -67,7 +67,7 @@ for feature in features:
 
 
 """
-Case 2.4 - sort a list of dictionaries by the key
+Case 2.4 - sort a list of dictionaries by the key/value
 """
 features = []
 with open('variable_dictionary.csv') as f:
@@ -79,9 +79,15 @@ with open('variable_dictionary.csv') as f:
 def get_variable(feature):
     return feature['variable']
 
-for feature in sorted(features, key=get_variable):
+def get_code(feature):
+    return feature['code']
+
+for feature in sorted(features, key=get_variable): 
     print(f"{feature['variable']} is coded as follows: {feature['code']}")
-        
+
+for feature in sorted(features, key=get_code, reverse=True): 
+    print(f"{feature['variable']} is coded as follows: {feature['code']}")
+    
 """
 Case 3
 """
