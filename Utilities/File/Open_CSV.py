@@ -1,3 +1,8 @@
+# https://docs.python.org/3/library/csv.html
+# class csv.DictReader(f, fieldnames=None, restkey=None, restval=None, dialect='excel', *args, **kwds)
+# Create an object that operates like a regular reader but maps the information in each row to a dict whose keys are given by the optional fieldnames parameter.
+
+
 import csv
 
 """Case: If a CSV file has only 2 columns without column headers"""
