@@ -50,6 +50,19 @@ with open('trial.csv') as f:
 
 for feature in sorted(features):
     print(feature)
+
+"""
+Case 2.3
+"""
+features = []
+with open('trial.csv') as f:
+    for line in f:
+        f1_val, f2_val = line.rstrip().split(',')
+        feature = {"feature 1": f1_val, "feature 2": f2_val}
+        features.append(feature)
+
+for feature in features:
+    print(f"{feature['feature 1']} and {feature['feature 2']}")
         
 """
 Case 3
