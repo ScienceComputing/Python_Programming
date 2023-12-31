@@ -1,3 +1,6 @@
+# Reference:
+# https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/String/*Remove_Character.py
+
 """
 Case 1
 """
