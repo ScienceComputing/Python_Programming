@@ -64,6 +64,23 @@ with open('trial.csv') as f:
 
 for feature in features:
     print(f"{feature['feature 1']} and {feature['feature 2']}")
+
+
+"""
+Case 2.4 - sort a list of dictionaries by the key
+"""
+features = []
+with open('variable_dictionary.csv') as f:
+    for line in f:
+        f1_val, f2_val = line.rstrip().split(',')
+        feature = {"variable": f1_val, "code": f2_val}
+        features.append(feature)
+
+def get_variable(feature):
+    return feature['variable']
+
+for feature in sorted(features, key=get_variable):
+    print(f"{feature['variable']} is coded as follows: {feature['code']}")
         
 """
 Case 3
