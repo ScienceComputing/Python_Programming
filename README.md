@@ -1,5 +1,5 @@
-# Welcome to the Python Gallery repository!
+# Python makes me feel like a man!
 
-Here, you'll find a curated collection of Python codes in various courses such as AI in Medicine, Data Science, Bioinformatics Algorithm I've taken. Whether you're a fellow learner or an aspiring Python developer, I hope this repository will be a valuable resource for you to explore and understand the practical applications of Python in different scientific contexts.
+Presenting a meticulously curated compilation of Python codes gathered from AI in Medicine, Data Science, Bioinformatics Algorithm, and Computer Science with Python. Whether you're fellow learners or aspiring Python developers, this repository is designed to serve as a valuable resource for your exploration and comprehension of Python's real-world applications across various scientific domains.
 
 $${\color{orange}Let's \space \color{orange}Be \space \color{red}Python \space Enthusiasts!}$$
