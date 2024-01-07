@@ -4,4 +4,4 @@ import numpy as np
 
 gene_expression_data = np.loadtxt("gene_expression.csv", delimiter=",", skiprows=1)
 dna_sequences = np.loadtxt("dna_sequences.fasta", dtype="str")
-vcf_data = np.loadtxt("variants.vcf", skiprows=7, usecols=range(9), delimiter="\t")
+vcf_data = np.loadtxt("variants.vcf", dtype="str", skiprows=7, usecols=range(9), delimiter="\t")
