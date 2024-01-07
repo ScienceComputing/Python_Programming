@@ -1,8 +1,12 @@
+# Reference: https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html
+
 import torch
 import torch.nn as nn
 
-DE_data = np.loadtxt("DE_result.csv", delimiter=",") 
+DE_data = np.loadtxt("DE_result.csv", delimiter=",", skiprows=1) 
 input_tensor = torch.from_numpy(DE_data)
+
+import numpy as np
 
 pred_model = nn.Sequential(
     nn.Linear(in_features=input_tensor.shape[1], out_features=100), 
