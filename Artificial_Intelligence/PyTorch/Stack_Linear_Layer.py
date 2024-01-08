@@ -19,11 +19,12 @@ pred_model = nn.Sequential(
 pred_result = pred_model(input_tensor)
 print(pred_result)
 
+num_class = 6
 pred_model_2 = nn.Sequential(
     nn.Linear(in_features=input_tensor.shape[1], out_features=100), 
     nn.Linear(in_features=100, out_features=70), 
     nn.Linear(in_features=70, out_features=30),
-    nn.Linear(in_features=30, out_features=6), # predictions for the multi-class (6-class) phenotype classification 
+    nn.Linear(in_features=30, out_features=num_class), # predictions for the multi-class (6-class) phenotype classification 
     nn.Softmax(dim=-1)
 )
 
