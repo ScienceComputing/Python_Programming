@@ -8,27 +8,36 @@ log_loss(true_label, pred_prob)
 log_loss(["spam", "ham", "ham", "spam"], [[.1, .9], [.8, .2], [.9, .1], [.05, .95]])
 # 0.1212894692543532 # TD ?
 
+# Case 2.1: 
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
 
-# Case 2:
+score = torch.tensor([[10, 2, -3, 6, 9, 19]]) # Predictions for 6 classes per subject 
+one_hot_label = F.one_hot(torch.tensor(0), num_classes=6).unsqueeze(0)
+one_hot_label 
+loss = nn.CrossEntropyLoss()
+loss_value = loss(score.double(), one_hot_label.double())
+print(loss_value) 
+
+# Case 2.2:
 import torch
 import torch.nn as nn
 
-def compute_cross_entropy_loss_and_backpropagate():
-    # Create a CrossEntropyLoss instance
+def compute_cross_entropy_loss_and_backpropagate(score, one_hot_label):
     loss = nn.CrossEntropyLoss()
-    # Create random input data (690 samples, 2 classes)
-    input = torch.randn(690, 2, requires_grad=True)
-    # Create a random target tensor (690 samples with class indices)
-    target = torch.empty(690, dtype=torch.long).random_(2)
-    # Calculate the loss between the input and target
-    output = loss(input, target)
-    # Perform backpropagation to compute gradients
+    output = loss(score, one_hot_label)
     output.backward()
-    return output, input.grad
+    return output, score.grad
 
-# Call the function to calculate the loss and gradients
-loss_value, gradients = compute_cross_entropy_loss_and_backpropagate()
+# Create random input data (690 samples, 3 classes)
+input = torch.randn(690, 3, requires_grad=True)
+# Create a random target tensor (690 samples with 3 class indices)
+target = torch.empty(690, dtype=torch.long).random_(3)
 
-# Print the loss value and gradients
+loss_value, gradients = compute_cross_entropy_loss_and_backpropagate(input, target)
+
 print("Loss Value:", loss_value.item())
 print("Gradients:\n", gradients)
+
+
