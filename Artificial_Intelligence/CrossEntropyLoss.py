@@ -24,20 +24,19 @@ print(loss_value)
 import torch
 import torch.nn as nn
 
-def compute_cross_entropy_loss_and_backpropagate(score, one_hot_label):
+def compute_cross_entropy_loss_and_backpropagate(input, target):
     loss = nn.CrossEntropyLoss()
-    output = loss(score, one_hot_label)
-    output.backward()
-    return output, score.grad
+    output = loss(input, target)
+    output.backward() # Compute the gradients of the loss
+    return output, input.grad
 
 # Create random input data (690 samples, 3 classes)
 input = torch.randn(690, 3, requires_grad=True)
 # Create a random target tensor (690 samples with 3 class indices)
 target = torch.empty(690, dtype=torch.long).random_(3)
-
 loss_value, gradients = compute_cross_entropy_loss_and_backpropagate(input, target)
-
 print("Loss Value:", loss_value.item())
 print("Gradients:\n", gradients)
+gradients.shape # torch.Size([690, 3])
 
 
