@@ -37,7 +37,6 @@ train_loader = DataLoader(train_data, batch_size=32, shuffle=True)
 validate_loader = DataLoader(validate_data, batch_size=32, shuffle=False)
 test_loader = DataLoader(test_data, batch_size=32, shuffle=False)
 
-
 class PoissonRegression(nn.Module):
     def __init__(self, input_size):
         super(PoissonRegression, self).__init__()
