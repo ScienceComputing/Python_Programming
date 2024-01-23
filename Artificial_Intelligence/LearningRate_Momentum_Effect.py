@@ -8,7 +8,6 @@ def my_function(input_value):
 
 def plot_parameter_impact(learning_rate=0.01, momentum_factor=0.0):
     """Optimize a custom function using gradient descent with optional momentum and plot the results."""
-
     initial_x = torch.tensor(2.0, requires_grad=True)
     buffer = torch.zeros_like(initial_x.data)
     optimization_values = []
