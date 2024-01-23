@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def my_function(input_value):
-    """Calculate a custom function of the input."""
+    """Calculate a custom loss function of the input."""
     return input_value**4 + 2*input_value**3 - 7*input_value**2 + 9
 
 def plot_parameter_impact(learning_rate=0.01, momentum_factor=0.0):
