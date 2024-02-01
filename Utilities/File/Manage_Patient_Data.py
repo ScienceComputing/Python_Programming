@@ -23,7 +23,7 @@ def add_patient():
                 print("This patient already exists in the library.")
                 return
 
-    with open('patient_library.csv', 'a', newline='', encoding='utf-8') as file:
+    with open('patient_library.csv', 'a', newline='', encoding='utf-8') as file: # newline='': no special newline character is used
         writer = csv.writer(file)
         writer.writerow([patient_id, name, age, diagnosis])
     print("Patient added successfully.")
