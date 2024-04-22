@@ -150,13 +150,14 @@ end_time = time.time()
 print(end_time - start_time) # 0.009947061538696289 seconds
 
 df.iloc[:,[0,2,5,9]] # Select the first, third, sixth, and tenth columns
+df.iloc[:, 1:-1] # Select all the columns except the first and last
 
 """
 Randomly select columns
 """
 # Reference: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sample.html
 # DataFrame.sample(n=None, frac=None, replace=False, weights=None, random_state=None, axis=None, ignore_index=False)
-df.sample(int(0.8 * df.shape[1]), axis=1, replace = False)
+df.sample(int(0.8 * df.shape[1]), axis=1, replace=False)
 
 # Slice rows and columns at the same time
 df.loc[("val_1_for_col_1", "val_1_for_col_2", "val_1_for_col_3"):("val_3_for_col_1", "val_3_for_col_2", "val_3_for_col_3"), "col_name_1":"col_name_3"] 
