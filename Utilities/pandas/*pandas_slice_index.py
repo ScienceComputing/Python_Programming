@@ -151,6 +151,7 @@ print(end_time - start_time) # 0.009947061538696289 seconds
 
 df.iloc[:,[0,2,5,9]] # Select the first, third, sixth, and tenth columns
 df.iloc[:, 1:-1] # Select all the columns except the first and last
+df.iloc[:, -1] # Select the last column
 
 """
 Randomly select columns
