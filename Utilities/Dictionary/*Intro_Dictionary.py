@@ -1,5 +1,11 @@
 # Create a dictionary
 my_dict = {}
+climate_change_impact = {
+  'Climate': ['global temperatures rise', 'sea level rise', 'glaciers are shrinking', 'carbon dioxide rises', 'snow is melting earlier'],
+  'Food': ['challenges for farming', 'heat-related health issues', 'harm livestock'],
+  'Water': ['flooding', 'stronger and more frequent abnormally heavy precipitation events', 'drought', 'plants need more water', 'less snow overall'],
+  'Infrastructure': ['more indoor cooling', 'flooding shuts down highways and major business areas', 'sea level rise affects coastal infrastructure (e.g., roads, bridges, water supplies)']
+}
 my_yogurt = {
   'kefir': 6.9,
   'filmjolk': 4.6,
