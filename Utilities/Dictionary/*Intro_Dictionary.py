@@ -12,6 +12,7 @@ my_yogurt = {
   'regular yogurt': 3.7
 }
 print(climate_change_impact['Infrastructure'])
+print(climate_change_impact['Infrastructure'][0])
 print(my_yogurt['filmjolk'])
 print(my_yogurt.get['filmjolk2']) # None
 
