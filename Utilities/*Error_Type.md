@@ -3,7 +3,14 @@
 The syntax errors are detected by the compiler or the interpreter.
 
 **Common reasons**: 
-- Wrongly written keywords or functions
+- Wrongly written keywords
+  ```
+  Cell In[17], line 3
+  return y
+  ^
+  SyntaxError: 'return' outside function
+  ```
+- Wrong function names
   ```
   NameError                                 Traceback (most recent call last)
   Cell In[18], line 1
