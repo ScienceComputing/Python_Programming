@@ -18,3 +18,10 @@ a, b = b, a
 (5 - 3) // 2
 8 - 3 * 2 - (1 + 1)
 # a // b	Floor division: Quotient of a and b, removing fractional parts
+
+## Question 4
+# Variables representing the number of candies collected by alice, bob, and carol
+alice_candies = 121
+bob_candies = 77
+carol_candies = 109
+to_smash = (alice_candies + bob_candies + carol_candies) % 3
