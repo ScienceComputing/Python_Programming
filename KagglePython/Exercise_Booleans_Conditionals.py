@@ -10,6 +10,7 @@ def sign(num=-1):
     else:
         return 1
 
+## Question 2
 def to_smash(total_candies):
     """Return the number of leftover candies that must be smashed after distributing
     the given number of candies evenly between 3 friends.
@@ -27,3 +28,26 @@ def to_smash(total_candies):
 
 to_smash(91)
 to_smash(1)
+
+## Question 3
+# Proof by contradiction
+# I said that I'm safe from today's weather if...
+# assumption 1: I have an umbrella...
+# assumption 2: or if the rain isn't too heavy and I have a hood...
+# assumption 3: otherwise, I'm still fine unless it's raining and it's a workday == I'll be fine if it's not raining or it's not a workday.
+# To prove that prepared_for_weather is buggy, come up with a set of inputs where either:
+# the function returns False (but should have returned True), or the function returned True (but should have returned False).
+
+def prepared_for_weather(have_umbrella, rain_level, have_hood, is_workday):
+    return have_umbrella or rain_level < 5 and have_hood or not rain_level > 0 and is_workday # not (rain_level > 0 and is_workday)
+
+# The function returns False (but should have returned True)
+have_umbrella = False
+rain_level = 0.0
+have_hood = False
+is_workday = False
+
+actual = prepared_for_weather(have_umbrella, rain_level, have_hood, is_workday)
+print(actual)
+
+# The function returns True (but should have returned False)
