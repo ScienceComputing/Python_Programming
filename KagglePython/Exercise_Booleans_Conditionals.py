@@ -50,4 +50,4 @@ is_workday = False
 actual = prepared_for_weather(have_umbrella, rain_level, have_hood, is_workday)
 print(actual)
 
-# The function returns True (but should have returned False)
+## Question 4
