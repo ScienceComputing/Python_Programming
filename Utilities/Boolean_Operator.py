@@ -10,6 +10,7 @@ donut_list = []
 print(bool(donut_list))
 # False
 
+# The highest precedence belongs to (), followed by not, and, and or.
 # ==
 # is True | is False
 # !=
