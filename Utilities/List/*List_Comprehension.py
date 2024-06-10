@@ -87,6 +87,7 @@ calc_prop(data=sample)
 # Case 6: conditionals on the output expression in comprehensions ~ if-else
 # newlist = [expression + conditional on expression for iterator variable in iterable]
 # substitute phenylalanine with methionine
+aa = ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'phenylalanine', 'threonine', 'tryptophan', 'valine']
 aa_target_2 = [x if x != 'phenylalanine' else 'methionine' for x in aa]
 print(aa_target_2)
 # ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'methionine', 'threonine', 'tryptophan', 'valine']
