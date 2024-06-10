@@ -15,3 +15,6 @@ b = [3, 2, 1]
 a, b = b, a
 
 ## Question 3
+(5 - 3) // 2
+8 - 3 * 2 - (1 + 1)
+# a // b	Floor division: Quotient of a and b, removing fractional parts
