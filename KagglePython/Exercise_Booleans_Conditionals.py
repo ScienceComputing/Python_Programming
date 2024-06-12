@@ -71,3 +71,26 @@ def is_negative(number):
 
 def concise_is_negative(number):
     return number < 0 # Replace the verbose expression if number < 0: return True
+
+## Question 5a
+def wants_all_toppings(ketchup, mustard, onion):
+    """Return whether the customer wants "the works" (all 3 toppings)
+    """
+    return ketchup & mustard & onion
+
+def wants_all_toppings(ketchup, mustard, onion):
+    """Return whether the customer wants "the works" (all 3 toppings)
+    """
+    return ketchup, mustard, onion
+# Expected return value of True given ketchup=True, mustard=True, onion=True, but got (True, True, True) instead.
+
+## Question 5b
+def wants_plain_hotdog(ketchup, mustard, onion):
+    """Return whether the customer wants a plain hot dog with no toppings.
+    """
+    return not ketchup and not mustard and not onion
+
+def wants_plain_hotdog(ketchup, mustard, onion):
+    """Return whether the customer wants a plain hot dog with no toppings.
+    """
+    return not (ketchup or mustard or onion)
