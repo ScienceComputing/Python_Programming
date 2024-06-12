@@ -23,7 +23,18 @@ def to_smash(total_candies):
     else:
         print("Splitting", total_candies, "candies")
     # Use a succinct conditional expression
-    # print("Splitting", total_candies, "candy" if total_candies == 1 else "candies")
+    # print("Splitting", total_candies, "candy" if total_candies <= 1 else "candies")
+    return total_candies % 3
+
+def concise_to_smash(total_candies):
+    """Return the number of leftover candies that must be smashed after distributing
+    the given number of candies evenly between 3 friends.
+    
+    >>> to_smash(91)
+    1
+    """
+    # Use a succinct conditional expression
+    print("Splitting", total_candies, "candy" if total_candies <= 1 else "candies")
     return total_candies % 3
 
 to_smash(91)
@@ -51,3 +62,11 @@ actual = prepared_for_weather(have_umbrella, rain_level, have_hood, is_workday)
 print(actual)
 
 ## Question 4
+def is_negative(number):
+    if number < 0:
+        return True
+    else:
+        return False
+
+def concise_is_negative(number):
+    return number < 0 # Replace the verbose expression if number < 0: return True
