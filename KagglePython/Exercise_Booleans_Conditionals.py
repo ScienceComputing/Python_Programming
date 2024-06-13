@@ -3,6 +3,9 @@
 # Boolean variables can either be True or False
 # https://en.wikipedia.org/wiki/De_Morgan%27s_laws
 
+bool(0) # False
+bool(0.1) # True
+
 ## Question 1
 def sign(num=-1):
     if num < 0:
