@@ -96,3 +96,8 @@ def wants_plain_hotdog(ketchup, mustard, onion):
     return not (ketchup or mustard or onion)
 
 ## Question 5c
+def exactly_one_sauce(ketchup, mustard, onion):
+    """Return whether the customer wants either ketchup or mustard, but not both.
+    (You may be familiar with this operation under the name "exclusive or")
+    """
+    return (ketchup and not mustard) or (not ketchup and mustard)
