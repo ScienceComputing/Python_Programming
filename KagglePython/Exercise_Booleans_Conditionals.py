@@ -1,6 +1,7 @@
 ## References:
 # https://github.com/ScienceComputing/Python_Programming/blob/68201ab5a7ec56c128425f736fd34298c1258548/Utilities/List/*List_Comprehension.py#L87
 # Boolean variables can either be True or False
+# https://en.wikipedia.org/wiki/De_Morgan%27s_laws
 
 ## Question 1
 def sign(num=-1):
@@ -94,6 +95,8 @@ def wants_plain_hotdog(ketchup, mustard, onion):
     """Return whether the customer wants a plain hot dog with no toppings.
     """
     return not (ketchup or mustard or onion)
+
+# This logical equivalence stems from De Morgan's laws in boolean algebra, which state that the negation of "A or B" is the same as "not A and not B.
 
 ## Question 5c
 def exactly_one_sauce(ketchup, mustard, onion):
