@@ -5,6 +5,8 @@
 
 bool(0) # False
 bool(0.1) # True
+int(False) # 0
+int(True) # 1
 
 ## Question 1
 def sign(num=-1):
@@ -107,3 +109,10 @@ def exactly_one_sauce(ketchup, mustard, onion):
     (You may be familiar with this operation under the name "exclusive or")
     """
     return (ketchup and not mustard) or (not ketchup and mustard)
+
+## Question 6
+def exactly_one_topping(ketchup, mustard, onion):
+    """Return whether the customer wants exactly one of the three available toppings
+    on their hot dog.
+    """
+    return (int(ketchup) + int(mustard) + int(onion)) == 1
