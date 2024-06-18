@@ -1,3 +1,5 @@
+# Ref: https://slides.com/johanneskoester/deck-1
+
 SAMPLES = glob_wildcards("data/samples/{fname}.fastq").fname
 print(SAMPLES)
 
