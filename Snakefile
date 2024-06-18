@@ -14,6 +14,7 @@ def get_bwa_map_input_fastqs(wildcards):
 
 include: "read_map.snakefile"
 
+
 # rule bwa_map:
 #     input:
 #         "data/genome.fa",
