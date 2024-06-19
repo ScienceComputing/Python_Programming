@@ -29,10 +29,9 @@ def to_smash(total_candies):
         print("Splitting", total_candies, "candy")
     else:
         print("Splitting", total_candies, "candies")
-    # Use a succinct conditional expression
-    # print("Splitting", total_candies, "candy" if total_candies <= 1 else "candies")
     return total_candies % 3
 
+# Use a *succinct* conditional expression
 def concise_to_smash(total_candies):
     """Return the number of leftover candies that must be smashed after distributing
     the given number of candies evenly between 3 friends.
@@ -40,7 +39,6 @@ def concise_to_smash(total_candies):
     >>> to_smash(91)
     1
     """
-    # Use a succinct conditional expression
     print("Splitting", total_candies, "candy" if total_candies <= 1 else "candies")
     return total_candies % 3
 
