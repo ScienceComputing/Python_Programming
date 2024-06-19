@@ -118,3 +118,31 @@ def exactly_one_topping(ketchup, mustard, onion):
     return (int(ketchup) + int(mustard) + int(onion)) == 1 # return (ketchup + mustard + onion) == 1
 
 ## Question 7
+def should_hit(dealer_total, player_total, player_low_aces, player_high_aces):
+    """
+    Return True if the player should hit (request another card) given the current game
+    state, or False if the player should stay.
+    """
+    if player_high_aces > 0:
+        if player_total <= 17:
+            return True
+        if player_total == 18 and dealer_total >= 9:
+            return True
+        return False
+    else:
+        if player_total < 10:
+            return True
+        if player_total >= 17:
+            return False
+        if dealer_total >= 7:
+            if player_total <= 16:
+                return True
+            return False
+        if dealer_total <= 6:
+            if player_total <= 10:
+                if player_total == 11 and player_high_aces == 0:
+                    return False
+                return True
+            return False
+    return False
+
