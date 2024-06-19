@@ -14,3 +14,7 @@ def is_suitable_for_atac_seq(fragment_length):
 print("Is a 30 bp fragment suitable for ATAC-Seq?", is_suitable_for_atac_seq(30)) # False
 print("Is a 100 bp fragment suitable for ATAC-Seq?", is_suitable_for_atac_seq(100)) # True
 print("Is a 200 bp fragment suitable for ATAC-Seq?", is_suitable_for_atac_seq(200)) # True
+
+# Comparisons
+3.0 == 3 # True
+'3' == 3 # False
