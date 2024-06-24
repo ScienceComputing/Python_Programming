@@ -31,6 +31,19 @@ The syntax errors are detected by the compiler or the interpreter.
 - Not putting strings in single quotes or double quotes
 
 ## Runtime Errors
+- No compatible binary
+  ```
+  DEBUG [main] Printing verbose output
+  Traceback (most recent call last):
+    File "/Users/your_name/.pyenv/versions/3.8.18/bin/kb", line 8, in <module>
+      sys.exit(main())
+    File "/Users/your_name/.pyenv/versions/3.8.18/lib/python3.8/site-packages/ngs_tools/logging.py", line 62, in inner
+      return func(*args, **kwargs)
+    File "/Users/your_name/.pyenv/versions/3.8.18/lib/python3.8/site-packages/kb_python/main.py", line 1583, in main
+      raise UnsupportedOSError(
+    kb_python.config.UnsupportedOSError: Failed to find compatible kallisto binary. Provide a compatible binary with the --kallisto option or    run kb compile."
+  ```
 
 ## Logical Errors
+
 
