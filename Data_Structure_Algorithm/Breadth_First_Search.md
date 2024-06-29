@@ -1,5 +1,5 @@
 ## Breadth first search - binary tree
-- Breadth first search initiates from the root and thoroughly explores all nodes at each level of the tree before progressing to the subsequent level. Its complexity is $O(n)$.
+- Breadth first search initiates from the root and thoroughly explores all nodes at each level of the tree before progressing to the subsequent level. Its complexity is $O(n)$. 
 
 ```
 import queue
