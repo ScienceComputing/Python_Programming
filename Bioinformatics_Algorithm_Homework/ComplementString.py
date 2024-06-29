@@ -1,6 +1,6 @@
 # Input:  A DNA string Pattern
 # Output: The complementary string of Pattern (with every nucleotide replaced by its complement).
-# First approach
+# 1st approach
 def Complement(Pattern):
     complementary_Pattern = ""
     for char in Pattern:
@@ -16,7 +16,7 @@ def Complement(Pattern):
 # Test the function
 Complement("CTAG")
 
-# Second approach
+# 2nd approach
 MAPPING = {
     'A': 'T',
     'T': 'A',
