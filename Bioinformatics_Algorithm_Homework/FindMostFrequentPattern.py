@@ -4,7 +4,7 @@
 
 ### Final solution
 def FrequentWords(Text, k):
-    """Return the most frequent k-mers inside a sequence.
+    """Return the most frequent k-mers inside a sequence. 
     Parameters:
     Text (str): The sequence string to explore
     k (int): The length of the patterns to retrieve
