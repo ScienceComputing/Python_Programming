@@ -5,7 +5,7 @@ class Calculator:
         self.result += x
         return self.result
     def __call__(self, x):
-        return self.add(x)
+        return self.add(x) 
     
 # Create an instance of the Calculator class
 calculator = Calculator()
