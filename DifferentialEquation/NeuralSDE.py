@@ -6,4 +6,4 @@ In this paper, we propose a new continuous neural network framework called Neura
 Our framework can model various types of noise injection frequently used in discrete networks for regularization purpose, such as dropout and additive/multiplicative noise in each block. 
 We provide theoretical analysis explaining the improved robustness of Neural SDE models against input perturbations/adversarial attacks. 
 Furthermore, we demonstrate that the Neural SDE network can achieve better generalization than the Neural ODE and is more resistant to adversarial and non-adversarial input perturbations.
-"""
+""" 
