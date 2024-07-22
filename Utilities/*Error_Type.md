@@ -11,7 +11,7 @@ The syntax errors are detected by the compiler or the interpreter.
   SyntaxError: 'return' outside function
   ```
 - Wrong function names
-  ```
+  ```python
   NameError                                 Traceback (most recent call last)
   Cell In[18], line 1
   ----> 1 devide_two(98.920)
@@ -25,6 +25,10 @@ The syntax errors are detected by the compiler or the interpreter.
   3 # Which of the two variables above has the smallest absolute value?
   ----> 4 smallest_abs = min(abs(x, y))
   TypeError: abs() takes exactly one argument (2 given)
+  ```
+- Two starred expressions in assignment
+  ```
+  SyntaxError: two starred expressions in assignment
   ```
 - Wrong use of an operator
 - Forgetting parentheses in a function call
