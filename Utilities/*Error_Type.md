@@ -4,7 +4,7 @@ The syntax errors are detected by the compiler or the interpreter.
 
 **Common reasons**: 
 - Wrongly written keywords
-  ```
+  ```python
   Cell In[17], line 3
   return y
   ^
@@ -18,7 +18,7 @@ The syntax errors are detected by the compiler or the interpreter.
   NameError: name 'devide_two' is not defined
   ```
 - Setting extra parameters
-  ```
+  ```python
   TypeError                                 Traceback (most recent call last)
   Cell In[14], line 4
   2 y = 5
@@ -27,7 +27,7 @@ The syntax errors are detected by the compiler or the interpreter.
   TypeError: abs() takes exactly one argument (2 given)
   ```
 - Two starred expressions in assignment
-  ```
+  ```python
   SyntaxError: two starred expressions in assignment
   ```
 - Wrong use of an operator
@@ -36,7 +36,7 @@ The syntax errors are detected by the compiler or the interpreter.
 
 ## Runtime Errors
 - No compatible binary
-  ```
+  ```python
   DEBUG [main] Printing verbose output
   Traceback (most recent call last):
     File "/Users/your_name/.pyenv/versions/3.8.18/bin/kb", line 8, in <module>
