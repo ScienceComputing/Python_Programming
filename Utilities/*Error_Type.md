@@ -28,6 +28,8 @@ The syntax errors are detected by the compiler or the interpreter.
   ```
 - Two starred expressions in assignment
   ```python
+  *__, a, b, *_ = ['a', 'cde', 'bib', 6, 9, 10]
+  File "<stdin>", line 1
   SyntaxError: two starred expressions in assignment
   ```
 - Wrong use of an operator
