@@ -21,3 +21,9 @@ data_2 = torch.tensor([[0, 1, 1], [3, 3, 2]])
 data_1 * data_2
 # tensor([[ 0,  5,  6],
 #         [ 6, 18, 18]])
+
+# Transposition
+
+# Matrix multiplication
+
+# Concatenation
