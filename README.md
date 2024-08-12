@@ -6,5 +6,5 @@ Presenting a curated compilation of Python codes gathered from AI in Medicine, D
 |----------|----------|----------|
 | [Python Overview](Python_Overview.ipynb) | XXX | XXX | 
 | [Learn Errors Hard](*Error_Type.md) | XXX | XXX | 
-| XXX | XXX | XXX | 
+| [Manage Data Through Pandas](Utilities/pandas) | XXX | XXX | 
 
