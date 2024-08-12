@@ -16,12 +16,12 @@ tensor_data.dtype # torch.int64
 tensor_data.device # device(type='cpu'); GPU boosts parallel computing capabilities
 
 # Method 2: initialization from a numpy array
-original_data = np.array([[5, 1, 0],[2, 0, 0]])
-tensor_data = torch.from_numpy(original_data)
+ori_data = np.array([[5, 1, 0],[2, 0, 0]])
+tensor_data = torch.from_numpy(ori_data)
 
 # Method 3: initialization from another tensor
-original_data = torch.tensor([[5, 1, 0],[2, 0, 0]])
-tensor_data = torch.ones_like(original_data)
+ori_data = torch.tensor([[5, 1, 0],[2, 0, 0]])
+tensor_data = torch.ones_like(ori_data)
 print(f"Ones tensor - \n {tensor_data} \n")
 
 tensor_data_2 = torch.rand_like(original_data, dtype=torch.float)
