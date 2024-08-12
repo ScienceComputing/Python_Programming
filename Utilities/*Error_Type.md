@@ -49,6 +49,14 @@ The syntax errors are detected by the compiler or the interpreter.
       raise UnsupportedOSError(
     kb_python.config.UnsupportedOSError: Failed to find compatible kallisto binary. Provide a compatible binary with the --kallisto option or    run kb compile."
   ```
+- No compatible tensor shape
+  ```
+  data_1 = torch.tensor([[1, 5, 6], [2, 6, 9]])
+  data_2 = torch.tensor([[0, 1], [3, 3]])
+  data_1 + data_2
+  Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+  RuntimeError: The size of tensor a (3) must match the size of tensor b (2) at non-singleton dimension 1
 
 ## Logical Errors
 
