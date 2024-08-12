@@ -5,6 +5,6 @@ Presenting a curated compilation of Python codes gathered from AI in Medicine, D
 | Python Basics | Artificial Intelligence |
 |----------|----------|
 | [Python Overview](Python_Overview.ipynb) | XXX |
-| XXX | XXX | 
+| [Learn errors hard](*Error_Type.md) | XXX | 
 | XXX | XXX | 
 
