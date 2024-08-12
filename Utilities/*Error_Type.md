@@ -50,7 +50,7 @@ The syntax errors are detected by the compiler or the interpreter.
     kb_python.config.UnsupportedOSError: Failed to find compatible kallisto binary. Provide a compatible binary with the --kallisto option or    run kb compile."
   ```
 - No compatible tensor shape
-  ```
+  ```python
   data_1 = torch.tensor([[1, 5, 6], [2, 6, 9]])
   data_2 = torch.tensor([[0, 1], [3, 3]])
   data_1 + data_2
