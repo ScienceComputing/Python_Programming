@@ -1,5 +1,6 @@
 # PyTorch uses the fundamental data structure tensors (essentially arrays) to encode the inputs and outputs of a model, and the model’s parameters
 # Tensors serve as multi-dimensional representations of their individual elements
+# pip3 install torch torchvision
 import torch
 import numpy as np
 
