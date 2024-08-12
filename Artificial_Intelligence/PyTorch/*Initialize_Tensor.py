@@ -13,7 +13,7 @@ tensor_data = torch.tensor(ori_data)
 # Access the tensor attributes
 tensor_data.shape # torch.Size([2, 3])
 tensor_data.dtype # torch.int64
-tensor_data.device # device(type='cpu'); GPU boosts parallel computing capabilities
+tensor_data.device # device(type='cpu'); GPU boosts parallel computing capabilities; faster training time; better computing performance
 
 # Method 2: initialization from a numpy array
 ori_data = np.array([[5, 1, 0],[2, 0, 0]])
