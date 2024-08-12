@@ -1,6 +1,7 @@
 # pip3 install torch torchvision
 import torch
 
+# Most operations we can do with NumPy arrays can also be done with PyTorch tensors
 # Element-wise addition for compatile shapes
 data_1 = torch.tensor([[1, 5, 6], [2, 6, 9]])
 data_2 = torch.tensor([[0, 1, 1], [3, 3, 2]])
