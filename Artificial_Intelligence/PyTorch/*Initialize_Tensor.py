@@ -5,8 +5,8 @@ import numpy as np
 
 # Initilize a tensor 
 # Method 1: initialization from a list
-original_data = [[5, 1, 0],[2, 0, 0]]
-tensor_data = torch.tensor(original_data)
+ori_data = [[5, 1, 0],[2, 0, 0]]
+tensor_data = torch.tensor(ori_data)
 # tensor([[5, 1, 0],
 #         [2, 0, 0]])
 
