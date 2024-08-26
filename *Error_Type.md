@@ -2,7 +2,6 @@
 ## Syntax Errors
 The syntax errors are detected by the compiler or the interpreter.
 
-**Common reasons**: 
 ### Wrongly written keywords
   ```python
   Cell In[17], line 3
@@ -10,14 +9,14 @@ The syntax errors are detected by the compiler or the interpreter.
   ^
   SyntaxError: 'return' outside function
   ```
-- Wrong function names
+### Wrong function names
   ```python
   NameError                                 Traceback (most recent call last)
   Cell In[18], line 1
   ----> 1 devide_two(98.920)
   NameError: name 'devide_two' is not defined
   ```
-- Setting extra parameters
+### Setting extra parameters
   ```python
   TypeError                                 Traceback (most recent call last)
   Cell In[14], line 4
@@ -26,15 +25,15 @@ The syntax errors are detected by the compiler or the interpreter.
   ----> 4 smallest_abs = min(abs(x, y))
   TypeError: abs() takes exactly one argument (2 given)
   ```
-- Two starred expressions in assignment
+### Two starred expressions in assignment
   ```python
   *__, a, b, *_ = ['a', 'cde', 'bib', 6, 9, 10]
   File "<stdin>", line 1
   SyntaxError: two starred expressions in assignment
   ```
-- Wrong use of an operator
-- Forgetting parentheses in a function call
-- Call the locally scoped function
+### Wrong use of an operator
+### Forgetting parentheses in a function call
+### Call the locally scoped function
   ```python
   def house():
     print("Gallary from house()")
@@ -50,10 +49,10 @@ The syntax errors are detected by the compiler or the interpreter.
     File "<stdin>", line 1, in <module>
   NameError: name 'first_house' is not defined
   ```
-- Not putting strings in single quotes or double quotes
+### Not putting strings in single quotes or double quotes
 
 ## Runtime Errors
-- No compatible binary
+### No compatible binary
   ```python
   DEBUG [main] Printing verbose output
   Traceback (most recent call last):
@@ -65,7 +64,7 @@ The syntax errors are detected by the compiler or the interpreter.
       raise UnsupportedOSError(
     kb_python.config.UnsupportedOSError: Failed to find compatible kallisto binary. Provide a compatible binary with the --kallisto option or    run kb compile."
   ```
-- No compatible tensor shape
+### No compatible tensor shape
   ```python
   data_1 = torch.tensor([[1, 5, 6], [2, 6, 9]])
   data_2 = torch.tensor([[0, 1], [3, 3]])
@@ -73,6 +72,7 @@ The syntax errors are detected by the compiler or the interpreter.
   Traceback (most recent call last):
     File "<stdin>", line 1, in <module>
   RuntimeError: The size of tensor a (3) must match the size of tensor b (2) at non-singleton dimension 1
+ ```
 
 ## Logical Errors
 
