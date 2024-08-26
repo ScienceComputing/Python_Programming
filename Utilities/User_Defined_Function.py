@@ -5,7 +5,10 @@
 def function_without_parameter(): # Function header
     new_value = 2 ** 8 # Function body
     print(new_value)
-square()
+
+function_without_parameter() # Return a value
+function_without_parameter # Return a reference to the function
+# <function function_without_parameter at 0x104d84ee0>
 
 
 # 2: functions with one parameter
@@ -13,7 +16,7 @@ def function_with_one_parameter(parameter):
     new_value = parameter ** 8 
     print(new_value)
 
-square(2)
+function_with_one_parameter(2)
 
 # When we define a function, we write parameters in the function header. When we call a function, we pass arguments into the function.  . 
 
@@ -22,7 +25,7 @@ def function_return_one_value(parameter):
     new_value = parameter ** 8 
     return new_value
 
-result = square(2)
+result = function_return_one_value(2)
 print(result)
 
 # Docstrings serve as documentation of our function so that others who read our function's doctoring understand what our function does, without having to trace through all the code
@@ -38,7 +41,7 @@ def function_with_multiple_parameters(parameter_1, parameter_2):
     new_value = parameter_1 ** parameter_2 
     return new_value
 
-result = square(2, 8)
+result = function_with_multiple_parameters(2, 8)
 print(result)
 
 # 5: function with multiple parameters that return multiple values 
@@ -51,10 +54,10 @@ def function_with_multiple_parameters_return_multiple_values(parameter_1, parame
 
     return new_tuple
 
-result = square(2, 8)
+result = function_with_multiple_parameters_return_multiple_values(2, 8)
 print(result[0])
 print(result[1])
 
-result_1, result_2 = square(2, 8)
+result_1, result_2 = function_with_multiple_parameters_return_multiple_values(2, 8)
 print(result_1)
 print(result_2)
