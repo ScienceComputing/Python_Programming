@@ -1,4 +1,4 @@
-# Topic:
+# Topic: Decorator
 # Nested functions
 def outer(…):
     """…"""
@@ -29,7 +29,7 @@ def mod3plus7(x1, x2, x3, xN):
 
 print(mod3plus7(9, 3, 27, 90)
 
-# Returning functions - enclosing scope
+# Returning functions for the future call - enclosing scope
 def raise_val(n):
     """Return the inner function."""
     def inner(x):
