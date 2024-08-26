@@ -34,6 +34,22 @@ The syntax errors are detected by the compiler or the interpreter.
   ```
 - Wrong use of an operator
 - Forgetting parentheses in a function call
+- Call the locally scoped function
+  ```python
+  def house():
+    print("Gallary from house()")
+    def first_house():
+        print("Gallary from first_house()")
+    def second_house():
+        print("Gallary from second_house()")
+    first_house()
+    second_house()
+
+  first_house()
+  Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+  NameError: name 'first_house' is not defined
+  ```
 - Not putting strings in single quotes or double quotes
 
 ## Runtime Errors
