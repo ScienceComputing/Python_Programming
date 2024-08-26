@@ -3,7 +3,7 @@
 The syntax errors are detected by the compiler or the interpreter.
 
 **Common reasons**: 
-- Wrongly written keywords
+### Wrongly written keywords
   ```python
   Cell In[17], line 3
   return y
