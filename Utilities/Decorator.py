@@ -19,7 +19,8 @@ def run_analysis(data, qc_metrics):
 
 # *args: allows the wrapper function to accept any number of positional arguments.
 # **kwargs: allows the wrapper function to accept any number of keyword arguments.
-# If you define def wrapper(): without *args and **kwargs, the wrapper function would not accept any arguments, which would make it impossible to pass any arguments to the original function. This would severely limit the usefulness of the decorator, as it would only work for functions that take no arguments.
+# If you define def wrapper() without *args and **kwargs, the wrapper function would not accept any arguments, making it impossible to pass any arguments to the original function. 
+# This would limit the usefulness of the decorator, as it would only work for functions that take no arguments.
 
 # Example usage:
 qc_met = {'mito_percent': 4.5, 'n_genes': 250, 'n_count': 505}
