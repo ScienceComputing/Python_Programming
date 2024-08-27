@@ -1,3 +1,5 @@
+# Reference: https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/**kwargs.py
+
 # qc_check_required() is a decorator
 def qc_check_required(func):  
     def wrapper(*args, **kwargs):
@@ -15,8 +17,8 @@ def run_analysis(data, qc_metrics):
     # Add data analysis code here
     return "Analysis complete"
 
-# *args: Allows the wrapper function to accept any number of positional arguments.
-# **kwargs: Allows the wrapper function to accept any number of keyword arguments.
+# *args: allows the wrapper function to accept any number of positional arguments.
+# **kwargs: allows the wrapper function to accept any number of keyword arguments.
 # If you define def wrapper(): without *args and **kwargs, the wrapper function would not accept any arguments, which would make it impossible to pass any arguments to the original function. This would severely limit the usefulness of the decorator, as it would only work for functions that take no arguments.
 
 # Example usage:
