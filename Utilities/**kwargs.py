@@ -1,5 +1,5 @@
 # Reference: https://realpython.com/python-kwargs-and-args/
-# Use *args and **kwargs to pass multiple arguments or keyword arguments to a function
+# Use *args and **kwargs to pass multiple positional arguments or keyword arguments to a function
 def make_dict(**kwargs):
     return kwargs
 
