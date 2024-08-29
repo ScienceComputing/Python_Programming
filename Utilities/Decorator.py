@@ -9,7 +9,7 @@ def qc_check_required(func):
         else:
             print("Data QC failed. Analysis not performed.")  # Data doesn't pass QC criteria
             return None
-    return wrapper
+    return wrapper 
 
 @qc_check_required # qc_check_required(run_analysis)
 def run_analysis(data, qc_metrics):
