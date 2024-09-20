@@ -1,5 +1,5 @@
 # Topic: slice and index DataFrames
-
+ 
 """Prepare a sample dataset"""
 import pandas as pd
 import numpy as np
