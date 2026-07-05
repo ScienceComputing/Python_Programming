@@ -84,7 +84,7 @@ is_lab = df["column_name_1"]  == "labrador"
 is_lab2 = df["column_name_1"]  == "labrador2"
 df[is_lab & is_lab2] # subset rows based on multiple conditions
 df[(df["column_name_1"]  == "labrador") & (df["column_name_1"]  == "labrador2")] # One-line expression
-is_lab_or_lab2 = df["column_name_1"].isin(["labrador", "labrador"])
+is_lab_or_lab2 = df["column_name_1"].isin(["labrador", "labrador2"]) # keeps only the rows where column_name_1 equals 'labrador' or 'labrador2'.
 df[is_lab_or_lab2] # subset rows based on multiple values of a categorical variable
 
 """
